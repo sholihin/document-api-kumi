@@ -1,0 +1,3308 @@
+_type: export
+__export_format: 4
+__export_date: 2021-08-10T07:59:24.614Z
+__export_source: insomnia.desktop.app:v2021.4.1
+resources:
+  - _id: req_3a72d7de1cf34cf88cced81db784a7e4
+    parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
+    modified: 1628558926650
+    created: 1627482067984
+    url: "{{ _.baseurl }}/api/customer/login"
+    name: Login Customer
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/login
+
+      ```
+
+      ## Query Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|
+
+      |---------|----|--------|--------|
+
+      |email|string|yes|body|
+
+      |password|string|yes|body|
+
+      |X-DOMAIN-MEMBER|string|yes|header|
+
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Authenticated"
+        },
+        "data": {
+          "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyNzQ4Mjk4NiwiZXhwIjoxNjI3NDg2NTg2LCJuYmYiOjE2Mjc0ODI5ODYsImp0aSI6IjZCdWdKVEQ1ZmJrTXBuNmQiLCJzdWIiOiI3OThlOGRkYS02OTk5LTRjN2UtOTcxNy1jNDk2MjJiMzcyOTciLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.VzHCaWRl81IDPONEKvu6p35IKsggIfTa69g_WCwxOy8",
+          "user": {
+            "id": "798e8dda-6999-4c7e-9717-c49622b37297",
+            "name": "Admin",
+            "email": "admin@kumi.id",
+            "created_at": "2021-07-25T13:16:07.000000Z",
+            "updated_at": "2021-07-25T13:16:07.000000Z"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Invalid Credentials
+
+      ```
+
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+          "message": "Authenticated Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Invalid Credential!"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Authenticated Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "email": [
+              "The email field is required."
+            ],
+            "password": [
+              "The password field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email" : "customer@kumi.id",
+        	"password" : "password"
+        }
+    parameters: []
+    headers:
+      - id: pair_a788173f5c1e403d918a684492108769
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_6ad5a4c065c34d1cba85b8ed80697a04
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication: {}
+    metaSortKey: -1627482067984
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e53bb5eaa06145eab95b22c90d9fbecb
+    parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
+    modified: 1627480815090
+    created: 1627480772372
+    name: Customer
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627480782207
+    _type: request_group
+  - _id: wrk_2f0e2d6098044534b082427ac3e6d0a6
+    parentId: null
+    modified: 1626332572475
+    created: 1626332572475
+    name: Kumi.id
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_54011a98bd1e4086bb1d53612c76f0a3
+    parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
+    modified: 1628558926652
+    created: 1627482077340
+    url: "{{ _.baseurl }}/api/customer/register"
+    name: Register Customer
+    description: |-
+      ## Method (POST)
+      ## Route
+      ```
+      /api/customer/register
+      ```
+      ## Query Parameters
+      |PARAMETER|TYPE|REQUIRED|
+      |---------|----|--------|
+      |domain|string|yes|
+      |name|string|yes|
+      |phone_number|string|yes|
+      |email|string|yes|
+      |password|string|yes|
+      |confirmation_password|string|yes|
+
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Registered"
+        },
+        "data": {
+          "user": {
+            "id": "b546577d-d264-4952-9a23-d978ddc8f979",
+            "name": "Dhit",
+            "email": "dhit@example.net",
+            "created_at": "2021-07-28T15:16:05.000000Z",
+            "updated_at": "2021-07-28T15:16:05.000000Z"
+          }
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Domain Invalid
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Registering User Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+      ### Validation Input
+      ```
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Register Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "email": [
+              "The email has already been taken."
+            ],
+            "phone_number": [
+              "The phone number field is required."
+            ],
+            "password": [
+              "The password confirmation does not match."
+            ]
+          }
+        }
+      }
+      ```
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - description: ""
+          id: pair_aab0c323359349568c04ca92cf573c89
+          name: email
+          value: mohamad.sholihin.it@gmail.com
+        - description: ""
+          id: pair_cc05e2f61973474aa1c47b1e46936b62
+          name: name
+          value: Mohamad Sholihin
+        - description: ""
+          id: pair_9783cdaf9087445b9876de1e3cd70b90
+          name: phone_number
+          value: "08123123123"
+        - description: ""
+          id: pair_0caf408794134592bd16ba8640ac255e
+          name: password
+          value: bismillah
+        - description: ""
+          id: pair_8fb44b7133e94e6b9bb1350418710f59
+          name: password_confirmation
+          value: bismillah
+        - description: ""
+          id: pair_c30c88829b494fae82ee765e6ec87882
+          name: domain
+          value: http://localhost:8080
+    parameters: []
+    headers:
+      - id: pair_5e963fb2fc0c45149a90ae275816c00b
+        name: Content-Type
+        value: multipart/form-data
+    authentication: {}
+    metaSortKey: -1627482077340
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ee16e329ab8943b988972515246ed355
+    parentId: fld_f43e15356f6b497686f35f79a062b563
+    modified: 1628558926658
+    created: 1627486608693
+    url: "{{ _.baseurl }}/api/admin/login"
+    name: Login Admin
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/admin/login
+
+      ```
+
+      ## Query Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|
+
+      |---------|----|--------|--------|
+
+      |email|string|yes|body|
+
+      |password|string|yes|body|
+
+      |X-DOMAIN-MEMBER|string|yes|header|
+
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Authenticated"
+        },
+        "data": {
+          "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyNzQ4Mjk4NiwiZXhwIjoxNjI3NDg2NTg2LCJuYmYiOjE2Mjc0ODI5ODYsImp0aSI6IjZCdWdKVEQ1ZmJrTXBuNmQiLCJzdWIiOiI3OThlOGRkYS02OTk5LTRjN2UtOTcxNy1jNDk2MjJiMzcyOTciLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.VzHCaWRl81IDPONEKvu6p35IKsggIfTa69g_WCwxOy8",
+          "user": {
+            "id": "798e8dda-6999-4c7e-9717-c49622b37297",
+            "name": "Admin",
+            "email": "admin@kumi.id",
+            "created_at": "2021-07-25T13:16:07.000000Z",
+            "updated_at": "2021-07-25T13:16:07.000000Z"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Invalid Credentials
+
+      ```
+
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+          "message": "Authenticated Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Invalid Credential!"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Authenticated Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "email": [
+              "The email field is required."
+            ],
+            "password": [
+              "The password field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{	"email" : "admin@kumi.id",	"password" : "password"}'
+    parameters: []
+    headers:
+      - disabled: false
+        id: pair_574e5c67c3d540a4a4693d7ff5f94eda
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+      - id: pair_4fb2bc0e31774f99b1bd6251e0b9c4cb
+        name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1627480776241
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f43e15356f6b497686f35f79a062b563
+    parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
+    modified: 1627480776291
+    created: 1627480776291
+    name: Admin
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627480776291
+    _type: request_group
+  - _id: req_585531fc590d466c810d2395fb9240c9
+    parentId: fld_40aeee4e68224603904889666c7f2a8c
+    modified: 1628558926652
+    created: 1627486544471
+    url: "{{ _.baseurl }}/api/reseller/login"
+    name: Login Reseller
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/reseller/login
+
+      ```
+
+      ## Query Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|
+
+      |---------|----|--------|--------|
+
+      |email|string|yes|body|
+
+      |password|string|yes|body|
+
+      |X-DOMAIN-MEMBER|string|yes|header|
+
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Authenticated"
+        },
+        "data": {
+          "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyNzQ4Mjk4NiwiZXhwIjoxNjI3NDg2NTg2LCJuYmYiOjE2Mjc0ODI5ODYsImp0aSI6IjZCdWdKVEQ1ZmJrTXBuNmQiLCJzdWIiOiI3OThlOGRkYS02OTk5LTRjN2UtOTcxNy1jNDk2MjJiMzcyOTciLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.VzHCaWRl81IDPONEKvu6p35IKsggIfTa69g_WCwxOy8",
+          "user": {
+            "id": "798e8dda-6999-4c7e-9717-c49622b37297",
+            "name": "Admin",
+            "email": "admin@kumi.id",
+            "created_at": "2021-07-25T13:16:07.000000Z",
+            "updated_at": "2021-07-25T13:16:07.000000Z"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Invalid Credentials
+
+      ```
+
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+          "message": "Authenticated Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Invalid Credential!"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Authenticated Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "email": [
+              "The email field is required."
+            ],
+            "password": [
+              "The password field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email" : "reseller@kumi.id",
+        	"password" : "password"
+        }
+    parameters: []
+    headers:
+      - id: pair_ca47174a01b34f7682a63471d0a80a6f
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_06f482597519409ea805845ae2e7b8c6
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication: {}
+    metaSortKey: -1627482067984
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_40aeee4e68224603904889666c7f2a8c
+    parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
+    modified: 1627972722930
+    created: 1627486544467
+    name: Reseller
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627480779249
+    _type: request_group
+  - _id: req_e7c6d867428a421da5c84203de3b1eae
+    parentId: fld_40aeee4e68224603904889666c7f2a8c
+    modified: 1628558926657
+    created: 1627486544474
+    url: "{{ _.baseurl }}/api/reseller/register"
+    name: Register Reseller
+    description: |-
+      ## Method (POST)
+      ## Route
+      ```
+      /api/reseller/register
+      ```
+      ## Query Parameters
+      |PARAMETER|TYPE|REQUIRED|
+      |---------|----|--------|
+      |domain|string|yes|
+      |name|string|yes|
+      |phone_number|string|yes|
+      |email|string|yes|
+      |password|string|yes|
+      |confirmation_password|string|yes|
+
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Registered"
+        },
+        "data": {
+          "user": {
+            "id": "b546577d-d264-4952-9a23-d978ddc8f979",
+            "name": "Dhit",
+            "email": "dhit@example.net",
+            "created_at": "2021-07-28T15:16:05.000000Z",
+            "updated_at": "2021-07-28T15:16:05.000000Z"
+          }
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Domain Invalid
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Registering User Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+      ### Validation Input
+      ```
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Register Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "email": [
+              "The email has already been taken."
+            ],
+            "phone_number": [
+              "The phone number field is required."
+            ],
+            "password": [
+              "The password confirmation does not match."
+            ]
+          }
+        }
+      }
+      ```
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - description: ""
+          id: pair_aab0c323359349568c04ca92cf573c89
+          name: email
+          value: mohamad.sholihin.it@gmail.com
+        - description: ""
+          id: pair_cc05e2f61973474aa1c47b1e46936b62
+          name: name
+          value: Mohamad Sholihin
+        - description: ""
+          id: pair_9783cdaf9087445b9876de1e3cd70b90
+          name: phone_number
+          value: "08123123123"
+        - description: ""
+          id: pair_0caf408794134592bd16ba8640ac255e
+          name: password
+          value: bismillah
+        - description: ""
+          id: pair_8fb44b7133e94e6b9bb1350418710f59
+          name: password_confirmation
+          value: bismillah
+        - description: ""
+          id: pair_c30c88829b494fae82ee765e6ec87882
+          name: domain
+          value: kumi.id
+    parameters: []
+    headers:
+      - id: pair_5e963fb2fc0c45149a90ae275816c00b
+        name: Content-Type
+        value: multipart/form-data
+    authentication: {}
+    metaSortKey: -1627482077340
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d38ad031cf77436a8ed19f0444c99a2d
+    parentId: fld_168e9ee64829406a88115d31cffb365e
+    modified: 1628558926656
+    created: 1627488560438
+    url: "{{ _.baseurl
+      }}/api/email/verify/e32dbf52-5bda-4c75-8dd8-6021bd5b473a/817304dcd8ad730c\
+      b15947c71846d5bfdd20b494?expires=1628236407&signature=d52de9c45b6959306c3\
+      8069b6abead71c0a41fb4a66097297bd9ac972869f5b6"
+    name: VERIFICATION EMAIL
+    description: |-
+      ## Method (GET)
+      ## Route
+      ```
+      /api/email/verify/{id}/{hash}?expires=*&signature=*
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|
+      |---------|----|--------|----|
+      |id|string|yes|route|
+      |hash|string|yes|route|
+      |expires|string|yes|query|
+      |signature|string|yes|query|
+      |domain|string|yes|body|
+      |bearer token|jwt|yes|header|
+      |X-DOMAIN-MEMBER|string|yes|header|
+
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Verified"
+        },
+        "data": [
+          "Verification Success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### error
+      ```
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+          "message": "Verification Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Verification User Failed!"
+        }
+      }
+      ```
+
+      ### already verified
+      ```
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Verified"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "User Already Have Verified The Email!"
+        }
+      }
+      ```
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - id: pair_ed1067674292413d87f7d8ee93ddc68a
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_5d7e3096ff0e4e0388cbe4d973da402f
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      prefix: ""
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2MjgyMzYyNzQsImV4cCI6MTYyODIzOTg3NCwibmJmIjoxNjI4MjM2Mjc0LCJqdGkiOiJSZG9jb3djVXhMTzE1aTFxIiwic3ViIjoiZTMyZGJmNTItNWJkYS00Yzc1LThkZDgtNjAyMWJkNWI0NzNhIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.hKE-MxfJIPA-2Lwk4CfjYwJPncPZZE9zq-mPMhv3u3w
+      type: bearer
+    metaSortKey: -1627855767407
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_168e9ee64829406a88115d31cffb365e
+    parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
+    modified: 1628470362660
+    created: 1628230752457
+    name: Email Verification
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627480776241
+    _type: request_group
+  - _id: req_142eaa29bccf44038f9ba39f66a6ab1d
+    parentId: fld_168e9ee64829406a88115d31cffb365e
+    modified: 1628558926649
+    created: 1627489785365
+    url: "{{ _.baseurl }}/api/email/verification-notification"
+    name: RESENT VERIFICATION
+    description: |-
+      ## Method (POST)
+      ## Route
+      ```
+      /api/email/verification-notification
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example
+      |---------|----|--------|----|
+      |bearer token|jwt|yes|header|fdjwhef234-dkfsdkf24|
+      |domain|string|yes|body|kumi.id|
+
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Sent!"
+        },
+        "data": [
+          "Verification Link Sent!"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ```
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+          "message": "Verification Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Verification User Failed!"
+        }
+      }
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"domain" : "example.net"
+        }
+    parameters: []
+    headers:
+      - id: pair_41b871351a134cfb9fcf6f3ae1d14216
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2MjgyMzYyNzQsImV4cCI6MTYyODIzOTg3NCwibmJmIjoxNjI4MjM2Mjc0LCJqdGkiOiJSZG9jb3djVXhMTzE1aTFxIiwic3ViIjoiZTMyZGJmNTItNWJkYS00Yzc1LThkZDgtNjAyMWJkNWI0NzNhIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.hKE-MxfJIPA-2Lwk4CfjYwJPncPZZE9zq-mPMhv3u3w
+      type: bearer
+    metaSortKey: -1627855767357
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_db213b75112b45c9b89210c57c3e7582
+    parentId: fld_6472a509baea4d89991533e9cc923228
+    modified: 1628579304576
+    created: 1628319613782
+    url: "{{ _.baseurl }}/api/cart"
+    name: CREATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/cart
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |qty|int|yes|body|computer|
+
+      |product_id|uuid|yes|body|hfuw4234-123ff|
+
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Cart Added!"
+        },
+        "data": {
+          "cart": {
+            "id": "5ec70007-7e95-437f-99be-650643cb0788",
+            "qty": 1,
+            "price": 1200000,
+            "weight": 9,
+            "note": null,
+            "discount": null,
+            "dicount_type": null,
+            "product": {
+              "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+              "title": "Computers Baru",
+              "slug": "computers-baru",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-10T02:48:26.000000Z",
+              "updated_at": "2021-08-10T02:48:26.000000Z"
+            }
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Adding Cart Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "qty": [
+              "The qty field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"product_id" : "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+        	"qty" : 1
+        }
+    parameters: []
+    headers:
+      - id: pair_5fe4f5026a2840a5a9862e025f731a42
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_ad6e92f886bc4d63ab7480098ac86ae2
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg1NjUyNDksImV4cCI6MTYyODU2ODg0OSwibmJmIjoxNjI4NTY1MjQ5LCJqdGkiOiJLbkFQTTZEYkFacm5OMDVYIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.L2NknGGvKSCMRk8vKGXLVELjjOhDl0xICTTMQFxMEpQ
+      type: bearer
+    metaSortKey: -1628319613782
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_6472a509baea4d89991533e9cc923228
+    parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
+    modified: 1628470362661
+    created: 1628307104310
+    name: Cart
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1628307104310
+    _type: request_group
+  - _id: req_f5d2ff3eee714e6b9c92ec8ba1d29faf
+    parentId: fld_6472a509baea4d89991533e9cc923228
+    modified: 1628558926659
+    created: 1628325186320
+    url: "{{ _.baseurl }}/api/cart/dac0a3dd-c1b6-4cd3-b632-293e272645b0"
+    name: DELETE
+    description: |-
+      ## Method (DELETE)
+      ## Route
+      ```
+      /api/cart/{cart}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |cart|uuid|yes|route param|sdjajsf-2479fd-3423|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Cart Deleted!"
+        },
+        "data": [
+          "success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Category Not Found!",
+          "error": "No query results for model [App\\Models\\Cart]."
+        }
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2MjgzMjI2OTMsImV4cCI6MTYyODMyNjI5MywibmJmIjoxNjI4MzIyNjkzLCJqdGkiOiJmaE1ua3RnSnhSb2NPWG9UIiwic3ViIjoiZGNlMjg4MmMtMDFiMi00MDYxLTg3MGItNzM2MzljM2ZlZGY1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.nKxzRgnUFMUkUfT00vXUs8B8Z1b_RFYoM_Y4JUU4-ps
+      type: bearer
+    metaSortKey: -1628325186320
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_75f657c0d8da48f886e4d823a750f71b
+    parentId: fld_6472a509baea4d89991533e9cc923228
+    modified: 1628579304573
+    created: 1628326317872
+    url: "{{ _.baseurl }}/api/cart/qty-update"
+    name: QTY UPDATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/cart/qty-update
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |product_id|uuid|yes|body|hfuw4234-123ff|
+
+      |type|string|optional|body|in:increase,decrease|
+
+      |note|string|optional|body|warna hijau|
+
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Cart Updated!"
+        },
+        "data": {
+          "cart": {
+            "id": "a0e4e56a-b727-4b8c-83ce-69b01eb5c8ef",
+            "qty": 3,
+            "price": 3600000,
+            "weight": 27,
+            "note": "Decrease",
+            "discount": null,
+            "dicount_type": null,
+            "product": {
+              "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+              "title": "Computers Baru",
+              "slug": "computers-baru",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-10T02:48:26.000000Z",
+              "updated_at": "2021-08-10T02:48:26.000000Z"
+            }
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Cart Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "type": [
+              "The selected type is invalid."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"product_id" : "1a6f2040-f591-4791-8aa6-4ca9c861a391"
+        }
+    parameters: []
+    headers:
+      - id: pair_feea94f13a9c4201ad9c45c67161f2fd
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_63191ad7fce54036a2db2fa0c17427a5
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg1NjY0MjMsImV4cCI6MTYyODU3MDAyMywibmJmIjoxNjI4NTY2NDIzLCJqdGkiOiJ4ZGpXZlB3UEJzNEZiQ2ZXIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.bRbvMvOf1rP5Ymoy5wVYMFsHc2Uv0NWXzNMyhGFaA1k
+      type: bearer
+    metaSortKey: -1628326317873
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cb9a416ea1a345b6a4bbdfc75a4d888d
+    parentId: fld_6472a509baea4d89991533e9cc923228
+    modified: 1628579304575
+    created: 1628404474690
+    url: "{{ _.baseurl }}/api/cart"
+    name: INDEX
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/cart
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string(slug)|yes|header|kumi_id|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Your Carts Listed!"
+        },
+        "data": {
+          "cart": [
+            {
+              "id": "a0e4e56a-b727-4b8c-83ce-69b01eb5c8ef",
+              "qty": 3,
+              "price": 3600000,
+              "weight": 27,
+              "note": "Decrease",
+              "discount": null,
+              "dicount_type": null,
+              "product": {
+                "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+                "title": "Computers Baru",
+                "slug": "computers-baru",
+                "type": "physical",
+                "merk": "ASUS",
+                "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+                "content": "nice",
+                "tnc": "you should buy",
+                "weight": 9,
+                "price": 1200000,
+                "stocks": 12,
+                "reseller_price": 1300000,
+                "discount_type": "nominal",
+                "discount": null,
+                "affiliate_type": "nominal",
+                "affiliate_fee": 10000,
+                "pin": null,
+                "created_at": "2021-08-10T02:48:26.000000Z",
+                "updated_at": "2021-08-10T02:48:26.000000Z"
+              }
+            }
+          ],
+          "total": 3600000
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Showing Cart Failed!"
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_76ffb2c492b0467587b0413d0263acd8
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+      - description: ""
+        id: pair_8cda0aeabfc74640aa737fc2069a2e2b
+        name: ""
+        value: ""
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg1NjY0MjMsImV4cCI6MTYyODU3MDAyMywibmJmIjoxNjI4NTY2NDIzLCJqdGkiOiJ4ZGpXZlB3UEJzNEZiQ2ZXIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.bRbvMvOf1rP5Ymoy5wVYMFsHc2Uv0NWXzNMyhGFaA1k
+      type: bearer
+    metaSortKey: -1628404474690
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a739ed41fba24092bcd0351d589a20ea
+    parentId: fld_a4001d26408346ea836cc2f449a26646
+    modified: 1628558926647
+    created: 1628488698762
+    url: "{{ _.baseurl }}/api/profile"
+    name: SHOW
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_aa9dddd71a4a4203bd31e453bc36562e
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg0ODg3MTQsImV4cCI6MTYyODQ5MjMxNCwibmJmIjoxNjI4NDg4NzE0LCJqdGkiOiI3b0xHUE1QeThnZkh2ZVhGIiwic3ViIjoiZGNlMjg4MmMtMDFiMi00MDYxLTg3MGItNzM2MzljM2ZlZGY1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.sDDOmMlmXAyHvrLbtg42yl9eProctdCa2zO4vgZOk5E
+      type: bearer
+    metaSortKey: -1628488698762
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_a4001d26408346ea836cc2f449a26646
+    parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
+    modified: 1628558926643
+    created: 1628488693148
+    name: Profile
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1628488693148
+    _type: request_group
+  - _id: req_922000d6838c4296ba63f1a7d659b333
+    parentId: fld_a4001d26408346ea836cc2f449a26646
+    modified: 1628558926646
+    created: 1628489475880
+    url: "{{ _.baseurl }}/api/profile/dce2882c-01b2-4061-870b-73639c3fedf5"
+    name: UPDATE
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - description: ""
+          id: pair_a96ef3c17f59442b9a88cf7839bde8f4
+          name: _method
+          value: PATCH
+        - description: ""
+          id: pair_c19ea0861b55408f8b189636935a2b32
+          name: name
+          value: customer
+        - description: ""
+          id: pair_b6226b20e819412db9d893d8523baa80
+          name: email
+          value: customer@kumi.id
+        - description: ""
+          id: pair_9b309d9496964fa2a6389409e12dd100
+          name: phone_number
+          value: "87764281911"
+        - description: ""
+          id: pair_95f201ba1d69459b8ef83fcc58ebb8de
+          name: jenkel
+          value: p
+    parameters: []
+    headers:
+      - id: pair_baaf127c69214313b1e6fde89c3e2e55
+        name: Content-Type
+        value: application/x-www-form-urlencoded
+      - description: ""
+        id: pair_6cfefba3aa2c481daefa9875c998fa80
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg0ODk4MzksImV4cCI6MTYyODQ5MzQzOSwibmJmIjoxNjI4NDg5ODM5LCJqdGkiOiJweHY5cFpyZHRVU1VGQ1VyIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.PkOboQZYSzkD8QyWPEuaxDKrxDNFp6A_kBR0rNt7fwo
+      type: bearer
+    metaSortKey: -1628489475880
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a0434fd015144431beca2f37169fb0c9
+    parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
+    modified: 1628579304574
+    created: 1627564703184
+    url: "{{ _.baseurl }}/api/admin/category"
+    name: CREATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/admin/category
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |name|string|yes|body|computer|
+
+      |parent_id|uuid|optional|body|hfuw4234-123ff|
+
+      |image|file|required|body|picture|
+
+      |domain|string|required|body|kumi.id|
+
+      |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Category Created!"
+        },
+        "data": {
+          "user": {
+            "id": "5d3ac7b0-b756-41e7-97cb-9b4428180871",
+            "name": "Computer",
+            "slug": "computer",
+            "image": "https:\/\/panel.kumi.id/\/storage\/exampledomain_com\/categories\/ySjEaJ0vKVzuFYSRVV5zB6rWb6dqAgYg5B3UWqwK.png",
+            "created_at": "2021-07-29T13:47:31.000000Z",
+            "updated_at": "2021-07-29T13:47:31.000000Z"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Creating Category Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "name": [
+              "The name field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - description: ""
+          id: pair_dbb45fbeb20c448689839f52fa763e4a
+          name: name
+          value: computer
+        - description: ""
+          id: pair_4c8c68ff51b04685b543291077361b3f
+          name: parent_id
+          value: ""
+        - description: ""
+          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          id: pair_3ef5265881124cb0b5324ea993f29262
+          name: image
+          type: file
+          value: ""
+    parameters: []
+    headers:
+      - id: pair_89c1c30eb8574557a4afb5776f9b801e
+        name: Content-Type
+        value: multipart/form-data
+      - description: ""
+        id: pair_47eef2b3d3ab487aa6fe8817b8cf03a8
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg1NjMyOTMsImV4cCI6MTYyODU2Njg5MywibmJmIjoxNjI4NTYzMjkzLCJqdGkiOiJ3ekF1MnBHV2tNOWtYRFVvIiwic3ViIjoiZDE5NGFkZTktNDgwOS00MDBkLWIyNzItYTFlMmE2NjEzMGI1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4T8QWKseoMNDelVGyOhZ8B5iiRyofFSl9loCZqgaHwI
+      type: bearer
+    metaSortKey: -1627564703184
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_83e942d4ad7345cbbdaec93a9a284f46
+    parentId: fld_f43e15356f6b497686f35f79a062b563
+    modified: 1627975590387
+    created: 1627564687159
+    name: Category
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627480776216
+    _type: request_group
+  - _id: req_029cfd574bb54d1e9956d372ccc0e0ac
+    parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
+    modified: 1628558926648
+    created: 1627568934198
+    url: "{{ _.baseurl }}/api/admin/category/9450d916-19e8-4b77-ab12-601f231498dd"
+    name: UPDATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/admin/category/{id}
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |id|uuid|yes|route param|rwer248348-241324dfndf|
+
+      |name|string|yes|body|computer|
+
+      |parent_id|uuid|optional|body|hfuw4234-123ff|
+
+      |image|file|required|body|picture|
+
+      |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Category Updated!"
+        },
+        "data": {
+          "user": {
+            "id": "5d3ac7b0-b756-41e7-97cb-9b4428180871",
+            "name": "Komputer",
+            "slug": "komputer",
+            "image": "https:\/\/kumi-backend.apps\/storage\/http___localhost_8080\/categories\/ySjEaJ0vKVzuFYSRVV5zB6rWb6dqAgYg5B3UWqwK.png",
+            "created_at": "2021-07-29T13:47:31.000000Z",
+            "updated_at": "2021-07-29T14:46:18.000000Z"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Category Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "name": [
+              "The name field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: PATCH
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - description: ""
+          disabled: false
+          id: pair_37ab36ab112644d1a825d3d4160ca929
+          name: name
+          value: Sandal
+        - description: ""
+          id: pair_56d36d0f92ae495487aeec0856783795
+          name: parent_id
+          value: ""
+        - description: ""
+          id: pair_c9c9109353424bbb818ec8d28f999cc4
+          name: image
+          value: ""
+        - description: ""
+          disabled: true
+          id: pair_f69faa5f4a5741e68e02e019b1953aaa
+          name: __method
+          value: PATCH
+    parameters: []
+    headers:
+      - id: pair_494bd0aa4d114d9eabfd4889271f0ea2
+        name: Content-Type
+        value: application/x-www-form-urlencoded
+      - description: ""
+        id: pair_be429178fe5e4fd9a66aebb3d1720d3d
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MjgyMzcyMjAsImV4cCI6MTYyODI0MDgyMCwibmJmIjoxNjI4MjM3MjIwLCJqdGkiOiJ0YnJzaUFJRUNxZ3RncE9kIiwic3ViIjoiMmQ1MWIzYTMtNjNkZi00YTZmLThkZjQtNTc3NDY2ZWJjNTc2IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.FRmurvruSjgi8U0Tdh0Xn1C9q_KCjOdsRFiRrA69lsA
+      type: bearer
+    metaSortKey: -1627568934199
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_49f8072095ff40afa34e548958d06b7f
+    parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
+    modified: 1628558926651
+    created: 1627570508699
+    url: "{{ _.baseurl }}/api/admin/category/ea863485-9330-46be-a868-1b170d637fe5"
+    name: SHOW
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/category/{category}
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
+
+      |category|uuid|yes|route param|sda2423-dsfsdkf245|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "category": {
+            "id": "ae2306d7-4ab4-40e8-8dc6-b0f16c53c98a",
+            "name": "Computer",
+            "slug": "computer",
+            "image": "https:\/\/kumi-backend.apps\/storage\/example_net\/categories\/5DfKgLcrUIe4Gt2uDQ63niHDILGQdTLDGolxeOYM.png",
+            "created_at": "2021-07-31T12:02:38.000000Z",
+            "updated_at": "2021-07-31T12:02:38.000000Z"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Not Found
+
+      ```
+
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Category Not Found!",
+          "error": "No query results for model [App\\Models\\Category]."
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_f9afdbd09f044fe5a6746894c1607aa5
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1627570508699
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f36d557fc98c4121a7f298c3eb2847a4
+    parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
+    modified: 1628558926658
+    created: 1627734122925
+    url: "{{ _.baseurl }}/api/admin/category/ea863485-9330-46be-a868-1b170d637fe5"
+    name: DELETE
+    description: |-
+      ## Method (DELETE)
+      ## Route
+      ```
+      /api/admin/category/{slug}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |slug|string|yes|route param|computer|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Category Deleted!"
+        },
+        "data": [
+          "success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Category Not Found!",
+          "error": "No query results for model [App\\Models\\Category]."
+        }
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_e3b255973e6544688e69b14c9f1fefed
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1627734122925
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7cf322de93c3483db3940f24d62325ef
+    parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
+    modified: 1628579304574
+    created: 1627735086938
+    url: "{{ _.baseurl }}/api/admin/categories"
+    name: INDEX
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/admin/categories
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |domain|string(slug)|yes|route param|kumi_id|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "categories": [
+            {
+              "id": "5d3ac7b0-b756-41e7-97cb-9b4428180871",
+              "name": "Komputer",
+              "slug": "komputer",
+              "image": "https:\/\/kumi-backend.apps\/storage\/http___localhost_8080\/categories\/ySjEaJ0vKVzuFYSRVV5zB6rWb6dqAgYg5B3UWqwK.png",
+              "created_at": "2021-07-29T13:47:31.000000Z",
+              "updated_at": "2021-07-29T14:46:18.000000Z"
+            }
+          ]
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Not Found
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Category Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_65aa777b2eb445db8bf2666206e0a5a6
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg1MDExNTUsImV4cCI6MTYyODUwNDc1NSwibmJmIjoxNjI4NTAxMTU1LCJqdGkiOiJVV2t4MW51OWwzT3BUZWtpIiwic3ViIjoiZDE5NGFkZTktNDgwOS00MDBkLWIyNzItYTFlMmE2NjEzMGI1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.jmh354w5TP5ex3mhNY_m22cppyEMTdXTHG_Kita5LAE
+      type: bearer
+    metaSortKey: -1627735086938
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5c7e747cd9894dc381f061340e36fc82
+    parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
+    modified: 1628558926645
+    created: 1628480090747
+    url: "{{ _.baseurl }}/api/admin/category/parent"
+    name: PARENT
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_ca770d641f6d451688747eedb6d104f5
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg0ODAxMDksImV4cCI6MTYyODQ4MzcwOSwibmJmIjoxNjI4NDgwMTA5LCJqdGkiOiIzcm1TSmRoVFdrRlR1Nm9wIiwic3ViIjoiYjEyNWFiMzAtYjRhMy00ZWMzLWI2OGYtOTBiNjM4MzNmNDcwIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.y_wwJ4j0ibNcYFlkA1EDsWKmq9tC0Q1NPQUW8SmqPnw
+      type: bearer
+    metaSortKey: -1628480090747
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0f5558acc0a342eabddd5b949f52e57b
+    parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
+    modified: 1628558926642
+    created: 1628481313886
+    url: "{{ _.baseurl
+      }}/api/admin/category/child/0a316103-f454-4bd9-af7f-fdd9681ee283"
+    name: CHILD
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_6ccffb20c1ce4831a3db3a277710945b
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg0ODAxMDksImV4cCI6MTYyODQ4MzcwOSwibmJmIjoxNjI4NDgwMTA5LCJqdGkiOiIzcm1TSmRoVFdrRlR1Nm9wIiwic3ViIjoiYjEyNWFiMzAtYjRhMy00ZWMzLWI2OGYtOTBiNjM4MzNmNDcwIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.y_wwJ4j0ibNcYFlkA1EDsWKmq9tC0Q1NPQUW8SmqPnw
+      type: bearer
+    metaSortKey: -1628481313886
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_bca3afea958f4499aa0f2f84c4ff0bd3
+    parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
+    modified: 1628579304575
+    created: 1627796858385
+    url: "{{ _.baseurl }}/api/admin/product"
+    name: CREATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/admin/product
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |title|string|yes|body|samsung a12|
+
+      |type|enum(digital,physical)|yes|body|physical|
+
+      |category_id|uuid|required|body|asd231-231423-231|
+
+      |image|file|optional|body|picture|
+
+      |images[]|image(array)|optional|body|picture|
+
+      |merk|string|yes|body|samsung|
+
+      |content|string|yes|body|lorem ipsum|
+
+      |weight|string|yes (if type physical)|body|12|
+
+      |stocks|string|yes (if type physical)|body|123|
+
+      |price|int|yes|body|12000000|
+
+      |discount_type|enum(presentase, nominal)|optional|body|presentase|
+
+      |discount|int|yes (if discount_type not null)|body|50|
+
+      |tnc|string|yes|body|lorem ipsum|
+
+      |domain|string|yes|body|kumi.id|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Product Created!"
+        },
+        "data": {
+          "Product": {
+            "id": "c0360470-ed09-414f-86ec-c4c851176b71",
+            "title": "Computer",
+            "slug": "computer",
+            "type": "physical",
+            "merk": "ASUS",
+            "image": "https:\/\/kumi-backend.apps\/storage\/products\/example_net\/products\/o6lJu68UZwuI1ThM3C2xMy2IKe1dfR4aKb8fF9xB.png",
+            "category": {
+              "id": "f7e7267a-2527-4c5a-88c5-6a5475747d86",
+              "name": "Computer",
+              "slug": "computer",
+              "image": "https:\/\/kumi-backend.apps\/storage\/example_net\/categories\/MdFm4JU7VxPgmaU5AkeDtgbQHVW3tgFCNlhc6Yfm.png",
+              "created_at": "2021-08-01T07:32:26.000000Z",
+              "updated_at": "2021-08-01T07:32:26.000000Z"
+            },
+            "content": "nice",
+            "tnc": "you should buy",
+            "weight": "9",
+            "price": "1200000",
+            "discount_type": "nominal",
+            "discount": null,
+            "stocks": "12",
+            "pin": null,
+            "created_at": "2021-08-01T07:47:41.000000Z",
+            "updated_at": "2021-08-01T07:47:41.000000Z"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Creating Product Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "title": [
+              "The title field is required."
+            ],
+            "category_id": [
+              "The category id field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - description: ""
+          disabled: false
+          id: pair_86997d4df9704cc79defeada0eaa56fa
+          name: title
+          value: computers baru
+        - description: ""
+          disabled: false
+          id: pair_6b1a129751ef4961b2fe46b93457f860
+          name: category_id
+          value: 61cd9565-7c81-4648-ba14-7c88afc71c8b
+        - description: ""
+          id: pair_340b627a78f24245b7a87eecaac8957a
+          name: type
+          value: physical
+        - description: ""
+          disabled: false
+          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          id: pair_5840ce6a1a7a4eaead52719733778cfc
+          name: image
+          type: file
+          value: ""
+        - description: ""
+          id: pair_a03b3b5721fa48198c83467efad589d6
+          name: merk
+          value: asus
+        - description: ""
+          id: pair_1f76324de37341508dd29570a956a8b9
+          name: content
+          value: nice
+        - description: ""
+          id: pair_6c08dcbcff4949deb46310b7043a2d22
+          name: tnc
+          value: you should buy
+        - description: ""
+          disabled: false
+          id: pair_fc95df7d6b244e6a8740eab83ad8769a
+          name: weight
+          value: "9"
+        - description: ""
+          id: pair_b3cc0ab53e424550b4995b7ce53d36d8
+          name: price
+          value: "1200000"
+        - description: ""
+          id: pair_ebd71b9930384dcebafb59ebb48a5d70
+          name: discount_type
+          value: nominal
+        - description: ""
+          id: pair_0143ac9ba5ff4793824a653723f3ed33
+          name: discount
+          value: ""
+        - description: ""
+          disabled: false
+          id: pair_46369d748f2142c6aac1fb6b511e856a
+          name: stocks
+          value: "12"
+        - description: ""
+          id: pair_4984cde019fe4809890a758ac2b60924
+          name: domain
+          value: example.net
+        - description: ""
+          id: pair_15423095971144d3b43503366f4eb1a6
+          name: affiliate_type
+          value: nominal
+        - description: ""
+          id: pair_be7fc932c610474386685c27389547cf
+          name: affiliate_fee
+          value: "10000"
+        - description: ""
+          id: pair_dd9f0f2206d94bd898e047778294b908
+          name: reseller_price
+          value: "1300000"
+        - description: ""
+          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          id: pair_157eda21bdb04d98a064630cfa4f6dab
+          name: images[]
+          type: file
+          value: ""
+        - description: ""
+          fileName: C:\Users\ADHIT\Downloads\201609435_2020-10-22_6cf0d149ad79d7a42aac39a6b20bd4a3.png
+          id: pair_2c19cff44a334793849fde362c197a01
+          name: images[]
+          type: file
+          value: ""
+    parameters: []
+    headers:
+      - id: pair_c8ed9fb2408548c2a994e799dd9a7fea
+        name: Content-Type
+        value: multipart/form-data
+      - description: ""
+        id: pair_e2e084980e544cbda0d83e81397ce953
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg1NjMyOTMsImV4cCI6MTYyODU2Njg5MywibmJmIjoxNjI4NTYzMjkzLCJqdGkiOiJ3ekF1MnBHV2tNOWtYRFVvIiwic3ViIjoiZDE5NGFkZTktNDgwOS00MDBkLWIyNzItYTFlMmE2NjEzMGI1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4T8QWKseoMNDelVGyOhZ8B5iiRyofFSl9loCZqgaHwI
+      type: bearer
+    metaSortKey: -1627796858385
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_22c8baba9f6f4793a6c9e7515266fc50
+    parentId: fld_f43e15356f6b497686f35f79a062b563
+    modified: 1627975577868
+    created: 1627796848205
+    name: Product
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627480776191
+    _type: request_group
+  - _id: req_fa39e54801bd4efaae8a5690542f2d39
+    parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
+    modified: 1628558926659
+    created: 1627805393173
+    url: "{{ _.baseurl }}/api/admin/product/910cf7ac-dc25-4916-ab74-752d47117ba2"
+    name: UPDATE
+    description: >-
+      ## Method (PATCH)
+
+      ## Route
+
+      ```
+
+      /api/admin/product/{product_id}
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |product_id|uuid|yes|route param|231gr-4324nf|
+
+      |title|string|yes|body|samsung a12|
+
+      |type|enum(digital,physical)|yes|body|physical|
+
+      |category_id|uuid|required|body|asd231-231423-231|
+
+      |image|file|optional|body|picture|
+
+      |images[]|image(array)|optional|body|picture|
+
+      |merk|string|yes|body|samsung|
+
+      |content|string|yes|body|lorem ipsum|
+
+      |weight|string|yes (if type physical)|body|12|
+
+      |stocks|string|yes (if type physical)|body|123|
+
+      |price|int|yes|body|12000000|
+
+      |discount_type|enum(presentase, nominal)|optional|body|presentase|
+
+      |discount|int|yes (if discount_type not null)|body|50|
+
+      |tnc|string|yes|body|lorem ipsum|
+
+      |domain|string|yes|body|kumi.id|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Product Updated!"
+        },
+        "data": {
+          "Product": {
+            "id": "c0360470-ed09-414f-86ec-c4c851176b71",
+            "title": "Computer",
+            "slug": "computer",
+            "type": "physical",
+            "merk": "ASUS",
+            "image": "https:\/\/kumi-backend.apps\/storage\/products\/example_net\/products\/o6lJu68UZwuI1ThM3C2xMy2IKe1dfR4aKb8fF9xB.png",
+            "category": {
+              "id": "f7e7267a-2527-4c5a-88c5-6a5475747d86",
+              "name": "Computer",
+              "slug": "computer",
+              "image": "https:\/\/kumi-backend.apps\/storage\/example_net\/categories\/MdFm4JU7VxPgmaU5AkeDtgbQHVW3tgFCNlhc6Yfm.png",
+              "created_at": "2021-08-01T07:32:26.000000Z",
+              "updated_at": "2021-08-01T07:32:26.000000Z"
+            },
+            "content": "nice",
+            "tnc": "you should buy",
+            "weight": "9",
+            "price": "1200000",
+            "discount_type": "nominal",
+            "discount": null,
+            "stocks": "12",
+            "pin": null,
+            "created_at": "2021-08-01T07:47:41.000000Z",
+            "updated_at": "2021-08-01T07:47:41.000000Z"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Product Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "title": [
+              "The title field is required."
+            ],
+            "category_id": [
+              "The category id field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - description: ""
+          disabled: false
+          id: pair_86997d4df9704cc79defeada0eaa56fa
+          name: title
+          value: Computers Baru
+        - description: ""
+          disabled: false
+          id: pair_6b1a129751ef4961b2fe46b93457f860
+          name: category_id
+          value: f197db19-51d8-459a-a337-a2f34d3fdb98
+        - description: ""
+          id: pair_340b627a78f24245b7a87eecaac8957a
+          name: type
+          value: physical
+        - description: ""
+          disabled: false
+          fileName: C:\Users\ADHIT\Downloads\sad.PNG
+          id: pair_5840ce6a1a7a4eaead52719733778cfc
+          multiline: false
+          name: image
+          type: text
+          value: ""
+        - description: ""
+          id: pair_a03b3b5721fa48198c83467efad589d6
+          name: merk
+          value: asus
+        - description: ""
+          id: pair_1f76324de37341508dd29570a956a8b9
+          name: content
+          value: nice
+        - description: ""
+          id: pair_6c08dcbcff4949deb46310b7043a2d22
+          name: tnc
+          value: you should buy
+        - description: ""
+          disabled: false
+          id: pair_fc95df7d6b244e6a8740eab83ad8769a
+          name: weight
+          value: "9"
+        - description: ""
+          id: pair_b3cc0ab53e424550b4995b7ce53d36d8
+          name: price
+          value: "1200000"
+        - description: ""
+          id: pair_ebd71b9930384dcebafb59ebb48a5d70
+          name: discount_type
+          value: nominal
+        - description: ""
+          id: pair_0143ac9ba5ff4793824a653723f3ed33
+          name: discount
+          value: ""
+        - description: ""
+          disabled: false
+          id: pair_46369d748f2142c6aac1fb6b511e856a
+          name: stocks
+          value: "12"
+        - description: ""
+          disabled: false
+          id: pair_13cf5984a82648b28807180d8017c50f
+          name: _method
+          value: PATCH
+        - description: ""
+          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          id: pair_44890a5d4ca04816b18b725017dc4646
+          name: images[]
+          type: file
+          value: ""
+        - description: ""
+          disabled: true
+          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          id: pair_d65360f962f84b63a65e0e3b84293132
+          name: images[]
+          type: file
+          value: ""
+        - description: ""
+          disabled: true
+          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          id: pair_3873b487f97445fb969821c0bc5b3e89
+          name: images[]
+          type: file
+          value: ""
+    parameters: []
+    headers:
+      - id: pair_2b0061477dd64c27b59032972f9f966a
+        name: Content-Type
+        value: multipart/form-data
+      - id: pair_c8ed9fb2408548c2a994e799dd9a7fea
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MjgyNjAzODcsImV4cCI6MTYyODI2Mzk4NywibmJmIjoxNjI4MjYwMzg3LCJqdGkiOiJWRjVrNjF1dkNXOEl2em1oIiwic3ViIjoiYjEyNWFiMzAtYjRhMy00ZWMzLWI2OGYtOTBiNjM4MzNmNDcwIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.PcGBCnyw1QvtQJUiCjQZixK55tZkNhI9hGmfberFVac
+      type: bearer
+    metaSortKey: -1627765972661.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4d96686d7f6941ebaf2b59f36f23f976
+    parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
+    modified: 1628558926651
+    created: 1627807785254
+    url: "{{ _.baseurl }}/api/admin/product/8d179771-9744-4cc2-9f90-cdb5bb5403a0"
+    name: DELETE
+    description: |-
+      ## Method (DELETE)
+      ## Route
+      ```
+      /api/product/{product}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|------------|
+      |product|uuid|yes|route param|146f4f17-ed48-4001-d58b18ae0b7e|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Product Deleted!"
+        },
+        "data": [
+          "success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Product Not Found!",
+          "error": "No query results for model [App\\Models\\Product]."
+        }
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_c257c1ef740f42f8bbebb36212099c3e
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1627807785255
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_41b214f6e3d94645a6cbfbd88c08b1aa
+    parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
+    modified: 1628579304573
+    created: 1627808180434
+    url: "{{ _.baseurl }}/api/admin/product/1a6f2040-f591-4791-8aa6-4ca9c861a391"
+    name: SHOW
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/admin/product/{product}
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
+
+      |product|uuid|yes|route param|32fdsdf-34832dv|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "Product": {
+            "id": "146f4f17-ed48-4001-a524-d58b18ae0b7e",
+            "title": "Computers",
+            "slug": "computers",
+            "type": "physical",
+            "merk": "ASUS",
+            "image": "https:\/\/kumi-backend.apps\/storage\/products\/example_net\/products\/5sY6AEjzKdu2aud7lKcAvhR6Fn2CJ7R9zYaPK1CK.png",
+            "category": {
+              "id": "f7e7267a-2527-4c5a-88c5-6a5475747d86",
+              "name": "Computer",
+              "slug": "computer",
+              "image": "https:\/\/kumi-backend.apps\/storage\/example_net\/categories\/MdFm4JU7VxPgmaU5AkeDtgbQHVW3tgFCNlhc6Yfm.png",
+              "created_at": "2021-08-01T07:32:26.000000Z",
+              "updated_at": "2021-08-01T07:32:26.000000Z"
+            },
+            "content": "nice",
+            "tnc": "you should buy",
+            "weight": 9,
+            "price": 1200000,
+            "discount_type": "nominal",
+            "discount": null,
+            "stocks": 12,
+            "pin": null,
+            "created_at": "2021-08-01T08:58:20.000000Z",
+            "updated_at": "2021-08-01T08:58:20.000000Z"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Not Found
+
+      ```
+
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Product Not Found!",
+          "error": "No query results for model [App\\Models\\Product]."
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_dce1818d1291457e8682bc1bc7275fd6
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      disabled: false
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg1NjMyOTMsImV4cCI6MTYyODU2Njg5MywibmJmIjoxNjI4NTYzMjkzLCJqdGkiOiJ3ekF1MnBHV2tNOWtYRFVvIiwic3ViIjoiZDE5NGFkZTktNDgwOS00MDBkLWIyNzItYTFlMmE2NjEzMGI1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4T8QWKseoMNDelVGyOhZ8B5iiRyofFSl9loCZqgaHwI
+      type: bearer
+    metaSortKey: -1627808180434
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b30d4ee444f94a87a4a8139e9c6a8d46
+    parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
+    modified: 1628579304575
+    created: 1627808730167
+    url: "{{ _.baseurl }}/api/admin/products"
+    name: INDEX
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/admin/products
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "Products": [
+            {
+              "id": "146f4f17-ed48-4001-a524-d58b18ae0b7e",
+              "title": "Computers",
+              "slug": "computers",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "https:\/\/kumi-backend.apps\/storage\/products\/example_net\/products\/5sY6AEjzKdu2aud7lKcAvhR6Fn2CJ7R9zYaPK1CK.png",
+              "category": {
+                "id": "f7e7267a-2527-4c5a-88c5-6a5475747d86",
+                "name": "Computer",
+                "slug": "computer",
+                "image": "https:\/\/kumi-backend.apps\/storage\/example_net\/categories\/MdFm4JU7VxPgmaU5AkeDtgbQHVW3tgFCNlhc6Yfm.png",
+                "created_at": "2021-08-01T07:32:26.000000Z",
+                "updated_at": "2021-08-01T07:32:26.000000Z"
+              },
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "discount_type": "nominal",
+              "discount": null,
+              "stocks": 12,
+              "pin": null,
+              "created_at": "2021-08-01T08:58:20.000000Z",
+              "updated_at": "2021-08-01T08:58:20.000000Z"
+            }
+          ]
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Not Found
+
+      ```
+
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Product\/Domain Not Found!",
+          "error": "No query results for model [App\\Models\\Member]."
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        disabled: false
+        id: pair_bb22181a0f1d4bf5a69e4745f40453f7
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg1NjMyOTMsImV4cCI6MTYyODU2Njg5MywibmJmIjoxNjI4NTYzMjkzLCJqdGkiOiJ3ekF1MnBHV2tNOWtYRFVvIiwic3ViIjoiZDE5NGFkZTktNDgwOS00MDBkLWIyNzItYTFlMmE2NjEzMGI1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4T8QWKseoMNDelVGyOhZ8B5iiRyofFSl9loCZqgaHwI
+      type: bearer
+    metaSortKey: -1627808730167
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cbbf5db9d0824590823f78c00b2d0201
+    parentId: fld_b1995b6ee49d412d95457293f7eeb62d
+    modified: 1628558926655
+    created: 1627975785082
+    url: "{{ _.baseurl }}/api/reseller/products"
+    name: INDEX
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/reseller/products
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "products": [
+            {
+              "id": "146f4f17-ed48-4001-a524-d58b18ae0b7e",
+              "title": "Computers",
+              "slug": "computers",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "https:\/\/kumi-backend.apps\/storage\/products\/example_net\/products\/5sY6AEjzKdu2aud7lKcAvhR6Fn2CJ7R9zYaPK1CK.png",
+              "category": {
+                "id": "f7e7267a-2527-4c5a-88c5-6a5475747d86",
+                "name": "Computer",
+                "slug": "computer",
+                "image": "https:\/\/kumi-backend.apps\/storage\/example_net\/categories\/MdFm4JU7VxPgmaU5AkeDtgbQHVW3tgFCNlhc6Yfm.png",
+                "created_at": "2021-08-01T07:32:26.000000Z",
+                "updated_at": "2021-08-01T07:32:26.000000Z"
+              },
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "reseller_price": 1100000,
+              "discount_type": "nominal",
+              "discount": null,
+              "stocks": 12,
+              "pin": null,
+              "created_at": "2021-08-01T08:58:20.000000Z",
+              "updated_at": "2021-08-01T08:58:20.000000Z"
+            }
+          ]
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Not Found
+
+      ```
+
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Product\/Domain Not Found!",
+          "error": "No query results for model [App\\Models\\Member]."
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1627975785082
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_b1995b6ee49d412d95457293f7eeb62d
+    parentId: fld_40aeee4e68224603904889666c7f2a8c
+    modified: 1627975774954
+    created: 1627975774954
+    name: Product
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627975774954
+    _type: request_group
+  - _id: req_c288d3e73ce44e638f3302aa0160758d
+    parentId: fld_9bc62c625a464a97a31cdb3efa7d43cd
+    modified: 1628558926648
+    created: 1628492215593
+    url: "{{ _.baseurl }}/api/profile"
+    name: SHOW
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_aa9dddd71a4a4203bd31e453bc36562e
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg0ODg3MTQsImV4cCI6MTYyODQ5MjMxNCwibmJmIjoxNjI4NDg4NzE0LCJqdGkiOiI3b0xHUE1QeThnZkh2ZVhGIiwic3ViIjoiZGNlMjg4MmMtMDFiMi00MDYxLTg3MGItNzM2MzljM2ZlZGY1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.sDDOmMlmXAyHvrLbtg42yl9eProctdCa2zO4vgZOk5E
+      type: bearer
+    metaSortKey: -1628488698762
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9bc62c625a464a97a31cdb3efa7d43cd
+    parentId: fld_40aeee4e68224603904889666c7f2a8c
+    modified: 1628558926642
+    created: 1628492215589
+    name: Profile
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627975775004
+    _type: request_group
+  - _id: req_3379dbe9fde94534a3c734487d2f4a2f
+    parentId: fld_9bc62c625a464a97a31cdb3efa7d43cd
+    modified: 1628558926643
+    created: 1628492215597
+    url: "{{ _.baseurl }}/api/profile/dce2882c-01b2-4061-870b-73639c3fedf5"
+    name: UPDATE
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - description: ""
+          id: pair_a96ef3c17f59442b9a88cf7839bde8f4
+          name: _method
+          value: PATCH
+        - description: ""
+          id: pair_c19ea0861b55408f8b189636935a2b32
+          name: name
+          value: customer
+        - description: ""
+          id: pair_b6226b20e819412db9d893d8523baa80
+          name: email
+          value: customer@kumi.id
+        - description: ""
+          id: pair_9b309d9496964fa2a6389409e12dd100
+          name: phone_number
+          value: "87764281911"
+        - description: ""
+          id: pair_95f201ba1d69459b8ef83fcc58ebb8de
+          name: jenkel
+          value: p
+    parameters: []
+    headers:
+      - id: pair_baaf127c69214313b1e6fde89c3e2e55
+        name: Content-Type
+        value: application/x-www-form-urlencoded
+      - description: ""
+        id: pair_6cfefba3aa2c481daefa9875c998fa80
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg0ODk4MzksImV4cCI6MTYyODQ5MzQzOSwibmJmIjoxNjI4NDg5ODM5LCJqdGkiOiJweHY5cFpyZHRVU1VGQ1VyIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.PkOboQZYSzkD8QyWPEuaxDKrxDNFp6A_kBR0rNt7fwo
+      type: bearer
+    metaSortKey: -1628489475880
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_865b973f21134f5bac8c08c59b42825d
+    parentId: fld_e65f864a07d74cd7bbbee4489781c6b2
+    modified: 1628558926653
+    created: 1628262150828
+    url: "{{ _.baseurl
+      }}/api/admin/product/gallery/910cf7ac-dc25-4916-ab74-752d47117ba2"
+    name: CREATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/admin/gallery/{product}
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |product|uuid|yes|route param|asdfnasjfhjas-asfasfnf-sfa|
+
+      |images[]|image(array)|yes|body|picture|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Gallery Created!"
+        },
+        "data": {
+          "product": {
+            "id": "910cf7ac-dc25-4916-ab74-752d47117ba2",
+            "title": "Computers Baru",
+            "slug": "computers-baru",
+            "type": "physical",
+            "merk": "ASUS",
+            "image": "http:\/\/kumi-backend.apps\/storage\/products\/8647d07b-de2e-4544-82f1-16c86c71e58a\/products\/HR7CNAI9DNnqg51kJafZAFK7Od2xo1sxtq3SDiRg.png",
+            "galleries": [
+              {
+                "image": "8647d07b-de2e-4544-82f1-16c86c71e58a\/products\/40DXUqnudCVlcqmwFLydGUTwl3hzsIDMGjSOY7B5.png",
+                "sorter": 1
+              },
+              {
+                "image": "8647d07b-de2e-4544-82f1-16c86c71e58a\/products\/GrcixftSH1gwgabjqzY9Q9ogAF0GksoC3HO465jh.png",
+                "sorter": 0
+              },
+              {
+                "image": "8647d07b-de2e-4544-82f1-16c86c71e58a\/products\/mm26iFwaodKGEOly8LoGeVBH0fdoI65Wkud5Pt1u.png",
+                "sorter": 0
+              },
+              {
+                "image": "8647d07b-de2e-4544-82f1-16c86c71e58a\/products\/06VPqtglI7oQ7Y5Or8p6CknEICKvepm5dbYIkCXX.png",
+                "sorter": 1
+              }
+            ],
+            "category": {
+              "id": "f197db19-51d8-459a-a337-a2f34d3fdb98",
+              "name": "Computer",
+              "slug": "computer",
+              "image": "http:\/\/kumi-backend.apps\/storage\/example_net\/categories\/m0VkZJTs8yMPWpiAlmNvZINXG9mockfo5qGXRpvw.png",
+              "created_at": "2021-08-06T13:39:03.000000Z",
+              "updated_at": "2021-08-06T13:39:03.000000Z"
+            },
+            "content": "nice",
+            "tnc": "you should buy",
+            "weight": 9,
+            "price": 1200000,
+            "stocks": 12,
+            "reseller_price": 1300000,
+            "discount_type": "nominal",
+            "discount": null,
+            "affiliate_type": "nominal",
+            "affiliate_fee": 10000,
+            "pin": null,
+            "created_at": "2021-08-06T13:42:58.000000Z",
+            "updated_at": "2021-08-06T13:42:58.000000Z"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Creating Product Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "title": [
+              "The iamges field must be image."
+            ],
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - description: ""
+          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          id: pair_35433fd1658f444da57448edeb6005d5
+          name: images[]
+          type: file
+          value: ""
+        - description: ""
+          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          id: pair_8ab7138d215348acb5c7433291a853f1
+          name: images[]
+          type: file
+          value: ""
+    parameters: []
+    headers:
+      - id: pair_7ee453a5d681404fbf440f327b8f3912
+        name: Content-Type
+        value: multipart/form-data
+      - description: ""
+        id: pair_8acbb4fae0604c16ac3a58d7ba98a370
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MjgyNjIzMTIsImV4cCI6MTYyODI2NTkxMiwibmJmIjoxNjI4MjYyMzEyLCJqdGkiOiJZb1o2UzRnWjhON0JoV1V4Iiwic3ViIjoiYjEyNWFiMzAtYjRhMy00ZWMzLWI2OGYtOTBiNjM4MzNmNDcwIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4CLMhWzZpQkevxtQJxa2BCBfYmNewkoJ1vHw6VcTXfs
+      type: bearer
+    metaSortKey: -1628262150829
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e65f864a07d74cd7bbbee4489781c6b2
+    parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
+    modified: 1628470362662
+    created: 1628262137061
+    name: Gallery
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1628262137061
+    _type: request_group
+  - _id: req_e116a62cfef7428288a44cd299904153
+    parentId: fld_e65f864a07d74cd7bbbee4489781c6b2
+    modified: 1628558926657
+    created: 1628262462715
+    url: "{{ _.baseurl
+      }}/api/admin/gallery/910cf7ac-dc25-4916-ab74-752d47117ba2/04b808e2-e772-4\
+      00e-a9a6-ae126a20c924"
+    name: DELETE
+    description: |-
+      ## Method (DELETE)
+      ## Route
+      ```
+      /api/admin/gallery/{product}/{gallery}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|------------|
+      |product|uuid|yes|route param|146f4f17-ed48-4001-d58b18ae0b7e|
+      |gallery|uuid|yes|route param|146f4f17-sdsds-4001-d58b18ae0b7e|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Gallery Deleted!"
+        },
+        "data": [
+          "success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Product Not Found!",
+          "error": "No query results for model [App\\Models\\Gallery]."
+        }
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_43a7966880b446a7896cdea7eed2e44f
+        name: ""
+        value: ""
+      - description: ""
+        id: pair_24a040b8238e4c2c81a0e107ad732100
+        name: ""
+        value: ""
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MjgyNjIzMTIsImV4cCI6MTYyODI2NTkxMiwibmJmIjoxNjI4MjYyMzEyLCJqdGkiOiJZb1o2UzRnWjhON0JoV1V4Iiwic3ViIjoiYjEyNWFiMzAtYjRhMy00ZWMzLWI2OGYtOTBiNjM4MzNmNDcwIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4CLMhWzZpQkevxtQJxa2BCBfYmNewkoJ1vHw6VcTXfs
+      type: bearer
+    metaSortKey: -1628262462715
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_2208ee768dc2295a39591cbb03562119586d56c8
+    parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
+    modified: 1628579301679
+    created: 1626332572608
+    name: Base Environment
+    data:
+      baseurl: http://kumi-backend.apps
+      domain: example.net
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MjgwODI5ODMsImV4cCI6MTYyODA4NjU4MywibmJmIjoxNjI4MDgyOTgzLCJqdGkiOiJpYmE0Q1lQN0NtR3l2ekpuIiwic3ViIjoiMDI4NjBhZjMtMmZkMS00N2ZiLTgwZjYtNGM5MWU2N2UxZGM4IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.kzTxuCMZcgX1ArJ6NRVHg2ihPZ6gBk8bUHzv4IUKrO4
+    dataPropertyOrder:
+      "&":
+        - baseurl
+        - token
+        - domain
+    color: null
+    isPrivate: false
+    metaSortKey: 1626332572608
+    _type: environment
+  - _id: jar_2208ee768dc2295a39591cbb03562119586d56c8
+    parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
+    modified: 1628566830170
+    created: 1626332572611
+    name: Default Jar
+    cookies:
+      - key: XSRF-TOKEN
+        value: eyJpdiI6ImFpZFJYaitTbzhGRWVLWGV4YlRaOEE9PSIsInZhbHVlIjoiZW5SQW9lZmRKOVJpVEpJMHhYTHlKb0ovUTdTNWJQVW5mMjhPaG9TdnpZVFVXZHcwUXdRc0lIWEtia3lselFGa0VQV25PMmlnS29xMXdEenJlc2RPZlJaMmNhMnhMMmd3ZENPcXJtVlBGNjRWVlZKU1FUR1VPU0xHeW1KWVhDWFoiLCJtYWMiOiI2YTc4MjVhY2QyOTI3YzQ0YzJlOGMxYjhjNzY1YWM1NzE3YTQ5NTlhZGQ0ODQxYTk1ZDhjYzRmZjIzNzM5ZGI4In0%3D
+        expires: 2021-08-10T05:40:30.000Z
+        maxAge: 7200
+        domain: kumi-backend.apps
+        path: /
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2021-08-04T02:11:09.642Z
+        lastAccessed: 2021-08-10T03:40:30.164Z
+        id: "6631990797477594"
+      - key: laravel_session
+        value: eyJpdiI6IjJGcENrc2pOTEYxL0VVbGg0NGRvVFE9PSIsInZhbHVlIjoiaGR2VEJJYnJkcE1RWTNlUTltUFNxUWhzT0p4RXBoZ0xZZlZBeEVDdzl2dVo1WkJwTW1FdDhqdjh2NEZnb3F0SkRsMWhIaUhGMWFIaWlsQVB6VXJqSmphSnJMN3JSYlVrMGV0VHowdC8wVEhzRWJ6SGFxaEZwdXI3RFErSEZ1MEQiLCJtYWMiOiIxZTc0OTBiMzc5YTAxOTVjMmZkN2ZjODA2ZjBhYWI2NGM3NDhmYzNhNzIyYmFhOTg0YmMxZTI0ZDBlMjIwMWIxIn0%3D
+        expires: 2021-08-10T05:40:30.000Z
+        maxAge: 7200
+        domain: kumi-backend.apps
+        path: /
+        httpOnly: true
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2021-08-04T02:11:09.643Z
+        lastAccessed: 2021-08-10T03:40:30.164Z
+        id: "17029088090509625"
+    _type: cookie_jar
+  - _id: spc_50c67a3c3676462d8ec0d0165c8f41eb
+    parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
+    modified: 1626332572484
+    created: 1626332572484
+    fileName: Kumi.id
+    contents: ""
+    contentType: yaml
+    _type: api_spec
