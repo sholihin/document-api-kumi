@@ -1,11 +1,11 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-10T07:59:24.614Z
+__export_date: 2021-08-12T16:11:12.527Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
   - _id: req_3a72d7de1cf34cf88cced81db784a7e4
     parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
-    modified: 1628558926650
+    modified: 1628784114734
     created: 1627482067984
     url: "{{ _.baseurl }}/api/customer/login"
     name: Login Customer
@@ -107,8 +107,8 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"email" : "customer@kumi.id",
-        	"password" : "password"
+        	"email" : "mohamad.sholihin@kumi.id",
+        	"password" : "bismillah"
         }
     parameters: []
     headers:
@@ -149,7 +149,7 @@ resources:
     _type: workspace
   - _id: req_54011a98bd1e4086bb1d53612c76f0a3
     parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
-    modified: 1628558926652
+    modified: 1628783981379
     created: 1627482077340
     url: "{{ _.baseurl }}/api/customer/register"
     name: Register Customer
@@ -162,7 +162,6 @@ resources:
       ## Query Parameters
       |PARAMETER|TYPE|REQUIRED|
       |---------|----|--------|
-      |domain|string|yes|
       |name|string|yes|
       |phone_number|string|yes|
       |email|string|yes|
@@ -235,7 +234,7 @@ resources:
         - description: ""
           id: pair_aab0c323359349568c04ca92cf573c89
           name: email
-          value: mohamad.sholihin.it@gmail.com
+          value: mohamad.sholihin@kumi.id
         - description: ""
           id: pair_cc05e2f61973474aa1c47b1e46936b62
           name: name
@@ -252,15 +251,15 @@ resources:
           id: pair_8fb44b7133e94e6b9bb1350418710f59
           name: password_confirmation
           value: bismillah
-        - description: ""
-          id: pair_c30c88829b494fae82ee765e6ec87882
-          name: domain
-          value: http://localhost:8080
     parameters: []
     headers:
       - id: pair_5e963fb2fc0c45149a90ae275816c00b
         name: Content-Type
         value: multipart/form-data
+      - id: pair_818ae3a07aee41a2b90fd0120e6543c1
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+        description: ""
     authentication: {}
     metaSortKey: -1627482077340
     isPrivate: false
@@ -665,7 +664,7 @@ resources:
     _type: request
   - _id: req_d38ad031cf77436a8ed19f0444c99a2d
     parentId: fld_168e9ee64829406a88115d31cffb365e
-    modified: 1628558926656
+    modified: 1628731043986
     created: 1627488560438
     url: "{{ _.baseurl
       }}/api/email/verify/e32dbf52-5bda-4c75-8dd8-6021bd5b473a/817304dcd8ad730c\
@@ -748,7 +747,7 @@ resources:
         value: "{{ _.domain }}"
     authentication:
       prefix: ""
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2MjgyMzYyNzQsImV4cCI6MTYyODIzOTg3NCwibmJmIjoxNjI4MjM2Mjc0LCJqdGkiOiJSZG9jb3djVXhMTzE1aTFxIiwic3ViIjoiZTMyZGJmNTItNWJkYS00Yzc1LThkZDgtNjAyMWJkNWI0NzNhIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.hKE-MxfJIPA-2Lwk4CfjYwJPncPZZE9zq-mPMhv3u3w
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627855767407
     isPrivate: false
@@ -771,7 +770,7 @@ resources:
     _type: request_group
   - _id: req_142eaa29bccf44038f9ba39f66a6ab1d
     parentId: fld_168e9ee64829406a88115d31cffb365e
-    modified: 1628558926649
+    modified: 1628782990878
     created: 1627489785365
     url: "{{ _.baseurl }}/api/email/verification-notification"
     name: RESENT VERIFICATION
@@ -828,7 +827,7 @@ resources:
         name: Content-Type
         value: application/json
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2MjgyMzYyNzQsImV4cCI6MTYyODIzOTg3NCwibmJmIjoxNjI4MjM2Mjc0LCJqdGkiOiJSZG9jb3djVXhMTzE1aTFxIiwic3ViIjoiZTMyZGJmNTItNWJkYS00Yzc1LThkZDgtNjAyMWJkNWI0NzNhIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.hKE-MxfJIPA-2Lwk4CfjYwJPncPZZE9zq-mPMhv3u3w
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627855767357
     isPrivate: false
@@ -841,7 +840,7 @@ resources:
     _type: request
   - _id: req_db213b75112b45c9b89210c57c3e7582
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628579304576
+    modified: 1628733319971
     created: 1628319613782
     url: "{{ _.baseurl }}/api/cart"
     name: CREATE
@@ -974,7 +973,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg1NjUyNDksImV4cCI6MTYyODU2ODg0OSwibmJmIjoxNjI4NTY1MjQ5LCJqdGkiOiJLbkFQTTZEYkFacm5OMDVYIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.L2NknGGvKSCMRk8vKGXLVELjjOhDl0xICTTMQFxMEpQ
+      token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628319613782
     isPrivate: false
@@ -1205,7 +1204,7 @@ resources:
     _type: request
   - _id: req_cb9a416ea1a345b6a4bbdfc75a4d888d
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628579304575
+    modified: 1628733351168
     created: 1628404474690
     url: "{{ _.baseurl }}/api/cart"
     name: INDEX
@@ -1303,13 +1302,13 @@ resources:
       - description: ""
         id: pair_76ffb2c492b0467587b0413d0263acd8
         name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
+        value: sda
       - description: ""
         id: pair_8cda0aeabfc74640aa737fc2069a2e2b
         name: ""
         value: ""
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg1NjY0MjMsImV4cCI6MTYyODU3MDAyMywibmJmIjoxNjI4NTY2NDIzLCJqdGkiOiJ4ZGpXZlB3UEJzNEZiQ2ZXIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.bRbvMvOf1rP5Ymoy5wVYMFsHc2Uv0NWXzNMyhGFaA1k
+      token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628404474690
     isPrivate: false
@@ -1322,11 +1321,73 @@ resources:
     _type: request
   - _id: req_a739ed41fba24092bcd0351d589a20ea
     parentId: fld_a4001d26408346ea836cc2f449a26646
-    modified: 1628558926647
+    modified: 1628783528306
     created: 1628488698762
-    url: "{{ _.baseurl }}/api/profile"
+    url: "{{ _.baseurl }}/api/customer/profile"
     name: SHOW
-    description: ""
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/customer/profile
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Listed!"
+        },
+        "data": {
+          "user": {
+            "id": "c16e9bbd-a40b-4ae5-bd6c-7d6ed9bbaa7e",
+            "name": "Mohamad Sholihin",
+            "email": "mohamad.sholihin.it@gmail.com",
+            "phone_number": "08123123123",
+            "avatar": "https:\/\/ui-avatars.com\/api\/?name=Mohamad+Sholihin&background=4e73df&color=ffffff&size=100",
+            "jenkel": "L"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Not Found
+
+      ```
+
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Profile Not Found!",
+          "error": "No query results for model [App\\Models\\User]."
+        }
+      }
+
+      ```
     method: GET
     body: {}
     parameters: []
@@ -1335,8 +1396,12 @@ resources:
         id: pair_aa9dddd71a4a4203bd31e453bc36562e
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
+      - id: pair_eff3fffe81ff45bc885be15ede8a415e
+        name: ""
+        value: ""
+        description: ""
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg0ODg3MTQsImV4cCI6MTYyODQ5MjMxNCwibmJmIjoxNjI4NDg4NzE0LCJqdGkiOiI3b0xHUE1QeThnZkh2ZVhGIiwic3ViIjoiZGNlMjg4MmMtMDFiMi00MDYxLTg3MGItNzM2MzljM2ZlZGY1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.sDDOmMlmXAyHvrLbtg42yl9eProctdCa2zO4vgZOk5E
+      token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628488698762
     isPrivate: false
@@ -1359,27 +1424,87 @@ resources:
     _type: request_group
   - _id: req_922000d6838c4296ba63f1a7d659b333
     parentId: fld_a4001d26408346ea836cc2f449a26646
-    modified: 1628558926646
+    modified: 1628784608770
     created: 1628489475880
-    url: "{{ _.baseurl }}/api/profile/dce2882c-01b2-4061-870b-73639c3fedf5"
+    url: "{{ _.baseurl }}/api/customer/profile"
     name: UPDATE
-    description: ""
+    description: >-
+      ## Method (PATCH)
+
+      ## Route
+
+      ```
+
+      /api/customer/profile
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
+
+      |name|string|yes|body|Sholihin|
+
+      |phone_number|string|yes|body|81386006706|
+
+      |jengkel|string|yes|body|L|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Listed!"
+        },
+        "data": {
+          "user": {
+            "id": "c16e9bbd-a40b-4ae5-bd6c-7d6ed9bbaa7e",
+            "name": "Mohamad Sholihin",
+            "email": "mohamad.sholihin.it@gmail.com",
+            "phone_number": "08123123123",
+            "avatar": "https:\/\/ui-avatars.com\/api\/?name=Mohamad+Sholihin&background=4e73df&color=ffffff&size=100",
+            "jenkel": "L"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Not Found
+
+      ```
+
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Profile Can't Updated!",
+          "error": "No query results for model [App\\Models\\User]."
+        }
+      }
+
+      ```
     method: PATCH
     body:
       mimeType: application/x-www-form-urlencoded
       params:
         - description: ""
-          id: pair_a96ef3c17f59442b9a88cf7839bde8f4
-          name: _method
-          value: PATCH
-        - description: ""
           id: pair_c19ea0861b55408f8b189636935a2b32
           name: name
-          value: customer
-        - description: ""
-          id: pair_b6226b20e819412db9d893d8523baa80
-          name: email
-          value: customer@kumi.id
+          value: Sholihin
         - description: ""
           id: pair_9b309d9496964fa2a6389409e12dd100
           name: phone_number
@@ -1387,18 +1512,18 @@ resources:
         - description: ""
           id: pair_95f201ba1d69459b8ef83fcc58ebb8de
           name: jenkel
-          value: p
+          value: L
     parameters: []
     headers:
       - id: pair_baaf127c69214313b1e6fde89c3e2e55
         name: Content-Type
         value: application/x-www-form-urlencoded
-      - description: ""
-        id: pair_6cfefba3aa2c481daefa9875c998fa80
+      - id: pair_cbf9f84aac544e3fa835bc09ee5d4a37
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
+        description: ""
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg0ODk4MzksImV4cCI6MTYyODQ5MzQzOSwibmJmIjoxNjI4NDg5ODM5LCJqdGkiOiJweHY5cFpyZHRVU1VGQ1VyIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.PkOboQZYSzkD8QyWPEuaxDKrxDNFp6A_kBR0rNt7fwo
+      token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628489475880
     isPrivate: false
@@ -1409,9 +1534,941 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
+  - _id: req_abbc95a7018442babbe2731ee6278a5e
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1628712511163
+    created: 1628587628062
+    url: "{{ _.baseurl }}/api/address"
+    name: CREATE
+    description: |-
+      ## Method (POST)
+      ## Route
+      ```
+      /api/address
+      ```
+      ## Query Parameters
+      |PARAMETER|TYPE|REQUIRED|
+      |---------|----|--------|
+      |label|string|yes|
+      |penerima|string|yes|
+      |phone_number|number|yes|
+      |province_id|integer|yes|
+      |city_id|integer|yes|
+      |subdistrict_id|integer|yes|
+      |detail|string|yes|
+      |X-DOMAIN-MEMBER|string|yes|
+
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Address Created!"
+        },
+        "data": {
+          "address": {
+            "label": "home",
+            "penerima": "admin kumi",
+            "phone_number": "0827372412434",
+            "province_id": 1,
+            "province": "Bali",
+            "city_id": 17,
+            "city": "Badung",
+            "subdistrict_id": 258,
+            "subdstrict": "Abiansemal",
+            "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+          }
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Domain Invalid
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Creating Address Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+      ### Validation Input
+      ```
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "subdistrict_id": [
+              "The subdistrict id field is required."
+            ]
+          }
+        }
+      }
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"label" : "home",
+        	"penerima" : "admin kumi",
+        	"phone_number" : "0827372412434", 
+        	"province_id" : 1,
+        	"city_id" : 17,
+        	"subdistrict_id" : 258,
+        	"detail" : "Jl. Angkatan 45 No. 15 Rt.04/15"
+        }
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_46643d4e95a54e46a271e16d140b00c3
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+      - id: pair_996098c40fac486db5c53e6baaaecf00
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg1OTYyNDUsImV4cCI6MTYyODU5OTg0NSwibmJmIjoxNjI4NTk2MjQ1LCJqdGkiOiJVZk5MbldhREFOc2dRYk9YIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4QJTYiZwYlwdjawrjzz9SK2mTCoSVybEulAbfzcQpCQ
+      type: bearer
+    metaSortKey: -1628587628062
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9a09d4cfc90945fe816882c471a27289
+    parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
+    modified: 1628712511161
+    created: 1628587617832
+    name: Address
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1628587617832
+    _type: request_group
+  - _id: req_591cce45ee4444d990572e9056dbead7
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1628733444795
+    created: 1628589132333
+    url: "{{ _.baseurl }}/api/provinces"
+    name: PROVINCES
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_6003373bb6df4e28a32238aa7f743c49
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628589132380
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ea49bc62523e4f7e97f52289cb20f6e8
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1628733454383
+    created: 1628589485359
+    url: "{{ _.baseurl }}/api/cities/1"
+    name: CITY
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_be56df29959a41ceae75139b1acd97e7
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628589485359
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6e4175be6b924a6f828ad42ae06e3f83
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1628733462960
+    created: 1628592001721
+    url: "{{ _.baseurl }}/api/subdistricts/17"
+    name: SUBDISTRICT
+    description: |-
+      ## Method (GET)
+      ## Route
+      ```
+      /api/subdistricts/{province}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |province|integer|yes|route param|1|
+      |X-DOMAIN-MEMBER|string|yes|header|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "cities": [
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 258,
+              "subdistrict": "Abiansemal"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 259,
+              "subdistrict": "Kuta"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 260,
+              "subdistrict": "Kuta Selatan"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 261,
+              "subdistrict": "Kuta Utara"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 262,
+              "subdistrict": "Mengwi"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 263,
+              "subdistrict": "Petang"
+            }
+          ]
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Showing District Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_51449915fcb249a399473d183872428e
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628592001721
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_63b862df194148b88d3a4ab91bdd613e
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1628712511162
+    created: 1628596208474
+    url: "{{ _.baseurl }}/api/address/2ce3a46c-704e-4de7-8db7-0e7fb0170044"
+    name: UPDATE
+    description: |-
+      ## Method (POST)
+      ## Route
+      ```
+      /api/address/{address}
+      ```
+      ## Query Parameters
+      |PARAMETER|TYPE|REQUIRED|
+      |---------|----|--------|
+      |address|uuid|yes|
+      |label|string|yes|
+      |penerima|string|yes|
+      |phone_number|number|yes|
+      |province_id|integer|yes|
+      |city_id|integer|yes|
+      |subdistrict_id|integer|yes|
+      |detail|string|yes|
+      |X-DOMAIN-MEMBER|string|yes|
+
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Address Updated!"
+        },
+        "data": {
+          "address": {
+            "label": "home",
+            "penerima": "saya",
+            "phone_number": "0827372412434",
+            "province_id": 1,
+            "province": "Bali",
+            "city_id": 17,
+            "city": "Badung",
+            "subdistrict_id": 258,
+            "subdstrict": "Abiansemal",
+            "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+          }
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Domain Invalid
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Creating Address Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+      ### Validation Input
+      ```
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "subdistrict_id": [
+              "The subdistrict id field is required."
+            ]
+          }
+        }
+      }
+      ```
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"label" : "home",
+        	"penerima" : "saya",
+        	"phone_number" : "0827372412434", 
+        	"province_id" : 1,
+        	"city_id" : 17,
+        	"subdistrict_id" : 258,
+        	"detail" : "Jl. Angkatan 45 No. 15 Rt.04/15"
+        }
+    parameters: []
+    headers:
+      - id: pair_6370e14b2d9a42b8a9d47e88e1deca5d
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_a38c8a33a3644dd1adf5c0b2715fa865
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg1OTYyNDUsImV4cCI6MTYyODU5OTg0NSwibmJmIjoxNjI4NTk2MjQ1LCJqdGkiOiJVZk5MbldhREFOc2dRYk9YIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4QJTYiZwYlwdjawrjzz9SK2mTCoSVybEulAbfzcQpCQ
+      type: bearer
+    metaSortKey: -1628596208522
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_88d4cf9903724f21981f1847c36dffd4
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1628733417619
+    created: 1628596443794
+    url: "{{ _.baseurl }}/api/address"
+    name: INDEX
+    description: |-
+      ## Method (GET)
+      ## Route
+      ```
+      /api/address
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |X-DOMAIN-MEMBER|string|yes|header|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "addresses": [
+            {
+              "label": "home",
+              "penerima": "admin kumi",
+              "phone_number": "0827372412434",
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "subdistrict_id": 258,
+              "subdstrict": "Abiansemal",
+              "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+            },
+            {
+              "label": "home",
+              "penerima": "saya",
+              "phone_number": "0827372412434",
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "subdistrict_id": 258,
+              "subdstrict": "Abiansemal",
+              "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+            }
+          ]
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Category Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_275183d77d0c424886955b3ff76dd0e4
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628596443794
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_788ca0039dbb4128a12a7e38046429de
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1628712511163
+    created: 1628596536766
+    url: "{{ _.baseurl }}/api/address/2ce3a46c-704e-4de7-8db7-0e7fb0170044"
+    name: DELETE
+    description: |
+      ## Method (DELETE)
+      ## Route
+      ```
+      /api/address/{address}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |address|uuid|yes|route param|sfhwf83758-sdknaf234|
+      |X-DOMAIN-MEMBER|string|yes|header|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Address Deleted!"
+        },
+        "data": [
+          "success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### Error
+      ```
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+          "message": "Deleting Address Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Auth guard [id] is not defined."
+        }
+      }
+      ```
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Address Not Found!",
+          "error": "No query results for model [App\\Models\\Address]."
+        }
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_5b48e9d5aabb41419ea1b0845bc4d941
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg1OTYyNDUsImV4cCI6MTYyODU5OTg0NSwibmJmIjoxNjI4NTk2MjQ1LCJqdGkiOiJVZk5MbldhREFOc2dRYk9YIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4QJTYiZwYlwdjawrjzz9SK2mTCoSVybEulAbfzcQpCQ
+      type: bearer
+    metaSortKey: -1628596536767
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6ce317c79a0f42e3bb75ec1123de0a93
+    parentId: fld_924db0c422c94978a3f1b794d466baca
+    modified: 1628773110921
+    created: 1628739544582
+    url: "{{ _.baseurl }}/api/wishlist"
+    name: CREATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/wishlist
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |product_id|uuid|yes|body|hfuw4234-123ff|
+
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Wishlist Added!"
+        },
+        "data": {
+          "wishlist": {
+            "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+            "title": "Computers Baru",
+            "slug": "computers-baru",
+            "type": "physical",
+            "merk": "ASUS",
+            "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+            "content": "nice",
+            "tnc": "you should buy",
+            "weight": 9,
+            "price": 1200000,
+            "stocks": 12,
+            "reseller_price": 1300000,
+            "discount_type": "nominal",
+            "discount": null,
+            "affiliate_type": "nominal",
+            "affiliate_fee": 10000,
+            "pin": null,
+            "created_at": "2021-08-10T02:48:26.000000Z",
+            "updated_at": "2021-08-10T02:48:26.000000Z"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Adding Wishlist Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "qty": [
+              "The product id field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"product_id" : "1a6f2040-f591-4791-8aa6-4ca9c861a391"
+        }
+    parameters: []
+    headers:
+      - id: pair_3069b4c8ea834623b155a176680fa121
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_5db36c1f8766458dbf0a82d40cb3694e
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg3NTAyMTMsImV4cCI6MTYyODc1MzgxMywibmJmIjoxNjI4NzUwMjEzLCJqdGkiOiJTMlNNVHJ2N0VwUEU3OUVMIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.NDbjijVQnkL0-MPueVyovz1wK3g65_FG-2u5tOm4JLk
+      type: bearer
+    metaSortKey: -1628739544582
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_924db0c422c94978a3f1b794d466baca
+    parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
+    modified: 1628773110920
+    created: 1628739532364
+    name: Wishlist
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1628739532364
+    _type: request_group
+  - _id: req_332cca8460b44a2ebd69e6f137a52cac
+    parentId: fld_924db0c422c94978a3f1b794d466baca
+    modified: 1628773110920
+    created: 1628741329852
+    url: "{{ _.baseurl }}/api/wishlist"
+    name: INDEX
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/wishlist
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string|yes|header|example.net|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "wishlists": [
+            {
+              "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+              "title": "Computers Baru",
+              "slug": "computers-baru",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-10T02:48:26.000000Z",
+              "updated_at": "2021-08-10T02:48:26.000000Z"
+            }
+          ]
+        }
+      }{
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "wishlists": [
+            {
+              "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+              "title": "Computers Baru",
+              "slug": "computers-baru",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-10T02:48:26.000000Z",
+              "updated_at": "2021-08-10T02:48:26.000000Z"
+            }
+          ]
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Showing Wishlist Failed!"
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_7f1f29a622194ed69edef4ea374d9778
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg3NTAyMTMsImV4cCI6MTYyODc1MzgxMywibmJmIjoxNjI4NzUwMjEzLCJqdGkiOiJTMlNNVHJ2N0VwUEU3OUVMIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.NDbjijVQnkL0-MPueVyovz1wK3g65_FG-2u5tOm4JLk
+      type: bearer
+    metaSortKey: -1628741329852
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7dfe40d96a5e45949c464af48880659f
+    parentId: fld_924db0c422c94978a3f1b794d466baca
+    modified: 1628773110921
+    created: 1628741531248
+    url: "{{ _.baseurl }}/api/wishlist/1a6f2040-f591-4791-8aa6-4ca9c861a391"
+    name: DELETE
+    description: |-
+      ## Method (DELETE)
+      ## Route
+      ```
+      /api/wishlist/{product}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |product|uuid|yes|route param|sdjajsf-2479fd-3423|
+      |X-DOMAIN-MEMBER|string|yes|header|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Wishlist Deleted!"
+        },
+        "data": [
+          "success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Category Not Found!",
+          "error": "No query results for model [App\\Models\\Wishlist]."
+        }
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_2b4ba12f5355413c8a62b24d9edfc8e8
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg3NTAyMTMsImV4cCI6MTYyODc1MzgxMywibmJmIjoxNjI4NzUwMjEzLCJqdGkiOiJTMlNNVHJ2N0VwUEU3OUVMIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.NDbjijVQnkL0-MPueVyovz1wK3g65_FG-2u5tOm4JLk
+      type: bearer
+    metaSortKey: -1628741531249
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_a0434fd015144431beca2f37169fb0c9
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628579304574
+    modified: 1628776475522
     created: 1627564703184
     url: "{{ _.baseurl }}/api/admin/category"
     name: CREATE
@@ -1521,7 +2578,7 @@ resources:
           name: parent_id
           value: ""
         - description: ""
-          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
           id: pair_3ef5265881124cb0b5324ea993f29262
           name: image
           type: file
@@ -1536,7 +2593,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg1NjMyOTMsImV4cCI6MTYyODU2Njg5MywibmJmIjoxNjI4NTYzMjkzLCJqdGkiOiJ3ekF1MnBHV2tNOWtYRFVvIiwic3ViIjoiZDE5NGFkZTktNDgwOS00MDBkLWIyNzItYTFlMmE2NjEzMGI1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4T8QWKseoMNDelVGyOhZ8B5iiRyofFSl9loCZqgaHwI
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627564703184
     isPrivate: false
@@ -1559,9 +2616,9 @@ resources:
     _type: request_group
   - _id: req_029cfd574bb54d1e9956d372ccc0e0ac
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628558926648
+    modified: 1628738168694
     created: 1627568934198
-    url: "{{ _.baseurl }}/api/admin/category/9450d916-19e8-4b77-ab12-601f231498dd"
+    url: "{{ _.baseurl }}/api/admin/category/f00f86c2-f6c9-401a-a8fc-d9540dd80fb8"
     name: UPDATE
     description: >-
       ## Method (POST)
@@ -1688,7 +2745,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MjgyMzcyMjAsImV4cCI6MTYyODI0MDgyMCwibmJmIjoxNjI4MjM3MjIwLCJqdGkiOiJ0YnJzaUFJRUNxZ3RncE9kIiwic3ViIjoiMmQ1MWIzYTMtNjNkZi00YTZmLThkZjQtNTc3NDY2ZWJjNTc2IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.FRmurvruSjgi8U0Tdh0Xn1C9q_KCjOdsRFiRrA69lsA
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627568934199
     isPrivate: false
@@ -1701,9 +2758,9 @@ resources:
     _type: request
   - _id: req_49f8072095ff40afa34e548958d06b7f
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628558926651
+    modified: 1628738181807
     created: 1627570508699
-    url: "{{ _.baseurl }}/api/admin/category/ea863485-9330-46be-a868-1b170d637fe5"
+    url: "{{ _.baseurl }}/api/admin/category/f00f86c2-f6c9-401a-a8fc-d9540dd80fb8"
     name: SHOW
     description: >-
       ## Method (GET)
@@ -1779,7 +2836,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: "{{ _.token }}"
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627570508699
     isPrivate: false
@@ -1792,7 +2849,7 @@ resources:
     _type: request
   - _id: req_f36d557fc98c4121a7f298c3eb2847a4
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628558926658
+    modified: 1628731077576
     created: 1627734122925
     url: "{{ _.baseurl }}/api/admin/category/ea863485-9330-46be-a868-1b170d637fe5"
     name: DELETE
@@ -1844,7 +2901,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: "{{ _.token }}"
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627734122925
     isPrivate: false
@@ -1857,7 +2914,7 @@ resources:
     _type: request
   - _id: req_7cf322de93c3483db3940f24d62325ef
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628579304574
+    modified: 1628780389732
     created: 1627735086938
     url: "{{ _.baseurl }}/api/admin/categories"
     name: INDEX
@@ -1878,7 +2935,7 @@ resources:
 
       |---------|----|--------|--------|
 
-      |domain|string(slug)|yes|route param|kumi_id|
+      |-|-|-|-|-|
 
       ## Response Success
 
@@ -1935,7 +2992,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg1MDExNTUsImV4cCI6MTYyODUwNDc1NSwibmJmIjoxNjI4NTAxMTU1LCJqdGkiOiJVV2t4MW51OWwzT3BUZWtpIiwic3ViIjoiZDE5NGFkZTktNDgwOS00MDBkLWIyNzItYTFlMmE2NjEzMGI1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.jmh354w5TP5ex3mhNY_m22cppyEMTdXTHG_Kita5LAE
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627735086938
     isPrivate: false
@@ -1948,9 +3005,10 @@ resources:
     _type: request
   - _id: req_5c7e747cd9894dc381f061340e36fc82
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628558926645
+    modified: 1628780890613
     created: 1628480090747
-    url: "{{ _.baseurl }}/api/admin/category/parent"
+    url: "{{ _.baseurl
+      }}/api/admin/category/parent/071a0d16-635f-49cf-b775-2de390569933"
     name: PARENT
     description: ""
     method: GET
@@ -1962,7 +3020,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg0ODAxMDksImV4cCI6MTYyODQ4MzcwOSwibmJmIjoxNjI4NDgwMTA5LCJqdGkiOiIzcm1TSmRoVFdrRlR1Nm9wIiwic3ViIjoiYjEyNWFiMzAtYjRhMy00ZWMzLWI2OGYtOTBiNjM4MzNmNDcwIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.y_wwJ4j0ibNcYFlkA1EDsWKmq9tC0Q1NPQUW8SmqPnw
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1628480090747
     isPrivate: false
@@ -1975,10 +3033,10 @@ resources:
     _type: request
   - _id: req_0f5558acc0a342eabddd5b949f52e57b
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628558926642
+    modified: 1628780884039
     created: 1628481313886
     url: "{{ _.baseurl
-      }}/api/admin/category/child/0a316103-f454-4bd9-af7f-fdd9681ee283"
+      }}/api/admin/category/child/071a0d16-635f-49cf-b775-2de390569933"
     name: CHILD
     description: ""
     method: GET
@@ -1990,7 +3048,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg0ODAxMDksImV4cCI6MTYyODQ4MzcwOSwibmJmIjoxNjI4NDgwMTA5LCJqdGkiOiIzcm1TSmRoVFdrRlR1Nm9wIiwic3ViIjoiYjEyNWFiMzAtYjRhMy00ZWMzLWI2OGYtOTBiNjM4MzNmNDcwIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.y_wwJ4j0ibNcYFlkA1EDsWKmq9tC0Q1NPQUW8SmqPnw
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1628481313886
     isPrivate: false
@@ -2003,7 +3061,7 @@ resources:
     _type: request
   - _id: req_bca3afea958f4499aa0f2f84c4ff0bd3
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1628579304575
+    modified: 1628780922595
     created: 1627796858385
     url: "{{ _.baseurl }}/api/admin/product"
     name: CREATE
@@ -2149,23 +3207,16 @@ resources:
           disabled: false
           id: pair_86997d4df9704cc79defeada0eaa56fa
           name: title
-          value: computers baru
+          value: computers
         - description: ""
           disabled: false
           id: pair_6b1a129751ef4961b2fe46b93457f860
           name: category_id
-          value: 61cd9565-7c81-4648-ba14-7c88afc71c8b
+          value: 071a0d16-635f-49cf-b775-2de390569933
         - description: ""
           id: pair_340b627a78f24245b7a87eecaac8957a
           name: type
           value: physical
-        - description: ""
-          disabled: false
-          fileName: C:\Users\ADHIT\Downloads\com-logo.png
-          id: pair_5840ce6a1a7a4eaead52719733778cfc
-          name: image
-          type: file
-          value: ""
         - description: ""
           id: pair_a03b3b5721fa48198c83467efad589d6
           name: merk
@@ -2217,17 +3268,18 @@ resources:
           name: reseller_price
           value: "1300000"
         - description: ""
-          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
           id: pair_157eda21bdb04d98a064630cfa4f6dab
           name: images[]
           type: file
           value: ""
-        - description: ""
-          fileName: C:\Users\ADHIT\Downloads\201609435_2020-10-22_6cf0d149ad79d7a42aac39a6b20bd4a3.png
-          id: pair_2c19cff44a334793849fde362c197a01
+        - id: pair_b8b2fb3d8c8f460580430689c81683a3
           name: images[]
-          type: file
           value: ""
+          description: ""
+          type: file
+          multiline: null
+          fileName: C:\Users\Mohamad Sholihin\Desktop\Screenshot_2.png
     parameters: []
     headers:
       - id: pair_c8ed9fb2408548c2a994e799dd9a7fea
@@ -2238,7 +3290,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg1NjMyOTMsImV4cCI6MTYyODU2Njg5MywibmJmIjoxNjI4NTYzMjkzLCJqdGkiOiJ3ekF1MnBHV2tNOWtYRFVvIiwic3ViIjoiZDE5NGFkZTktNDgwOS00MDBkLWIyNzItYTFlMmE2NjEzMGI1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4T8QWKseoMNDelVGyOhZ8B5iiRyofFSl9loCZqgaHwI
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627796858385
     isPrivate: false
@@ -2261,7 +3313,7 @@ resources:
     _type: request_group
   - _id: req_fa39e54801bd4efaae8a5690542f2d39
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1628558926659
+    modified: 1628779609999
     created: 1627805393173
     url: "{{ _.baseurl }}/api/admin/product/910cf7ac-dc25-4916-ab74-752d47117ba2"
     name: UPDATE
@@ -2420,14 +3472,6 @@ resources:
           name: type
           value: physical
         - description: ""
-          disabled: false
-          fileName: C:\Users\ADHIT\Downloads\sad.PNG
-          id: pair_5840ce6a1a7a4eaead52719733778cfc
-          multiline: false
-          name: image
-          type: text
-          value: ""
-        - description: ""
           id: pair_a03b3b5721fa48198c83467efad589d6
           name: merk
           value: asus
@@ -2467,22 +3511,15 @@ resources:
           name: _method
           value: PATCH
         - description: ""
-          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          fileName: C:\Users\Mohamad Sholihin\Desktop\Screenshot_2.png
           id: pair_44890a5d4ca04816b18b725017dc4646
           name: images[]
           type: file
           value: ""
         - description: ""
-          disabled: true
-          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          disabled: false
+          fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
           id: pair_d65360f962f84b63a65e0e3b84293132
-          name: images[]
-          type: file
-          value: ""
-        - description: ""
-          disabled: true
-          fileName: C:\Users\ADHIT\Downloads\com-logo.png
-          id: pair_3873b487f97445fb969821c0bc5b3e89
           name: images[]
           type: file
           value: ""
@@ -2495,7 +3532,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MjgyNjAzODcsImV4cCI6MTYyODI2Mzk4NywibmJmIjoxNjI4MjYwMzg3LCJqdGkiOiJWRjVrNjF1dkNXOEl2em1oIiwic3ViIjoiYjEyNWFiMzAtYjRhMy00ZWMzLWI2OGYtOTBiNjM4MzNmNDcwIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.PcGBCnyw1QvtQJUiCjQZixK55tZkNhI9hGmfberFVac
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627765972661.5
     isPrivate: false
@@ -2508,9 +3545,9 @@ resources:
     _type: request
   - _id: req_4d96686d7f6941ebaf2b59f36f23f976
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1628558926651
+    modified: 1628780965110
     created: 1627807785254
-    url: "{{ _.baseurl }}/api/admin/product/8d179771-9744-4cc2-9f90-cdb5bb5403a0"
+    url: "{{ _.baseurl }}/api/admin/product/c0cd5146-a0cc-4894-8c38-3bad1a6b0104"
     name: DELETE
     description: |-
       ## Method (DELETE)
@@ -2560,7 +3597,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: "{{ _.token }}"
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627807785255
     isPrivate: false
@@ -2573,9 +3610,9 @@ resources:
     _type: request
   - _id: req_41b214f6e3d94645a6cbfbd88c08b1aa
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1628579304573
+    modified: 1628780948964
     created: 1627808180434
-    url: "{{ _.baseurl }}/api/admin/product/1a6f2040-f591-4791-8aa6-4ca9c861a391"
+    url: "{{ _.baseurl }}/api/admin/product/c0cd5146-a0cc-4894-8c38-3bad1a6b0104"
     name: SHOW
     description: >-
       ## Method (GET)
@@ -2670,7 +3707,7 @@ resources:
         value: "{{ _.domain }}"
     authentication:
       disabled: false
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg1NjMyOTMsImV4cCI6MTYyODU2Njg5MywibmJmIjoxNjI4NTYzMjkzLCJqdGkiOiJ3ekF1MnBHV2tNOWtYRFVvIiwic3ViIjoiZDE5NGFkZTktNDgwOS00MDBkLWIyNzItYTFlMmE2NjEzMGI1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4T8QWKseoMNDelVGyOhZ8B5iiRyofFSl9loCZqgaHwI
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627808180434
     isPrivate: false
@@ -2683,7 +3720,7 @@ resources:
     _type: request
   - _id: req_b30d4ee444f94a87a4a8139e9c6a8d46
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1628579304575
+    modified: 1628731008014
     created: 1627808730167
     url: "{{ _.baseurl }}/api/admin/products"
     name: INDEX
@@ -2780,7 +3817,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg1NjMyOTMsImV4cCI6MTYyODU2Njg5MywibmJmIjoxNjI4NTYzMjkzLCJqdGkiOiJ3ekF1MnBHV2tNOWtYRFVvIiwic3ViIjoiZDE5NGFkZTktNDgwOS00MDBkLWIyNzItYTFlMmE2NjEzMGI1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4T8QWKseoMNDelVGyOhZ8B5iiRyofFSl9loCZqgaHwI
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627808730167
     isPrivate: false
@@ -2998,10 +4035,9 @@ resources:
     _type: request
   - _id: req_865b973f21134f5bac8c08c59b42825d
     parentId: fld_e65f864a07d74cd7bbbee4489781c6b2
-    modified: 1628558926653
+    modified: 1628779460701
     created: 1628262150828
-    url: "{{ _.baseurl
-      }}/api/admin/product/gallery/910cf7ac-dc25-4916-ab74-752d47117ba2"
+    url: "{{ _.baseurl }}/api/admin/gallery/340f7d37-c59b-4849-8292-4bbdf422972c"
     name: CREATE
     description: >-
       ## Method (POST)
@@ -3020,7 +4056,7 @@ resources:
 
       |---------|----|--------|--------|
 
-      |product|uuid|yes|route param|asdfnasjfhjas-asfasfnf-sfa|
+      |product|uuid|yes|route param|340f7d37-c59b-4849-8292-4bbdf422972c|
 
       |images[]|image(array)|yes|body|picture|
 
@@ -3134,13 +4170,13 @@ resources:
       mimeType: multipart/form-data
       params:
         - description: ""
-          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
           id: pair_35433fd1658f444da57448edeb6005d5
           name: images[]
           type: file
           value: ""
         - description: ""
-          fileName: C:\Users\ADHIT\Downloads\com-logo.png
+          fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
           id: pair_8ab7138d215348acb5c7433291a853f1
           name: images[]
           type: file
@@ -3155,7 +4191,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MjgyNjIzMTIsImV4cCI6MTYyODI2NTkxMiwibmJmIjoxNjI4MjYyMzEyLCJqdGkiOiJZb1o2UzRnWjhON0JoV1V4Iiwic3ViIjoiYjEyNWFiMzAtYjRhMy00ZWMzLWI2OGYtOTBiNjM4MzNmNDcwIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4CLMhWzZpQkevxtQJxa2BCBfYmNewkoJ1vHw6VcTXfs
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1628262150829
     isPrivate: false
@@ -3178,11 +4214,11 @@ resources:
     _type: request_group
   - _id: req_e116a62cfef7428288a44cd299904153
     parentId: fld_e65f864a07d74cd7bbbee4489781c6b2
-    modified: 1628558926657
+    modified: 1628782884651
     created: 1628262462715
     url: "{{ _.baseurl
-      }}/api/admin/gallery/910cf7ac-dc25-4916-ab74-752d47117ba2/04b808e2-e772-4\
-      00e-a9a6-ae126a20c924"
+      }}/api/admin/gallery/340f7d37-c59b-4849-8292-4bbdf422972c/d1aaa1fd-fbcd-4\
+      021-bab7-45d9a8818a41"
     name: DELETE
     description: |-
       ## Method (DELETE)
@@ -3227,17 +4263,9 @@ resources:
     method: DELETE
     body: {}
     parameters: []
-    headers:
-      - description: ""
-        id: pair_43a7966880b446a7896cdea7eed2e44f
-        name: ""
-        value: ""
-      - description: ""
-        id: pair_24a040b8238e4c2c81a0e107ad732100
-        name: ""
-        value: ""
+    headers: []
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MjgyNjIzMTIsImV4cCI6MTYyODI2NTkxMiwibmJmIjoxNjI4MjYyMzEyLCJqdGkiOiJZb1o2UzRnWjhON0JoV1V4Iiwic3ViIjoiYjEyNWFiMzAtYjRhMy00ZWMzLWI2OGYtOTBiNjM4MzNmNDcwIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4CLMhWzZpQkevxtQJxa2BCBfYmNewkoJ1vHw6VcTXfs
+      token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1628262462715
     isPrivate: false
@@ -3248,19 +4276,165 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
+  - _id: req_084e6d00352f4492981b4393a9e8f2aa
+    parentId: fld_e65f864a07d74cd7bbbee4489781c6b2
+    modified: 1628782794618
+    created: 1628781195591
+    url: "{{ _.baseurl
+      }}/api/admin/gallery/340f7d37-c59b-4849-8292-4bbdf422972c/d1aaa1fd-fbcd-4\
+      021-bab7-45d9a8818a41"
+    name: UPDATE
+    description: >-
+      ## Method (PATCH)
+
+      ## Route
+
+      ```
+
+      /api/admin/gallery/{product}/{gallery_id}
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |product|uuid|yes|route param|340f7d37-c59b-4849-8292-4bbdf422972c|
+
+      |gallery_id|uuid|yes|route param|340f7d37-c59b-4849-8292-4bbdf422972c|
+
+      |sorter|integer|yes|body|1|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Gallery Updated!"
+        },
+        "data": {
+          "product": {
+            "id": "340f7d37-c59b-4849-8292-4bbdf422972c",
+            "title": "Computers Baru",
+            "slug": "computers-baru",
+            "type": "physical",
+            "merk": "ASUS",
+            "image": "http:\/\/kumi-backend.apps\/storage",
+            "galleries": [
+              {
+                "id": "0a4b25a2-0296-4c99-84e4-3d2c5248e7af",
+                "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/YhO1muzUKCyzA5S94Ui8nib49feFRzy7KrxqBw2C.png",
+                "sorter": 0
+              },
+              {
+                "id": "9ac1309e-b315-4363-9cfe-1b8d2c863e6d",
+                "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/MKVY7w7zUlnxdsi7AWw8E2xTp6d5PpqHSqwlTO0y.png",
+                "sorter": 1
+              },
+              {
+                "id": "0530e13b-b054-4f36-926b-45b7ff927984",
+                "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/JgDcMJZK875KiBzdoS4FBHZOWeLOx04RsIhZGK0u.png",
+                "sorter": 2
+              },
+              {
+                "id": "d1aaa1fd-fbcd-4021-bab7-45d9a8818a41",
+                "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/IqYQ86gFmsuMXzjSKUkSEMQmk113hQgrNzqTBQn9.png",
+                "sorter": 3
+              }
+            ],
+            "category": {
+              "id": "071a0d16-635f-49cf-b775-2de390569933",
+              "name": "Computer",
+              "slug": "computer",
+              "image": "http:\/\/kumi-backend.apps\/storage\/bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/categories\/wEK4cRjhQ0XJMC0yrYEtzmHNjiIezyKEkR3PKuyj.png",
+              "created_at": "2021-08-12T13:54:37.000000Z",
+              "updated_at": "2021-08-12T13:54:37.000000Z"
+            },
+            "content": "nice",
+            "tnc": "you should buy",
+            "weight": 9,
+            "price": 1200000,
+            "stocks": 12,
+            "reseller_price": 1300000,
+            "discount_type": "nominal",
+            "discount": null,
+            "affiliate_type": "nominal",
+            "affiliate_fee": 10000,
+            "pin": null,
+            "created_at": "2021-08-12T14:09:43.000000Z",
+            "updated_at": "2021-08-12T14:09:43.000000Z"
+          }
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "title": [
+              "The iamges field must be image."
+            ],
+          }
+        }
+      }
+
+      ```
+    method: PATCH
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_e278f642fbee4a74913ce4ceaa23bf5c
+          name: sorter
+          value: "3"
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+        id: pair_9aa2e2bd316e41a097e9eecd0893a6e3
+    authentication:
+      type: bearer
+      token: "{{ _.token_admin }}"
+    metaSortKey: -1628262150779
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: env_2208ee768dc2295a39591cbb03562119586d56c8
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1628579301679
+    modified: 1628783250610
     created: 1626332572608
     name: Base Environment
     data:
       baseurl: http://kumi-backend.apps
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg3ODMyMzUsImV4cCI6MTYyODc4NjgzNSwibmJmIjoxNjI4NzgzMjM1LCJqdGkiOiJJV1oxNjNEWXJBZzU5dEdCIiwic3ViIjoiYzE2ZTliYmQtYTQwYi00YWU1LWJkNmMtN2Q2ZWQ5YmJhYTdlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.jWZmAyqS9x2f6mWyysZqtPeXu3uSEQxvR-zlV0qYJIc
+      token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg3ODA4MTQsImV4cCI6MTYyODc4NDQxNCwibmJmIjoxNjI4NzgwODE0LCJqdGkiOiJlZzN3bzZjbTFTYzdyWU1EIiwic3ViIjoiZGQ5ZjhiYmEtOTVmNS00NzJkLWIwZDAtMjZhMzc4YWFlODkzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.vL0m4oSOLfjnZ1jw2oXG4KmoBpkwObedEIH82L-zvP4
       domain: example.net
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MjgwODI5ODMsImV4cCI6MTYyODA4NjU4MywibmJmIjoxNjI4MDgyOTgzLCJqdGkiOiJpYmE0Q1lQN0NtR3l2ekpuIiwic3ViIjoiMDI4NjBhZjMtMmZkMS00N2ZiLTgwZjYtNGM5MWU2N2UxZGM4IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.kzTxuCMZcgX1ArJ6NRVHg2ihPZ6gBk8bUHzv4IUKrO4
     dataPropertyOrder:
       "&":
         - baseurl
         - token
+        - token_admin
         - domain
     color: null
     isPrivate: false
@@ -3268,13 +4442,13 @@ resources:
     _type: environment
   - _id: jar_2208ee768dc2295a39591cbb03562119586d56c8
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1628566830170
+    modified: 1628733430055
     created: 1626332572611
     name: Default Jar
     cookies:
       - key: XSRF-TOKEN
-        value: eyJpdiI6ImFpZFJYaitTbzhGRWVLWGV4YlRaOEE9PSIsInZhbHVlIjoiZW5SQW9lZmRKOVJpVEpJMHhYTHlKb0ovUTdTNWJQVW5mMjhPaG9TdnpZVFVXZHcwUXdRc0lIWEtia3lselFGa0VQV25PMmlnS29xMXdEenJlc2RPZlJaMmNhMnhMMmd3ZENPcXJtVlBGNjRWVlZKU1FUR1VPU0xHeW1KWVhDWFoiLCJtYWMiOiI2YTc4MjVhY2QyOTI3YzQ0YzJlOGMxYjhjNzY1YWM1NzE3YTQ5NTlhZGQ0ODQxYTk1ZDhjYzRmZjIzNzM5ZGI4In0%3D
-        expires: 2021-08-10T05:40:30.000Z
+        value: eyJpdiI6InBmQnNKUzZIVFBBaElTencvMmhVR0E9PSIsInZhbHVlIjoiWG51RFBSSmdSbjhneWw2UjRyVEx6YnMzSFhndmViUzQ1c3JYNFZMV2MrR2RzN1ZzOWlqUnRDZ2t2ZlVTWUE4d1czU2wyK2prbUVveDkwRlhmOWpsUW5zUjRtWHRvaEplTXZxNVNTc3JKdkcydmhPNDlTQ09OZHFUNWhmSUJhd1ciLCJtYWMiOiIyZjE1MjE0NzMxZWVjZDczOWRlYTlhZjVjODY5OGRlYjk2ZGQxZjI3YTBmM2UzOTdmZjk4ZTY2ZjZhZmYzNTJlIn0%3D
+        expires: 2021-08-12T03:57:09.000Z
         maxAge: 7200
         domain: kumi-backend.apps
         path: /
@@ -3282,11 +4456,11 @@ resources:
           - samesite=lax
         hostOnly: true
         creation: 2021-08-04T02:11:09.642Z
-        lastAccessed: 2021-08-10T03:40:30.164Z
-        id: "6631990797477594"
+        lastAccessed: 2021-08-12T01:57:10.053Z
+        id: "8821117757006376"
       - key: laravel_session
-        value: eyJpdiI6IjJGcENrc2pOTEYxL0VVbGg0NGRvVFE9PSIsInZhbHVlIjoiaGR2VEJJYnJkcE1RWTNlUTltUFNxUWhzT0p4RXBoZ0xZZlZBeEVDdzl2dVo1WkJwTW1FdDhqdjh2NEZnb3F0SkRsMWhIaUhGMWFIaWlsQVB6VXJqSmphSnJMN3JSYlVrMGV0VHowdC8wVEhzRWJ6SGFxaEZwdXI3RFErSEZ1MEQiLCJtYWMiOiIxZTc0OTBiMzc5YTAxOTVjMmZkN2ZjODA2ZjBhYWI2NGM3NDhmYzNhNzIyYmFhOTg0YmMxZTI0ZDBlMjIwMWIxIn0%3D
-        expires: 2021-08-10T05:40:30.000Z
+        value: eyJpdiI6ImpMdjZpVUhOZ1NPQzJSdnlWYnFDUEE9PSIsInZhbHVlIjoidjA5Y3U4WVVXWkVKaUx3dnJtVVhxTHFsQlRXUEVsMXlxNGRWa0xYQnhGNkc4bCtha2lmc1dPeUdLc0ppWUY4RkVud0gwL3Z2VkdCN3JrNDg0bFVvNFoybGNhT2xWVEpWU2M2dGsyUFEvNnFndFhjZld3OXphM1dCZnVYRVBNd0oiLCJtYWMiOiI1ZmJhNWY4NDRhOTEzYzc1NGQ4ZmZkYjU2MzVlZjlhMTFkMWMxYjZjMTM4MzlhYmJjNzFhODNlZWRmNGJhMGVjIn0%3D
+        expires: 2021-08-12T03:57:09.000Z
         maxAge: 7200
         domain: kumi-backend.apps
         path: /
@@ -3295,8 +4469,8 @@ resources:
           - samesite=lax
         hostOnly: true
         creation: 2021-08-04T02:11:09.643Z
-        lastAccessed: 2021-08-10T03:40:30.164Z
-        id: "17029088090509625"
+        lastAccessed: 2021-08-12T01:57:10.054Z
+        id: "07364464930306514"
     _type: cookie_jar
   - _id: spc_50c67a3c3676462d8ec0d0165c8f41eb
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
