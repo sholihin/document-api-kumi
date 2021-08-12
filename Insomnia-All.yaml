@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-12T16:41:48.783Z
+__export_date: 2021-08-12T17:08:37.079Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
   - _id: req_3a72d7de1cf34cf88cced81db784a7e4
@@ -540,7 +540,7 @@ resources:
     _type: request_group
   - _id: req_e7c6d867428a421da5c84203de3b1eae
     parentId: fld_40aeee4e68224603904889666c7f2a8c
-    modified: 1628558926657
+    modified: 1628787161212
     created: 1627486544474
     url: "{{ _.baseurl }}/api/reseller/register"
     name: Register Reseller
@@ -553,7 +553,7 @@ resources:
       ## Query Parameters
       |PARAMETER|TYPE|REQUIRED|
       |---------|----|--------|
-      |domain|string|yes|
+      |X-DOMAIN-MEMBER|string|yes|
       |name|string|yes|
       |phone_number|string|yes|
       |email|string|yes|
@@ -643,15 +643,15 @@ resources:
           id: pair_8fb44b7133e94e6b9bb1350418710f59
           name: password_confirmation
           value: bismillah
-        - description: ""
-          id: pair_c30c88829b494fae82ee765e6ec87882
-          name: domain
-          value: kumi.id
     parameters: []
     headers:
       - id: pair_5e963fb2fc0c45149a90ae275816c00b
         name: Content-Type
         value: multipart/form-data
+      - id: pair_9abb9fba2ce545bdacf497ccf99a784a
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+        description: ""
     authentication: {}
     metaSortKey: -1627482077340
     isPrivate: false
@@ -3837,7 +3837,7 @@ resources:
     _type: request
   - _id: req_cbbf5db9d0824590823f78c00b2d0201
     parentId: fld_b1995b6ee49d412d95457293f7eeb62d
-    modified: 1628558926655
+    modified: 1628787813621
     created: 1627975785082
     url: "{{ _.baseurl }}/api/reseller/products"
     name: INDEX
@@ -3873,31 +3873,47 @@ resources:
         "data": {
           "products": [
             {
-              "id": "146f4f17-ed48-4001-a524-d58b18ae0b7e",
-              "title": "Computers",
-              "slug": "computers",
+              "id": "340f7d37-c59b-4849-8292-4bbdf422972c",
+              "title": "Computers Baru",
+              "slug": "computers-baru",
               "type": "physical",
               "merk": "ASUS",
-              "image": "https:\/\/kumi-backend.apps\/storage\/products\/example_net\/products\/5sY6AEjzKdu2aud7lKcAvhR6Fn2CJ7R9zYaPK1CK.png",
+              "image": "http:\/\/kumi-backend.apps\/storage",
+              "galleries": [
+                {
+                  "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/JgDcMJZK875KiBzdoS4FBHZOWeLOx04RsIhZGK0u.png",
+                  "sorter": 2
+                },
+                {
+                  "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/YhO1muzUKCyzA5S94Ui8nib49feFRzy7KrxqBw2C.png",
+                  "sorter": 0
+                },
+                {
+                  "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/MKVY7w7zUlnxdsi7AWw8E2xTp6d5PpqHSqwlTO0y.png",
+                  "sorter": 1
+                }
+              ],
               "category": {
-                "id": "f7e7267a-2527-4c5a-88c5-6a5475747d86",
+                "id": "071a0d16-635f-49cf-b775-2de390569933",
                 "name": "Computer",
                 "slug": "computer",
-                "image": "https:\/\/kumi-backend.apps\/storage\/example_net\/categories\/MdFm4JU7VxPgmaU5AkeDtgbQHVW3tgFCNlhc6Yfm.png",
-                "created_at": "2021-08-01T07:32:26.000000Z",
-                "updated_at": "2021-08-01T07:32:26.000000Z"
+                "image": "http:\/\/kumi-backend.apps\/storage\/bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/categories\/wEK4cRjhQ0XJMC0yrYEtzmHNjiIezyKEkR3PKuyj.png",
+                "created_at": "2021-08-12T13:54:37.000000Z",
+                "updated_at": "2021-08-12T13:54:37.000000Z"
               },
               "content": "nice",
               "tnc": "you should buy",
               "weight": 9,
               "price": 1200000,
-              "reseller_price": 1100000,
+              "stocks": 12,
+              "reseller_price": 1300000,
               "discount_type": "nominal",
               "discount": null,
-              "stocks": 12,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
               "pin": null,
-              "created_at": "2021-08-01T08:58:20.000000Z",
-              "updated_at": "2021-08-01T08:58:20.000000Z"
+              "created_at": "2021-08-12T14:09:43.000000Z",
+              "updated_at": "2021-08-12T14:09:43.000000Z"
             }
           ]
         }
@@ -3919,7 +3935,7 @@ resources:
           "message": "failed"
         },
         "data": {
-          "message": "Product\/Domain Not Found!",
+          "message": "Product Not Found!",
           "error": "No query results for model [App\\Models\\Member]."
         }
       }
@@ -3928,9 +3944,13 @@ resources:
     method: GET
     body: {}
     parameters: []
-    headers: []
+    headers:
+      - id: pair_36fa6b9cb2a648d19cfecddc3a3203f9
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+        description: ""
     authentication:
-      token: "{{ _.token }}"
+      token: "{{ _.token_reseller }}"
       type: bearer
     metaSortKey: -1627975785082
     isPrivate: false
@@ -3951,9 +3971,137 @@ resources:
     environmentPropertyOrder: null
     metaSortKey: -1627975774954
     _type: request_group
+  - _id: req_82526700e672469a8c4da0c9280489ad
+    parentId: fld_b1995b6ee49d412d95457293f7eeb62d
+    modified: 1628788061668
+    created: 1628787839128
+    url: "{{ _.baseurl }}/api/reseller/product/340f7d37-c59b-4849-8292-4bbdf422972c"
+    name: SHOW
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/reseller/product/{product}
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
+
+      |product|uuid|yes|body|340f7d37-c59b-4849-8292-4bbdf422972c|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "products": [
+            {
+              "id": "340f7d37-c59b-4849-8292-4bbdf422972c",
+              "title": "Computers Baru",
+              "slug": "computers-baru",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage",
+              "galleries": [
+                {
+                  "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/JgDcMJZK875KiBzdoS4FBHZOWeLOx04RsIhZGK0u.png",
+                  "sorter": 2
+                },
+                {
+                  "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/YhO1muzUKCyzA5S94Ui8nib49feFRzy7KrxqBw2C.png",
+                  "sorter": 0
+                },
+                {
+                  "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/MKVY7w7zUlnxdsi7AWw8E2xTp6d5PpqHSqwlTO0y.png",
+                  "sorter": 1
+                }
+              ],
+              "category": {
+                "id": "071a0d16-635f-49cf-b775-2de390569933",
+                "name": "Computer",
+                "slug": "computer",
+                "image": "http:\/\/kumi-backend.apps\/storage\/bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/categories\/wEK4cRjhQ0XJMC0yrYEtzmHNjiIezyKEkR3PKuyj.png",
+                "created_at": "2021-08-12T13:54:37.000000Z",
+                "updated_at": "2021-08-12T13:54:37.000000Z"
+              },
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-12T14:09:43.000000Z",
+              "updated_at": "2021-08-12T14:09:43.000000Z"
+            }
+          ]
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Not Found
+
+      ```
+
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Product Not Found!",
+          "error": "No query results for model [App\\Models\\Member]."
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_8df4a469b6e84f31875791a7da89202d
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+        description: ""
+    authentication:
+      type: bearer
+      token: "{{ _.token_reseller }}"
+    metaSortKey: -1628787839128
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_c288d3e73ce44e638f3302aa0160758d
     parentId: fld_9bc62c625a464a97a31cdb3efa7d43cd
-    modified: 1628558926648
+    modified: 1628786914221
     created: 1628492215593
     url: "{{ _.baseurl }}/api/profile"
     name: SHOW
@@ -3967,7 +4115,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg0ODg3MTQsImV4cCI6MTYyODQ5MjMxNCwibmJmIjoxNjI4NDg4NzE0LCJqdGkiOiI3b0xHUE1QeThnZkh2ZVhGIiwic3ViIjoiZGNlMjg4MmMtMDFiMi00MDYxLTg3MGItNzM2MzljM2ZlZGY1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.sDDOmMlmXAyHvrLbtg42yl9eProctdCa2zO4vgZOk5E
+      token: "{{ _.token_reseller }}"
       type: bearer
     metaSortKey: -1628488698762
     isPrivate: false
@@ -4429,18 +4577,20 @@ resources:
     _type: request
   - _id: env_2208ee768dc2295a39591cbb03562119586d56c8
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1628784911519
+    modified: 1628787229892
     created: 1626332572608
     name: Base Environment
     data:
       baseurl: http://kumi-backend.apps
       token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg3ODMyMzUsImV4cCI6MTYyODc4NjgzNSwibmJmIjoxNjI4NzgzMjM1LCJqdGkiOiJJV1oxNjNEWXJBZzU5dEdCIiwic3ViIjoiYzE2ZTliYmQtYTQwYi00YWU1LWJkNmMtN2Q2ZWQ5YmJhYTdlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.jWZmAyqS9x2f6mWyysZqtPeXu3uSEQxvR-zlV0qYJIc
+      token_reseller: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2Mjg3ODcyMTMsImV4cCI6MTYyODc5MDgxMywibmJmIjoxNjI4Nzg3MjEzLCJqdGkiOiIwcllpQWdJcEZHRjFEVVJ0Iiwic3ViIjoiZWE4ZDQ1ZTgtMDBiYi00OWU5LWExMTgtZjc5NzBhNjg1MGI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Xj6ev8X-9z65VewlOSGYIWK32AKqcR1okITRvJo-U34
       token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg3ODQ5MDEsImV4cCI6MTYyODc4ODUwMSwibmJmIjoxNjI4Nzg0OTAxLCJqdGkiOiJUbVFVd2dvU0J5bG9GZlk4Iiwic3ViIjoiZGQ5ZjhiYmEtOTVmNS00NzJkLWIwZDAtMjZhMzc4YWFlODkzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.nm7SIH9gqCudgNtQ4aTEOb4kPxF_4-6Rp4bT2osKRxY
       domain: example.net
     dataPropertyOrder:
       "&":
         - baseurl
         - token
+        - token_reseller
         - token_admin
         - domain
     color: null
