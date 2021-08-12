@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-12T16:11:12.527Z
+__export_date: 2021-08-12T16:41:48.783Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
   - _id: req_3a72d7de1cf34cf88cced81db784a7e4
@@ -840,7 +840,7 @@ resources:
     _type: request
   - _id: req_db213b75112b45c9b89210c57c3e7582
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628733319971
+    modified: 1628784965252
     created: 1628319613782
     url: "{{ _.baseurl }}/api/cart"
     name: CREATE
@@ -960,8 +960,8 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"product_id" : "1a6f2040-f591-4791-8aa6-4ca9c861a391",
-        	"qty" : 1
+        	"product_id" : "340f7d37-c59b-4849-8292-4bbdf422972c",
+        	"qty" : 2
         }
     parameters: []
     headers:
@@ -996,9 +996,9 @@ resources:
     _type: request_group
   - _id: req_f5d2ff3eee714e6b9c92ec8ba1d29faf
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628558926659
+    modified: 1628785234577
     created: 1628325186320
-    url: "{{ _.baseurl }}/api/cart/dac0a3dd-c1b6-4cd3-b632-293e272645b0"
+    url: "{{ _.baseurl }}/api/cart/314501de-fb67-43e1-b4a8-be2101460c67"
     name: DELETE
     description: |-
       ## Method (DELETE)
@@ -1042,9 +1042,13 @@ resources:
     method: DELETE
     body: {}
     parameters: []
-    headers: []
+    headers:
+      - id: pair_f1ab3d958f31464894a6ddbacb948fc3
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+        description: ""
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2MjgzMjI2OTMsImV4cCI6MTYyODMyNjI5MywibmJmIjoxNjI4MzIyNjkzLCJqdGkiOiJmaE1ua3RnSnhSb2NPWG9UIiwic3ViIjoiZGNlMjg4MmMtMDFiMi00MDYxLTg3MGItNzM2MzljM2ZlZGY1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.nKxzRgnUFMUkUfT00vXUs8B8Z1b_RFYoM_Y4JUU4-ps
+      token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628325186320
     isPrivate: false
@@ -1057,7 +1061,7 @@ resources:
     _type: request
   - _id: req_75f657c0d8da48f886e4d823a750f71b
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628579304573
+    modified: 1628785136450
     created: 1628326317872
     url: "{{ _.baseurl }}/api/cart/qty-update"
     name: QTY UPDATE
@@ -1179,7 +1183,9 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"product_id" : "1a6f2040-f591-4791-8aa6-4ca9c861a391"
+        	"product_id" : "340f7d37-c59b-4849-8292-4bbdf422972c",
+        	"type" : "decrease",
+        	"note" : "yang bagus ya"
         }
     parameters: []
     headers:
@@ -1191,7 +1197,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg1NjY0MjMsImV4cCI6MTYyODU3MDAyMywibmJmIjoxNjI4NTY2NDIzLCJqdGkiOiJ4ZGpXZlB3UEJzNEZiQ2ZXIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.bRbvMvOf1rP5Ymoy5wVYMFsHc2Uv0NWXzNMyhGFaA1k
+      token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628326317873
     isPrivate: false
@@ -1204,7 +1210,7 @@ resources:
     _type: request
   - _id: req_cb9a416ea1a345b6a4bbdfc75a4d888d
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628733351168
+    modified: 1628785175317
     created: 1628404474690
     url: "{{ _.baseurl }}/api/cart"
     name: INDEX
@@ -1302,7 +1308,7 @@ resources:
       - description: ""
         id: pair_76ffb2c492b0467587b0413d0263acd8
         name: X-DOMAIN-MEMBER
-        value: sda
+        value: "{{ _.domain }}"
       - description: ""
         id: pair_8cda0aeabfc74640aa737fc2069a2e2b
         name: ""
@@ -1536,9 +1542,9 @@ resources:
     _type: request
   - _id: req_abbc95a7018442babbe2731ee6278a5e
     parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628712511163
+    modified: 1628785529590
     created: 1628587628062
-    url: "{{ _.baseurl }}/api/address"
+    url: "{{ _.baseurl }}/api/customer/address"
     name: CREATE
     description: |-
       ## Method (POST)
@@ -1639,7 +1645,7 @@ resources:
         name: Content-Type
         value: application/json
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg1OTYyNDUsImV4cCI6MTYyODU5OTg0NSwibmJmIjoxNjI4NTk2MjQ1LCJqdGkiOiJVZk5MbldhREFOc2dRYk9YIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4QJTYiZwYlwdjawrjzz9SK2mTCoSVybEulAbfzcQpCQ
+      token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628587628062
     isPrivate: false
@@ -1954,9 +1960,9 @@ resources:
     _type: request
   - _id: req_88d4cf9903724f21981f1847c36dffd4
     parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628733417619
+    modified: 1628785969821
     created: 1628596443794
-    url: "{{ _.baseurl }}/api/address"
+    url: "{{ _.baseurl }}/api/customer/address"
     name: INDEX
     description: |-
       ## Method (GET)
@@ -2124,9 +2130,9 @@ resources:
     _type: request
   - _id: req_6ce317c79a0f42e3bb75ec1123de0a93
     parentId: fld_924db0c422c94978a3f1b794d466baca
-    modified: 1628773110921
+    modified: 1628786064932
     created: 1628739544582
-    url: "{{ _.baseurl }}/api/wishlist"
+    url: "{{ _.baseurl }}/api/customer/wishlist"
     name: CREATE
     description: >-
       ## Method (POST)
@@ -2233,7 +2239,7 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"product_id" : "1a6f2040-f591-4791-8aa6-4ca9c861a391"
+        	"product_id" : "340f7d37-c59b-4849-8292-4bbdf422972c"
         }
     parameters: []
     headers:
@@ -2245,7 +2251,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg3NTAyMTMsImV4cCI6MTYyODc1MzgxMywibmJmIjoxNjI4NzUwMjEzLCJqdGkiOiJTMlNNVHJ2N0VwUEU3OUVMIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.NDbjijVQnkL0-MPueVyovz1wK3g65_FG-2u5tOm4JLk
+      token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628739544582
     isPrivate: false
@@ -2268,9 +2274,9 @@ resources:
     _type: request_group
   - _id: req_332cca8460b44a2ebd69e6f137a52cac
     parentId: fld_924db0c422c94978a3f1b794d466baca
-    modified: 1628773110920
+    modified: 1628786412209
     created: 1628741329852
-    url: "{{ _.baseurl }}/api/wishlist"
+    url: "{{ _.baseurl }}/api/customer/wishlist"
     name: INDEX
     description: >-
       ## Method (GET)
@@ -2389,7 +2395,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg3NTAyMTMsImV4cCI6MTYyODc1MzgxMywibmJmIjoxNjI4NzUwMjEzLCJqdGkiOiJTMlNNVHJ2N0VwUEU3OUVMIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.NDbjijVQnkL0-MPueVyovz1wK3g65_FG-2u5tOm4JLk
+      token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628741329852
     isPrivate: false
@@ -2402,9 +2408,10 @@ resources:
     _type: request
   - _id: req_7dfe40d96a5e45949c464af48880659f
     parentId: fld_924db0c422c94978a3f1b794d466baca
-    modified: 1628773110921
+    modified: 1628786445692
     created: 1628741531248
-    url: "{{ _.baseurl }}/api/wishlist/1a6f2040-f591-4791-8aa6-4ca9c861a391"
+    url: "{{ _.baseurl
+      }}/api/customer/wishlist/340f7d37-c59b-4849-8292-4bbdf422972c"
     name: DELETE
     description: |-
       ## Method (DELETE)
@@ -2455,7 +2462,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg3NTAyMTMsImV4cCI6MTYyODc1MzgxMywibmJmIjoxNjI4NzUwMjEzLCJqdGkiOiJTMlNNVHJ2N0VwUEU3OUVMIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.NDbjijVQnkL0-MPueVyovz1wK3g65_FG-2u5tOm4JLk
+      token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628741531249
     isPrivate: false
@@ -4422,13 +4429,13 @@ resources:
     _type: request
   - _id: env_2208ee768dc2295a39591cbb03562119586d56c8
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1628783250610
+    modified: 1628784911519
     created: 1626332572608
     name: Base Environment
     data:
       baseurl: http://kumi-backend.apps
       token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg3ODMyMzUsImV4cCI6MTYyODc4NjgzNSwibmJmIjoxNjI4NzgzMjM1LCJqdGkiOiJJV1oxNjNEWXJBZzU5dEdCIiwic3ViIjoiYzE2ZTliYmQtYTQwYi00YWU1LWJkNmMtN2Q2ZWQ5YmJhYTdlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.jWZmAyqS9x2f6mWyysZqtPeXu3uSEQxvR-zlV0qYJIc
-      token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg3ODA4MTQsImV4cCI6MTYyODc4NDQxNCwibmJmIjoxNjI4NzgwODE0LCJqdGkiOiJlZzN3bzZjbTFTYzdyWU1EIiwic3ViIjoiZGQ5ZjhiYmEtOTVmNS00NzJkLWIwZDAtMjZhMzc4YWFlODkzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.vL0m4oSOLfjnZ1jw2oXG4KmoBpkwObedEIH82L-zvP4
+      token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg3ODQ5MDEsImV4cCI6MTYyODc4ODUwMSwibmJmIjoxNjI4Nzg0OTAxLCJqdGkiOiJUbVFVd2dvU0J5bG9GZlk4Iiwic3ViIjoiZGQ5ZjhiYmEtOTVmNS00NzJkLWIwZDAtMjZhMzc4YWFlODkzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.nm7SIH9gqCudgNtQ4aTEOb4kPxF_4-6Rp4bT2osKRxY
       domain: example.net
     dataPropertyOrder:
       "&":
