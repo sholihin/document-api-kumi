@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-12T17:18:21.180Z
+__export_date: 2021-08-13T02:47:37.188Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
   - _id: req_3a72d7de1cf34cf88cced81db784a7e4
@@ -1843,9 +1843,9 @@ resources:
     _type: request
   - _id: req_63b862df194148b88d3a4ab91bdd613e
     parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628712511162
+    modified: 1628822779106
     created: 1628596208474
-    url: "{{ _.baseurl }}/api/address/2ce3a46c-704e-4de7-8db7-0e7fb0170044"
+    url: "{{ _.baseurl }}/api/customer/address/1c5034e5-a0e9-497d-a0df-fc4bc3a7d035"
     name: UPDATE
     description: |-
       ## Method (POST)
@@ -1947,7 +1947,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg1OTYyNDUsImV4cCI6MTYyODU5OTg0NSwibmJmIjoxNjI4NTk2MjQ1LCJqdGkiOiJVZk5MbldhREFOc2dRYk9YIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4QJTYiZwYlwdjawrjzz9SK2mTCoSVybEulAbfzcQpCQ
+      token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628596208522
     isPrivate: false
@@ -1960,7 +1960,7 @@ resources:
     _type: request
   - _id: req_88d4cf9903724f21981f1847c36dffd4
     parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628785969821
+    modified: 1628821990186
     created: 1628596443794
     url: "{{ _.baseurl }}/api/customer/address"
     name: INDEX
@@ -1968,7 +1968,7 @@ resources:
       ## Method (GET)
       ## Route
       ```
-      /api/address
+      /api/customer/address
       ```
       ## Parameters
       |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
@@ -2050,9 +2050,9 @@ resources:
     _type: request
   - _id: req_788ca0039dbb4128a12a7e38046429de
     parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628712511163
+    modified: 1628822802807
     created: 1628596536766
-    url: "{{ _.baseurl }}/api/address/2ce3a46c-704e-4de7-8db7-0e7fb0170044"
+    url: "{{ _.baseurl }}/api/customer/address/1c5034e5-a0e9-497d-a0df-fc4bc3a7d035"
     name: DELETE
     description: |
       ## Method (DELETE)
@@ -2117,7 +2117,7 @@ resources:
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
     authentication:
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg1OTYyNDUsImV4cCI6MTYyODU5OTg0NSwibmJmIjoxNjI4NTk2MjQ1LCJqdGkiOiJVZk5MbldhREFOc2dRYk9YIiwic3ViIjoiNDA2YzA1MmQtZjk3Ny00YTZjLTk3OGEtNGM4YjRhMjUzZTRlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4QJTYiZwYlwdjawrjzz9SK2mTCoSVybEulAbfzcQpCQ
+      token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628596536767
     isPrivate: false
@@ -3285,7 +3285,6 @@ resources:
           value: ""
           description: ""
           type: file
-          multiline: null
           fileName: C:\Users\Mohamad Sholihin\Desktop\Screenshot_2.png
     parameters: []
     headers:
@@ -4703,14 +4702,14 @@ resources:
     _type: request
   - _id: env_2208ee768dc2295a39591cbb03562119586d56c8
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1628787229892
+    modified: 1628821917693
     created: 1626332572608
     name: Base Environment
     data:
       baseurl: http://kumi-backend.apps
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg3ODMyMzUsImV4cCI6MTYyODc4NjgzNSwibmJmIjoxNjI4NzgzMjM1LCJqdGkiOiJJV1oxNjNEWXJBZzU5dEdCIiwic3ViIjoiYzE2ZTliYmQtYTQwYi00YWU1LWJkNmMtN2Q2ZWQ5YmJhYTdlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.jWZmAyqS9x2f6mWyysZqtPeXu3uSEQxvR-zlV0qYJIc
-      token_reseller: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2Mjg3ODcyMTMsImV4cCI6MTYyODc5MDgxMywibmJmIjoxNjI4Nzg3MjEzLCJqdGkiOiIwcllpQWdJcEZHRjFEVVJ0Iiwic3ViIjoiZWE4ZDQ1ZTgtMDBiYi00OWU5LWExMTgtZjc5NzBhNjg1MGI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Xj6ev8X-9z65VewlOSGYIWK32AKqcR1okITRvJo-U34
-      token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg3ODQ5MDEsImV4cCI6MTYyODc4ODUwMSwibmJmIjoxNjI4Nzg0OTAxLCJqdGkiOiJUbVFVd2dvU0J5bG9GZlk4Iiwic3ViIjoiZGQ5ZjhiYmEtOTVmNS00NzJkLWIwZDAtMjZhMzc4YWFlODkzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.nm7SIH9gqCudgNtQ4aTEOb4kPxF_4-6Rp4bT2osKRxY
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg4MjE5MDMsImV4cCI6MTYyODgyNTUwMywibmJmIjoxNjI4ODIxOTAzLCJqdGkiOiJwbzVZQW12VnFyaEJSd2UzIiwic3ViIjoiYzE2ZTliYmQtYTQwYi00YWU1LWJkNmMtN2Q2ZWQ5YmJhYTdlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.OLBeMj9sMXmmtUa-wfn0-RaT3zuEOUwDiJwbCOCyFcg
+      token_reseller: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2Mjg4MjE4NjUsImV4cCI6MTYyODgyNTQ2NSwibmJmIjoxNjI4ODIxODY1LCJqdGkiOiJ5aVhFOHdwUGkzdW1OWHE4Iiwic3ViIjoiZWE4ZDQ1ZTgtMDBiYi00OWU5LWExMTgtZjc5NzBhNjg1MGI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.mgHW-zTvyczuoxKj8-eYPtfW_weBD9m3mE2MWv0nPJk
+      token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg3OTE1MzYsImV4cCI6MTYyODc5NTEzNiwibmJmIjoxNjI4NzkxNTM2LCJqdGkiOiJ0Qm9Rc0RjNG9VVnEybjB0Iiwic3ViIjoiZGQ5ZjhiYmEtOTVmNS00NzJkLWIwZDAtMjZhMzc4YWFlODkzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.B0d0PaD6YfW4uJNCM3vl0GeXq0wPDtbj-SrFSNn7h9A
       domain: example.net
     dataPropertyOrder:
       "&":
