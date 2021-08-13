@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-13T02:47:37.188Z
+__export_date: 2021-08-13T18:33:25.822Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
   - _id: req_3a72d7de1cf34cf88cced81db784a7e4
@@ -272,9 +272,9 @@ resources:
     _type: request
   - _id: req_ee16e329ab8943b988972515246ed355
     parentId: fld_f43e15356f6b497686f35f79a062b563
-    modified: 1628558926658
+    modified: 1628876654869
     created: 1627486608693
-    url: "{{ _.baseurl }}/api/admin/login"
+    url: "{{ _.produrl }}/api/admin/login"
     name: Login Admin
     description: >-
       ## Method (POST)
@@ -664,7 +664,7 @@ resources:
     _type: request
   - _id: req_d38ad031cf77436a8ed19f0444c99a2d
     parentId: fld_168e9ee64829406a88115d31cffb365e
-    modified: 1628731043986
+    modified: 1628878794456
     created: 1627488560438
     url: "{{ _.baseurl
       }}/api/email/verify/e32dbf52-5bda-4c75-8dd8-6021bd5b473a/817304dcd8ad730c\
@@ -733,14 +733,9 @@ resources:
       }
       ```
     method: GET
-    body:
-      mimeType: application/json
-      text: ""
+    body: {}
     parameters: []
     headers:
-      - id: pair_ed1067674292413d87f7d8ee93ddc68a
-        name: Content-Type
-        value: application/json
       - description: ""
         id: pair_5d7e3096ff0e4e0388cbe4d973da402f
         name: X-DOMAIN-MEMBER
@@ -840,7 +835,7 @@ resources:
     _type: request
   - _id: req_db213b75112b45c9b89210c57c3e7582
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628784965252
+    modified: 1628879074195
     created: 1628319613782
     url: "{{ _.baseurl }}/api/cart"
     name: CREATE
@@ -864,6 +859,8 @@ resources:
       |qty|int|yes|body|computer|
 
       |product_id|uuid|yes|body|hfuw4234-123ff|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
@@ -996,7 +993,7 @@ resources:
     _type: request_group
   - _id: req_f5d2ff3eee714e6b9c92ec8ba1d29faf
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628785234577
+    modified: 1628879104668
     created: 1628325186320
     url: "{{ _.baseurl }}/api/cart/314501de-fb67-43e1-b4a8-be2101460c67"
     name: DELETE
@@ -1010,6 +1007,8 @@ resources:
       |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
       |---------|----|--------|--------|
       |cart|uuid|yes|route param|sdjajsf-2479fd-3423|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
       ## Response Success
       ```
       {
@@ -1061,7 +1060,7 @@ resources:
     _type: request
   - _id: req_75f657c0d8da48f886e4d823a750f71b
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628785136450
+    modified: 1628879044661
     created: 1628326317872
     url: "{{ _.baseurl }}/api/cart/qty-update"
     name: QTY UPDATE
@@ -1087,6 +1086,8 @@ resources:
       |type|string|optional|body|in:increase,decrease|
 
       |note|string|optional|body|warna hijau|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
@@ -1210,7 +1211,7 @@ resources:
     _type: request
   - _id: req_cb9a416ea1a345b6a4bbdfc75a4d888d
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628785175317
+    modified: 1628879052458
     created: 1628404474690
     url: "{{ _.baseurl }}/api/cart"
     name: INDEX
@@ -1230,6 +1231,8 @@ resources:
       |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
       |---------|----|--------|--------|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       |X-DOMAIN-MEMBER|string(slug)|yes|header|kumi_id|
 
@@ -1327,7 +1330,7 @@ resources:
     _type: request
   - _id: req_a739ed41fba24092bcd0351d589a20ea
     parentId: fld_a4001d26408346ea836cc2f449a26646
-    modified: 1628783528306
+    modified: 1628879157558
     created: 1628488698762
     url: "{{ _.baseurl }}/api/customer/profile"
     name: SHOW
@@ -1348,7 +1351,9 @@ resources:
 
       |---------|----|--------|--------|
 
-      |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
       ## Response Success
 
@@ -1430,7 +1435,7 @@ resources:
     _type: request_group
   - _id: req_922000d6838c4296ba63f1a7d659b333
     parentId: fld_a4001d26408346ea836cc2f449a26646
-    modified: 1628784608770
+    modified: 1628879170819
     created: 1628489475880
     url: "{{ _.baseurl }}/api/customer/profile"
     name: UPDATE
@@ -1451,13 +1456,15 @@ resources:
 
       |---------|----|--------|--------|
 
-      |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
-
       |name|string|yes|body|Sholihin|
 
       |phone_number|string|yes|body|81386006706|
 
       |jengkel|string|yes|body|L|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
       ## Response Success
 
@@ -1542,7 +1549,7 @@ resources:
     _type: request
   - _id: req_abbc95a7018442babbe2731ee6278a5e
     parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628785529590
+    modified: 1628879272556
     created: 1628587628062
     url: "{{ _.baseurl }}/api/customer/address"
     name: CREATE
@@ -1553,16 +1560,17 @@ resources:
       /api/address
       ```
       ## Query Parameters
-      |PARAMETER|TYPE|REQUIRED|
-      |---------|----|--------|
-      |label|string|yes|
-      |penerima|string|yes|
-      |phone_number|number|yes|
-      |province_id|integer|yes|
-      |city_id|integer|yes|
-      |subdistrict_id|integer|yes|
-      |detail|string|yes|
-      |X-DOMAIN-MEMBER|string|yes|
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |label|string|yes|body||
+      |penerima|string|yes|body||
+      |phone_number|number|yes|body||
+      |province_id|integer|yes|body||
+      |city_id|integer|yes|body||
+      |subdistrict_id|integer|yes|body||
+      |detail|string|yes|body||
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
       ## Response Success
       ```
@@ -1843,7 +1851,7 @@ resources:
     _type: request
   - _id: req_63b862df194148b88d3a4ab91bdd613e
     parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628822779106
+    modified: 1628879424672
     created: 1628596208474
     url: "{{ _.baseurl }}/api/customer/address/1c5034e5-a0e9-497d-a0df-fc4bc3a7d035"
     name: UPDATE
@@ -1854,17 +1862,18 @@ resources:
       /api/address/{address}
       ```
       ## Query Parameters
-      |PARAMETER|TYPE|REQUIRED|
-      |---------|----|--------|
-      |address|uuid|yes|
-      |label|string|yes|
-      |penerima|string|yes|
-      |phone_number|number|yes|
-      |province_id|integer|yes|
-      |city_id|integer|yes|
-      |subdistrict_id|integer|yes|
-      |detail|string|yes|
-      |X-DOMAIN-MEMBER|string|yes|
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |address|uuid|yes|body||
+      |label|string|yes|body||
+      |penerima|string|yes|body||
+      |phone_number|number|yes|body||
+      |province_id|integer|yes|body||
+      |city_id|integer|yes|body||
+      |subdistrict_id|integer|yes|body||
+      |detail|string|yes|body||
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
       ## Response Success
       ```
@@ -1960,7 +1969,7 @@ resources:
     _type: request
   - _id: req_88d4cf9903724f21981f1847c36dffd4
     parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628821990186
+    modified: 1628879493415
     created: 1628596443794
     url: "{{ _.baseurl }}/api/customer/address"
     name: INDEX
@@ -1973,7 +1982,8 @@ resources:
       ## Parameters
       |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
       |---------|----|--------|--------|
-      |X-DOMAIN-MEMBER|string|yes|header|example.net|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
       ## Response Success
       ```
       {
@@ -2050,7 +2060,7 @@ resources:
     _type: request
   - _id: req_788ca0039dbb4128a12a7e38046429de
     parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628822802807
+    modified: 1628879507050
     created: 1628596536766
     url: "{{ _.baseurl }}/api/customer/address/1c5034e5-a0e9-497d-a0df-fc4bc3a7d035"
     name: DELETE
@@ -2064,7 +2074,8 @@ resources:
       |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
       |---------|----|--------|--------|
       |address|uuid|yes|route param|sfhwf83758-sdknaf234|
-      |X-DOMAIN-MEMBER|string|yes|header|example.net|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
       ## Response Success
       ```
       {
@@ -2130,7 +2141,7 @@ resources:
     _type: request
   - _id: req_6ce317c79a0f42e3bb75ec1123de0a93
     parentId: fld_924db0c422c94978a3f1b794d466baca
-    modified: 1628786064932
+    modified: 1628879526232
     created: 1628739544582
     url: "{{ _.baseurl }}/api/customer/wishlist"
     name: CREATE
@@ -2152,6 +2163,8 @@ resources:
       |---------|----|--------|--------|
 
       |product_id|uuid|yes|body|hfuw4234-123ff|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
@@ -2274,7 +2287,7 @@ resources:
     _type: request_group
   - _id: req_332cca8460b44a2ebd69e6f137a52cac
     parentId: fld_924db0c422c94978a3f1b794d466baca
-    modified: 1628786412209
+    modified: 1628879533113
     created: 1628741329852
     url: "{{ _.baseurl }}/api/customer/wishlist"
     name: INDEX
@@ -2295,7 +2308,9 @@ resources:
 
       |---------|----|--------|--------|
 
-      |X-DOMAIN-MEMBER|string|yes|header|example.net|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
       ## Response Success
 
@@ -2408,7 +2423,7 @@ resources:
     _type: request
   - _id: req_7dfe40d96a5e45949c464af48880659f
     parentId: fld_924db0c422c94978a3f1b794d466baca
-    modified: 1628786445692
+    modified: 1628879540430
     created: 1628741531248
     url: "{{ _.baseurl
       }}/api/customer/wishlist/340f7d37-c59b-4849-8292-4bbdf422972c"
@@ -2423,7 +2438,8 @@ resources:
       |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
       |---------|----|--------|--------|
       |product|uuid|yes|route param|sdjajsf-2479fd-3423|
-      |X-DOMAIN-MEMBER|string|yes|header|example.net|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
       ## Response Success
       ```
       {
@@ -2475,7 +2491,7 @@ resources:
     _type: request
   - _id: req_a0434fd015144431beca2f37169fb0c9
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628776475522
+    modified: 1628877222704
     created: 1627564703184
     url: "{{ _.baseurl }}/api/admin/category"
     name: CREATE
@@ -2579,11 +2595,11 @@ resources:
         - description: ""
           id: pair_dbb45fbeb20c448689839f52fa763e4a
           name: name
-          value: computer
+          value: Asuss
         - description: ""
           id: pair_4c8c68ff51b04685b543291077361b3f
           name: parent_id
-          value: ""
+          value: 071a0d16-635f-49cf-b775-2de390569933
         - description: ""
           fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
           id: pair_3ef5265881124cb0b5324ea993f29262
@@ -2765,7 +2781,7 @@ resources:
     _type: request
   - _id: req_49f8072095ff40afa34e548958d06b7f
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628738181807
+    modified: 1628878832695
     created: 1627570508699
     url: "{{ _.baseurl }}/api/admin/category/f00f86c2-f6c9-401a-a8fc-d9540dd80fb8"
     name: SHOW
@@ -2789,6 +2805,8 @@ resources:
       |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
 
       |category|uuid|yes|route param|sda2423-dsfsdkf245|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       ## Response Success
 
@@ -2856,7 +2874,7 @@ resources:
     _type: request
   - _id: req_f36d557fc98c4121a7f298c3eb2847a4
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628731077576
+    modified: 1628878844681
     created: 1627734122925
     url: "{{ _.baseurl }}/api/admin/category/ea863485-9330-46be-a868-1b170d637fe5"
     name: DELETE
@@ -2870,6 +2888,7 @@ resources:
       |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
       |---------|----|--------|--------|
       |slug|string|yes|route param|computer|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
       ## Response Success
       ```
       {
@@ -2921,7 +2940,7 @@ resources:
     _type: request
   - _id: req_7cf322de93c3483db3940f24d62325ef
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628780389732
+    modified: 1628878862137
     created: 1627735086938
     url: "{{ _.baseurl }}/api/admin/categories"
     name: INDEX
@@ -2942,7 +2961,7 @@ resources:
 
       |---------|----|--------|--------|
 
-      |-|-|-|-|-|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       ## Response Success
 
@@ -3012,12 +3031,87 @@ resources:
     _type: request
   - _id: req_5c7e747cd9894dc381f061340e36fc82
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628780890613
+    modified: 1628878056008
     created: 1628480090747
-    url: "{{ _.baseurl
-      }}/api/admin/category/parent/071a0d16-635f-49cf-b775-2de390569933"
+    url: "{{ _.baseurl }}/api/admin/category/parent"
     name: PARENT
-    description: ""
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/admin/category/parent
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
+
+      |bearer token|jwt|yes|header|eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg4NzY2MzIsImV4cCI6MTYyODg4MDIzMiwibmJmIjoxNjI4ODc2NjMyLCJqdGkiOiJKazdPV1hVdWhTT2puVXFtIiwic3ViIjoiZGQ5ZjhiYmEtOTVmNS00NzJkLWIwZDAtMjZhMzc4YWFlODkzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.zyAwbQpLctPareWuGbPCGoJla-3P6R-KlWdgaXO2c-M|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "categories": [
+            {
+              "id": "071a0d16-635f-49cf-b775-2de390569933",
+              "name": "Computer",
+              "parent_id": null,
+              "slug": "computer",
+              "image": "http:\/\/kumi-backend.apps\/storage\/bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/categories\/wEK4cRjhQ0XJMC0yrYEtzmHNjiIezyKEkR3PKuyj.png",
+              "created_at": "2021-08-12T13:54:37.000000Z",
+              "updated_at": "2021-08-12T13:54:37.000000Z"
+            },
+            {
+              "id": "f00f86c2-f6c9-401a-a8fc-d9540dd80fb8",
+              "name": "Sandal",
+              "parent_id": null,
+              "slug": "sandal",
+              "image": "http:\/\/kumi-backend.apps\/storage\/bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/categories\/cvaJMerirujDGP9XLFQwGCocLM2g4Oi12oJCBLSm.png",
+              "created_at": "2021-08-12T03:15:45.000000Z",
+              "updated_at": "2021-08-12T03:16:13.000000Z"
+            }
+          ]
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Not Found
+
+      ```
+
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Category Not Found!",
+          "error": "No query results for model [App\\Models\\Category]."
+        }
+      }
+
+      ```
     method: GET
     body: {}
     parameters: []
@@ -3040,12 +3134,90 @@ resources:
     _type: request
   - _id: req_0f5558acc0a342eabddd5b949f52e57b
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628780884039
+    modified: 1628878238166
     created: 1628481313886
     url: "{{ _.baseurl
       }}/api/admin/category/child/071a0d16-635f-49cf-b775-2de390569933"
     name: CHILD
-    description: ""
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/admin/category/child/{parent_category_id}
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
+
+      |parent_category_id|string|yes|route param|071a0d16-635f-49cf-b775-2de390569933|
+
+      |bearer token|jwt|yes|header|eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg4NzY2MzIsImV4cCI6MTYyODg4MDIzMiwibmJmIjoxNjI4ODc2NjMyLCJqdGkiOiJKazdPV1hVdWhTT2puVXFtIiwic3ViIjoiZGQ5ZjhiYmEtOTVmNS00NzJkLWIwZDAtMjZhMzc4YWFlODkzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.zyAwbQpLctPareWuGbPCGoJla-3P6R-KlWdgaXO2c-M|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "categories": [
+            {
+              "id": "4ab754a0-61b8-4619-adb3-846423c398d2",
+              "name": "Asus",
+              "parent_id": "071a0d16-635f-49cf-b775-2de390569933",
+              "slug": "asus",
+              "image": "http:\/\/kumi-backend.apps\/storage\/bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/categories\/LpID0WcILsU50Z7I6VacBsbXZXkdvKpnRXQnzPpU.png",
+              "created_at": "2021-08-13T17:53:08.000000Z",
+              "updated_at": "2021-08-13T17:53:08.000000Z"
+            },
+            {
+              "id": "d8cbf184-92f1-492f-85b7-d069d00f4654",
+              "name": "Asuss",
+              "parent_id": "071a0d16-635f-49cf-b775-2de390569933",
+              "slug": "asuss",
+              "image": "http:\/\/kumi-backend.apps\/storage\/bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/categories\/Gv8NToYTcYmf08sqQwnkAT6y0oqWH468AdyYZ64u.png",
+              "created_at": "2021-08-13T17:53:44.000000Z",
+              "updated_at": "2021-08-13T17:53:44.000000Z"
+            }
+          ]
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Not Found
+
+      ```
+
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Category Not Found!",
+          "error": "No query results for model [App\\Models\\Category]."
+        }
+      }
+
+      ```
     method: GET
     body: {}
     parameters: []
@@ -3551,7 +3723,7 @@ resources:
     _type: request
   - _id: req_4d96686d7f6941ebaf2b59f36f23f976
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1628780965110
+    modified: 1628878667003
     created: 1627807785254
     url: "{{ _.baseurl }}/api/admin/product/c0cd5146-a0cc-4894-8c38-3bad1a6b0104"
     name: DELETE
@@ -3565,6 +3737,7 @@ resources:
       |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
       |---------|----|--------|------------|
       |product|uuid|yes|route param|146f4f17-ed48-4001-d58b18ae0b7e|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
       ## Response Success
       ```
       {
@@ -3616,7 +3789,7 @@ resources:
     _type: request
   - _id: req_41b214f6e3d94645a6cbfbd88c08b1aa
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1628780948964
+    modified: 1628878681235
     created: 1627808180434
     url: "{{ _.baseurl }}/api/admin/product/c0cd5146-a0cc-4894-8c38-3bad1a6b0104"
     name: SHOW
@@ -3640,6 +3813,8 @@ resources:
       |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
 
       |product|uuid|yes|route param|32fdsdf-34832dv|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       ## Response Success
 
@@ -3726,7 +3901,7 @@ resources:
     _type: request
   - _id: req_b30d4ee444f94a87a4a8139e9c6a8d46
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1628731008014
+    modified: 1628878688775
     created: 1627808730167
     url: "{{ _.baseurl }}/api/admin/products"
     name: INDEX
@@ -3748,6 +3923,8 @@ resources:
       |---------|----|--------|--------|
 
       |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       ## Response Success
 
@@ -3836,7 +4013,7 @@ resources:
     _type: request
   - _id: req_cbbf5db9d0824590823f78c00b2d0201
     parentId: fld_b1995b6ee49d412d95457293f7eeb62d
-    modified: 1628787813621
+    modified: 1628878910266
     created: 1627975785082
     url: "{{ _.baseurl }}/api/reseller/products"
     name: INDEX
@@ -3858,6 +4035,8 @@ resources:
       |---------|----|--------|--------|
 
       |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       ## Response Success
 
@@ -3972,7 +4151,7 @@ resources:
     _type: request_group
   - _id: req_82526700e672469a8c4da0c9280489ad
     parentId: fld_b1995b6ee49d412d95457293f7eeb62d
-    modified: 1628788061668
+    modified: 1628878921000
     created: 1628787839128
     url: "{{ _.baseurl }}/api/reseller/product/340f7d37-c59b-4849-8292-4bbdf422972c"
     name: SHOW
@@ -3996,6 +4175,8 @@ resources:
       |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
 
       |product|uuid|yes|body|340f7d37-c59b-4849-8292-4bbdf422972c|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       ## Response Success
 
@@ -4100,7 +4281,7 @@ resources:
     _type: request
   - _id: req_c288d3e73ce44e638f3302aa0160758d
     parentId: fld_9bc62c625a464a97a31cdb3efa7d43cd
-    modified: 1628788530208
+    modified: 1628878934130
     created: 1628492215593
     url: "{{ _.baseurl }}/api/reseller/profile"
     name: SHOW
@@ -4122,6 +4303,8 @@ resources:
       |---------|----|--------|--------|
 
       |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       ## Response Success
 
@@ -4199,7 +4382,7 @@ resources:
     _type: request_group
   - _id: req_3379dbe9fde94534a3c734487d2f4a2f
     parentId: fld_9bc62c625a464a97a31cdb3efa7d43cd
-    modified: 1628788638415
+    modified: 1628878954942
     created: 1628492215597
     url: "{{ _.baseurl }}/api/reseller/profile"
     name: UPDATE
@@ -4227,6 +4410,8 @@ resources:
       |phone_number|string|yes|body|81386006706|
 
       |jengkel|string|yes|body|L|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       ## Response Success
 
@@ -4315,7 +4500,7 @@ resources:
     _type: request
   - _id: req_865b973f21134f5bac8c08c59b42825d
     parentId: fld_e65f864a07d74cd7bbbee4489781c6b2
-    modified: 1628779460701
+    modified: 1628878716456
     created: 1628262150828
     url: "{{ _.baseurl }}/api/admin/gallery/340f7d37-c59b-4849-8292-4bbdf422972c"
     name: CREATE
@@ -4339,6 +4524,8 @@ resources:
       |product|uuid|yes|route param|340f7d37-c59b-4849-8292-4bbdf422972c|
 
       |images[]|image(array)|yes|body|picture|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       ## Response Success
 
@@ -4494,7 +4681,7 @@ resources:
     _type: request_group
   - _id: req_e116a62cfef7428288a44cd299904153
     parentId: fld_e65f864a07d74cd7bbbee4489781c6b2
-    modified: 1628782884651
+    modified: 1628878706264
     created: 1628262462715
     url: "{{ _.baseurl
       }}/api/admin/gallery/340f7d37-c59b-4849-8292-4bbdf422972c/d1aaa1fd-fbcd-4\
@@ -4511,6 +4698,7 @@ resources:
       |---------|----|--------|------------|
       |product|uuid|yes|route param|146f4f17-ed48-4001-d58b18ae0b7e|
       |gallery|uuid|yes|route param|146f4f17-sdsds-4001-d58b18ae0b7e|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
       ## Response Success
       ```
       {
@@ -4558,7 +4746,7 @@ resources:
     _type: request
   - _id: req_084e6d00352f4492981b4393a9e8f2aa
     parentId: fld_e65f864a07d74cd7bbbee4489781c6b2
-    modified: 1628782794618
+    modified: 1628878728084
     created: 1628781195591
     url: "{{ _.baseurl
       }}/api/admin/gallery/340f7d37-c59b-4849-8292-4bbdf422972c/d1aaa1fd-fbcd-4\
@@ -4586,6 +4774,8 @@ resources:
       |gallery_id|uuid|yes|route param|340f7d37-c59b-4849-8292-4bbdf422972c|
 
       |sorter|integer|yes|body|1|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
       ## Response Success
 
@@ -4702,21 +4892,25 @@ resources:
     _type: request
   - _id: env_2208ee768dc2295a39591cbb03562119586d56c8
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1628821917693
+    modified: 1628876673794
     created: 1626332572608
     name: Base Environment
     data:
       baseurl: http://kumi-backend.apps
+      produrl: https://panel.kumi.id
       token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg4MjE5MDMsImV4cCI6MTYyODgyNTUwMywibmJmIjoxNjI4ODIxOTAzLCJqdGkiOiJwbzVZQW12VnFyaEJSd2UzIiwic3ViIjoiYzE2ZTliYmQtYTQwYi00YWU1LWJkNmMtN2Q2ZWQ5YmJhYTdlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.OLBeMj9sMXmmtUa-wfn0-RaT3zuEOUwDiJwbCOCyFcg
       token_reseller: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2Mjg4MjE4NjUsImV4cCI6MTYyODgyNTQ2NSwibmJmIjoxNjI4ODIxODY1LCJqdGkiOiJ5aVhFOHdwUGkzdW1OWHE4Iiwic3ViIjoiZWE4ZDQ1ZTgtMDBiYi00OWU5LWExMTgtZjc5NzBhNjg1MGI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.mgHW-zTvyczuoxKj8-eYPtfW_weBD9m3mE2MWv0nPJk
-      token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg3OTE1MzYsImV4cCI6MTYyODc5NTEzNiwibmJmIjoxNjI4NzkxNTM2LCJqdGkiOiJ0Qm9Rc0RjNG9VVnEybjB0Iiwic3ViIjoiZGQ5ZjhiYmEtOTVmNS00NzJkLWIwZDAtMjZhMzc4YWFlODkzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.B0d0PaD6YfW4uJNCM3vl0GeXq0wPDtbj-SrFSNn7h9A
+      token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg4NzY2MzIsImV4cCI6MTYyODg4MDIzMiwibmJmIjoxNjI4ODc2NjMyLCJqdGkiOiJKazdPV1hVdWhTT2puVXFtIiwic3ViIjoiZGQ5ZjhiYmEtOTVmNS00NzJkLWIwZDAtMjZhMzc4YWFlODkzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.zyAwbQpLctPareWuGbPCGoJla-3P6R-KlWdgaXO2c-M
+      token_prod_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9wYW5lbC5rdW1pLmlkXC9hcGlcL2FkbWluXC9sb2dpbiIsImlhdCI6MTYyODg3NjY1NywiZXhwIjoxNjI4ODgwMjU3LCJuYmYiOjE2Mjg4NzY2NTcsImp0aSI6IjBDbld1UG9iclg0dzdkWHQiLCJzdWIiOiIyNjkwY2UxNS1lNGY2LTQ0ZWQtODIxOC1kY2MxOWMyMjEyM2UiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HmV-FwCxmD7rRWNXDNnQtVYaE9NApZbWbug7pDJGkZE
       domain: example.net
     dataPropertyOrder:
       "&":
         - baseurl
+        - produrl
         - token
         - token_reseller
         - token_admin
+        - token_prod_admin
         - domain
     color: null
     isPrivate: false
@@ -4724,7 +4918,7 @@ resources:
     _type: environment
   - _id: jar_2208ee768dc2295a39591cbb03562119586d56c8
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1628733430055
+    modified: 1628877626732
     created: 1626332572611
     name: Default Jar
     cookies:
@@ -4739,7 +4933,7 @@ resources:
         hostOnly: true
         creation: 2021-08-04T02:11:09.642Z
         lastAccessed: 2021-08-12T01:57:10.053Z
-        id: "8821117757006376"
+        id: "27285700638736765"
       - key: laravel_session
         value: eyJpdiI6ImpMdjZpVUhOZ1NPQzJSdnlWYnFDUEE9PSIsInZhbHVlIjoidjA5Y3U4WVVXWkVKaUx3dnJtVVhxTHFsQlRXUEVsMXlxNGRWa0xYQnhGNkc4bCtha2lmc1dPeUdLc0ppWUY4RkVud0gwL3Z2VkdCN3JrNDg0bFVvNFoybGNhT2xWVEpWU2M2dGsyUFEvNnFndFhjZld3OXphM1dCZnVYRVBNd0oiLCJtYWMiOiI1ZmJhNWY4NDRhOTEzYzc1NGQ4ZmZkYjU2MzVlZjlhMTFkMWMxYjZjMTM4MzlhYmJjNzFhODNlZWRmNGJhMGVjIn0%3D
         expires: 2021-08-12T03:57:09.000Z
@@ -4752,7 +4946,32 @@ resources:
         hostOnly: true
         creation: 2021-08-04T02:11:09.643Z
         lastAccessed: 2021-08-12T01:57:10.054Z
-        id: "07364464930306514"
+        id: "48210195826137214"
+      - key: XSRF-TOKEN
+        value: eyJpdiI6InA5UWFyVG56eGsrWkFOaHJmMFd1d0E9PSIsInZhbHVlIjoiMXhQTXVHT1Q3QXZpVHJNRGZOYkVuSzlHZnljem5VN25QTU9zL0R3Ym1jMGJuenNFaU04MW1POFZlNDFnb3o1YXRRMS9QMHZ5bGV5NlRSRW9GRUhTREZsS2xmM1FyK09PbVNjNzFoV0JZanRJWnhOclZmL1dkNDVaU2pUYjdHM2wiLCJtYWMiOiIzNDg0MWY5MTgzMTUzNjRiMjRjMTJjZjNjYjA3ODk1MzIwOGU4OGRjYTFhMjcwZGE0ZTg3Yzc4MjZiNmQ5ZTA1In0%3D
+        expires: 2021-08-13T19:59:17.000Z
+        maxAge: 7200
+        domain: panel.kumi.id
+        path: /
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2021-08-13T18:00:26.723Z
+        lastAccessed: 2021-08-13T18:00:26.723Z
+        id: "6367946405482181"
+      - key: kumi_session
+        value: eyJpdiI6IkpvMkh6QldWak5va085TXRveVJMTlE9PSIsInZhbHVlIjoiK3gvTXV6UFB1eXhFWTRIeXhETkg5Z09SSkI3czJSa2RHYmxsUmpNa3hyaXQxOHNWY2hXWEpPdnZMR3Biek1VUzVjRldBcFFNWmk1K2VzN3FDY2VXZHJLOEdHcVIvMXB1cWpBRmQ5L01US3RDT2x6Q2xIQk9rcFo0bHJGTDhSSTgiLCJtYWMiOiJjZmIwYTQwZGE3OTRkMzVmYThjYTAyMWE2MmZlNmJjNDViY2I0ZTU3ZDg3ZTdmNzllZWM3YTkwNzg2MWZiOTQ5In0%3D
+        expires: 2021-08-13T19:59:17.000Z
+        maxAge: 7200
+        domain: panel.kumi.id
+        path: /
+        httpOnly: true
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2021-08-13T18:00:26.724Z
+        lastAccessed: 2021-08-13T18:00:26.724Z
+        id: "2705158727169039"
     _type: cookie_jar
   - _id: spc_50c67a3c3676462d8ec0d0165c8f41eb
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
