@@ -1,11 +1,11 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-13T18:33:25.822Z
+__export_date: 2021-08-19T06:32:47.132Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
   - _id: req_3a72d7de1cf34cf88cced81db784a7e4
     parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
-    modified: 1628784114734
+    modified: 1629354723018
     created: 1627482067984
     url: "{{ _.baseurl }}/api/customer/login"
     name: Login Customer
@@ -270,9 +270,51 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
+  - _id: req_d1f79b1d30524fe3b3025be624180996
+    parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
+    modified: 1629354723019
+    created: 1628845827995
+    url: "{{ _.baseurl }}/api/customer/facebook/login"
+    name: Login via Facebook
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1627894590825
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9683b9d7522d4e32a4879c063a67fd69
+    parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
+    modified: 1629354723019
+    created: 1628953750075
+    url: "{{ _.baseurl }}/api/customer/google/login"
+    name: Login via Google
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1627875179116
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_ee16e329ab8943b988972515246ed355
     parentId: fld_f43e15356f6b497686f35f79a062b563
-    modified: 1628876654869
+    modified: 1629354723021
     created: 1627486608693
     url: "{{ _.produrl }}/api/admin/login"
     name: Login Admin
@@ -404,7 +446,7 @@ resources:
     _type: request_group
   - _id: req_585531fc590d466c810d2395fb9240c9
     parentId: fld_40aeee4e68224603904889666c7f2a8c
-    modified: 1628558926652
+    modified: 1629354723022
     created: 1627486544471
     url: "{{ _.baseurl }}/api/reseller/login"
     name: Login Reseller
@@ -540,7 +582,7 @@ resources:
     _type: request_group
   - _id: req_e7c6d867428a421da5c84203de3b1eae
     parentId: fld_40aeee4e68224603904889666c7f2a8c
-    modified: 1628787161212
+    modified: 1629354723023
     created: 1627486544474
     url: "{{ _.baseurl }}/api/reseller/register"
     name: Register Reseller
@@ -648,12 +690,54 @@ resources:
       - id: pair_5e963fb2fc0c45149a90ae275816c00b
         name: Content-Type
         value: multipart/form-data
-      - id: pair_9abb9fba2ce545bdacf497ccf99a784a
+      - description: ""
+        id: pair_9abb9fba2ce545bdacf497ccf99a784a
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
-        description: ""
     authentication: {}
     metaSortKey: -1627482077340
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2733bf7b444845cba3d2051c5f895b7d
+    parentId: fld_40aeee4e68224603904889666c7f2a8c
+    modified: 1628997027873
+    created: 1628953759450
+    url: "{{ _.baseurl }}/api/reseller/facebook/login"
+    name: Login via Facebook
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1627975775054
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_591721ea4cae41499c5322fc0e45451b
+    parentId: fld_40aeee4e68224603904889666c7f2a8c
+    modified: 1628997027873
+    created: 1628953766434
+    url: "{{ _.baseurl }}/api/reseller/google/login"
+    name: Login via Google
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1627975775104
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -1330,7 +1414,7 @@ resources:
     _type: request
   - _id: req_a739ed41fba24092bcd0351d589a20ea
     parentId: fld_a4001d26408346ea836cc2f449a26646
-    modified: 1628879157558
+    modified: 1629354723016
     created: 1628488698762
     url: "{{ _.baseurl }}/api/customer/profile"
     name: SHOW
@@ -1407,10 +1491,10 @@ resources:
         id: pair_aa9dddd71a4a4203bd31e453bc36562e
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
-      - id: pair_eff3fffe81ff45bc885be15ede8a415e
+      - description: ""
+        id: pair_eff3fffe81ff45bc885be15ede8a415e
         name: ""
         value: ""
-        description: ""
     authentication:
       token: "{{ _.token }}"
       type: bearer
@@ -1676,7 +1760,7 @@ resources:
     _type: request_group
   - _id: req_591cce45ee4444d990572e9056dbead7
     parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628733444795
+    modified: 1629354723017
     created: 1628589132333
     url: "{{ _.baseurl }}/api/provinces"
     name: PROVINCES
@@ -1703,7 +1787,7 @@ resources:
     _type: request
   - _id: req_ea49bc62523e4f7e97f52289cb20f6e8
     parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628733454383
+    modified: 1629354723018
     created: 1628589485359
     url: "{{ _.baseurl }}/api/cities/1"
     name: CITY
@@ -2491,7 +2575,7 @@ resources:
     _type: request
   - _id: req_a0434fd015144431beca2f37169fb0c9
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628877222704
+    modified: 1629354723020
     created: 1627564703184
     url: "{{ _.baseurl }}/api/admin/category"
     name: CREATE
@@ -3240,7 +3324,7 @@ resources:
     _type: request
   - _id: req_bca3afea958f4499aa0f2f84c4ff0bd3
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1628780922595
+    modified: 1629354723021
     created: 1627796858385
     url: "{{ _.baseurl }}/api/admin/product"
     name: CREATE
@@ -3452,12 +3536,12 @@ resources:
           name: images[]
           type: file
           value: ""
-        - id: pair_b8b2fb3d8c8f460580430689c81683a3
-          name: images[]
-          value: ""
-          description: ""
-          type: file
+        - description: ""
           fileName: C:\Users\Mohamad Sholihin\Desktop\Screenshot_2.png
+          id: pair_b8b2fb3d8c8f460580430689c81683a3
+          name: images[]
+          type: file
+          value: ""
     parameters: []
     headers:
       - id: pair_c8ed9fb2408548c2a994e799dd9a7fea
@@ -4281,7 +4365,7 @@ resources:
     _type: request
   - _id: req_c288d3e73ce44e638f3302aa0160758d
     parentId: fld_9bc62c625a464a97a31cdb3efa7d43cd
-    modified: 1628878934130
+    modified: 1628997148200
     created: 1628492215593
     url: "{{ _.baseurl }}/api/reseller/profile"
     name: SHOW
@@ -4892,17 +4976,17 @@ resources:
     _type: request
   - _id: env_2208ee768dc2295a39591cbb03562119586d56c8
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1628876673794
+    modified: 1629354723016
     created: 1626332572608
     name: Base Environment
     data:
       baseurl: http://kumi-backend.apps
+      domain: example.net
       produrl: https://panel.kumi.id
       token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg4MjE5MDMsImV4cCI6MTYyODgyNTUwMywibmJmIjoxNjI4ODIxOTAzLCJqdGkiOiJwbzVZQW12VnFyaEJSd2UzIiwic3ViIjoiYzE2ZTliYmQtYTQwYi00YWU1LWJkNmMtN2Q2ZWQ5YmJhYTdlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.OLBeMj9sMXmmtUa-wfn0-RaT3zuEOUwDiJwbCOCyFcg
-      token_reseller: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2Mjg4MjE4NjUsImV4cCI6MTYyODgyNTQ2NSwibmJmIjoxNjI4ODIxODY1LCJqdGkiOiJ5aVhFOHdwUGkzdW1OWHE4Iiwic3ViIjoiZWE4ZDQ1ZTgtMDBiYi00OWU5LWExMTgtZjc5NzBhNjg1MGI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.mgHW-zTvyczuoxKj8-eYPtfW_weBD9m3mE2MWv0nPJk
       token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg4NzY2MzIsImV4cCI6MTYyODg4MDIzMiwibmJmIjoxNjI4ODc2NjMyLCJqdGkiOiJKazdPV1hVdWhTT2puVXFtIiwic3ViIjoiZGQ5ZjhiYmEtOTVmNS00NzJkLWIwZDAtMjZhMzc4YWFlODkzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.zyAwbQpLctPareWuGbPCGoJla-3P6R-KlWdgaXO2c-M
       token_prod_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9wYW5lbC5rdW1pLmlkXC9hcGlcL2FkbWluXC9sb2dpbiIsImlhdCI6MTYyODg3NjY1NywiZXhwIjoxNjI4ODgwMjU3LCJuYmYiOjE2Mjg4NzY2NTcsImp0aSI6IjBDbld1UG9iclg0dzdkWHQiLCJzdWIiOiIyNjkwY2UxNS1lNGY2LTQ0ZWQtODIxOC1kY2MxOWMyMjEyM2UiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HmV-FwCxmD7rRWNXDNnQtVYaE9NApZbWbug7pDJGkZE
-      domain: example.net
+      token_reseller: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2Mjg4MjE4NjUsImV4cCI6MTYyODgyNTQ2NSwibmJmIjoxNjI4ODIxODY1LCJqdGkiOiJ5aVhFOHdwUGkzdW1OWHE4Iiwic3ViIjoiZWE4ZDQ1ZTgtMDBiYi00OWU5LWExMTgtZjc5NzBhNjg1MGI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.mgHW-zTvyczuoxKj8-eYPtfW_weBD9m3mE2MWv0nPJk
     dataPropertyOrder:
       "&":
         - baseurl
@@ -4918,7 +5002,7 @@ resources:
     _type: environment
   - _id: jar_2208ee768dc2295a39591cbb03562119586d56c8
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1628877626732
+    modified: 1629163857077
     created: 1626332572611
     name: Default Jar
     cookies:
@@ -4933,7 +5017,7 @@ resources:
         hostOnly: true
         creation: 2021-08-04T02:11:09.642Z
         lastAccessed: 2021-08-12T01:57:10.053Z
-        id: "27285700638736765"
+        id: "3783737853656097"
       - key: laravel_session
         value: eyJpdiI6ImpMdjZpVUhOZ1NPQzJSdnlWYnFDUEE9PSIsInZhbHVlIjoidjA5Y3U4WVVXWkVKaUx3dnJtVVhxTHFsQlRXUEVsMXlxNGRWa0xYQnhGNkc4bCtha2lmc1dPeUdLc0ppWUY4RkVud0gwL3Z2VkdCN3JrNDg0bFVvNFoybGNhT2xWVEpWU2M2dGsyUFEvNnFndFhjZld3OXphM1dCZnVYRVBNd0oiLCJtYWMiOiI1ZmJhNWY4NDRhOTEzYzc1NGQ4ZmZkYjU2MzVlZjlhMTFkMWMxYjZjMTM4MzlhYmJjNzFhODNlZWRmNGJhMGVjIn0%3D
         expires: 2021-08-12T03:57:09.000Z
@@ -4946,10 +5030,10 @@ resources:
         hostOnly: true
         creation: 2021-08-04T02:11:09.643Z
         lastAccessed: 2021-08-12T01:57:10.054Z
-        id: "48210195826137214"
+        id: "2986726067800747"
       - key: XSRF-TOKEN
-        value: eyJpdiI6InA5UWFyVG56eGsrWkFOaHJmMFd1d0E9PSIsInZhbHVlIjoiMXhQTXVHT1Q3QXZpVHJNRGZOYkVuSzlHZnljem5VN25QTU9zL0R3Ym1jMGJuenNFaU04MW1POFZlNDFnb3o1YXRRMS9QMHZ5bGV5NlRSRW9GRUhTREZsS2xmM1FyK09PbVNjNzFoV0JZanRJWnhOclZmL1dkNDVaU2pUYjdHM2wiLCJtYWMiOiIzNDg0MWY5MTgzMTUzNjRiMjRjMTJjZjNjYjA3ODk1MzIwOGU4OGRjYTFhMjcwZGE0ZTg3Yzc4MjZiNmQ5ZTA1In0%3D
-        expires: 2021-08-13T19:59:17.000Z
+        value: eyJpdiI6IkkvQzlURVIzK2Q4S28ydks0SkZCenc9PSIsInZhbHVlIjoiR2RsbndGSFdQU1VTTDcyQlk2d2tDajFTTXNsVVhlUUhKY2xnZWRvcG1FbDdTRlF0emFuTjU5Vm1vWVhQM0pmQ2t2VDdNWlRDd2ZWWVk1dWdvN0hNc0FvT3h3U1FyN0JIdG5iUHhnd3pMd1BzeHY2d1lUTUVrWGt3ZS9jYXhiS00iLCJtYWMiOiI3NDJkNDdkNjFmMjRlMTA4Y2MyMjQyMzdhY2E4MGY5M2VhYzE5NTA1ZDI0MDRlZTQzODgwNGY3ZmMzYTAwMzA5In0%3D
+        expires: 2021-08-17T03:30:55.000Z
         maxAge: 7200
         domain: panel.kumi.id
         path: /
@@ -4957,11 +5041,11 @@ resources:
           - samesite=lax
         hostOnly: true
         creation: 2021-08-13T18:00:26.723Z
-        lastAccessed: 2021-08-13T18:00:26.723Z
-        id: "6367946405482181"
+        lastAccessed: 2021-08-17T01:30:57.072Z
+        id: "14399826920601"
       - key: kumi_session
-        value: eyJpdiI6IkpvMkh6QldWak5va085TXRveVJMTlE9PSIsInZhbHVlIjoiK3gvTXV6UFB1eXhFWTRIeXhETkg5Z09SSkI3czJSa2RHYmxsUmpNa3hyaXQxOHNWY2hXWEpPdnZMR3Biek1VUzVjRldBcFFNWmk1K2VzN3FDY2VXZHJLOEdHcVIvMXB1cWpBRmQ5L01US3RDT2x6Q2xIQk9rcFo0bHJGTDhSSTgiLCJtYWMiOiJjZmIwYTQwZGE3OTRkMzVmYThjYTAyMWE2MmZlNmJjNDViY2I0ZTU3ZDg3ZTdmNzllZWM3YTkwNzg2MWZiOTQ5In0%3D
-        expires: 2021-08-13T19:59:17.000Z
+        value: eyJpdiI6IkNWTVlGWmpKRzhCZEZ3N0YvUGNlTnc9PSIsInZhbHVlIjoidDVFTitlOTBqa0RHS0ZFcURrd3NNOS85UkEvZGpkaGJFemY2Tmxucjd6QStYanhYeEp5emJ1T2F1TndCcmVVMWhlUnRFenVCenlFeXYrNU1URmtsOGdjeVZDSmFOZ0Z6a1dEVFhIcDhaZ1ZZQmhDYlF0UDY0Q1JCam9wR3oxeWciLCJtYWMiOiJiMGVjMzdhNGFiMzg4ODc5MzMxZjJhNTAyOTFjYTM1ZjZiZmM3ZmNmNTFkM2UzN2QyMmIxM2JkYzU2OTRiYTIwIn0%3D
+        expires: 2021-08-17T03:30:55.000Z
         maxAge: 7200
         domain: panel.kumi.id
         path: /
@@ -4970,8 +5054,55 @@ resources:
           - samesite=lax
         hostOnly: true
         creation: 2021-08-13T18:00:26.724Z
-        lastAccessed: 2021-08-13T18:00:26.724Z
-        id: "2705158727169039"
+        lastAccessed: 2021-08-17T01:30:57.074Z
+        id: "4843684524957632"
+      - key: fr
+        value: 1LYuxSHo9PsVJ155i..BhGw76._c.AAA.0.0.BhGxAX.AWVU2ERnUpU
+        expires: 2021-11-15T01:25:42.000Z
+        maxAge: 7775999
+        domain: facebook.com
+        path: /
+        secure: true
+        httpOnly: true
+        hostOnly: false
+        creation: 2021-08-17T01:20:59.122Z
+        lastAccessed: 2021-08-17T01:25:43.537Z
+        id: "8700576432142293"
+      - key: sb
+        value: -g4bYfZTT20GY6JISOdwCpxs
+        expires: 2023-08-17T01:20:58.000Z
+        maxAge: 63072000
+        domain: facebook.com
+        path: /
+        secure: true
+        httpOnly: true
+        hostOnly: false
+        creation: 2021-08-17T01:20:59.127Z
+        lastAccessed: 2021-08-17T01:20:59.127Z
+        id: "5832783207631835"
+      - key: __Host-GAPS
+        value: 1:2x1WnfsOPy5OchoHytEjApb4LlpxbA:30HLfSaChYDtmzGm
+        expires: 2023-08-17T01:25:34.000Z
+        domain: accounts.google.com
+        path: /
+        secure: true
+        httpOnly: true
+        extensions:
+          - Priority=HIGH
+        hostOnly: true
+        creation: 2021-08-17T01:21:48.980Z
+        lastAccessed: 2021-08-17T01:25:37.010Z
+        id: "06605963176990315"
+      - key: GEM
+        value: CgptaW51dGVtYWlkEIL12o21Lw==
+        domain: accounts.google.com
+        path: /
+        secure: true
+        httpOnly: true
+        hostOnly: true
+        creation: 2021-08-17T01:21:48.981Z
+        lastAccessed: 2021-08-17T01:25:37.011Z
+        id: "16662164736595253"
     _type: cookie_jar
   - _id: spc_50c67a3c3676462d8ec0d0165c8f41eb
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
