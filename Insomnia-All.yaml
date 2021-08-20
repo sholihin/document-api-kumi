@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-20T03:18:29.086Z
+__export_date: 2021-08-20T08:03:23.292Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
   - _id: req_3a72d7de1cf34cf88cced81db784a7e4
@@ -446,9 +446,9 @@ resources:
     _type: request_group
   - _id: req_585531fc590d466c810d2395fb9240c9
     parentId: fld_40aeee4e68224603904889666c7f2a8c
-    modified: 1629428425019
+    modified: 1629445096323
     created: 1627486544471
-    url: "{{ _.produrl }}/api/reseller/login"
+    url: "{{ _.baseurl }}/api/reseller/login"
     name: Login Reseller
     description: >-
       ## Method (POST)
@@ -1643,7 +1643,7 @@ resources:
     _type: request_group
   - _id: req_922000d6838c4296ba63f1a7d659b333
     parentId: fld_a4001d26408346ea836cc2f449a26646
-    modified: 1628879170819
+    modified: 1629446464275
     created: 1628489475880
     url: "{{ _.baseurl }}/api/customer/profile"
     name: UPDATE
@@ -1718,9 +1718,9 @@ resources:
       }
 
       ```
-    method: PATCH
+    method: POST
     body:
-      mimeType: application/x-www-form-urlencoded
+      mimeType: multipart/form-data
       params:
         - description: ""
           id: pair_c19ea0861b55408f8b189636935a2b32
@@ -1734,11 +1734,22 @@ resources:
           id: pair_95f201ba1d69459b8ef83fcc58ebb8de
           name: jenkel
           value: L
+        - id: pair_95029aa1030b42aeafb26672e9510e39
+          name: avatar
+          value: ""
+          description: ""
+          type: file
+          multiline: null
+          fileName: C:\Users\Mohamad Sholihin\Pictures\kun.png
+        - id: pair_2cb430773b78451b82882e05abe00638
+          name: _method
+          value: PATCH
+          description: ""
     parameters: []
     headers:
       - id: pair_baaf127c69214313b1e6fde89c3e2e55
         name: Content-Type
-        value: application/x-www-form-urlencoded
+        value: multipart/form-data
       - id: pair_cbf9f84aac544e3fa835bc09ee5d4a37
         name: X-DOMAIN-MEMBER
         value: "{{ _.domain }}"
@@ -4590,7 +4601,7 @@ resources:
     _type: request_group
   - _id: req_3379dbe9fde94534a3c734487d2f4a2f
     parentId: fld_9bc62c625a464a97a31cdb3efa7d43cd
-    modified: 1628878954942
+    modified: 1629446520510
     created: 1628492215597
     url: "{{ _.baseurl }}/api/reseller/profile"
     name: UPDATE
@@ -4665,9 +4676,9 @@ resources:
       }
 
       ```
-    method: PATCH
+    method: POST
     body:
-      mimeType: application/x-www-form-urlencoded
+      mimeType: multipart/form-data
       params:
         - description: ""
           id: pair_c19ea0861b55408f8b189636935a2b32
@@ -4685,11 +4696,23 @@ resources:
           id: pair_95f201ba1d69459b8ef83fcc58ebb8de
           name: jenkel
           value: p
+        - id: pair_d4accf2d12f64fe0a4d22d8c5d7f99a2
+          name: avatar
+          value: ""
+          description: ""
+          type: file
+          multiline: null
+          disabled: false
+          fileName: C:\Users\Mohamad Sholihin\Pictures\kun.png
+        - id: pair_6351ad02bcaa4bd19a10627bc04eedcd
+          name: _method
+          value: PATCH
+          description: ""
     parameters: []
     headers:
       - id: pair_baaf127c69214313b1e6fde89c3e2e55
         name: Content-Type
-        value: application/x-www-form-urlencoded
+        value: multipart/form-data
       - description: ""
         id: pair_6cfefba3aa2c481daefa9875c998fa80
         name: X-DOMAIN-MEMBER
@@ -5100,14 +5123,14 @@ resources:
     _type: request
   - _id: env_2208ee768dc2295a39591cbb03562119586d56c8
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1629428729040
+    modified: 1629445125060
     created: 1626332572608
     name: Base Environment
     data:
       baseurl: http://kumi-backend.apps
       produrl: https://panel.kumi.id
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjk0Mjg1MzgsImV4cCI6MTYyOTQzMjEzOCwibmJmIjoxNjI5NDI4NTM4LCJqdGkiOiJYMExjcXlzdm5ISGFaRXByIiwic3ViIjoiY2YzZTVjZjItN2RmNy00M2NlLWFlMWItMjRjM2UzOTIxNzZjIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.siHVKx3PK9d2BewpqJqr35hbSZ_3cs1Eb2Qt7Gt9CDg
-      token_reseller: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2Mjg4MjE4NjUsImV4cCI6MTYyODgyNTQ2NSwibmJmIjoxNjI4ODIxODY1LCJqdGkiOiJ5aVhFOHdwUGkzdW1OWHE4Iiwic3ViIjoiZWE4ZDQ1ZTgtMDBiYi00OWU5LWExMTgtZjc5NzBhNjg1MGI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.mgHW-zTvyczuoxKj8-eYPtfW_weBD9m3mE2MWv0nPJk
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjk0NDQ3MzksImV4cCI6MTYyOTQ0ODMzOSwibmJmIjoxNjI5NDQ0NzM5LCJqdGkiOiJvYXI1czE0V0FpblJCMlpwIiwic3ViIjoiY2YzZTVjZjItN2RmNy00M2NlLWFlMWItMjRjM2UzOTIxNzZjIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.eDMGvXp4L4422CVbAFiJKLpIOKJYUCnDmSQedjuBncY
+      token_reseller: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2Mjk0NDUxMDIsImV4cCI6MTYyOTQ0ODcwMiwibmJmIjoxNjI5NDQ1MTAyLCJqdGkiOiJvSzdYSjZwZHMyaGk1Nm9yIiwic3ViIjoiNjFmODM1NDgtMzIzYy00ZWMxLWI0YTItODRhM2EzMjU4OWE1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.5_YrDzEyQo83T0O1bByX01l73v1E4UJIjF-gUCU69mg
       token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjk0Mjg3MTcsImV4cCI6MTYyOTQzMjMxNywibmJmIjoxNjI5NDI4NzE3LCJqdGkiOiJkd3dPd3piSFd4cmNwWER1Iiwic3ViIjoiMjNjY2JiZTgtNjc5NS00MTE5LThkYWMtOWY5YTU3ZWRlMWFiIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4BMYIVM_HYtj-bTil0lL9Dx4xJSNrPAzCPj0jmRR3Bo
       token_prod_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjk0Mjg2NjQsImV4cCI6MTYyOTQzMjI2NCwibmJmIjoxNjI5NDI4NjY0LCJqdGkiOiJpTE9BaG9XU3Z4eVBjOWlOIiwic3ViIjoiMjNjY2JiZTgtNjc5NS00MTE5LThkYWMtOWY5YTU3ZWRlMWFiIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Ivmy4MTm5ohPiuZqTphIJZrAk5s5tG69wzBcPsSLsNY
       domain: example.net
