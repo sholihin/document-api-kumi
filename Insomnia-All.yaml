@@ -1,11 +1,11 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-19T06:32:47.132Z
+__export_date: 2021-08-20T03:18:29.086Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
   - _id: req_3a72d7de1cf34cf88cced81db784a7e4
     parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
-    modified: 1629354723018
+    modified: 1629428289100
     created: 1627482067984
     url: "{{ _.baseurl }}/api/customer/login"
     name: Login Customer
@@ -107,8 +107,8 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"email" : "mohamad.sholihin@kumi.id",
-        	"password" : "bismillah"
+        	"email" : "customer@kumi.id",
+        	"password" : "password"
         }
     parameters: []
     headers:
@@ -314,9 +314,9 @@ resources:
     _type: request
   - _id: req_ee16e329ab8943b988972515246ed355
     parentId: fld_f43e15356f6b497686f35f79a062b563
-    modified: 1629354723021
+    modified: 1629428661386
     created: 1627486608693
-    url: "{{ _.produrl }}/api/admin/login"
+    url: "{{ _.baseurl }}/api/admin/login"
     name: Login Admin
     description: >-
       ## Method (POST)
@@ -446,9 +446,9 @@ resources:
     _type: request_group
   - _id: req_585531fc590d466c810d2395fb9240c9
     parentId: fld_40aeee4e68224603904889666c7f2a8c
-    modified: 1629354723022
+    modified: 1629428425019
     created: 1627486544471
-    url: "{{ _.baseurl }}/api/reseller/login"
+    url: "{{ _.produrl }}/api/reseller/login"
     name: Login Reseller
     description: >-
       ## Method (POST)
@@ -919,7 +919,7 @@ resources:
     _type: request
   - _id: req_db213b75112b45c9b89210c57c3e7582
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628879074195
+    modified: 1629428837375
     created: 1628319613782
     url: "{{ _.baseurl }}/api/cart"
     name: CREATE
@@ -1041,8 +1041,8 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"product_id" : "340f7d37-c59b-4849-8292-4bbdf422972c",
-        	"qty" : 2
+        	"product_id" : "ac43fbf2-81de-4f2b-93f4-035c168a55d8",
+        	"qty" : 1
         }
     parameters: []
     headers:
@@ -1144,7 +1144,7 @@ resources:
     _type: request
   - _id: req_75f657c0d8da48f886e4d823a750f71b
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628879044661
+    modified: 1629429079516
     created: 1628326317872
     url: "{{ _.baseurl }}/api/cart/qty-update"
     name: QTY UPDATE
@@ -1268,7 +1268,7 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"product_id" : "340f7d37-c59b-4849-8292-4bbdf422972c",
+        	"product_id" : "ac43fbf2-81de-4f2b-93f4-035c168a55d8",
         	"type" : "decrease",
         	"note" : "yang bagus ya"
         }
@@ -1404,6 +1404,130 @@ resources:
       token: "{{ _.token }}"
       type: bearer
     metaSortKey: -1628404474690
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_df1200faa2e447bbb203b1b9a0429dd6
+    parentId: fld_6472a509baea4d89991533e9cc923228
+    modified: 1629429338887
+    created: 1629429100927
+    url: "{{ _.baseurl }}/api/cart/qty-update"
+    name: CREATE OR UPDATE NOTE
+    description: |-
+      ## Method (POST)
+      ## Route
+      ```
+      /api/cart/qty-update
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |product_id|uuid|yes|body|hfuw4234-123ff|
+      |note|string|optional|body|warna hijau|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Cart Updated!"
+        },
+        "data": {
+          "cart": {
+            "id": "5ea49a09-312b-4115-adea-2edb6b0912a5",
+            "qty": 2,
+            "price": 2400000,
+            "weight": 18,
+            "note": "Yang Bagus Ya Gaes Boleh Lah",
+            "discount": null,
+            "dicount_type": null,
+            "product": {
+              "id": "ac43fbf2-81de-4f2b-93f4-035c168a55d8",
+              "title": "Computers",
+              "slug": "computers",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-20T03:06:10.000000Z",
+              "updated_at": "2021-08-20T03:06:10.000000Z"
+            }
+          }
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Unauthorized
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Cart Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+      ### Validation Input
+      ```
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "type": [
+              "The selected type is invalid."
+            ]
+          }
+        }
+      }
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"product_id" : "ac43fbf2-81de-4f2b-93f4-035c168a55d8",
+        	"note" : "yang bagus ya gaes boleh lah"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_863eab5303d54a138ff18b5da394cee3
+      - id: pair_f875f62a8c524f7da50723251c308344
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+        description: ""
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1628319613732
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -2575,7 +2699,7 @@ resources:
     _type: request
   - _id: req_a0434fd015144431beca2f37169fb0c9
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1629354723020
+    modified: 1629428751527
     created: 1627564703184
     url: "{{ _.baseurl }}/api/admin/category"
     name: CREATE
@@ -2679,11 +2803,11 @@ resources:
         - description: ""
           id: pair_dbb45fbeb20c448689839f52fa763e4a
           name: name
-          value: Asuss
+          value: Laptop
         - description: ""
           id: pair_4c8c68ff51b04685b543291077361b3f
           name: parent_id
-          value: 071a0d16-635f-49cf-b775-2de390569933
+          value: ""
         - description: ""
           fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
           id: pair_3ef5265881124cb0b5324ea993f29262
@@ -3324,7 +3448,7 @@ resources:
     _type: request
   - _id: req_bca3afea958f4499aa0f2f84c4ff0bd3
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1629354723021
+    modified: 1629428769394
     created: 1627796858385
     url: "{{ _.baseurl }}/api/admin/product"
     name: CREATE
@@ -3475,7 +3599,7 @@ resources:
           disabled: false
           id: pair_6b1a129751ef4961b2fe46b93457f860
           name: category_id
-          value: 071a0d16-635f-49cf-b775-2de390569933
+          value: 1f5a50b8-5dcd-4051-8d5c-01762eb1d97c
         - description: ""
           id: pair_340b627a78f24245b7a87eecaac8957a
           name: type
@@ -3985,7 +4109,7 @@ resources:
     _type: request
   - _id: req_b30d4ee444f94a87a4a8139e9c6a8d46
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1628878688775
+    modified: 1629428705003
     created: 1627808730167
     url: "{{ _.baseurl }}/api/admin/products"
     name: INDEX
@@ -4976,17 +5100,17 @@ resources:
     _type: request
   - _id: env_2208ee768dc2295a39591cbb03562119586d56c8
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1629354723016
+    modified: 1629428729040
     created: 1626332572608
     name: Base Environment
     data:
       baseurl: http://kumi-backend.apps
-      domain: example.net
       produrl: https://panel.kumi.id
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjg4MjE5MDMsImV4cCI6MTYyODgyNTUwMywibmJmIjoxNjI4ODIxOTAzLCJqdGkiOiJwbzVZQW12VnFyaEJSd2UzIiwic3ViIjoiYzE2ZTliYmQtYTQwYi00YWU1LWJkNmMtN2Q2ZWQ5YmJhYTdlIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.OLBeMj9sMXmmtUa-wfn0-RaT3zuEOUwDiJwbCOCyFcg
-      token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjg4NzY2MzIsImV4cCI6MTYyODg4MDIzMiwibmJmIjoxNjI4ODc2NjMyLCJqdGkiOiJKazdPV1hVdWhTT2puVXFtIiwic3ViIjoiZGQ5ZjhiYmEtOTVmNS00NzJkLWIwZDAtMjZhMzc4YWFlODkzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.zyAwbQpLctPareWuGbPCGoJla-3P6R-KlWdgaXO2c-M
-      token_prod_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9wYW5lbC5rdW1pLmlkXC9hcGlcL2FkbWluXC9sb2dpbiIsImlhdCI6MTYyODg3NjY1NywiZXhwIjoxNjI4ODgwMjU3LCJuYmYiOjE2Mjg4NzY2NTcsImp0aSI6IjBDbld1UG9iclg0dzdkWHQiLCJzdWIiOiIyNjkwY2UxNS1lNGY2LTQ0ZWQtODIxOC1kY2MxOWMyMjEyM2UiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HmV-FwCxmD7rRWNXDNnQtVYaE9NApZbWbug7pDJGkZE
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjk0Mjg1MzgsImV4cCI6MTYyOTQzMjEzOCwibmJmIjoxNjI5NDI4NTM4LCJqdGkiOiJYMExjcXlzdm5ISGFaRXByIiwic3ViIjoiY2YzZTVjZjItN2RmNy00M2NlLWFlMWItMjRjM2UzOTIxNzZjIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.siHVKx3PK9d2BewpqJqr35hbSZ_3cs1Eb2Qt7Gt9CDg
       token_reseller: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2Mjg4MjE4NjUsImV4cCI6MTYyODgyNTQ2NSwibmJmIjoxNjI4ODIxODY1LCJqdGkiOiJ5aVhFOHdwUGkzdW1OWHE4Iiwic3ViIjoiZWE4ZDQ1ZTgtMDBiYi00OWU5LWExMTgtZjc5NzBhNjg1MGI0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.mgHW-zTvyczuoxKj8-eYPtfW_weBD9m3mE2MWv0nPJk
+      token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjk0Mjg3MTcsImV4cCI6MTYyOTQzMjMxNywibmJmIjoxNjI5NDI4NzE3LCJqdGkiOiJkd3dPd3piSFd4cmNwWER1Iiwic3ViIjoiMjNjY2JiZTgtNjc5NS00MTE5LThkYWMtOWY5YTU3ZWRlMWFiIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4BMYIVM_HYtj-bTil0lL9Dx4xJSNrPAzCPj0jmRR3Bo
+      token_prod_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjk0Mjg2NjQsImV4cCI6MTYyOTQzMjI2NCwibmJmIjoxNjI5NDI4NjY0LCJqdGkiOiJpTE9BaG9XU3Z4eVBjOWlOIiwic3ViIjoiMjNjY2JiZTgtNjc5NS00MTE5LThkYWMtOWY5YTU3ZWRlMWFiIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Ivmy4MTm5ohPiuZqTphIJZrAk5s5tG69wzBcPsSLsNY
+      domain: example.net
     dataPropertyOrder:
       "&":
         - baseurl
