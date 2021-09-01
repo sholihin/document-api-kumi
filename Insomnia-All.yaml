@@ -1,13 +1,13 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-20T08:03:23.292Z
-__export_source: insomnia.desktop.app:v2021.4.1
+__export_date: 2021-09-01T21:11:01.749Z
+__export_source: insomnia.desktop.app:v2021.5.1
 resources:
   - _id: req_3a72d7de1cf34cf88cced81db784a7e4
     parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
-    modified: 1629428289100
+    modified: 1630076350044
     created: 1627482067984
-    url: "{{ _.baseurl }}/api/customer/login"
+    url: "{{ _.produrl }}/api/customer/login"
     name: Login Customer
     description: >-
       ## Method (POST)
@@ -314,7 +314,7 @@ resources:
     _type: request
   - _id: req_ee16e329ab8943b988972515246ed355
     parentId: fld_f43e15356f6b497686f35f79a062b563
-    modified: 1629428661386
+    modified: 1630381832547
     created: 1627486608693
     url: "{{ _.baseurl }}/api/admin/login"
     name: Login Admin
@@ -424,7 +424,12 @@ resources:
       - id: pair_4fb2bc0e31774f99b1bd6251e0b9c4cb
         name: Content-Type
         value: application/json
-    authentication: {}
+    authentication:
+      disabled: false
+      password: ""
+      type: basic
+      useISO88591: false
+      username: ""
     metaSortKey: -1627480776241
     isPrivate: false
     settingStoreCookies: true
@@ -444,9 +449,63 @@ resources:
     environmentPropertyOrder: null
     metaSortKey: -1627480776291
     _type: request_group
+  - _id: req_61f52cde64354151b738c6ff1bfdb73e
+    parentId: fld_f43e15356f6b497686f35f79a062b563
+    modified: 1630443964922
+    created: 1630304253403
+    url: "{{ _.baseurl }}/api/admin/customers"
+    name: Customers
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_91b2dba1259d42e29a5e6329895da310
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_admin }}"
+      type: bearer
+    metaSortKey: -1630304253403
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7e8e8bd645fc465fbefe3c791efe1a3e
+    parentId: fld_f43e15356f6b497686f35f79a062b563
+    modified: 1630443964923
+    created: 1630305906361
+    url: "{{ _.baseurl }}/api/admin/resellers"
+    name: Resellers
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_91b2dba1259d42e29a5e6329895da310
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_admin }}"
+      type: bearer
+    metaSortKey: -1630220736688.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_585531fc590d466c810d2395fb9240c9
     parentId: fld_40aeee4e68224603904889666c7f2a8c
-    modified: 1629445096323
+    modified: 1630377580789
     created: 1627486544471
     url: "{{ _.baseurl }}/api/reseller/login"
     name: Login Reseller
@@ -917,10 +976,10 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_db213b75112b45c9b89210c57c3e7582
-    parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1629428837375
-    created: 1628319613782
+  - _id: req_30b45e085271410097436b00b0fccc4a
+    parentId: fld_640b66f353294f22bb329db3f29657f1
+    modified: 1630527795702
+    created: 1630392729847
     url: "{{ _.baseurl }}/api/cart"
     name: CREATE
     description: >-
@@ -1041,7 +1100,626 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"product_id" : "ac43fbf2-81de-4f2b-93f4-035c168a55d8",
+        	"product_id" : "7863ec51-8d7e-4b3f-8305-7e5d833378ac",
+        	"qty" : 1
+        }
+    parameters: []
+    headers:
+      - id: pair_5fe4f5026a2840a5a9862e025f731a42
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_ad6e92f886bc4d63ab7480098ac86ae2
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628319613782
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_640b66f353294f22bb329db3f29657f1
+    parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
+    modified: 1630527566725
+    created: 1630392729843
+    name: Cart
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627480777770
+    _type: request_group
+  - _id: req_44d31d297fad43b6a285260069b8bcf4
+    parentId: fld_640b66f353294f22bb329db3f29657f1
+    modified: 1630527874000
+    created: 1630392729850
+    url: "{{ _.baseurl }}/api/cart/7863ec51-8d7e-4b3f-8305-7e5d833378ac"
+    name: DELETE
+    description: |-
+      ## Method (DELETE)
+      ## Route
+      ```
+      /api/cart/{cart}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |cart|uuid|yes|route param|sdjajsf-2479fd-3423|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Cart Deleted!"
+        },
+        "data": [
+          "success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Category Not Found!",
+          "error": "No query results for model [App\\Models\\Cart]."
+        }
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_f1ab3d958f31464894a6ddbacb948fc3
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628325186320
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7f88db55af63477e802cbd242b019314
+    parentId: fld_640b66f353294f22bb329db3f29657f1
+    modified: 1630528118581
+    created: 1630392729855
+    url: "{{ _.baseurl }}/api/cart/qty-update"
+    name: QTY UPDATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/cart/qty-update
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |product_id|uuid|yes|body|hfuw4234-123ff|
+
+      |type|string|optional|body|in:increase,decrease|
+
+      |note|string|optional|body|warna hijau|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Cart Updated!"
+        },
+        "data": {
+          "cart": {
+            "id": "a0e4e56a-b727-4b8c-83ce-69b01eb5c8ef",
+            "qty": 3,
+            "price": 3600000,
+            "weight": 27,
+            "note": "Decrease",
+            "discount": null,
+            "dicount_type": null,
+            "product": {
+              "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+              "title": "Computers Baru",
+              "slug": "computers-baru",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-10T02:48:26.000000Z",
+              "updated_at": "2021-08-10T02:48:26.000000Z"
+            }
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Cart Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "type": [
+              "The selected type is invalid."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"product_id" : "7863ec51-8d7e-4b3f-8305-7e5d833378ac",
+        	"type" : "decrease",
+        	"note" : "yang bagus ya"
+        }
+    parameters: []
+    headers:
+      - id: pair_feea94f13a9c4201ad9c45c67161f2fd
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_63191ad7fce54036a2db2fa0c17427a5
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628326317873
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f029604d146f4654897a333d64f76adb
+    parentId: fld_640b66f353294f22bb329db3f29657f1
+    modified: 1630527666826
+    created: 1630392729860
+    url: "{{ _.baseurl }}/api/cart"
+    name: INDEX
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/cart
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      |X-DOMAIN-MEMBER|string(slug)|yes|header|kumi_id|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Your Carts Listed!"
+        },
+        "data": {
+          "cart": [
+            {
+              "id": "a0e4e56a-b727-4b8c-83ce-69b01eb5c8ef",
+              "qty": 3,
+              "price": 3600000,
+              "weight": 27,
+              "note": "Decrease",
+              "discount": null,
+              "dicount_type": null,
+              "product": {
+                "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+                "title": "Computers Baru",
+                "slug": "computers-baru",
+                "type": "physical",
+                "merk": "ASUS",
+                "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+                "content": "nice",
+                "tnc": "you should buy",
+                "weight": 9,
+                "price": 1200000,
+                "stocks": 12,
+                "reseller_price": 1300000,
+                "discount_type": "nominal",
+                "discount": null,
+                "affiliate_type": "nominal",
+                "affiliate_fee": 10000,
+                "pin": null,
+                "created_at": "2021-08-10T02:48:26.000000Z",
+                "updated_at": "2021-08-10T02:48:26.000000Z"
+              }
+            }
+          ],
+          "total": 3600000
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Showing Cart Failed!"
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_76ffb2c492b0467587b0413d0263acd8
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+      - description: ""
+        id: pair_8cda0aeabfc74640aa737fc2069a2e2b
+        name: ""
+        value: ""
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628404474690
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_217908e1295943a389bf7bbf23c05365
+    parentId: fld_640b66f353294f22bb329db3f29657f1
+    modified: 1630527817414
+    created: 1630392729864
+    url: "{{ _.baseurl }}/api/cart/qty-update"
+    name: CREATE OR UPDATE NOTE
+    description: |-
+      ## Method (POST)
+      ## Route
+      ```
+      /api/cart/qty-update
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |product_id|uuid|yes|body|hfuw4234-123ff|
+      |note|string|optional|body|warna hijau|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Cart Updated!"
+        },
+        "data": {
+          "cart": {
+            "id": "5ea49a09-312b-4115-adea-2edb6b0912a5",
+            "qty": 2,
+            "price": 2400000,
+            "weight": 18,
+            "note": "Yang Bagus Ya Gaes Boleh Lah",
+            "discount": null,
+            "dicount_type": null,
+            "product": {
+              "id": "ac43fbf2-81de-4f2b-93f4-035c168a55d8",
+              "title": "Computers",
+              "slug": "computers",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-20T03:06:10.000000Z",
+              "updated_at": "2021-08-20T03:06:10.000000Z"
+            }
+          }
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Unauthorized
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Cart Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+      ### Validation Input
+      ```
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "type": [
+              "The selected type is invalid."
+            ]
+          }
+        }
+      }
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"product_id" : "7863ec51-8d7e-4b3f-8305-7e5d833378ac",
+        	"note" : "yang bagus ya gaes boleh lah"
+        }
+    parameters: []
+    headers:
+      - id: pair_863eab5303d54a138ff18b5da394cee3
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_f875f62a8c524f7da50723251c308344
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628319613732
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_db213b75112b45c9b89210c57c3e7582
+    parentId: fld_6472a509baea4d89991533e9cc923228
+    modified: 1630375365824
+    created: 1628319613782
+    url: "{{ _.produrl }}/api/cart"
+    name: CREATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/cart
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |qty|int|yes|body|computer|
+
+      |product_id|uuid|yes|body|hfuw4234-123ff|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Cart Added!"
+        },
+        "data": {
+          "cart": {
+            "id": "5ec70007-7e95-437f-99be-650643cb0788",
+            "qty": 1,
+            "price": 1200000,
+            "weight": 9,
+            "note": null,
+            "discount": null,
+            "dicount_type": null,
+            "product": {
+              "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+              "title": "Computers Baru",
+              "slug": "computers-baru",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-10T02:48:26.000000Z",
+              "updated_at": "2021-08-10T02:48:26.000000Z"
+            }
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Adding Cart Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "qty": [
+              "The qty field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"product_id" : "4d6ef52b-a568-484e-b5ce-d76a9b93f212",
         	"qty" : 1
         }
     parameters: []
@@ -1295,7 +1973,7 @@ resources:
     _type: request
   - _id: req_cb9a416ea1a345b6a4bbdfc75a4d888d
     parentId: fld_6472a509baea4d89991533e9cc923228
-    modified: 1628879052458
+    modified: 1630382447816
     created: 1628404474690
     url: "{{ _.baseurl }}/api/cart"
     name: INDEX
@@ -1401,7 +2079,7 @@ resources:
         name: ""
         value: ""
     authentication:
-      token: "{{ _.token }}"
+      token: "{{ _.token_reseller }}"
       type: bearer
     metaSortKey: -1628404474690
     isPrivate: false
@@ -1538,9 +2216,9 @@ resources:
     _type: request
   - _id: req_a739ed41fba24092bcd0351d589a20ea
     parentId: fld_a4001d26408346ea836cc2f449a26646
-    modified: 1629354723016
+    modified: 1630076439997
     created: 1628488698762
-    url: "{{ _.baseurl }}/api/customer/profile"
+    url: "{{ _.produrl }}/api/customer/profile"
     name: SHOW
     description: >-
       ## Method (GET)
@@ -1643,9 +2321,9 @@ resources:
     _type: request_group
   - _id: req_922000d6838c4296ba63f1a7d659b333
     parentId: fld_a4001d26408346ea836cc2f449a26646
-    modified: 1629446464275
+    modified: 1630374886819
     created: 1628489475880
-    url: "{{ _.baseurl }}/api/customer/profile"
+    url: "{{ _.produrl }}/api/customer/profile"
     name: UPDATE
     description: >-
       ## Method (PATCH)
@@ -1739,8 +2417,7 @@ resources:
           value: ""
           description: ""
           type: file
-          multiline: null
-          fileName: C:\Users\Mohamad Sholihin\Pictures\kun.png
+          fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
         - id: pair_2cb430773b78451b82882e05abe00638
           name: _method
           value: PATCH
@@ -1766,603 +2443,11 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_abbc95a7018442babbe2731ee6278a5e
-    parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628879272556
-    created: 1628587628062
-    url: "{{ _.baseurl }}/api/customer/address"
-    name: CREATE
-    description: |-
-      ## Method (POST)
-      ## Route
-      ```
-      /api/address
-      ```
-      ## Query Parameters
-      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-      |---------|----|--------|--------|
-      |label|string|yes|body||
-      |penerima|string|yes|body||
-      |phone_number|number|yes|body||
-      |province_id|integer|yes|body||
-      |city_id|integer|yes|body||
-      |subdistrict_id|integer|yes|body||
-      |detail|string|yes|body||
-      |bearer token|jwt|yes|header|12132-jfjdf34-213|
-      |X-DOMAIN-MEMBER|string|yes|body|example.net|
-
-      ## Response Success
-      ```
-      {
-        "meta": {
-          "code": 201,
-          "status": "success",
-          "message": "Address Created!"
-        },
-        "data": {
-          "address": {
-            "label": "home",
-            "penerima": "admin kumi",
-            "phone_number": "0827372412434",
-            "province_id": 1,
-            "province": "Bali",
-            "city_id": 17,
-            "city": "Badung",
-            "subdistrict_id": 258,
-            "subdstrict": "Abiansemal",
-            "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
-          }
-        }
-      }
-      ```
-
-      ## Response Failed
-      ### Domain Invalid
-      ```
-      {
-        "meta": {
-          "code": 401,
-          "status": "error",
-          "message": "Creating Address Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": "Unauthorized Domain"
-        }
-      }
-      ```
-      ### Validation Input
-      ```
-      {
-        "meta": {
-          "code": 422,
-          "status": "error",
-          "message": "Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": {
-            "subdistrict_id": [
-              "The subdistrict id field is required."
-            ]
-          }
-        }
-      }
-      ```
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-        	"label" : "home",
-        	"penerima" : "admin kumi",
-        	"phone_number" : "0827372412434", 
-        	"province_id" : 1,
-        	"city_id" : 17,
-        	"subdistrict_id" : 258,
-        	"detail" : "Jl. Angkatan 45 No. 15 Rt.04/15"
-        }
-    parameters: []
-    headers:
-      - description: ""
-        id: pair_46643d4e95a54e46a271e16d140b00c3
-        name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
-      - id: pair_996098c40fac486db5c53e6baaaecf00
-        name: Content-Type
-        value: application/json
-    authentication:
-      token: "{{ _.token }}"
-      type: bearer
-    metaSortKey: -1628587628062
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: fld_9a09d4cfc90945fe816882c471a27289
-    parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
-    modified: 1628712511161
-    created: 1628587617832
-    name: Address
-    description: ""
-    environment: {}
-    environmentPropertyOrder: null
-    metaSortKey: -1628587617832
-    _type: request_group
-  - _id: req_591cce45ee4444d990572e9056dbead7
-    parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1629354723017
-    created: 1628589132333
-    url: "{{ _.baseurl }}/api/provinces"
-    name: PROVINCES
-    description: ""
-    method: GET
-    body: {}
-    parameters: []
-    headers:
-      - description: ""
-        id: pair_6003373bb6df4e28a32238aa7f743c49
-        name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
-    authentication:
-      token: "{{ _.token }}"
-      type: bearer
-    metaSortKey: -1628589132380
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_ea49bc62523e4f7e97f52289cb20f6e8
-    parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1629354723018
-    created: 1628589485359
-    url: "{{ _.baseurl }}/api/cities/1"
-    name: CITY
-    description: ""
-    method: GET
-    body: {}
-    parameters: []
-    headers:
-      - description: ""
-        id: pair_be56df29959a41ceae75139b1acd97e7
-        name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
-    authentication:
-      token: "{{ _.token }}"
-      type: bearer
-    metaSortKey: -1628589485359
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_6e4175be6b924a6f828ad42ae06e3f83
-    parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628733462960
-    created: 1628592001721
-    url: "{{ _.baseurl }}/api/subdistricts/17"
-    name: SUBDISTRICT
-    description: |-
-      ## Method (GET)
-      ## Route
-      ```
-      /api/subdistricts/{province}
-      ```
-      ## Parameters
-      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-      |---------|----|--------|--------|
-      |province|integer|yes|route param|1|
-      |X-DOMAIN-MEMBER|string|yes|header|example.net|
-      ## Response Success
-      ```
-      {
-        "meta": {
-          "code": 200,
-          "status": "success",
-          "message": "success"
-        },
-        "data": {
-          "cities": [
-            {
-              "province_id": 1,
-              "province": "Bali",
-              "city_id": 17,
-              "city": "Badung",
-              "type": "Kabupaten",
-              "subdistrict_id": 258,
-              "subdistrict": "Abiansemal"
-            },
-            {
-              "province_id": 1,
-              "province": "Bali",
-              "city_id": 17,
-              "city": "Badung",
-              "type": "Kabupaten",
-              "subdistrict_id": 259,
-              "subdistrict": "Kuta"
-            },
-            {
-              "province_id": 1,
-              "province": "Bali",
-              "city_id": 17,
-              "city": "Badung",
-              "type": "Kabupaten",
-              "subdistrict_id": 260,
-              "subdistrict": "Kuta Selatan"
-            },
-            {
-              "province_id": 1,
-              "province": "Bali",
-              "city_id": 17,
-              "city": "Badung",
-              "type": "Kabupaten",
-              "subdistrict_id": 261,
-              "subdistrict": "Kuta Utara"
-            },
-            {
-              "province_id": 1,
-              "province": "Bali",
-              "city_id": 17,
-              "city": "Badung",
-              "type": "Kabupaten",
-              "subdistrict_id": 262,
-              "subdistrict": "Mengwi"
-            },
-            {
-              "province_id": 1,
-              "province": "Bali",
-              "city_id": 17,
-              "city": "Badung",
-              "type": "Kabupaten",
-              "subdistrict_id": 263,
-              "subdistrict": "Petang"
-            }
-          ]
-        }
-      }
-      ```
-
-      ## Response Failed
-      ### Not Found
-      ```
-      {
-        "meta": {
-          "code": 401,
-          "status": "error",
-          "message": "Showing District Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": "Unauthorized Domain"
-        }
-      }
-      ```
-    method: GET
-    body: {}
-    parameters: []
-    headers:
-      - description: ""
-        id: pair_51449915fcb249a399473d183872428e
-        name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
-    authentication:
-      token: "{{ _.token }}"
-      type: bearer
-    metaSortKey: -1628592001721
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_63b862df194148b88d3a4ab91bdd613e
-    parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628879424672
-    created: 1628596208474
-    url: "{{ _.baseurl }}/api/customer/address/1c5034e5-a0e9-497d-a0df-fc4bc3a7d035"
-    name: UPDATE
-    description: |-
-      ## Method (POST)
-      ## Route
-      ```
-      /api/address/{address}
-      ```
-      ## Query Parameters
-      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-      |---------|----|--------|--------|
-      |address|uuid|yes|body||
-      |label|string|yes|body||
-      |penerima|string|yes|body||
-      |phone_number|number|yes|body||
-      |province_id|integer|yes|body||
-      |city_id|integer|yes|body||
-      |subdistrict_id|integer|yes|body||
-      |detail|string|yes|body||
-      |bearer token|jwt|yes|header|12132-jfjdf34-213|
-      |X-DOMAIN-MEMBER|string|yes|body|example.net|
-
-      ## Response Success
-      ```
-      {
-        "meta": {
-          "code": 201,
-          "status": "success",
-          "message": "Address Updated!"
-        },
-        "data": {
-          "address": {
-            "label": "home",
-            "penerima": "saya",
-            "phone_number": "0827372412434",
-            "province_id": 1,
-            "province": "Bali",
-            "city_id": 17,
-            "city": "Badung",
-            "subdistrict_id": 258,
-            "subdstrict": "Abiansemal",
-            "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
-          }
-        }
-      }
-      ```
-
-      ## Response Failed
-      ### Domain Invalid
-      ```
-      {
-        "meta": {
-          "code": 401,
-          "status": "error",
-          "message": "Creating Address Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": "Unauthorized Domain"
-        }
-      }
-      ```
-      ### Validation Input
-      ```
-      {
-        "meta": {
-          "code": 422,
-          "status": "error",
-          "message": "Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": {
-            "subdistrict_id": [
-              "The subdistrict id field is required."
-            ]
-          }
-        }
-      }
-      ```
-    method: PATCH
-    body:
-      mimeType: application/json
-      text: |-
-        {
-        	"label" : "home",
-        	"penerima" : "saya",
-        	"phone_number" : "0827372412434", 
-        	"province_id" : 1,
-        	"city_id" : 17,
-        	"subdistrict_id" : 258,
-        	"detail" : "Jl. Angkatan 45 No. 15 Rt.04/15"
-        }
-    parameters: []
-    headers:
-      - id: pair_6370e14b2d9a42b8a9d47e88e1deca5d
-        name: Content-Type
-        value: application/json
-      - description: ""
-        id: pair_a38c8a33a3644dd1adf5c0b2715fa865
-        name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
-    authentication:
-      token: "{{ _.token }}"
-      type: bearer
-    metaSortKey: -1628596208522
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_88d4cf9903724f21981f1847c36dffd4
-    parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628879493415
-    created: 1628596443794
-    url: "{{ _.baseurl }}/api/customer/address"
-    name: INDEX
-    description: |-
-      ## Method (GET)
-      ## Route
-      ```
-      /api/customer/address
-      ```
-      ## Parameters
-      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-      |---------|----|--------|--------|
-      |bearer token|jwt|yes|header|12132-jfjdf34-213|
-      |X-DOMAIN-MEMBER|string|yes|body|example.net|
-      ## Response Success
-      ```
-      {
-        "meta": {
-          "code": 200,
-          "status": "success",
-          "message": "success"
-        },
-        "data": {
-          "addresses": [
-            {
-              "label": "home",
-              "penerima": "admin kumi",
-              "phone_number": "0827372412434",
-              "province_id": 1,
-              "province": "Bali",
-              "city_id": 17,
-              "city": "Badung",
-              "subdistrict_id": 258,
-              "subdstrict": "Abiansemal",
-              "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
-            },
-            {
-              "label": "home",
-              "penerima": "saya",
-              "phone_number": "0827372412434",
-              "province_id": 1,
-              "province": "Bali",
-              "city_id": 17,
-              "city": "Badung",
-              "subdistrict_id": 258,
-              "subdstrict": "Abiansemal",
-              "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
-            }
-          ]
-        }
-      }
-      ```
-
-      ## Response Failed
-      ### Not Found
-      ```
-      {
-        "meta": {
-          "code": 401,
-          "status": "error",
-          "message": "Updating Category Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": "Unauthorized Domain"
-        }
-      }
-      ```
-    method: GET
-    body: {}
-    parameters: []
-    headers:
-      - description: ""
-        id: pair_275183d77d0c424886955b3ff76dd0e4
-        name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
-    authentication:
-      token: "{{ _.token }}"
-      type: bearer
-    metaSortKey: -1628596443794
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_788ca0039dbb4128a12a7e38046429de
-    parentId: fld_9a09d4cfc90945fe816882c471a27289
-    modified: 1628879507050
-    created: 1628596536766
-    url: "{{ _.baseurl }}/api/customer/address/1c5034e5-a0e9-497d-a0df-fc4bc3a7d035"
-    name: DELETE
-    description: |
-      ## Method (DELETE)
-      ## Route
-      ```
-      /api/address/{address}
-      ```
-      ## Parameters
-      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-      |---------|----|--------|--------|
-      |address|uuid|yes|route param|sfhwf83758-sdknaf234|
-      |bearer token|jwt|yes|header|12132-jfjdf34-213|
-      |X-DOMAIN-MEMBER|string|yes|body|example.net|
-      ## Response Success
-      ```
-      {
-        "meta": {
-          "code": 201,
-          "status": "success",
-          "message": "Address Deleted!"
-        },
-        "data": [
-          "success"
-        ]
-      }
-      ```
-
-      ## Response Failed
-      ### Error
-      ```
-      {
-        "meta": {
-          "code": 500,
-          "status": "error",
-          "message": "Deleting Address Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": "Auth guard [id] is not defined."
-        }
-      }
-      ```
-      ### Not Found
-      ```
-      {
-        "meta": {
-          "code": 404,
-          "status": "error",
-          "message": "failed"
-        },
-        "data": {
-          "message": "Address Not Found!",
-          "error": "No query results for model [App\\Models\\Address]."
-        }
-      }
-      ```
-    method: DELETE
-    body: {}
-    parameters: []
-    headers:
-      - description: ""
-        id: pair_5b48e9d5aabb41419ea1b0845bc4d941
-        name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
-    authentication:
-      token: "{{ _.token }}"
-      type: bearer
-    metaSortKey: -1628596536767
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
   - _id: req_6ce317c79a0f42e3bb75ec1123de0a93
     parentId: fld_924db0c422c94978a3f1b794d466baca
-    modified: 1628879526232
+    modified: 1630375318125
     created: 1628739544582
-    url: "{{ _.baseurl }}/api/customer/wishlist"
+    url: "{{ _.produrl }}/api/wishlist"
     name: CREATE
     description: >-
       ## Method (POST)
@@ -2471,7 +2556,7 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"product_id" : "340f7d37-c59b-4849-8292-4bbdf422972c"
+        	"product_id" : "4d6ef52b-a568-484e-b5ce-d76a9b93f212"
         }
     parameters: []
     headers:
@@ -2506,9 +2591,9 @@ resources:
     _type: request_group
   - _id: req_332cca8460b44a2ebd69e6f137a52cac
     parentId: fld_924db0c422c94978a3f1b794d466baca
-    modified: 1628879533113
+    modified: 1630375335160
     created: 1628741329852
-    url: "{{ _.baseurl }}/api/customer/wishlist"
+    url: "{{ _.produrl }}/api/wishlist"
     name: INDEX
     description: >-
       ## Method (GET)
@@ -2642,10 +2727,9 @@ resources:
     _type: request
   - _id: req_7dfe40d96a5e45949c464af48880659f
     parentId: fld_924db0c422c94978a3f1b794d466baca
-    modified: 1628879540430
+    modified: 1630075742073
     created: 1628741531248
-    url: "{{ _.baseurl
-      }}/api/customer/wishlist/340f7d37-c59b-4849-8292-4bbdf422972c"
+    url: "{{ _.baseurl }}/api/wishlist/340f7d37-c59b-4849-8292-4bbdf422972c"
     name: DELETE
     description: |-
       ## Method (DELETE)
@@ -2708,9 +2792,601 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
+  - _id: req_20016db3674b453d92604694e801d692
+    parentId: fld_f31f78f058b349918090c6c20aa94989
+    modified: 1630075742061
+    created: 1629719844713
+    url: "{{ _.baseurl }}/api/customer/address"
+    name: CREATE
+    description: |-
+      ## Method (POST)
+      ## Route
+      ```
+      /api/address
+      ```
+      ## Query Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |label|string|yes|body||
+      |penerima|string|yes|body||
+      |phone_number|number|yes|body||
+      |province_id|integer|yes|body||
+      |city_id|integer|yes|body||
+      |subdistrict_id|integer|yes|body||
+      |detail|string|yes|body||
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Address Created!"
+        },
+        "data": {
+          "address": {
+            "label": "home",
+            "penerima": "admin kumi",
+            "phone_number": "0827372412434",
+            "province_id": 1,
+            "province": "Bali",
+            "city_id": 17,
+            "city": "Badung",
+            "subdistrict_id": 258,
+            "subdstrict": "Abiansemal",
+            "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+          }
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Domain Invalid
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Creating Address Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+      ### Validation Input
+      ```
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "subdistrict_id": [
+              "The subdistrict id field is required."
+            ]
+          }
+        }
+      }
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"label" : "home",
+        	"penerima" : "admin kumi",
+        	"phone_number" : "0827372412434", 
+        	"province_id" : 1,
+        	"city_id" : 17,
+        	"subdistrict_id" : 258,
+        	"detail" : "Jl. Angkatan 45 No. 15 Rt.04/15"
+        }
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_46643d4e95a54e46a271e16d140b00c3
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+      - id: pair_996098c40fac486db5c53e6baaaecf00
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628587628062
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f31f78f058b349918090c6c20aa94989
+    parentId: fld_e53bb5eaa06145eab95b22c90d9fbecb
+    modified: 1630075742059
+    created: 1629719844709
+    name: Address
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1628538155490
+    _type: request_group
+  - _id: req_cf35a14b4b0a40a380bb13b6905aed1a
+    parentId: fld_f31f78f058b349918090c6c20aa94989
+    modified: 1630075742070
+    created: 1629719844716
+    url: "{{ _.baseurl }}/api/provinces"
+    name: PROVINCES
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_6003373bb6df4e28a32238aa7f743c49
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628589132380
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9f8b2294700d40a39c82626638d02b9d
+    parentId: fld_f31f78f058b349918090c6c20aa94989
+    modified: 1630075742067
+    created: 1629719844719
+    url: "{{ _.baseurl }}/api/cities/1"
+    name: CITY
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_be56df29959a41ceae75139b1acd97e7
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628589485359
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3266bfba9af34d4683462a427e429193
+    parentId: fld_f31f78f058b349918090c6c20aa94989
+    modified: 1630075742062
+    created: 1629719844722
+    url: "{{ _.baseurl }}/api/subdistricts/17"
+    name: SUBDISTRICT
+    description: |-
+      ## Method (GET)
+      ## Route
+      ```
+      /api/subdistricts/{province}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |province|integer|yes|route param|1|
+      |X-DOMAIN-MEMBER|string|yes|header|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "cities": [
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 258,
+              "subdistrict": "Abiansemal"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 259,
+              "subdistrict": "Kuta"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 260,
+              "subdistrict": "Kuta Selatan"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 261,
+              "subdistrict": "Kuta Utara"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 262,
+              "subdistrict": "Mengwi"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 263,
+              "subdistrict": "Petang"
+            }
+          ]
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Showing District Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_51449915fcb249a399473d183872428e
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628592001721
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a769580ebba64e9483632a10ba0eb0f0
+    parentId: fld_f31f78f058b349918090c6c20aa94989
+    modified: 1630075742068
+    created: 1629719844725
+    url: "{{ _.baseurl }}/api/customer/address/1c5034e5-a0e9-497d-a0df-fc4bc3a7d035"
+    name: UPDATE
+    description: |-
+      ## Method (POST)
+      ## Route
+      ```
+      /api/address/{address}
+      ```
+      ## Query Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |address|uuid|yes|body||
+      |label|string|yes|body||
+      |penerima|string|yes|body||
+      |phone_number|number|yes|body||
+      |province_id|integer|yes|body||
+      |city_id|integer|yes|body||
+      |subdistrict_id|integer|yes|body||
+      |detail|string|yes|body||
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Address Updated!"
+        },
+        "data": {
+          "address": {
+            "label": "home",
+            "penerima": "saya",
+            "phone_number": "0827372412434",
+            "province_id": 1,
+            "province": "Bali",
+            "city_id": 17,
+            "city": "Badung",
+            "subdistrict_id": 258,
+            "subdstrict": "Abiansemal",
+            "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+          }
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Domain Invalid
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Creating Address Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+      ### Validation Input
+      ```
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "subdistrict_id": [
+              "The subdistrict id field is required."
+            ]
+          }
+        }
+      }
+      ```
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"label" : "home",
+        	"penerima" : "saya",
+        	"phone_number" : "0827372412434", 
+        	"province_id" : 1,
+        	"city_id" : 17,
+        	"subdistrict_id" : 258,
+        	"detail" : "Jl. Angkatan 45 No. 15 Rt.04/15"
+        }
+    parameters: []
+    headers:
+      - id: pair_6370e14b2d9a42b8a9d47e88e1deca5d
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_a38c8a33a3644dd1adf5c0b2715fa865
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628596208522
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e77fde4218f24806970b51e2c871e99b
+    parentId: fld_f31f78f058b349918090c6c20aa94989
+    modified: 1630078223791
+    created: 1629719844729
+    url: "{{ _.produrl }}/api/customer/address"
+    name: INDEX
+    description: |-
+      ## Method (GET)
+      ## Route
+      ```
+      /api/customer/address
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "addresses": [
+            {
+              "label": "home",
+              "penerima": "admin kumi",
+              "phone_number": "0827372412434",
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "subdistrict_id": 258,
+              "subdstrict": "Abiansemal",
+              "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+            },
+            {
+              "label": "home",
+              "penerima": "saya",
+              "phone_number": "0827372412434",
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "subdistrict_id": 258,
+              "subdstrict": "Abiansemal",
+              "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+            }
+          ]
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Category Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_275183d77d0c424886955b3ff76dd0e4
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628596443794
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b2311762f47649f7b3c03af4f73e0be2
+    parentId: fld_f31f78f058b349918090c6c20aa94989
+    modified: 1630075742068
+    created: 1629719844732
+    url: "{{ _.baseurl }}/api/customer/address/1c5034e5-a0e9-497d-a0df-fc4bc3a7d035"
+    name: DELETE
+    description: |
+      ## Method (DELETE)
+      ## Route
+      ```
+      /api/address/{address}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |address|uuid|yes|route param|sfhwf83758-sdknaf234|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Address Deleted!"
+        },
+        "data": [
+          "success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### Error
+      ```
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+          "message": "Deleting Address Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Auth guard [id] is not defined."
+        }
+      }
+      ```
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Address Not Found!",
+          "error": "No query results for model [App\\Models\\Address]."
+        }
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_5b48e9d5aabb41419ea1b0845bc4d941
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628596536767
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_a0434fd015144431beca2f37169fb0c9
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1629428751527
+    modified: 1630382143787
     created: 1627564703184
     url: "{{ _.baseurl }}/api/admin/category"
     name: CREATE
@@ -2858,7 +3534,7 @@ resources:
     _type: request_group
   - _id: req_029cfd574bb54d1e9956d372ccc0e0ac
     parentId: fld_83e942d4ad7345cbbdaec93a9a284f46
-    modified: 1628738168694
+    modified: 1630075738932
     created: 1627568934198
     url: "{{ _.baseurl }}/api/admin/category/f00f86c2-f6c9-401a-a8fc-d9540dd80fb8"
     name: UPDATE
@@ -3459,7 +4135,7 @@ resources:
     _type: request
   - _id: req_bca3afea958f4499aa0f2f84c4ff0bd3
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1629428769394
+    modified: 1630383355738
     created: 1627796858385
     url: "{{ _.baseurl }}/api/admin/product"
     name: CREATE
@@ -3486,7 +4162,7 @@ resources:
 
       |category_id|uuid|required|body|asd231-231423-231|
 
-      |image|file|optional|body|picture|
+      |main_image|file|optional|body|picture|
 
       |images[]|image(array)|optional|body|picture|
 
@@ -3506,7 +4182,15 @@ resources:
 
       |tnc|string|yes|body|lorem ipsum|
 
-      |domain|string|yes|body|kumi.id|
+      |seo|boolean|yes|body|1|
+
+      |meta_title|string|yes: if seo true|body|computer bagus|
+
+      |meta_keyword|string|yes: if seo true|body|computer bagus|
+
+      |meta_description|string|yes: if seo true|body|computer bagus|
+
+      |X-DIMAIN-MEMBER|string|yes|header|kumi.id|
 
       |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
@@ -3521,31 +4205,47 @@ resources:
           "message": "Product Created!"
         },
         "data": {
-          "Product": {
-            "id": "c0360470-ed09-414f-86ec-c4c851176b71",
-            "title": "Computer",
-            "slug": "computer",
+          "product": {
+            "id": "c0ce211c-43ff-433f-afcb-5e0b923daeaa",
+            "title": "Computers",
+            "slug": "computers",
             "type": "physical",
             "merk": "ASUS",
-            "image": "https:\/\/kumi-backend.apps\/storage\/products\/example_net\/products\/o6lJu68UZwuI1ThM3C2xMy2IKe1dfR4aKb8fF9xB.png",
+            "main_image": "bb5c8b3e-fcd4-4c24-b0d6-ac5b70f810d5\/products\/Op6ZhcEMtzvcjWgdkAEMMUdJXrZkzJuawKhbPOTU.png",
+            "galleries": [
+              {
+                "id": "052bec74-d5e5-4b37-a927-095177eee842",
+                "image": "bb5c8b3e-fcd4-4c24-b0d6-ac5b70f810d5\/products\/2E1pZpxI5LdIJjE6GtCZvlLLKnnU0Kt7XpRTI9Gw.png",
+                "sorter": 1
+              },
+              {
+                "id": "27b959f6-2bcc-4a9d-9fe6-e0dc6cd04c82",
+                "image": "bb5c8b3e-fcd4-4c24-b0d6-ac5b70f810d5\/products\/kdMFvjAXpzd3XRivjXM2SFS0g6r3W5kDfL9SHT97.png",
+                "sorter": 2
+              }
+            ],
             "category": {
-              "id": "f7e7267a-2527-4c5a-88c5-6a5475747d86",
-              "name": "Computer",
-              "slug": "computer",
-              "image": "https:\/\/kumi-backend.apps\/storage\/example_net\/categories\/MdFm4JU7VxPgmaU5AkeDtgbQHVW3tgFCNlhc6Yfm.png",
-              "created_at": "2021-08-01T07:32:26.000000Z",
-              "updated_at": "2021-08-01T07:32:26.000000Z"
+              "id": "3c046641-0fb4-4e9c-aa78-cac70581c8cb",
+              "name": "Laptop",
+              "parent_id": null,
+              "slug": "laptop",
+              "image": "http:\/\/kumi-backend.apps\/storage\/bb5c8b3e-fcd4-4c24-b0d6-ac5b70f810d5\/categories\/tbvZzj6PzmEHYooPyXJcz9L0IHOOFabqBxF42DbG.png",
+              "created_at": "2021-08-22T06:40:02.000000Z",
+              "updated_at": "2021-08-22T06:40:02.000000Z"
             },
             "content": "nice",
             "tnc": "you should buy",
             "weight": "9",
             "price": "1200000",
+            "stocks": "12",
+            "reseller_price": "1300000",
             "discount_type": "nominal",
             "discount": null,
-            "stocks": "12",
+            "affiliate_type": "nominal",
+            "affiliate_fee": "10000",
             "pin": null,
-            "created_at": "2021-08-01T07:47:41.000000Z",
-            "updated_at": "2021-08-01T07:47:41.000000Z"
+            "created_at": "2021-08-22T06:41:52.000000Z",
+            "updated_at": "2021-08-22T06:41:52.000000Z"
           }
         }
       }
@@ -3605,16 +4305,16 @@ resources:
           disabled: false
           id: pair_86997d4df9704cc79defeada0eaa56fa
           name: title
-          value: computers
+          value: Digital Product
         - description: ""
           disabled: false
           id: pair_6b1a129751ef4961b2fe46b93457f860
           name: category_id
-          value: 1f5a50b8-5dcd-4051-8d5c-01762eb1d97c
+          value: 33cad2c7-0238-4229-8ac0-87aab32c282a
         - description: ""
           id: pair_340b627a78f24245b7a87eecaac8957a
           name: type
-          value: physical
+          value: digital
         - description: ""
           id: pair_a03b3b5721fa48198c83467efad589d6
           name: merk
@@ -3631,7 +4331,7 @@ resources:
           disabled: false
           id: pair_fc95df7d6b244e6a8740eab83ad8769a
           name: weight
-          value: "9"
+          value: "0"
         - description: ""
           id: pair_b3cc0ab53e424550b4995b7ce53d36d8
           name: price
@@ -3648,7 +4348,7 @@ resources:
           disabled: false
           id: pair_46369d748f2142c6aac1fb6b511e856a
           name: stocks
-          value: "12"
+          value: "0"
         - description: ""
           id: pair_4984cde019fe4809890a758ac2b60924
           name: domain
@@ -3672,10 +4372,36 @@ resources:
           type: file
           value: ""
         - description: ""
-          fileName: C:\Users\Mohamad Sholihin\Desktop\Screenshot_2.png
+          fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
           id: pair_b8b2fb3d8c8f460580430689c81683a3
           name: images[]
           type: file
+          value: ""
+        - description: ""
+          fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
+          id: pair_bb526d271bf14c2dae03fd90dcbcdc6e
+          name: main_image
+          type: file
+          value: ""
+        - description: ""
+          id: pair_0d9b55a6184142fd8ff3d7913b57e7f4
+          name: seo
+          value: "0"
+        - description: ""
+          id: pair_9c6e0a1ce5414b2fb42c59e3a0727ca7
+          name: meta_title
+          value: ""
+        - description: ""
+          id: pair_31561de5b7fd412688b97c9799a087d7
+          name: meta_keyword
+          value: ""
+        - description: ""
+          id: pair_a5eaa15d61c04c1fb72a4661e094f8eb
+          name: meta_description
+          value: ""
+        - description: ""
+          id: pair_649140ece1094a5d8544ac75d05561e4
+          name: ""
           value: ""
     parameters: []
     headers:
@@ -3710,9 +4436,9 @@ resources:
     _type: request_group
   - _id: req_fa39e54801bd4efaae8a5690542f2d39
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1628779609999
+    modified: 1630075742078
     created: 1627805393173
-    url: "{{ _.baseurl }}/api/admin/product/910cf7ac-dc25-4916-ab74-752d47117ba2"
+    url: "{{ _.baseurl }}/api/admin/product/a77b8c16-5138-4276-9f36-26f85a309a4b"
     name: UPDATE
     description: >-
       ## Method (PATCH)
@@ -3731,15 +4457,13 @@ resources:
 
       |---------|----|--------|--------|
 
-      |product_id|uuid|yes|route param|231gr-4324nf|
-
       |title|string|yes|body|samsung a12|
 
       |type|enum(digital,physical)|yes|body|physical|
 
       |category_id|uuid|required|body|asd231-231423-231|
 
-      |image|file|optional|body|picture|
+      |main_image|file|optional|body|picture|
 
       |images[]|image(array)|optional|body|picture|
 
@@ -3759,7 +4483,15 @@ resources:
 
       |tnc|string|yes|body|lorem ipsum|
 
-      |domain|string|yes|body|kumi.id|
+      |seo|boolean|yes|body|1|
+
+      |meta_title|string|yes: if seo true|body|computer bagus|
+
+      |meta_keyword|string|yes: if seo true|body|computer bagus|
+
+      |meta_description|string|yes: if seo true|body|computer bagus|
+
+      |X-DIMAIN-MEMBER|string|yes|header|kumi.id|
 
       |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
@@ -3780,7 +4512,7 @@ resources:
             "slug": "computer",
             "type": "physical",
             "merk": "ASUS",
-            "image": "https:\/\/kumi-backend.apps\/storage\/products\/example_net\/products\/o6lJu68UZwuI1ThM3C2xMy2IKe1dfR4aKb8fF9xB.png",
+            "main_image": "https:\/\/kumi-backend.apps\/storage\/products\/example_net\/products\/o6lJu68UZwuI1ThM3C2xMy2IKe1dfR4aKb8fF9xB.png",
             "category": {
               "id": "f7e7267a-2527-4c5a-88c5-6a5475747d86",
               "name": "Computer",
@@ -3863,7 +4595,7 @@ resources:
           disabled: false
           id: pair_6b1a129751ef4961b2fe46b93457f860
           name: category_id
-          value: f197db19-51d8-459a-a337-a2f34d3fdb98
+          value: 3c046641-0fb4-4e9c-aa78-cac70581c8cb
         - description: ""
           id: pair_340b627a78f24245b7a87eecaac8957a
           name: type
@@ -3903,23 +4635,40 @@ resources:
           name: stocks
           value: "12"
         - description: ""
+          id: pair_e5f6d0e815af41729a3ec94bae1873e2
+          name: seo
+          value: "0"
+        - description: ""
           disabled: false
           id: pair_13cf5984a82648b28807180d8017c50f
           name: _method
           value: PATCH
         - description: ""
+          disabled: true
           fileName: C:\Users\Mohamad Sholihin\Desktop\Screenshot_2.png
           id: pair_44890a5d4ca04816b18b725017dc4646
           name: images[]
           type: file
           value: ""
         - description: ""
-          disabled: false
+          disabled: true
           fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
           id: pair_d65360f962f84b63a65e0e3b84293132
           name: images[]
           type: file
           value: ""
+        - description: ""
+          id: pair_5674c30b30224aacb22691f896ede5bb
+          name: meta_title
+          value: computer
+        - description: ""
+          id: pair_9cad93a71d5f485f91f9bdb2ee42acb4
+          name: meta_keyword
+          value: computer
+        - description: ""
+          id: pair_1a6d0ef7b9ff48149a8f8626f826bdf9
+          name: meta_description
+          value: computer
     parameters: []
     headers:
       - id: pair_2b0061477dd64c27b59032972f9f966a
@@ -4120,7 +4869,7 @@ resources:
     _type: request
   - _id: req_b30d4ee444f94a87a4a8139e9c6a8d46
     parentId: fld_22c8baba9f6f4793a6c9e7515266fc50
-    modified: 1629428705003
+    modified: 1630381812111
     created: 1627808730167
     url: "{{ _.baseurl }}/api/admin/products"
     name: INDEX
@@ -4222,6 +4971,767 @@ resources:
       token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627808730167
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_05b049b9d9174e468361bbc993302e5e
+    parentId: fld_fd4b16a5d2934a27bad257e2efe72d7f
+    modified: 1630385447198
+    created: 1629642493390
+    url: "{{ _.baseurl }}/api/admin/coupon"
+    name: CREATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/admin/coupon
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |code|string|yes|body|KUMIKUPON|
+
+      |name|string|yes|body|Kupon KEMERDEKAAN|
+
+      |type|string|yes|body|nominal or presentase|
+
+      |amount|int or double|yes|body|10000|
+
+      |limit|int|optional|body|1000|
+
+      |start_date|datetime|yes|body|2021-08-22 21:39:23|
+
+      |expired_date|datetime|yes|body|2021-08-25 21:39:23|
+
+      |status|string|yes|body|active or non-active|
+
+      |min_total|int|optional|body|100000|
+
+      |description|string|required|body|ini promo kemerdekaan|
+
+      |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+      |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Coupon Created!"
+        },
+        "data": {
+          "coupon": {
+            "code": "KUMIKUPON",
+            "name": "Kupon Kemerdekaan",
+            "type": "nominal",
+            "amount": "10000",
+            "limit": "100",
+            "used": null,
+            "min_total": "0",
+            "start_date": "2021-08-22 21:39:23",
+            "expired_date": "2021-08-25 06:39:23",
+            "status": "non-active",
+            "description": "Ini merupakan kupon kemerdekaan dengan minimal pembelian 0 rupiah"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Creating Coupon Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "code": [
+              "The code field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - description: ""
+          id: pair_297c7ac8cf5944d19035321507d49402
+          name: code
+          value: KUMIKUPONs
+        - description: ""
+          id: pair_ee23dfa14add4769a6e661ce535436ee
+          name: name
+          value: Kupon Kemerdekaan
+        - description: ""
+          id: pair_aafa4bdced444dc3a3eef0f3fb11ef69
+          name: type
+          value: nominal
+        - description: ""
+          id: pair_e2fd17393ab4487d97c3b8226095a7be
+          name: amount
+          value: "10000"
+        - description: ""
+          id: pair_b345684d7fe94da3a60574d43bfde2a4
+          multiline: false
+          name: start_date
+          type: text
+          value: 2021-09-01 21:39:23
+          disabled: false
+        - description: ""
+          id: pair_7e6aaecbd1fc4e49a494430377bce1f3
+          name: expired_date
+          value: 2021-09-30 21:39:23
+          disabled: false
+        - description: ""
+          id: pair_13dae179106c4bcf9938f313157ddca2
+          name: status
+          value: non-active
+        - description: ""
+          id: pair_f6b824cfc2ee497b9879ac8d8bf92ec1
+          name: min_total
+          value: "0"
+        - description: ""
+          id: pair_38b49f3983db4174aca20ab3bb31a44f
+          name: description
+          value: Ini merupakan kupon kemerdekaan dengan minimal pembelian 0 rupiah
+        - description: ""
+          id: pair_0e82e22714264f80889dcc0604a50b29
+          name: limit
+          value: "100"
+    parameters: []
+    headers:
+      - description: ""
+        disabled: false
+        id: pair_44e5bf90631b4696ba7ccfdd0ed94421
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+      - id: pair_a957ba83ef9d47619b82aa42565c0ad9
+        name: Content-Type
+        value: multipart/form-data
+    authentication:
+      token: "{{ _.token_admin }}"
+      type: bearer
+    metaSortKey: -1629642493390
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_fd4b16a5d2934a27bad257e2efe72d7f
+    parentId: fld_f43e15356f6b497686f35f79a062b563
+    modified: 1630075742061
+    created: 1629642483065
+    name: Coupon
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1629642483065
+    _type: request_group
+  - _id: req_3a873e5d1e004a1ead0be93166f70502
+    parentId: fld_fd4b16a5d2934a27bad257e2efe72d7f
+    modified: 1630385920612
+    created: 1629644049928
+    url: "{{ _.baseurl }}/api/admin/coupon/bf459bc6-c70a-4dcb-9e90-5de6047a2ea8"
+    name: UPDATE
+    description: >-
+      ## Method (PATCH)
+
+      ## Route
+
+      ```
+
+      /api/admin/coupon/{coupon}
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |coupon|uuid|yes|route param|hsdfg7567sdf|
+
+      |code|string|yes|body|KUMIKUPON|
+
+      |name|string|yes|body|Kupon KEMERDEKAAN|
+
+      |type|string|yes|body|nominal or presentase|
+
+      |amount|int or double|yes|body|10000|
+
+      |limit|int|optional|body|1000|
+
+      |start_date|datetime|yes|body|2021-08-22 21:39:23|
+
+      |expired_date|datetime|yes|body|2021-08-25 21:39:23|
+
+      |status|string|yes|body|active or non-active|
+
+      |min_total|int|optional|body|100000|
+
+      |description|string|required|body|ini promo kemerdekaan|
+
+      |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+      |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Coupon UPDATED!"
+        },
+        "data": {
+          "coupon": {
+            "code": "KUMIKUPON",
+            "name": "Kupon Kemerdekaan",
+            "type": "nominal",
+            "amount": "10000",
+            "limit": "100",
+            "used": null,
+            "min_total": "0",
+            "start_date": "2021-08-22 21:39:23",
+            "expired_date": "2021-08-25 06:39:23",
+            "status": "non-active",
+            "description": "Ini merupakan kupon kemerdekaan dengan minimal pembelian 0 rupiah"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Coupon Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "code": [
+              "The code field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: PATCH
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - description: ""
+          id: pair_297c7ac8cf5944d19035321507d49402
+          name: code
+          value: KUMIKUPONs
+        - description: ""
+          id: pair_ee23dfa14add4769a6e661ce535436ee
+          name: name
+          value: Kupon Kemerdekaan
+        - description: ""
+          id: pair_aafa4bdced444dc3a3eef0f3fb11ef69
+          name: type
+          value: nominal
+        - description: ""
+          id: pair_e2fd17393ab4487d97c3b8226095a7be
+          name: amount
+          value: "10000"
+        - description: ""
+          id: pair_b345684d7fe94da3a60574d43bfde2a4
+          multiline: false
+          name: start_date
+          type: text
+          value: 2021-08-22 21:39:23
+        - description: ""
+          id: pair_7e6aaecbd1fc4e49a494430377bce1f3
+          name: expired_date
+          value: 2021-09-25 06:39:23
+        - description: ""
+          id: pair_13dae179106c4bcf9938f313157ddca2
+          name: status
+          value: non-active
+        - description: ""
+          id: pair_f6b824cfc2ee497b9879ac8d8bf92ec1
+          name: min_total
+          value: "0"
+        - description: ""
+          id: pair_38b49f3983db4174aca20ab3bb31a44f
+          name: description
+          value: Ini merupakan kupon kemerdekaan dengan minimal pembelian 0 rupiah
+        - description: ""
+          id: pair_0e82e22714264f80889dcc0604a50b29
+          name: limit
+          value: "100"
+        - description: ""
+          disabled: false
+          id: pair_49525432ff0f46359b99dd4088d482c5
+          name: __method
+          value: PATCH
+    parameters: []
+    headers:
+      - description: ""
+        disabled: false
+        id: pair_44e5bf90631b4696ba7ccfdd0ed94421
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+      - id: pair_a957ba83ef9d47619b82aa42565c0ad9
+        name: Content-Type
+        value: application/x-www-form-urlencoded
+    authentication:
+      token: "{{ _.token_admin }}"
+      type: bearer
+    metaSortKey: -1629215166259
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4d786c8492f84933ab3d19a939dd5609
+    parentId: fld_fd4b16a5d2934a27bad257e2efe72d7f
+    modified: 1630385932077
+    created: 1629645256698
+    url: "{{ _.baseurl }}/api/admin/coupon/bf459bc6-c70a-4dcb-9e90-5de6047a2ea8"
+    name: SHOW
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/admin/coupon/{coupon}
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |coupon|uuid|yes|route param|hsdfg7567sdf|
+
+      |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+      |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "coupon": {
+            "code": "KUMIKUPONS",
+            "name": "Kupon Kemerdekaan",
+            "type": "nominal",
+            "amount": 10000,
+            "limit": 100,
+            "used": 0,
+            "min_total": 0,
+            "start_date": "2021-08-22 21:39:23",
+            "expired_date": "2021-08-25 06:39:23",
+            "status": "non-active",
+            "description": "Ini merupakan kupon kemerdekaan dengan minimal pembelian 0 rupiah"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Showing Coupon Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+    method: GET
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - description: ""
+          id: pair_297c7ac8cf5944d19035321507d49402
+          name: code
+          value: KUMIKUPONs
+        - description: ""
+          id: pair_ee23dfa14add4769a6e661ce535436ee
+          name: name
+          value: Kupon Kemerdekaan
+        - description: ""
+          id: pair_aafa4bdced444dc3a3eef0f3fb11ef69
+          name: type
+          value: nominal
+        - description: ""
+          id: pair_e2fd17393ab4487d97c3b8226095a7be
+          name: amount
+          value: "10000"
+        - description: ""
+          id: pair_b345684d7fe94da3a60574d43bfde2a4
+          multiline: false
+          name: start_date
+          type: text
+          value: 2021-08-22 21:39:23
+        - description: ""
+          id: pair_7e6aaecbd1fc4e49a494430377bce1f3
+          name: expired_date
+          value: 2021-08-25 06:39:23
+        - description: ""
+          id: pair_13dae179106c4bcf9938f313157ddca2
+          name: status
+          value: non-active
+        - description: ""
+          id: pair_f6b824cfc2ee497b9879ac8d8bf92ec1
+          name: min_total
+          value: "0"
+        - description: ""
+          id: pair_38b49f3983db4174aca20ab3bb31a44f
+          name: description
+          value: Ini merupakan kupon kemerdekaan dengan minimal pembelian 0 rupiah
+        - description: ""
+          id: pair_0e82e22714264f80889dcc0604a50b29
+          name: limit
+          value: "100"
+        - description: ""
+          disabled: false
+          id: pair_49525432ff0f46359b99dd4088d482c5
+          name: __method
+          value: PATCH
+    parameters: []
+    headers:
+      - description: ""
+        disabled: false
+        id: pair_44e5bf90631b4696ba7ccfdd0ed94421
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+      - id: pair_a957ba83ef9d47619b82aa42565c0ad9
+        name: Content-Type
+        value: application/x-www-form-urlencoded
+    authentication:
+      token: "{{ _.token_admin }}"
+      type: bearer
+    metaSortKey: -1629001502693.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9bf6d0d03b5a4a3abb571bf8a2c0be5e
+    parentId: fld_fd4b16a5d2934a27bad257e2efe72d7f
+    modified: 1630385322228
+    created: 1629645369638
+    url: "{{ _.baseurl }}/api/admin/coupon"
+    name: INDEX
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/admin/coupon
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+      |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "coupons": [
+            {
+              "code": "KUMIKUPONS",
+              "name": "Kupon Kemerdekaan",
+              "type": "nominal",
+              "amount": 10000,
+              "limit": 100,
+              "used": 0,
+              "min_total": 0,
+              "start_date": "2021-08-22 21:39:23",
+              "expired_date": "2021-08-25 06:39:23",
+              "status": "non-active",
+              "description": "Ini merupakan kupon kemerdekaan dengan minimal pembelian 0 rupiah"
+            }
+          ]
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Showing Coupon Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        disabled: false
+        id: pair_44e5bf90631b4696ba7ccfdd0ed94421
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_admin }}"
+      type: bearer
+    metaSortKey: -1628894670910.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5a8aa57ae1b04b07b0a145891850216e
+    parentId: fld_fd4b16a5d2934a27bad257e2efe72d7f
+    modified: 1630385938591
+    created: 1629645548597
+    url: "{{ _.baseurl }}/api/admin/coupon/bf459bc6-c70a-4dcb-9e90-5de6047a2ea8"
+    name: DESTROY
+    description: |-
+      ## Method (DELETE)
+      ## Route
+      ```
+      /api/admin/coupon/{coupon}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |coupon|uuid|yes|route param|hsdfg7567sdf|
+      |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+      |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Coupon Deleted!"
+        },
+        "data": [
+          "success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### Unauthorized
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Deleting Coupon Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+    method: DELETE
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - description: ""
+          id: pair_297c7ac8cf5944d19035321507d49402
+          name: code
+          value: KUMIKUPONs
+        - description: ""
+          id: pair_ee23dfa14add4769a6e661ce535436ee
+          name: name
+          value: Kupon Kemerdekaan
+        - description: ""
+          id: pair_aafa4bdced444dc3a3eef0f3fb11ef69
+          name: type
+          value: nominal
+        - description: ""
+          id: pair_e2fd17393ab4487d97c3b8226095a7be
+          name: amount
+          value: "10000"
+        - description: ""
+          id: pair_b345684d7fe94da3a60574d43bfde2a4
+          multiline: false
+          name: start_date
+          type: text
+          value: 2021-08-22 21:39:23
+        - description: ""
+          id: pair_7e6aaecbd1fc4e49a494430377bce1f3
+          name: expired_date
+          value: 2021-08-25 06:39:23
+        - description: ""
+          id: pair_13dae179106c4bcf9938f313157ddca2
+          name: status
+          value: non-active
+        - description: ""
+          id: pair_f6b824cfc2ee497b9879ac8d8bf92ec1
+          name: min_total
+          value: "0"
+        - description: ""
+          id: pair_38b49f3983db4174aca20ab3bb31a44f
+          name: description
+          value: Ini merupakan kupon kemerdekaan dengan minimal pembelian 0 rupiah
+        - description: ""
+          id: pair_0e82e22714264f80889dcc0604a50b29
+          name: limit
+          value: "100"
+        - description: ""
+          disabled: false
+          id: pair_49525432ff0f46359b99dd4088d482c5
+          name: __method
+          value: PATCH
+    parameters: []
+    headers:
+      - description: ""
+        disabled: false
+        id: pair_44e5bf90631b4696ba7ccfdd0ed94421
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+      - id: pair_a957ba83ef9d47619b82aa42565c0ad9
+        name: Content-Type
+        value: application/x-www-form-urlencoded
+    authentication:
+      token: "{{ _.token_admin }}"
+      type: bearer
+    metaSortKey: -1628948086802.125
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -4601,7 +6111,7 @@ resources:
     _type: request_group
   - _id: req_3379dbe9fde94534a3c734487d2f4a2f
     parentId: fld_9bc62c625a464a97a31cdb3efa7d43cd
-    modified: 1629446520510
+    modified: 1630077525415
     created: 1628492215597
     url: "{{ _.baseurl }}/api/reseller/profile"
     name: UPDATE
@@ -4701,12 +6211,15 @@ resources:
           value: ""
           description: ""
           type: file
-          multiline: null
           disabled: false
-          fileName: C:\Users\Mohamad Sholihin\Pictures\kun.png
+          fileName: C:\Users\Mohamad Sholihin\Pictures\IMG_20171111_072928.jpg
         - id: pair_6351ad02bcaa4bd19a10627bc04eedcd
           name: _method
           value: PATCH
+          description: ""
+        - id: pair_010eab42731d4057892799d46cbfb49d
+          name: ""
+          value: ""
           description: ""
     parameters: []
     headers:
@@ -4721,6 +6234,947 @@ resources:
       token: "{{ _.token_reseller }}"
       type: bearer
     metaSortKey: -1628489475880
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_abbc95a7018442babbe2731ee6278a5e
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1630380120157
+    created: 1628587628062
+    url: "{{ _.baseurl }}/api/reseller/address"
+    name: CREATE
+    description: |-
+      ## Method (POST)
+      ## Route
+      ```
+      /api/address
+      ```
+      ## Query Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |label|string|yes|body||
+      |penerima|string|yes|body||
+      |phone_number|number|yes|body||
+      |province_id|integer|yes|body||
+      |city_id|integer|yes|body||
+      |subdistrict_id|integer|yes|body||
+      |detail|string|yes|body||
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Address Created!"
+        },
+        "data": {
+          "address": {
+            "label": "home",
+            "penerima": "admin kumi",
+            "phone_number": "0827372412434",
+            "province_id": 1,
+            "province": "Bali",
+            "city_id": 17,
+            "city": "Badung",
+            "subdistrict_id": 258,
+            "subdstrict": "Abiansemal",
+            "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+          }
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Domain Invalid
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Creating Address Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+      ### Validation Input
+      ```
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "subdistrict_id": [
+              "The subdistrict id field is required."
+            ]
+          }
+        }
+      }
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"label" : "homes",
+        	"penerima" : "admin kumi",
+        	"phone_number" : "0827372412434", 
+        	"province_id" : 1,
+        	"city_id" : 17,
+        	"subdistrict_id" : 258,
+        	"detail" : "Jl. Angkatan 45 No. 15 Rt.04/15"
+        }
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_46643d4e95a54e46a271e16d140b00c3
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+      - id: pair_996098c40fac486db5c53e6baaaecf00
+        name: Content-Type
+        value: application/json
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628587628062
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9a09d4cfc90945fe816882c471a27289
+    parentId: fld_40aeee4e68224603904889666c7f2a8c
+    modified: 1630075742062
+    created: 1628587617832
+    name: Address
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627728926147
+    _type: request_group
+  - _id: req_591cce45ee4444d990572e9056dbead7
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1630380942685
+    created: 1628589132333
+    url: "{{ _.baseurl }}/api/provinces"
+    name: PROVINCES
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_6003373bb6df4e28a32238aa7f743c49
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628589132380
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ea49bc62523e4f7e97f52289cb20f6e8
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1629354723018
+    created: 1628589485359
+    url: "{{ _.baseurl }}/api/cities/1"
+    name: CITY
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_be56df29959a41ceae75139b1acd97e7
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628589485359
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6e4175be6b924a6f828ad42ae06e3f83
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1628733462960
+    created: 1628592001721
+    url: "{{ _.baseurl }}/api/subdistricts/17"
+    name: SUBDISTRICT
+    description: |-
+      ## Method (GET)
+      ## Route
+      ```
+      /api/subdistricts/{province}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |province|integer|yes|route param|1|
+      |X-DOMAIN-MEMBER|string|yes|header|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "cities": [
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 258,
+              "subdistrict": "Abiansemal"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 259,
+              "subdistrict": "Kuta"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 260,
+              "subdistrict": "Kuta Selatan"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 261,
+              "subdistrict": "Kuta Utara"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 262,
+              "subdistrict": "Mengwi"
+            },
+            {
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "type": "Kabupaten",
+              "subdistrict_id": 263,
+              "subdistrict": "Petang"
+            }
+          ]
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Showing District Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_51449915fcb249a399473d183872428e
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628592001721
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_63b862df194148b88d3a4ab91bdd613e
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1630444121842
+    created: 1628596208474
+    url: "{{ _.baseurl }}/api/reseller/address/f0f96b5a-b2c2-4801-a7d3-1e0b75edb897"
+    name: UPDATE
+    description: |-
+      ## Method (POST)
+      ## Route
+      ```
+      /api/address/{address}
+      ```
+      ## Query Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |address|uuid|yes|body||
+      |label|string|yes|body||
+      |penerima|string|yes|body||
+      |phone_number|number|yes|body||
+      |province_id|integer|yes|body||
+      |city_id|integer|yes|body||
+      |subdistrict_id|integer|yes|body||
+      |detail|string|yes|body||
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Address Updated!"
+        },
+        "data": {
+          "address": {
+            "label": "home",
+            "penerima": "saya",
+            "phone_number": "0827372412434",
+            "province_id": 1,
+            "province": "Bali",
+            "city_id": 17,
+            "city": "Badung",
+            "subdistrict_id": 258,
+            "subdstrict": "Abiansemal",
+            "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+          }
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Domain Invalid
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Creating Address Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+      ### Validation Input
+      ```
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "subdistrict_id": [
+              "The subdistrict id field is required."
+            ]
+          }
+        }
+      }
+      ```
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"label" : "homes",
+        	"penerima" : "saya",
+        	"phone_number" : "0827372412434", 
+        	"province_id" : 1,
+        	"city_id" : 17,
+        	"subdistrict_id" : 258,
+        	"detail" : "Jl. Angkatan 45 No. 15 Rt.04/15"
+        }
+    parameters: []
+    headers:
+      - id: pair_6370e14b2d9a42b8a9d47e88e1deca5d
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_a38c8a33a3644dd1adf5c0b2715fa865
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628596208522
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_88d4cf9903724f21981f1847c36dffd4
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1630377607717
+    created: 1628596443794
+    url: "{{ _.baseurl }}/api/reseller/address"
+    name: INDEX
+    description: |-
+      ## Method (GET)
+      ## Route
+      ```
+      /api/customer/address
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "addresses": [
+            {
+              "label": "home",
+              "penerima": "admin kumi",
+              "phone_number": "0827372412434",
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "subdistrict_id": 258,
+              "subdstrict": "Abiansemal",
+              "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+            },
+            {
+              "label": "home",
+              "penerima": "saya",
+              "phone_number": "0827372412434",
+              "province_id": 1,
+              "province": "Bali",
+              "city_id": 17,
+              "city": "Badung",
+              "subdistrict_id": 258,
+              "subdstrict": "Abiansemal",
+              "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+            }
+          ]
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Category Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_275183d77d0c424886955b3ff76dd0e4
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628596443794
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_788ca0039dbb4128a12a7e38046429de
+    parentId: fld_9a09d4cfc90945fe816882c471a27289
+    modified: 1630381555234
+    created: 1628596536766
+    url: "{{ _.baseurl }}/api/reseller/address/326bf312-5c19-4b1c-84c0-c0eeea079235"
+    name: DELETE
+    description: |
+      ## Method (DELETE)
+      ## Route
+      ```
+      /api/address/{address}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |address|uuid|yes|route param|sfhwf83758-sdknaf234|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Address Deleted!"
+        },
+        "data": [
+          "success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### Error
+      ```
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+          "message": "Deleting Address Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Auth guard [id] is not defined."
+        }
+      }
+      ```
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Address Not Found!",
+          "error": "No query results for model [App\\Models\\Address]."
+        }
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_5b48e9d5aabb41419ea1b0845bc4d941
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628596536767
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ca63c33f8903460ab3da8add9e0102c9
+    parentId: fld_c960e7b631bc49ad97764e3a15dc65f6
+    modified: 1630382246566
+    created: 1629720288868
+    url: "{{ _.baseurl }}/api/wishlist"
+    name: CREATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/wishlist
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |product_id|uuid|yes|body|hfuw4234-123ff|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Wishlist Added!"
+        },
+        "data": {
+          "wishlist": {
+            "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+            "title": "Computers Baru",
+            "slug": "computers-baru",
+            "type": "physical",
+            "merk": "ASUS",
+            "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+            "content": "nice",
+            "tnc": "you should buy",
+            "weight": 9,
+            "price": 1200000,
+            "stocks": 12,
+            "reseller_price": 1300000,
+            "discount_type": "nominal",
+            "discount": null,
+            "affiliate_type": "nominal",
+            "affiliate_fee": 10000,
+            "pin": null,
+            "created_at": "2021-08-10T02:48:26.000000Z",
+            "updated_at": "2021-08-10T02:48:26.000000Z"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Adding Wishlist Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "qty": [
+              "The product id field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"product_id" : "dcaa8d22-8e2f-40e0-b76c-a843ee835765"
+        }
+    parameters: []
+    headers:
+      - id: pair_3069b4c8ea834623b155a176680fa121
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_5db36c1f8766458dbf0a82d40cb3694e
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628739544582
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_c960e7b631bc49ad97764e3a15dc65f6
+    parentId: fld_40aeee4e68224603904889666c7f2a8c
+    modified: 1630075742058
+    created: 1629720288865
+    name: Wishlist
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627852350550.5
+    _type: request_group
+  - _id: req_5f572242eaa24033915e4f84e005ab74
+    parentId: fld_c960e7b631bc49ad97764e3a15dc65f6
+    modified: 1630381723145
+    created: 1629720288872
+    url: "{{ _.baseurl }}/api/wishlist"
+    name: INDEX
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/wishlist
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "wishlists": [
+            {
+              "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+              "title": "Computers Baru",
+              "slug": "computers-baru",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-10T02:48:26.000000Z",
+              "updated_at": "2021-08-10T02:48:26.000000Z"
+            }
+          ]
+        }
+      }{
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "wishlists": [
+            {
+              "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+              "title": "Computers Baru",
+              "slug": "computers-baru",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-10T02:48:26.000000Z",
+              "updated_at": "2021-08-10T02:48:26.000000Z"
+            }
+          ]
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Showing Wishlist Failed!"
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_7f1f29a622194ed69edef4ea374d9778
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628741329852
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1ee45a1ac38b4a979e5155a6ba380a6f
+    parentId: fld_c960e7b631bc49ad97764e3a15dc65f6
+    modified: 1630382274907
+    created: 1629720288875
+    url: "{{ _.baseurl }}/api/wishlist/dcaa8d22-8e2f-40e0-b76c-a843ee835765"
+    name: DELETE
+    description: |-
+      ## Method (DELETE)
+      ## Route
+      ```
+      /api/wishlist/{product}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |product|uuid|yes|route param|sdjajsf-2479fd-3423|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Wishlist Deleted!"
+        },
+        "data": [
+          "success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Category Not Found!",
+          "error": "No query results for model [App\\Models\\Wishlist]."
+        }
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_2b4ba12f5355413c8a62b24d9edfc8e8
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628741531249
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -4912,7 +7366,7 @@ resources:
     _type: request_group
   - _id: req_e116a62cfef7428288a44cd299904153
     parentId: fld_e65f864a07d74cd7bbbee4489781c6b2
-    modified: 1628878706264
+    modified: 1630075742076
     created: 1628262462715
     url: "{{ _.baseurl
       }}/api/admin/gallery/340f7d37-c59b-4849-8292-4bbdf422972c/d1aaa1fd-fbcd-4\
@@ -4929,6 +7383,7 @@ resources:
       |---------|----|--------|------------|
       |product|uuid|yes|route param|146f4f17-ed48-4001-d58b18ae0b7e|
       |gallery|uuid|yes|route param|146f4f17-sdsds-4001-d58b18ae0b7e|
+      |X-DOMAIN-MEMBER|string|yes|header|example.net|
       |bearer token|jwt|yes|header|12132-jfjdf34-213|
       ## Response Success
       ```
@@ -5121,18 +7576,390 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
+  - _id: req_6ff0f46e42dd496897952c8dbe6514f5
+    parentId: fld_59fc3f369bf94d898bf42d363e96f358
+    modified: 1630528848108
+    created: 1630136116904
+    url: "{{ _.baseurl
+      }}/api/admin/config/theme/8c4b7d40-9349-4a6e-8333-70c677ce21f4"
+    name: UPDATE
+    description: >-
+      ## Method (PATCH)
+
+      ## Route
+
+      ```
+
+      /api/admin/config/theme/{configuration}
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |configuration|uuid|yes|route param|hsdfg7567sdf|
+
+      |blog|boolean|yes|body|1|
+
+      |tnc|boolean|yes|body|1|
+
+      |contact|boolean|yes|body|1|
+
+      |faq|boolean|yes|body|1|
+
+      |contact|boolean|yes|body|1|
+
+      |title|string|yes|body|KUMI|
+
+      |theme_color|string|yes|body|#000000|
+
+      |header_color|string|yes|body|#000000|
+
+      |footer|string|yes|body|KUMI|
+
+      |store_description|string|yes|body|KUMI|
+
+      |widget_code|string|yes|body|KUMI|
+
+      |favicon|file|optional|body|image|
+
+      |loader|file|optional|body|image|
+
+      |error_banner|file|optional|body|image|
+
+      |logo|file|optional|body|image|
+
+      |invoice|file|optional|body|image|
+
+      |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+      |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Theme Configuration Updated!"
+        },
+        "data": {
+          "theme": {
+            "blog": true,
+            "tnc": true,
+            "contact": true,
+            "about": true,
+            "faq": true,
+            "title": "KUMI",
+            "theme_color": "sdas",
+            "header_color": "sda",
+            "footer": "sdasdsd",
+            "store_description": "asdasd",
+            "widget_code": "asdasd",
+            "favicon": "http:\/\/kumi-backend.apps\/storage\/60a448a8-eb94-4e85-ad0c-be6474b3a7b7\/configurations\/iBlclYclNzSVripqoZZjH0VdXTAJ5lwYEUT1VXOg.png",
+            "loader": "http:\/\/kumi-backend.apps\/storage\/60a448a8-eb94-4e85-ad0c-be6474b3a7b7\/configurations\/iBlclYclNzSVripqoZZjH0VdXTAJ5lwYEUT1VXOg.png",
+            "error_banner": "http:\/\/kumi-backend.apps\/storage\/60a448a8-eb94-4e85-ad0c-be6474b3a7b7\/configurations\/iBlclYclNzSVripqoZZjH0VdXTAJ5lwYEUT1VXOg.png",
+            "logo": "http:\/\/kumi-backend.apps\/storage\/60a448a8-eb94-4e85-ad0c-be6474b3a7b7\/configurations\/iBlclYclNzSVripqoZZjH0VdXTAJ5lwYEUT1VXOg.png",
+            "invoice": "http:\/\/kumi-backend.apps\/storage\/60a448a8-eb94-4e85-ad0c-be6474b3a7b7\/configurations\/iBlclYclNzSVripqoZZjH0VdXTAJ5lwYEUT1VXOg.png"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Theme Configuration Updated"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "blog": [
+              "The blog field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - description: ""
+          id: pair_5b04e280bf1f403e8e62ca45562f495a
+          name: _method
+          value: PATCH
+        - description: ""
+          disabled: false
+          id: pair_64b3b2d456e24b7a92a22d455322e3dd
+          name: blog
+          value: "0"
+        - description: ""
+          disabled: false
+          id: pair_5b3365d4daaf4f30b963c89530af4e12
+          name: tnc
+          value: "1"
+        - description: ""
+          disabled: false
+          id: pair_b788c74dae554c379326db158fd17cde
+          name: contact
+          value: "1"
+        - description: ""
+          disabled: false
+          id: pair_c424ff1cc25c44be99dd3b2430409ebf
+          name: about
+          value: "1"
+        - description: ""
+          disabled: false
+          id: pair_3dfe3a65a9e44087a5487881e7474cb6
+          name: faq
+          value: "1"
+        - description: ""
+          disabled: false
+          id: pair_a8199ec241d24967b346d7743b505bb1
+          name: title
+          value: KUMI
+        - description: ""
+          disabled: false
+          id: pair_6c13912610e140429b7d4cc479a8ac7e
+          name: theme_color
+          value: sdas
+        - description: ""
+          disabled: false
+          id: pair_098c5dde076649c3ac53d7cd4a1e780f
+          name: header_color
+          value: sda
+        - description: ""
+          disabled: false
+          id: pair_f069d61f264e4516938baa03ae9fc55d
+          name: footer
+          value: sdasdsd
+        - description: ""
+          disabled: false
+          id: pair_32a233085cf241e7ae13d4ed4e5ff6bd
+          name: store_description
+          value: asdasd
+        - description: ""
+          disabled: false
+          id: pair_ee42b4c2dd06459087a331565eec5b82
+          name: widget_code
+          value: asdasd
+        - description: ""
+          disabled: false
+          fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
+          id: pair_9e3e9e88e1564321a97a7272975f6843
+          name: favicon
+          type: file
+          value: dasdas
+        - description: ""
+          disabled: true
+          id: pair_e9e1542ca80849f5b2324a5594da3606
+          name: loader
+          value: sdasd
+        - description: ""
+          disabled: true
+          id: pair_7570758627854e0487539ea370c87de5
+          name: error
+          value: sdas
+        - description: ""
+          disabled: true
+          id: pair_03c88ea0e3804165aa255eaf1e96894f
+          name: logo
+          value: asdas
+        - description: ""
+          disabled: true
+          id: pair_e3fefcc351ef4b5cbdc263007a203f62
+          name: invoice
+          value: sdasdddd
+    parameters: []
+    headers:
+      - id: pair_66c577ac1d2947518320d4e12e64b5cf
+        name: Content-Type
+        value: multipart/form-data
+      - description: ""
+        id: pair_f01cddc3f09f494cafa005deb6466e78
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      disabled: false
+      token: "{{ _.token_admin }}"
+      type: bearer
+    metaSortKey: -1630136116904
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_59fc3f369bf94d898bf42d363e96f358
+    parentId: fld_fff31bcd49a14821b00a18ec680c0bdf
+    modified: 1630374283296
+    created: 1630136108709
+    name: Theme
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1630136108709
+    _type: request_group
+  - _id: fld_fff31bcd49a14821b00a18ec680c0bdf
+    parentId: fld_f43e15356f6b497686f35f79a062b563
+    modified: 1630374283296
+    created: 1630136100883
+    name: Configurations
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1630136100883
+    _type: request_group
+  - _id: req_1f9e96327cee452fb6a81d0b553605bb
+    parentId: fld_59fc3f369bf94d898bf42d363e96f358
+    modified: 1630530542814
+    created: 1630137219974
+    url: "{{ _.baseurl }}/api/admin/config/theme"
+    name: GET
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/admin/config/theme
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+      |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "success"
+        },
+        "data": {
+          "theme": {
+            "config_id": "8c4b7d40-9349-4a6e-8333-70c677ce21f4",
+            "blog": false,
+            "tnc": true,
+            "contact": true,
+            "about": true,
+            "faq": true,
+            "title": "KUMI",
+            "theme_color": "sdas",
+            "header_color": "sda",
+            "footer": "sdasdsd",
+            "store_description": "asdasd",
+            "widget_code": "asdasd",
+            "favicon": "http:\/\/kumi-backend.apps\/storage\/08d21566-7ad4-4387-a036-beb38d99683d\/configurations\/0U1VtGXbeNhVLfsLY4OpFK9mcK71PiPX7z0Rfx7B.png",
+            "loader": "http:\/\/kumi-backend.apps\/storage",
+            "error_banner": "http:\/\/kumi-backend.apps\/storage",
+            "logo": "http:\/\/kumi-backend.apps\/storage",
+            "invoice": "http:\/\/kumi-backend.apps\/storage"
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Theme's Configuration Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_5d0a79555f61419a91037a506be5ab49
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_admin }}"
+      type: bearer
+    metaSortKey: -1630137219974
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: env_2208ee768dc2295a39591cbb03562119586d56c8
     parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1629445125060
+    modified: 1630527767969
     created: 1626332572608
     name: Base Environment
     data:
       baseurl: http://kumi-backend.apps
       produrl: https://panel.kumi.id
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mjk0NDQ3MzksImV4cCI6MTYyOTQ0ODMzOSwibmJmIjoxNjI5NDQ0NzM5LCJqdGkiOiJvYXI1czE0V0FpblJCMlpwIiwic3ViIjoiY2YzZTVjZjItN2RmNy00M2NlLWFlMWItMjRjM2UzOTIxNzZjIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.eDMGvXp4L4422CVbAFiJKLpIOKJYUCnDmSQedjuBncY
-      token_reseller: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2Mjk0NDUxMDIsImV4cCI6MTYyOTQ0ODcwMiwibmJmIjoxNjI5NDQ1MTAyLCJqdGkiOiJvSzdYSjZwZHMyaGk1Nm9yIiwic3ViIjoiNjFmODM1NDgtMzIzYy00ZWMxLWI0YTItODRhM2EzMjU4OWE1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.5_YrDzEyQo83T0O1bByX01l73v1E4UJIjF-gUCU69mg
-      token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjk0Mjg3MTcsImV4cCI6MTYyOTQzMjMxNywibmJmIjoxNjI5NDI4NzE3LCJqdGkiOiJkd3dPd3piSFd4cmNwWER1Iiwic3ViIjoiMjNjY2JiZTgtNjc5NS00MTE5LThkYWMtOWY5YTU3ZWRlMWFiIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4BMYIVM_HYtj-bTil0lL9Dx4xJSNrPAzCPj0jmRR3Bo
-      token_prod_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2Mjk0Mjg2NjQsImV4cCI6MTYyOTQzMjI2NCwibmJmIjoxNjI5NDI4NjY0LCJqdGkiOiJpTE9BaG9XU3Z4eVBjOWlOIiwic3ViIjoiMjNjY2JiZTgtNjc5NS00MTE5LThkYWMtOWY5YTU3ZWRlMWFiIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Ivmy4MTm5ohPiuZqTphIJZrAk5s5tG69wzBcPsSLsNY
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9wYW5lbC5rdW1pLmlkXC9hcGlcL2N1c3RvbWVyXC9sb2dpbiIsImlhdCI6MTYzMDM3NDY3NywiZXhwIjoxNjMwMzc4Mjc3LCJuYmYiOjE2MzAzNzQ2NzcsImp0aSI6IlNkdWozeVNQR2NEWmUxUkMiLCJzdWIiOiJiMmVhOWZiOS1lYjk3LTQwNGUtYjg4Yi1iMmI0OTJkYjMxNDciLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ejCVbn2c4w_Bkhlv_lPGSd1dA0Dliq3e27S7tEEB0L8
+      token_reseller: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9yZXNlbGxlclwvbG9naW4iLCJpYXQiOjE2MzA1Mjc2MTIsImV4cCI6MTYzMDUzMTIxMiwibmJmIjoxNjMwNTI3NjEyLCJqdGkiOiJLNnlsME5ZOWhlRkRIRlAxIiwic3ViIjoiOGViNzE5OWQtMWZkOC00MDMwLWI0MGEtY2NmY2I4MWQ0MTYyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.hh2N290l4mEwgLECTFQdDhkemqIJdFX6Dr43W58pW90
+      token_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MzA1Mjc3MjUsImV4cCI6MTYzMDUzMTMyNSwibmJmIjoxNjMwNTI3NzI1LCJqdGkiOiJCeHJRYXFPVHA5dGlKcXdoIiwic3ViIjoiNjJjY2NkYzctMzk0Yi00YWNkLWIzYzctMmI5NWZlZDIyODg4IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UxAmYaU1RXpjDhsTo0w8-ODGjsShwwYCTfgfIvpU-38
+      token_prod_admin: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9wYW5lbC5rdW1pLmlkXC9hcGlcL2FkbWluXC9sb2dpbiIsImlhdCI6MTYzMDM3NDk2NCwiZXhwIjoxNjMwMzc4NTY0LCJuYmYiOjE2MzAzNzQ5NjQsImp0aSI6IjYzOWdqaEFpMHNGNWlYNjEiLCJzdWIiOiIwZGYwNWI0NC1mMWZmLTQ4ZjItYmYzMi1mNGY5ZDZhOTkzOGIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bAKWFLiHI7P7KuaF7lC6lgaf65iIDGleFXMH-riErhM
       domain: example.net
     dataPropertyOrder:
       "&":
