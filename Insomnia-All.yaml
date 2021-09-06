@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2021-09-06T20:25:16.138Z
+__export_date: 2021-09-06T20:28:05.534Z
 __export_source: insomnia.desktop.app:v2021.5.2
 resources:
   - _id: req_3a72d7de1cf34cf88cced81db784a7e4
@@ -968,625 +968,6 @@ resources:
       token: "{{ _.token_admin }}"
       type: bearer
     metaSortKey: -1627855767357
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_30b45e085271410097436b00b0fccc4a
-    parentId: fld_640b66f353294f22bb329db3f29657f1
-    modified: 1630527795702
-    created: 1630392729847
-    url: "{{ _.baseurl }}/api/cart"
-    name: CREATE
-    description: >-
-      ## Method (POST)
-
-      ## Route
-
-      ```
-
-      /api/cart
-
-      ```
-
-      ## Parameters
-
-      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-
-      |---------|----|--------|--------|
-
-      |qty|int|yes|body|computer|
-
-      |product_id|uuid|yes|body|hfuw4234-123ff|
-
-      |bearer token|jwt|yes|header|12132-jfjdf34-213|
-
-      |X-DOMAIN-MEMBER|string|yes|body|example.net|
-
-      ## Response Success
-
-      ```
-
-      {
-        "meta": {
-          "code": 201,
-          "status": "success",
-          "message": "Cart Added!"
-        },
-        "data": {
-          "cart": {
-            "id": "5ec70007-7e95-437f-99be-650643cb0788",
-            "qty": 1,
-            "price": 1200000,
-            "weight": 9,
-            "note": null,
-            "discount": null,
-            "dicount_type": null,
-            "product": {
-              "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
-              "title": "Computers Baru",
-              "slug": "computers-baru",
-              "type": "physical",
-              "merk": "ASUS",
-              "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
-              "content": "nice",
-              "tnc": "you should buy",
-              "weight": 9,
-              "price": 1200000,
-              "stocks": 12,
-              "reseller_price": 1300000,
-              "discount_type": "nominal",
-              "discount": null,
-              "affiliate_type": "nominal",
-              "affiliate_fee": 10000,
-              "pin": null,
-              "created_at": "2021-08-10T02:48:26.000000Z",
-              "updated_at": "2021-08-10T02:48:26.000000Z"
-            }
-          }
-        }
-      }
-
-      ```
-
-
-      ## Response Failed
-
-      ### Unauthorized
-
-      ```
-
-      {
-        "meta": {
-          "code": 401,
-          "status": "error",
-          "message": "Adding Cart Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": "Unauthorized Domain"
-        }
-      }
-
-      ```
-
-      ### Validation Input
-
-      ```
-
-      {
-        "meta": {
-          "code": 422,
-          "status": "error",
-          "message": "Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": {
-            "qty": [
-              "The qty field is required."
-            ]
-          }
-        }
-      }
-
-      ```
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-        	"product_id" : "7863ec51-8d7e-4b3f-8305-7e5d833378ac",
-        	"qty" : 1
-        }
-    parameters: []
-    headers:
-      - id: pair_5fe4f5026a2840a5a9862e025f731a42
-        name: Content-Type
-        value: application/json
-      - description: ""
-        id: pair_ad6e92f886bc4d63ab7480098ac86ae2
-        name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
-    authentication:
-      token: "{{ _.token_reseller }}"
-      type: bearer
-    metaSortKey: -1628319613782
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: fld_640b66f353294f22bb329db3f29657f1
-    parentId: wrk_2f0e2d6098044534b082427ac3e6d0a6
-    modified: 1630959805066
-    created: 1630392729843
-    name: Cart
-    description: ""
-    environment: {}
-    environmentPropertyOrder: null
-    metaSortKey: -1627480777770
-    _type: request_group
-  - _id: req_44d31d297fad43b6a285260069b8bcf4
-    parentId: fld_640b66f353294f22bb329db3f29657f1
-    modified: 1630527874000
-    created: 1630392729850
-    url: "{{ _.baseurl }}/api/cart/7863ec51-8d7e-4b3f-8305-7e5d833378ac"
-    name: DELETE
-    description: |-
-      ## Method (DELETE)
-      ## Route
-      ```
-      /api/cart/{cart}
-      ```
-      ## Parameters
-      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-      |---------|----|--------|--------|
-      |cart|uuid|yes|route param|sdjajsf-2479fd-3423|
-      |bearer token|jwt|yes|header|12132-jfjdf34-213|
-      |X-DOMAIN-MEMBER|string|yes|body|example.net|
-      ## Response Success
-      ```
-      {
-        "meta": {
-          "code": 201,
-          "status": "success",
-          "message": "Cart Deleted!"
-        },
-        "data": [
-          "success"
-        ]
-      }
-      ```
-
-      ## Response Failed
-      ### Not Found
-      ```
-      {
-        "meta": {
-          "code": 404,
-          "status": "error",
-          "message": "failed"
-        },
-        "data": {
-          "message": "Category Not Found!",
-          "error": "No query results for model [App\\Models\\Cart]."
-        }
-      }
-      ```
-    method: DELETE
-    body: {}
-    parameters: []
-    headers:
-      - description: ""
-        id: pair_f1ab3d958f31464894a6ddbacb948fc3
-        name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
-    authentication:
-      token: "{{ _.token }}"
-      type: bearer
-    metaSortKey: -1628325186320
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_7f88db55af63477e802cbd242b019314
-    parentId: fld_640b66f353294f22bb329db3f29657f1
-    modified: 1630528118581
-    created: 1630392729855
-    url: "{{ _.baseurl }}/api/cart/qty-update"
-    name: QTY UPDATE
-    description: >-
-      ## Method (POST)
-
-      ## Route
-
-      ```
-
-      /api/cart/qty-update
-
-      ```
-
-      ## Parameters
-
-      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-
-      |---------|----|--------|--------|
-
-      |product_id|uuid|yes|body|hfuw4234-123ff|
-
-      |type|string|optional|body|in:increase,decrease|
-
-      |note|string|optional|body|warna hijau|
-
-      |bearer token|jwt|yes|header|12132-jfjdf34-213|
-
-      |X-DOMAIN-MEMBER|string|yes|body|example.net|
-
-      ## Response Success
-
-      ```
-
-      {
-        "meta": {
-          "code": 200,
-          "status": "success",
-          "message": "Cart Updated!"
-        },
-        "data": {
-          "cart": {
-            "id": "a0e4e56a-b727-4b8c-83ce-69b01eb5c8ef",
-            "qty": 3,
-            "price": 3600000,
-            "weight": 27,
-            "note": "Decrease",
-            "discount": null,
-            "dicount_type": null,
-            "product": {
-              "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
-              "title": "Computers Baru",
-              "slug": "computers-baru",
-              "type": "physical",
-              "merk": "ASUS",
-              "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
-              "content": "nice",
-              "tnc": "you should buy",
-              "weight": 9,
-              "price": 1200000,
-              "stocks": 12,
-              "reseller_price": 1300000,
-              "discount_type": "nominal",
-              "discount": null,
-              "affiliate_type": "nominal",
-              "affiliate_fee": 10000,
-              "pin": null,
-              "created_at": "2021-08-10T02:48:26.000000Z",
-              "updated_at": "2021-08-10T02:48:26.000000Z"
-            }
-          }
-        }
-      }
-
-      ```
-
-
-      ## Response Failed
-
-      ### Unauthorized
-
-      ```
-
-      {
-        "meta": {
-          "code": 401,
-          "status": "error",
-          "message": "Updating Cart Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": "Unauthorized Domain"
-        }
-      }
-
-      ```
-
-      ### Validation Input
-
-      ```
-
-      {
-        "meta": {
-          "code": 422,
-          "status": "error",
-          "message": "Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": {
-            "type": [
-              "The selected type is invalid."
-            ]
-          }
-        }
-      }
-
-      ```
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-        	"product_id" : "7863ec51-8d7e-4b3f-8305-7e5d833378ac",
-        	"type" : "decrease",
-        	"note" : "yang bagus ya"
-        }
-    parameters: []
-    headers:
-      - id: pair_feea94f13a9c4201ad9c45c67161f2fd
-        name: Content-Type
-        value: application/json
-      - description: ""
-        id: pair_63191ad7fce54036a2db2fa0c17427a5
-        name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
-    authentication:
-      token: "{{ _.token_reseller }}"
-      type: bearer
-    metaSortKey: -1628326317873
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_f029604d146f4654897a333d64f76adb
-    parentId: fld_640b66f353294f22bb329db3f29657f1
-    modified: 1630527666826
-    created: 1630392729860
-    url: "{{ _.baseurl }}/api/cart"
-    name: INDEX
-    description: >-
-      ## Method (GET)
-
-      ## Route
-
-      ```
-
-      /api/cart
-
-      ```
-
-      ## Parameters
-
-      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-
-      |---------|----|--------|--------|
-
-      |bearer token|jwt|yes|header|12132-jfjdf34-213|
-
-      |X-DOMAIN-MEMBER|string(slug)|yes|header|kumi_id|
-
-      ## Response Success
-
-      ```
-
-      {
-        "meta": {
-          "code": 200,
-          "status": "success",
-          "message": "Your Carts Listed!"
-        },
-        "data": {
-          "cart": [
-            {
-              "id": "a0e4e56a-b727-4b8c-83ce-69b01eb5c8ef",
-              "qty": 3,
-              "price": 3600000,
-              "weight": 27,
-              "note": "Decrease",
-              "discount": null,
-              "dicount_type": null,
-              "product": {
-                "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
-                "title": "Computers Baru",
-                "slug": "computers-baru",
-                "type": "physical",
-                "merk": "ASUS",
-                "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
-                "content": "nice",
-                "tnc": "you should buy",
-                "weight": 9,
-                "price": 1200000,
-                "stocks": 12,
-                "reseller_price": 1300000,
-                "discount_type": "nominal",
-                "discount": null,
-                "affiliate_type": "nominal",
-                "affiliate_fee": 10000,
-                "pin": null,
-                "created_at": "2021-08-10T02:48:26.000000Z",
-                "updated_at": "2021-08-10T02:48:26.000000Z"
-              }
-            }
-          ],
-          "total": 3600000
-        }
-      }
-
-      ```
-
-
-      ## Response Failed
-
-      ### Unauthorized
-
-      ```
-
-      {
-        "meta": {
-          "code": 500,
-          "status": "error",
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": "Showing Cart Failed!"
-        }
-      }
-
-      ```
-    method: GET
-    body: {}
-    parameters: []
-    headers:
-      - description: ""
-        id: pair_76ffb2c492b0467587b0413d0263acd8
-        name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
-      - description: ""
-        id: pair_8cda0aeabfc74640aa737fc2069a2e2b
-        name: ""
-        value: ""
-    authentication:
-      token: "{{ _.token_reseller }}"
-      type: bearer
-    metaSortKey: -1628404474690
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_217908e1295943a389bf7bbf23c05365
-    parentId: fld_640b66f353294f22bb329db3f29657f1
-    modified: 1630527817414
-    created: 1630392729864
-    url: "{{ _.baseurl }}/api/cart/qty-update"
-    name: CREATE OR UPDATE NOTE
-    description: |-
-      ## Method (POST)
-      ## Route
-      ```
-      /api/cart/qty-update
-      ```
-      ## Parameters
-      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-      |---------|----|--------|--------|
-      |product_id|uuid|yes|body|hfuw4234-123ff|
-      |note|string|optional|body|warna hijau|
-      |bearer token|jwt|yes|header|12132-jfjdf34-213|
-      |X-DOMAIN-MEMBER|string|yes|body|example.net|
-      ## Response Success
-      ```
-      {
-        "meta": {
-          "code": 200,
-          "status": "success",
-          "message": "Cart Updated!"
-        },
-        "data": {
-          "cart": {
-            "id": "5ea49a09-312b-4115-adea-2edb6b0912a5",
-            "qty": 2,
-            "price": 2400000,
-            "weight": 18,
-            "note": "Yang Bagus Ya Gaes Boleh Lah",
-            "discount": null,
-            "dicount_type": null,
-            "product": {
-              "id": "ac43fbf2-81de-4f2b-93f4-035c168a55d8",
-              "title": "Computers",
-              "slug": "computers",
-              "type": "physical",
-              "merk": "ASUS",
-              "image": "http:\/\/kumi-backend.apps\/storage",
-              "content": "nice",
-              "tnc": "you should buy",
-              "weight": 9,
-              "price": 1200000,
-              "stocks": 12,
-              "reseller_price": 1300000,
-              "discount_type": "nominal",
-              "discount": null,
-              "affiliate_type": "nominal",
-              "affiliate_fee": 10000,
-              "pin": null,
-              "created_at": "2021-08-20T03:06:10.000000Z",
-              "updated_at": "2021-08-20T03:06:10.000000Z"
-            }
-          }
-        }
-      }
-      ```
-
-      ## Response Failed
-      ### Unauthorized
-      ```
-      {
-        "meta": {
-          "code": 401,
-          "status": "error",
-          "message": "Updating Cart Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": "Unauthorized Domain"
-        }
-      }
-      ```
-      ### Validation Input
-      ```
-      {
-        "meta": {
-          "code": 422,
-          "status": "error",
-          "message": "Failed"
-        },
-        "data": {
-          "message": "Something went wrong!",
-          "error": {
-            "type": [
-              "The selected type is invalid."
-            ]
-          }
-        }
-      }
-      ```
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-        	"product_id" : "7863ec51-8d7e-4b3f-8305-7e5d833378ac",
-        	"note" : "yang bagus ya gaes boleh lah"
-        }
-    parameters: []
-    headers:
-      - id: pair_863eab5303d54a138ff18b5da394cee3
-        name: Content-Type
-        value: application/json
-      - description: ""
-        id: pair_f875f62a8c524f7da50723251c308344
-        name: X-DOMAIN-MEMBER
-        value: "{{ _.domain }}"
-    authentication:
-      token: "{{ _.token_reseller }}"
-      type: bearer
-    metaSortKey: -1628319613732
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -7572,6 +6953,625 @@ resources:
       token: "{{ _.token_reseller }}"
       type: bearer
     metaSortKey: -1628741531249
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_30b45e085271410097436b00b0fccc4a
+    parentId: fld_640b66f353294f22bb329db3f29657f1
+    modified: 1630527795702
+    created: 1630392729847
+    url: "{{ _.baseurl }}/api/cart"
+    name: CREATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/cart
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |qty|int|yes|body|computer|
+
+      |product_id|uuid|yes|body|hfuw4234-123ff|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Cart Added!"
+        },
+        "data": {
+          "cart": {
+            "id": "5ec70007-7e95-437f-99be-650643cb0788",
+            "qty": 1,
+            "price": 1200000,
+            "weight": 9,
+            "note": null,
+            "discount": null,
+            "dicount_type": null,
+            "product": {
+              "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+              "title": "Computers Baru",
+              "slug": "computers-baru",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-10T02:48:26.000000Z",
+              "updated_at": "2021-08-10T02:48:26.000000Z"
+            }
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Adding Cart Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "qty": [
+              "The qty field is required."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"product_id" : "7863ec51-8d7e-4b3f-8305-7e5d833378ac",
+        	"qty" : 1
+        }
+    parameters: []
+    headers:
+      - id: pair_5fe4f5026a2840a5a9862e025f731a42
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_ad6e92f886bc4d63ab7480098ac86ae2
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628319613782
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_640b66f353294f22bb329db3f29657f1
+    parentId: fld_40aeee4e68224603904889666c7f2a8c
+    modified: 1630960020224
+    created: 1630392729843
+    name: Cart
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627605501743.5
+    _type: request_group
+  - _id: req_44d31d297fad43b6a285260069b8bcf4
+    parentId: fld_640b66f353294f22bb329db3f29657f1
+    modified: 1630527874000
+    created: 1630392729850
+    url: "{{ _.baseurl }}/api/cart/7863ec51-8d7e-4b3f-8305-7e5d833378ac"
+    name: DELETE
+    description: |-
+      ## Method (DELETE)
+      ## Route
+      ```
+      /api/cart/{cart}
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |cart|uuid|yes|route param|sdjajsf-2479fd-3423|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 201,
+          "status": "success",
+          "message": "Cart Deleted!"
+        },
+        "data": [
+          "success"
+        ]
+      }
+      ```
+
+      ## Response Failed
+      ### Not Found
+      ```
+      {
+        "meta": {
+          "code": 404,
+          "status": "error",
+          "message": "failed"
+        },
+        "data": {
+          "message": "Category Not Found!",
+          "error": "No query results for model [App\\Models\\Cart]."
+        }
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_f1ab3d958f31464894a6ddbacb948fc3
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token }}"
+      type: bearer
+    metaSortKey: -1628325186320
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7f88db55af63477e802cbd242b019314
+    parentId: fld_640b66f353294f22bb329db3f29657f1
+    modified: 1630528118581
+    created: 1630392729855
+    url: "{{ _.baseurl }}/api/cart/qty-update"
+    name: QTY UPDATE
+    description: >-
+      ## Method (POST)
+
+      ## Route
+
+      ```
+
+      /api/cart/qty-update
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |product_id|uuid|yes|body|hfuw4234-123ff|
+
+      |type|string|optional|body|in:increase,decrease|
+
+      |note|string|optional|body|warna hijau|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Cart Updated!"
+        },
+        "data": {
+          "cart": {
+            "id": "a0e4e56a-b727-4b8c-83ce-69b01eb5c8ef",
+            "qty": 3,
+            "price": 3600000,
+            "weight": 27,
+            "note": "Decrease",
+            "discount": null,
+            "dicount_type": null,
+            "product": {
+              "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+              "title": "Computers Baru",
+              "slug": "computers-baru",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-10T02:48:26.000000Z",
+              "updated_at": "2021-08-10T02:48:26.000000Z"
+            }
+          }
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Cart Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+
+      ```
+
+      ### Validation Input
+
+      ```
+
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "type": [
+              "The selected type is invalid."
+            ]
+          }
+        }
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"product_id" : "7863ec51-8d7e-4b3f-8305-7e5d833378ac",
+        	"type" : "decrease",
+        	"note" : "yang bagus ya"
+        }
+    parameters: []
+    headers:
+      - id: pair_feea94f13a9c4201ad9c45c67161f2fd
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_63191ad7fce54036a2db2fa0c17427a5
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628326317873
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f029604d146f4654897a333d64f76adb
+    parentId: fld_640b66f353294f22bb329db3f29657f1
+    modified: 1630527666826
+    created: 1630392729860
+    url: "{{ _.baseurl }}/api/cart"
+    name: INDEX
+    description: >-
+      ## Method (GET)
+
+      ## Route
+
+      ```
+
+      /api/cart
+
+      ```
+
+      ## Parameters
+
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+      |---------|----|--------|--------|
+
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+      |X-DOMAIN-MEMBER|string(slug)|yes|header|kumi_id|
+
+      ## Response Success
+
+      ```
+
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Your Carts Listed!"
+        },
+        "data": {
+          "cart": [
+            {
+              "id": "a0e4e56a-b727-4b8c-83ce-69b01eb5c8ef",
+              "qty": 3,
+              "price": 3600000,
+              "weight": 27,
+              "note": "Decrease",
+              "discount": null,
+              "dicount_type": null,
+              "product": {
+                "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+                "title": "Computers Baru",
+                "slug": "computers-baru",
+                "type": "physical",
+                "merk": "ASUS",
+                "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+                "content": "nice",
+                "tnc": "you should buy",
+                "weight": 9,
+                "price": 1200000,
+                "stocks": 12,
+                "reseller_price": 1300000,
+                "discount_type": "nominal",
+                "discount": null,
+                "affiliate_type": "nominal",
+                "affiliate_fee": 10000,
+                "pin": null,
+                "created_at": "2021-08-10T02:48:26.000000Z",
+                "updated_at": "2021-08-10T02:48:26.000000Z"
+              }
+            }
+          ],
+          "total": 3600000
+        }
+      }
+
+      ```
+
+
+      ## Response Failed
+
+      ### Unauthorized
+
+      ```
+
+      {
+        "meta": {
+          "code": 500,
+          "status": "error",
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Showing Cart Failed!"
+        }
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - description: ""
+        id: pair_76ffb2c492b0467587b0413d0263acd8
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+      - description: ""
+        id: pair_8cda0aeabfc74640aa737fc2069a2e2b
+        name: ""
+        value: ""
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628404474690
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_217908e1295943a389bf7bbf23c05365
+    parentId: fld_640b66f353294f22bb329db3f29657f1
+    modified: 1630527817414
+    created: 1630392729864
+    url: "{{ _.baseurl }}/api/cart/qty-update"
+    name: CREATE OR UPDATE NOTE
+    description: |-
+      ## Method (POST)
+      ## Route
+      ```
+      /api/cart/qty-update
+      ```
+      ## Parameters
+      |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+      |---------|----|--------|--------|
+      |product_id|uuid|yes|body|hfuw4234-123ff|
+      |note|string|optional|body|warna hijau|
+      |bearer token|jwt|yes|header|12132-jfjdf34-213|
+      |X-DOMAIN-MEMBER|string|yes|body|example.net|
+      ## Response Success
+      ```
+      {
+        "meta": {
+          "code": 200,
+          "status": "success",
+          "message": "Cart Updated!"
+        },
+        "data": {
+          "cart": {
+            "id": "5ea49a09-312b-4115-adea-2edb6b0912a5",
+            "qty": 2,
+            "price": 2400000,
+            "weight": 18,
+            "note": "Yang Bagus Ya Gaes Boleh Lah",
+            "discount": null,
+            "dicount_type": null,
+            "product": {
+              "id": "ac43fbf2-81de-4f2b-93f4-035c168a55d8",
+              "title": "Computers",
+              "slug": "computers",
+              "type": "physical",
+              "merk": "ASUS",
+              "image": "http:\/\/kumi-backend.apps\/storage",
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 9,
+              "price": 1200000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "created_at": "2021-08-20T03:06:10.000000Z",
+              "updated_at": "2021-08-20T03:06:10.000000Z"
+            }
+          }
+        }
+      }
+      ```
+
+      ## Response Failed
+      ### Unauthorized
+      ```
+      {
+        "meta": {
+          "code": 401,
+          "status": "error",
+          "message": "Updating Cart Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": "Unauthorized Domain"
+        }
+      }
+      ```
+      ### Validation Input
+      ```
+      {
+        "meta": {
+          "code": 422,
+          "status": "error",
+          "message": "Failed"
+        },
+        "data": {
+          "message": "Something went wrong!",
+          "error": {
+            "type": [
+              "The selected type is invalid."
+            ]
+          }
+        }
+      }
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"product_id" : "7863ec51-8d7e-4b3f-8305-7e5d833378ac",
+        	"note" : "yang bagus ya gaes boleh lah"
+        }
+    parameters: []
+    headers:
+      - id: pair_863eab5303d54a138ff18b5da394cee3
+        name: Content-Type
+        value: application/json
+      - description: ""
+        id: pair_f875f62a8c524f7da50723251c308344
+        name: X-DOMAIN-MEMBER
+        value: "{{ _.domain }}"
+    authentication:
+      token: "{{ _.token_reseller }}"
+      type: bearer
+    metaSortKey: -1628319613732
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
