@@ -1,7 +1,7 @@
 _id: req_47921c0cdafd42f686f5540b40494dd0
 type: Request
 parentId: fld_4593e41f610941ec94fa931251c2fda2
-modified: 1631690181410
+modified: 1631706924777
 created: 1631690181410
 url: "{{ _.baseurl }}/api/customer/register"
 name: Register Customer
@@ -113,7 +113,7 @@ headers:
     value: "{{ _.domain }}"
     description: ""
 authentication: {}
-metaSortKey: -1627482077340
+metaSortKey: -1628538155590
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

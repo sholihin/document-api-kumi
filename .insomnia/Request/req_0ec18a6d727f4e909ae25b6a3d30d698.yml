@@ -1,7 +1,7 @@
 _id: req_0ec18a6d727f4e909ae25b6a3d30d698
 type: Request
 parentId: fld_4593e41f610941ec94fa931251c2fda2
-modified: 1631690181404
+modified: 1631706941264
 created: 1631690181404
 url: "{{ _.baseurl }}/api/customer/login"
 name: Login Customer
@@ -116,7 +116,7 @@ headers:
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
 authentication: {}
-metaSortKey: -1627482067984
+metaSortKey: -1628538155565
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
