@@ -1,0 +1,138 @@
+_id: req_f1f3311878d94126b500d455baf580eb
+type: Request
+parentId: fld_5abd3a45fdf34cfda05c5f73e7453059
+modified: 1631690201195
+created: 1631690201195
+url: "{{ _.baseurl }}/api/admin/category/blog"
+name: CREATE
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/admin/category/blog
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |name|string|yes|body|computer|
+
+  |parent_id|uuid|optional|body|hfuw4234-123ff|
+
+  |image|file|required|body|picture|
+
+  |domain|string|required|body|kumi.id|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "Category Created!"
+    },
+    "data": {
+      "user": {
+        "id": "5d3ac7b0-b756-41e7-97cb-9b4428180871",
+        "name": "Computer",
+        "slug": "computer",
+        "image": "https:\/\/panel.kumi.id/\/storage\/exampledomain_com\/categories\/ySjEaJ0vKVzuFYSRVV5zB6rWb6dqAgYg5B3UWqwK.png",
+        "created_at": "2021-07-29T13:47:31.000000Z",
+        "updated_at": "2021-07-29T13:47:31.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Creating Category Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "name": [
+          "The name field is required."
+        ]
+      }
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - description: ""
+      id: pair_dbb45fbeb20c448689839f52fa763e4a
+      name: name
+      value: Laptop
+    - description: ""
+      id: pair_4c8c68ff51b04685b543291077361b3f
+      name: parent_id
+      value: ""
+    - description: ""
+      fileName: C:\Users\ADHIT\Downloads\store.PNG
+      id: pair_3ef5265881124cb0b5324ea993f29262
+      name: image
+      type: file
+      value: ""
+parameters: []
+headers:
+  - id: pair_89c1c30eb8574557a4afb5776f9b801e
+    name: Content-Type
+    value: multipart/form-data
+  - description: ""
+    id: pair_47eef2b3d3ab487aa6fe8817b8cf03a8
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1627564703184
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

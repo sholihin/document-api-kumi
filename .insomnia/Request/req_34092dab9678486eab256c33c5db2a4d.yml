@@ -1,0 +1,111 @@
+_id: req_34092dab9678486eab256c33c5db2a4d
+type: Request
+parentId: fld_72cb62af60c04607b62c8098399fc0b0
+modified: 1631690201119
+created: 1631690201119
+url: "{{ _.baseurl }}/api/admin/config/slider/75e6c480-6d4c-4860-88cd-262f9db74c64"
+name: SHOW
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/admin/config/slider/{slider}
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |slider|jwt|yes|route param|hfhe34234-3423fdf|
+
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "slider": {
+        "id": "75e6c480-6d4c-4860-88cd-262f9db74c64",
+        "sorter": 1,
+        "title": "Nice Slider",
+        "slug": "nice-slider",
+        "url": "https:\/\/laravel.com\/docs\/8.x\/validation",
+        "image": "http:\/\/kumi-backend.apps\/storage\/628a85d6-0ae3-43ba-b691-e015ef986894\/configurations\/23XAzIG2FEZ0wqQdftfH4GF9fDz1YkCe0VKzPRVG.png"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Not Found
+
+  ```
+
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "Slider's Configuration Not Found!"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Not Found!"
+    }
+  }
+
+  ```
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Slider's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_5d0a79555f61419a91037a506be5ab49
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630136668439
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

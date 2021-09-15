@@ -1,0 +1,27 @@
+_id: req_6651f520d9f04956ad48f98a39d975f7
+type: Request
+parentId: fld_dcfd80e748874fe682b565262ad721a5
+modified: 1631690190463
+created: 1631690190463
+url: "{{ _.baseurl }}/api/cities/1"
+name: CITY
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_be56df29959a41ceae75139b1acd97e7
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token }}"
+  type: bearer
+metaSortKey: -1628589485359
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

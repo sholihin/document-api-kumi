@@ -1,0 +1,141 @@
+_id: req_a407d9c51cdd4bc9a2f568c56f807767
+type: Request
+parentId: fld_53e1e42b17f747cdb77a1a7973081966
+modified: 1631690201087
+created: 1631690201087
+url: "{{ _.baseurl
+  }}/api/admin/config/social-media/0c240ae8-ee08-4922-8a4e-8a0ea18f80dc"
+name: UPDATE
+description: |-
+  ## Method (PATCH)
+  ## Route
+  ```
+  /api/admin/config/social-media/{configuration}
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|
+  |configuration|uuid|yes|route param|hsdfg7567sdf|
+  |facebook_username|string|optional|body|kumi|
+  |facebook_status|boolean|optional|body|1|
+  |instagram_username|string|optional|body|kumi|
+  |instagram_status|boolean|optional|body|1|
+  |youtube_username|string|optional|body|kumi|
+  |youtube_status|boolean|optional|body|1|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Social Media Configuration Updated!"
+    },
+    "data": {
+      "social_media": {
+        "config_id": "5542e09b-112a-400a-853f-88e8bf4020f5",
+        "facebook": {
+          "username": "kumi.id",
+          "status": true
+        },
+        "instagram": {
+          "username": "username",
+          "status": false
+        },
+        "youtube": {
+          "username": "username",
+          "status": false
+        }
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Social Media's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+  ### Validation Input
+  ```
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Updating Social Media's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "youtube_status": [
+          "The youtube status field must be true or false."
+        ]
+      }
+    }
+  }
+  ```
+method: PATCH
+body:
+  mimeType: application/x-www-form-urlencoded
+  params:
+    - description: ""
+      id: pair_5b04b817b38e4e17b1f493d347085b9f
+      name: facebook_username
+      value: kumi.id
+    - description: ""
+      disabled: false
+      id: pair_8ca5d4c1f5ac4c9da7a124a234a22561
+      name: facebook_status
+      value: "1"
+    - description: ""
+      disabled: true
+      id: pair_410da9a920884d909e8d600236bd222b
+      name: instagram_username
+      value: ""
+    - description: ""
+      disabled: true
+      id: pair_760aca1b4bea429084511c5be8433aa9
+      name: instagram_status
+      value: ""
+    - description: ""
+      disabled: true
+      id: pair_1534199270ed422a8bee059453399479
+      name: youtube_username
+      value: ""
+    - description: ""
+      disabled: true
+      id: pair_92d928722e1f45569f84f1844477b20f
+      name: youtube_status
+      value: e
+parameters: []
+headers:
+  - id: pair_66c577ac1d2947518320d4e12e64b5cf
+    name: Content-Type
+    value: application/x-www-form-urlencoded
+  - description: ""
+    id: pair_f01cddc3f09f494cafa005deb6466e78
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  disabled: false
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630136116904
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

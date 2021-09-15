@@ -1,0 +1,124 @@
+_id: req_74408dbba02f4267898fefcc1ea6f91c
+type: Request
+parentId: fld_3d1357ac29e34173a93d4f5e2eca9ef9
+modified: 1631690190528
+created: 1631690190528
+url: "{{ _.baseurl }}/api/cart/qty-update"
+name: CREATE OR UPDATE NOTE
+description: |-
+  ## Method (POST)
+  ## Route
+  ```
+  /api/cart/qty-update
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|
+  |product_id|uuid|yes|body|hfuw4234-123ff|
+  |note|string|optional|body|warna hijau|
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Cart Updated!"
+    },
+    "data": {
+      "cart": {
+        "id": "5ea49a09-312b-4115-adea-2edb6b0912a5",
+        "qty": 2,
+        "price": 2400000,
+        "weight": 18,
+        "note": "Yang Bagus Ya Gaes Boleh Lah",
+        "discount": null,
+        "dicount_type": null,
+        "product": {
+          "id": "ac43fbf2-81de-4f2b-93f4-035c168a55d8",
+          "title": "Computers",
+          "slug": "computers",
+          "type": "physical",
+          "merk": "ASUS",
+          "image": "http:\/\/kumi-backend.apps\/storage",
+          "content": "nice",
+          "tnc": "you should buy",
+          "weight": 9,
+          "price": 1200000,
+          "stocks": 12,
+          "reseller_price": 1300000,
+          "discount_type": "nominal",
+          "discount": null,
+          "affiliate_type": "nominal",
+          "affiliate_fee": 10000,
+          "pin": null,
+          "created_at": "2021-08-20T03:06:10.000000Z",
+          "updated_at": "2021-08-20T03:06:10.000000Z"
+        }
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating Cart Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+  ### Validation Input
+  ```
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "type": [
+          "The selected type is invalid."
+        ]
+      }
+    }
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"product_id" : "7863ec51-8d7e-4b3f-8305-7e5d833378ac",
+    	"note" : "yang bagus ya gaes boleh lah"
+    }
+parameters: []
+headers:
+  - id: pair_863eab5303d54a138ff18b5da394cee3
+    name: Content-Type
+    value: application/json
+  - description: ""
+    id: pair_f875f62a8c524f7da50723251c308344
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_reseller }}"
+  type: bearer
+metaSortKey: -1628319613732
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

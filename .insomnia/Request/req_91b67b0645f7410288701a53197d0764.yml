@@ -1,0 +1,87 @@
+_id: req_91b67b0645f7410288701a53197d0764
+type: Request
+parentId: fld_48561d5e8d12426e94a187777ee7e9db
+modified: 1631690201168
+created: 1631690201168
+url: "{{ _.baseurl }}/api/admin/config/analytic"
+name: GET
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/admin/config/analytic
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "analytic": {
+        "config_id": "0c240ae8-ee08-4922-8a4e-8a0ea18f80dc",
+        "analytic": "<script>\r\ndocument.getElementById(\\\"demo\\\").innerHTML = \\\"Hello JavaScript!\\\";\r\n<\/script>"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating Google Analytics\'s Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_5d0a79555f61419a91037a506be5ab49
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630137219974
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

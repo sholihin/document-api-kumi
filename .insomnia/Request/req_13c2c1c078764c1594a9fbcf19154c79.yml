@@ -1,0 +1,138 @@
+_id: req_13c2c1c078764c1594a9fbcf19154c79
+type: Request
+parentId: fld_4240492dd7864e27a4845a0a82ead699
+modified: 1631690201247
+created: 1631690201247
+url: "{{ _.baseurl }}/api/admin/faq"
+name: CREATE
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/admin/faq
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |category_id|uuid|yes|body|hfuw4234-123ff|
+
+  |question|string|yes|body|Blog Example|
+
+  |answer|string|yes|body|Blog Example|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "FAQ Created!"
+    },
+    "data": {
+      "faq": {
+        "id": "f27caef1-15d6-4fd5-aa43-1251c6703352",
+        "question": "Apa itu KUMI ?",
+        "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quaerat porro nihil magni quasi possimus. Quaerat optio ea natus, exercitationem dolore modi qui, voluptatibus labore praesentium neque perferendis aspernatur iste! Nesciunt esse, fugit omnis aut accusamus distinctio expedita mollitia dolor molestiae! Recusandae voluptates dolorem nam harum sit perferendis ex, incidunt, laudantium in laboriosam nostrum repudiandae sint. Cum perspiciatis similique ipsa!",
+        "created_at": "2021-09-06T06:42:56.000000Z",
+        "updated_at": "2021-09-06T06:42:56.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Creating FAQ Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "answer": [
+          "The answer field is required."
+        ]
+      }
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - description: ""
+      fileName: C:\Users\ADHIT\Downloads\bsi.png
+      id: pair_61f7682e32a942fa9d687410187c6dd6
+      multiline: false
+      name: question
+      type: text
+      value: Apa itu KUMI ?
+    - description: ""
+      id: pair_2288dc632b8342f3ade5c12f88c37b5f
+      name: answer
+      value: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quaerat
+        porro nihil magni quasi possimus. Quaerat optio ea natus, exercitationem
+        dolore modi qui, voluptatibus labore praesentium neque perferendis
+        aspernatur iste! Nesciunt esse, fugit omnis aut accusamus distinctio
+        expedita mollitia dolor molestiae! Recusandae voluptates dolorem nam
+        harum sit perferendis ex, incidunt, laudantium in laboriosam nostrum
+        repudiandae sint. Cum perspiciatis similique ipsa!
+parameters: []
+headers:
+  - description: ""
+    id: pair_c2deddf000de4885ba2a8916d43be01e
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+  - id: pair_7f0f9d1cb7f44a5c87eb4419b2cde505
+    name: Content-Type
+    value: multipart/form-data
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630506542806
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

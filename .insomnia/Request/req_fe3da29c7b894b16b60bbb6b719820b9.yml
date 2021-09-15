@@ -1,0 +1,67 @@
+_id: req_fe3da29c7b894b16b60bbb6b719820b9
+type: Request
+parentId: fld_4240492dd7864e27a4845a0a82ead699
+modified: 1631690201261
+created: 1631690201261
+url: "{{ _.baseurl }}/api/admin/faq/58eedbf3-9c4a-4a16-83d0-0893153df6f3"
+name: DELETE
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/admin/faq/{faq}
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|
+  |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
+  |faq|uuid|yes|route param|sda2423-dsfsdkf245|
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "FAQ Deleted!"
+    },
+    "data": [
+      "success"
+    ]
+  }
+  ```
+
+  ## Response Failed
+  ### Not Found
+  ```
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "failed"
+    },
+    "data": {
+      "message": "Faq Not Found!",
+      "error": "No query results for model [App\\Models\\Faq]."
+    }
+  }
+  ```
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_a66980467b3b433da32f164d7c99fa6a
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630331901320.1875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

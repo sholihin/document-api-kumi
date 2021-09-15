@@ -1,0 +1,279 @@
+_id: req_18f958a0ce2f4988ae02231eff9e03ba
+type: Request
+parentId: fld_fc625f025a244d79a220618a93d25f29
+modified: 1631690200957
+created: 1631690200957
+url: "{{ _.baseurl }}/api/admin/product/c98a91e3-49d9-4b3d-9848-3830adfa4c32"
+name: UPDATE
+description: >-
+  ## Method (PATCH)
+
+  ## Route
+
+  ```
+
+  /api/admin/product/{product}
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |product|uuid|required|route param|asd231-231423-231|
+
+  |title|string|yes|body|samsung a12|
+
+  |type|enum(digital,physical)|yes|body|physical|
+
+  |category_id|uuid|required|body|asd231-231423-231|
+
+  |digital_product|file or url|required_if:type,digital|body|zip|
+
+  |main_image|file|optional|body|picture|
+
+  |images[]|image(array)|optional|body|picture|
+
+  |merk|string|yes|body|samsung|
+
+  |content|string|yes|body|lorem ipsum|
+
+  |weight|string|yes (if type physical)|body|12|
+
+  |stocks|string|yes (if type physical)|body|123|
+
+  |price|int|yes|body|12000000|
+
+  |discount_type|enum(presentase, nominal)|optional|body|presentase|
+
+  |discount|int|yes (if discount_type not null)|body|50|
+
+  |tnc|string|yes|body|lorem ipsum|
+
+  |pin|string|optional|body|flash sale|
+
+  |seo|boolean|yes|body|1|
+
+  |meta_title|string|yes: if seo true|body|computer bagus|
+
+  |meta_keyword|string|yes: if seo true|body|computer bagus|
+
+  |meta_description|string|yes: if seo true|body|computer bagus|
+
+  |X-DIMAIN-MEMBER|string|yes|header|kumi.id|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Product Updated!"
+    },
+    "data": {
+      "product": {
+        "id": "c98a91e3-49d9-4b3d-9848-3830adfa4c32",
+        "title": "Computers Baru",
+        "slug": "computers-baru-nd9dp",
+        "max_reseller": null,
+        "duration": null,
+        "digital_product": "http:\/\/kumi-backend.apps\/storage\/edd94494-6950-407a-8ab0-9499c30436cf\/products\/fiOiH3DCytyI6ta8PpxWmXAaSYLnieu26u2Vxa2b.zip",
+        "type": "digital",
+        "merk": "ASUS",
+        "main_image": "http:\/\/kumi-backend.apps\/storage\/edd94494-6950-407a-8ab0-9499c30436cf\/products\/40KGHGsteSjpybZAyjzN6N0hbSZVkLT9PU2WOGtj.png",
+        "galleries": [],
+        "category": {
+          "id": "6cb69669-9682-4289-b57a-d71c0605ade0",
+          "name": "Laptop",
+          "parent_id": null,
+          "slug": "laptop",
+          "image": "http:\/\/kumi-backend.apps\/storage\/edd94494-6950-407a-8ab0-9499c30436cf\/categories\/P6fsoL0Hga5uGSwTf5ihKqdjoZPZRJBzpxeqllz2.png",
+          "created_at": "2021-09-09T03:35:53.000000Z",
+          "updated_at": "2021-09-09T03:35:53.000000Z"
+        },
+        "content": "nice",
+        "tnc": "you should buy",
+        "weight": "9",
+        "price": "1200000",
+        "stocks": "12",
+        "reseller_price": 1300000,
+        "discount_type": "nominal",
+        "discount": null,
+        "affiliate_type": "nominal",
+        "affiliate_fee": 10000,
+        "pin": null,
+        "seo": "0",
+        "meta_title": null,
+        "meta_keyword": null,
+        "meta_description": null,
+        "created_at": "2021-09-09T03:43:37.000000Z",
+        "updated_at": "2021-09-09T04:00:37.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating Product Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "title": [
+          "The title field is required."
+        ],
+        "category_id": [
+          "The category id field is required."
+        ]
+      }
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - description: ""
+      disabled: false
+      id: pair_86997d4df9704cc79defeada0eaa56fa
+      name: title
+      value: Computers Baru
+    - description: ""
+      disabled: false
+      id: pair_6b1a129751ef4961b2fe46b93457f860
+      name: category_id
+      value: 6cb69669-9682-4289-b57a-d71c0605ade0
+    - description: ""
+      id: pair_340b627a78f24245b7a87eecaac8957a
+      name: type
+      value: digital
+    - description: ""
+      fileName: C:\Users\ADHIT\Downloads\TaskbarX_1.7.2.0_x64.zip
+      id: pair_6752faf8df9640a88e496fcdf39588bf
+      name: digital_product
+      type: file
+      value: http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
+    - description: ""
+      id: pair_a03b3b5721fa48198c83467efad589d6
+      name: merk
+      value: asus
+    - description: ""
+      id: pair_1f76324de37341508dd29570a956a8b9
+      name: content
+      value: nice
+    - description: ""
+      id: pair_6c08dcbcff4949deb46310b7043a2d22
+      name: tnc
+      value: you should buy
+    - description: ""
+      disabled: false
+      id: pair_fc95df7d6b244e6a8740eab83ad8769a
+      name: weight
+      value: "9"
+    - description: ""
+      id: pair_b3cc0ab53e424550b4995b7ce53d36d8
+      name: price
+      value: "1200000"
+    - description: ""
+      id: pair_ebd71b9930384dcebafb59ebb48a5d70
+      name: discount_type
+      value: nominal
+    - description: ""
+      id: pair_0143ac9ba5ff4793824a653723f3ed33
+      name: discount
+      value: ""
+    - description: ""
+      disabled: false
+      id: pair_46369d748f2142c6aac1fb6b511e856a
+      name: stocks
+      value: "12"
+    - description: ""
+      id: pair_e5f6d0e815af41729a3ec94bae1873e2
+      name: seo
+      value: "0"
+    - description: ""
+      disabled: false
+      id: pair_13cf5984a82648b28807180d8017c50f
+      name: _method
+      value: PATCH
+    - description: ""
+      disabled: true
+      fileName: C:\Users\Mohamad Sholihin\Desktop\Screenshot_2.png
+      id: pair_44890a5d4ca04816b18b725017dc4646
+      name: images[]
+      type: file
+      value: ""
+    - description: ""
+      disabled: true
+      fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
+      id: pair_d65360f962f84b63a65e0e3b84293132
+      name: images[]
+      type: file
+      value: ""
+    - description: ""
+      id: pair_5674c30b30224aacb22691f896ede5bb
+      name: meta_title
+      value: computer
+    - description: ""
+      id: pair_9cad93a71d5f485f91f9bdb2ee42acb4
+      name: meta_keyword
+      value: computer
+    - description: ""
+      id: pair_1a6d0ef7b9ff48149a8f8626f826bdf9
+      name: meta_description
+      value: computer
+parameters: []
+headers:
+  - id: pair_2b0061477dd64c27b59032972f9f966a
+    name: Content-Type
+    value: multipart/form-data
+  - id: pair_c8ed9fb2408548c2a994e799dd9a7fea
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1627765972661.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

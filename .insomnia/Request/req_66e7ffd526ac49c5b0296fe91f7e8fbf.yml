@@ -1,0 +1,21 @@
+_id: req_66e7ffd526ac49c5b0296fe91f7e8fbf
+type: Request
+parentId: fld_4593e41f610941ec94fa931251c2fda2
+modified: 1631690181423
+created: 1631690181423
+url: "{{ _.baseurl }}/api/customer/google/login"
+name: Login via Google
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1627875179116
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

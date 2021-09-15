@@ -1,0 +1,91 @@
+_id: req_e3210d3051df4b5a8bbdb1b1f759a1ba
+type: Request
+parentId: fld_35a0ff58d7e045cd98cb0f081e920b59
+modified: 1631690181386
+created: 1631690181386
+url: "{{ _.baseurl }}/api/customer/address"
+name: INDEX
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/customer/address
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "addresses": [
+        {
+          "label": "home",
+          "penerima": "admin kumi",
+          "phone_number": "0827372412434",
+          "province_id": 1,
+          "province": "Bali",
+          "city_id": 17,
+          "city": "Badung",
+          "subdistrict_id": 258,
+          "subdstrict": "Abiansemal",
+          "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+        },
+        {
+          "label": "home",
+          "penerima": "saya",
+          "phone_number": "0827372412434",
+          "province_id": 1,
+          "province": "Bali",
+          "city_id": 17,
+          "city": "Badung",
+          "subdistrict_id": 258,
+          "subdstrict": "Abiansemal",
+          "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+        }
+      ]
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Not Found
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating Category Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_275183d77d0c424886955b3ff76dd0e4
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token }}"
+  type: bearer
+metaSortKey: -1628596443794
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

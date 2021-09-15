@@ -1,0 +1,150 @@
+_id: req_219ccbd8ce734432ae6aa0ee0d5a1d9e
+type: Request
+parentId: fld_6e3b207f75df4bf299ced31577d0651a
+modified: 1631690201225
+created: 1631690201225
+url: "{{ _.baseurl }}/api/admin/blog"
+name: CREATE
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/admin/blog
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |category_id|uuid|yes|body|hfuw4234-123ff|
+
+  |title|string|yes|body|Blog Example|
+
+  |image|file|yes|body|picture|
+
+  |content|string|yes|body|Blog Example|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "Article Created!"
+    },
+    "data": {
+      "article": {
+        "title": "Blog Examples",
+        "slug": "blog-examples",
+        "category": {
+          "id": "a8be48da-b1ad-407a-8632-d8215dd1a199",
+          "name": "Sandal",
+          "parent_id": null,
+          "slug": "sandal",
+          "image": "http:\/\/kumi-backend.apps\/storage\/c5f6c61b-dc00-4034-aaed-63305f95e2d5\/categories\/85XgSi9IvMkdu9NuhBwNxLIk2SmVRhozeph0F6Lv.png",
+          "created_at": "2021-09-01T14:13:12.000000Z",
+          "updated_at": "2021-09-01T14:19:18.000000Z"
+        },
+        "image": "http:\/\/kumi-backend.apps\/storage\/c5f6c61b-dc00-4034-aaed-63305f95e2d5\/articles\/BpoqFEXYqDBrW7Mah3JCC8lnMpXlYH3tdGyXN7h8.png",
+        "content": "lorem ipsum",
+        "viewers": 0
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Creating Article Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "name": [
+          "The name field is required."
+        ]
+      }
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - description: ""
+      id: pair_517ae35059594315ba7db4c71f33abed
+      name: category_id
+      value: a8be48da-b1ad-407a-8632-d8215dd1a199
+    - description: ""
+      id: pair_41f5658cfa094af0bc9bb8d7aff5518a
+      name: title
+      value: Blog Examples
+    - description: ""
+      fileName: C:\Users\ADHIT\Downloads\bsi.png
+      id: pair_61f7682e32a942fa9d687410187c6dd6
+      name: image
+      type: file
+      value: ""
+    - description: ""
+      id: pair_2288dc632b8342f3ade5c12f88c37b5f
+      name: content
+      value: lorem ipsum
+parameters: []
+headers:
+  - description: ""
+    id: pair_c2deddf000de4885ba2a8916d43be01e
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+  - id: pair_7f0f9d1cb7f44a5c87eb4419b2cde505
+    name: Content-Type
+    value: multipart/form-data
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630506542806
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

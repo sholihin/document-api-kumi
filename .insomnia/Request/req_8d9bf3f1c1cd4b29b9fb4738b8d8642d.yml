@@ -1,0 +1,142 @@
+_id: req_8d9bf3f1c1cd4b29b9fb4738b8d8642d
+type: Request
+parentId: fld_5abd3a45fdf34cfda05c5f73e7453059
+modified: 1631690201199
+created: 1631690201199
+url: "{{ _.baseurl }}/api/admin/category/blog/a8be48da-b1ad-407a-8632-d8215dd1a199"
+name: UPDATE
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/admin/category/blog/{id}
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |id|uuid|yes|route param|rwer248348-241324dfndf|
+
+  |name|string|yes|body|computer|
+
+  |parent_id|uuid|optional|body|hfuw4234-123ff|
+
+  |image|file|required|body|picture|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Category Updated!"
+    },
+    "data": {
+      "user": {
+        "id": "5d3ac7b0-b756-41e7-97cb-9b4428180871",
+        "name": "Komputer",
+        "slug": "komputer",
+        "image": "https:\/\/kumi-backend.apps\/storage\/http___localhost_8080\/categories\/ySjEaJ0vKVzuFYSRVV5zB6rWb6dqAgYg5B3UWqwK.png",
+        "created_at": "2021-07-29T13:47:31.000000Z",
+        "updated_at": "2021-07-29T14:46:18.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating Category Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "name": [
+          "The name field is required."
+        ]
+      }
+    }
+  }
+
+  ```
+method: PATCH
+body:
+  mimeType: application/x-www-form-urlencoded
+  params:
+    - description: ""
+      disabled: false
+      id: pair_37ab36ab112644d1a825d3d4160ca929
+      name: name
+      value: Sandal
+    - description: ""
+      id: pair_56d36d0f92ae495487aeec0856783795
+      name: parent_id
+      value: ""
+    - description: ""
+      id: pair_c9c9109353424bbb818ec8d28f999cc4
+      name: image
+      value: ""
+    - description: ""
+      disabled: true
+      id: pair_f69faa5f4a5741e68e02e019b1953aaa
+      name: __method
+      value: PATCH
+parameters: []
+headers:
+  - id: pair_494bd0aa4d114d9eabfd4889271f0ea2
+    name: Content-Type
+    value: application/x-www-form-urlencoded
+  - description: ""
+    id: pair_be429178fe5e4fd9a66aebb3d1720d3d
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1627568934199
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

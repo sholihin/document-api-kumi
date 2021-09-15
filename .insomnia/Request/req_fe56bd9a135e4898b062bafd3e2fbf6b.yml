@@ -1,0 +1,21 @@
+_id: req_fe56bd9a135e4898b062bafd3e2fbf6b
+type: Request
+parentId: fld_53fe21ee2098498cab5432eee56adb6e
+modified: 1631690190554
+created: 1631690190554
+url: "{{ _.baseurl }}/api/reseller/facebook/login"
+name: Login via Facebook
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1627975775054
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

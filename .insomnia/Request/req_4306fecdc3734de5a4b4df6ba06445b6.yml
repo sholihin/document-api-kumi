@@ -1,0 +1,128 @@
+_id: req_4306fecdc3734de5a4b4df6ba06445b6
+type: Request
+parentId: fld_fabfab3b99bf433aba8b7b7be0adb5c0
+modified: 1631690190419
+created: 1631690190419
+url: "{{ _.baseurl }}/api/reseller/products"
+name: INDEX
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/reseller/products
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "products": [
+        {
+          "id": "340f7d37-c59b-4849-8292-4bbdf422972c",
+          "title": "Computers Baru",
+          "slug": "computers-baru",
+          "type": "physical",
+          "merk": "ASUS",
+          "image": "http:\/\/kumi-backend.apps\/storage",
+          "galleries": [
+            {
+              "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/JgDcMJZK875KiBzdoS4FBHZOWeLOx04RsIhZGK0u.png",
+              "sorter": 2
+            },
+            {
+              "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/YhO1muzUKCyzA5S94Ui8nib49feFRzy7KrxqBw2C.png",
+              "sorter": 0
+            },
+            {
+              "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/MKVY7w7zUlnxdsi7AWw8E2xTp6d5PpqHSqwlTO0y.png",
+              "sorter": 1
+            }
+          ],
+          "category": {
+            "id": "071a0d16-635f-49cf-b775-2de390569933",
+            "name": "Computer",
+            "slug": "computer",
+            "image": "http:\/\/kumi-backend.apps\/storage\/bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/categories\/wEK4cRjhQ0XJMC0yrYEtzmHNjiIezyKEkR3PKuyj.png",
+            "created_at": "2021-08-12T13:54:37.000000Z",
+            "updated_at": "2021-08-12T13:54:37.000000Z"
+          },
+          "content": "nice",
+          "tnc": "you should buy",
+          "weight": 9,
+          "price": 1200000,
+          "stocks": 12,
+          "reseller_price": 1300000,
+          "discount_type": "nominal",
+          "discount": null,
+          "affiliate_type": "nominal",
+          "affiliate_fee": 10000,
+          "pin": null,
+          "created_at": "2021-08-12T14:09:43.000000Z",
+          "updated_at": "2021-08-12T14:09:43.000000Z"
+        }
+      ]
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Not Found
+
+  ```
+
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "failed"
+    },
+    "data": {
+      "message": "Product Not Found!",
+      "error": "No query results for model [App\\Models\\Member]."
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_36fa6b9cb2a648d19cfecddc3a3203f9
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  token: "{{ _.token_reseller }}"
+  type: bearer
+metaSortKey: -1627975785082
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,123 @@
+_id: req_47921c0cdafd42f686f5540b40494dd0
+type: Request
+parentId: fld_4593e41f610941ec94fa931251c2fda2
+modified: 1631690181410
+created: 1631690181410
+url: "{{ _.baseurl }}/api/customer/register"
+name: Register Customer
+description: |-
+  ## Method (POST)
+  ## Route
+  ```
+  /api/customer/register
+  ```
+  ## Query Parameters
+  |PARAMETER|TYPE|REQUIRED|
+  |---------|----|--------|
+  |name|string|yes|
+  |phone_number|string|yes|
+  |email|string|yes|
+  |password|string|yes|
+  |confirmation_password|string|yes|
+
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "Registered"
+    },
+    "data": {
+      "user": {
+        "id": "b546577d-d264-4952-9a23-d978ddc8f979",
+        "name": "Dhit",
+        "email": "dhit@example.net",
+        "created_at": "2021-07-28T15:16:05.000000Z",
+        "updated_at": "2021-07-28T15:16:05.000000Z"
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Domain Invalid
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Registering User Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+  ### Validation Input
+  ```
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Register Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "email": [
+          "The email has already been taken."
+        ],
+        "phone_number": [
+          "The phone number field is required."
+        ],
+        "password": [
+          "The password confirmation does not match."
+        ]
+      }
+    }
+  }
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - description: ""
+      id: pair_aab0c323359349568c04ca92cf573c89
+      name: email
+      value: mohamad.sholihin@kumi.id
+    - description: ""
+      id: pair_cc05e2f61973474aa1c47b1e46936b62
+      name: name
+      value: Mohamad Sholihin
+    - description: ""
+      id: pair_9783cdaf9087445b9876de1e3cd70b90
+      name: phone_number
+      value: "08123123123"
+    - description: ""
+      id: pair_0caf408794134592bd16ba8640ac255e
+      name: password
+      value: bismillah
+    - description: ""
+      id: pair_8fb44b7133e94e6b9bb1350418710f59
+      name: password_confirmation
+      value: bismillah
+parameters: []
+headers:
+  - id: pair_5e963fb2fc0c45149a90ae275816c00b
+    name: Content-Type
+    value: multipart/form-data
+  - id: pair_818ae3a07aee41a2b90fd0120e6543c1
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication: {}
+metaSortKey: -1627482077340
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

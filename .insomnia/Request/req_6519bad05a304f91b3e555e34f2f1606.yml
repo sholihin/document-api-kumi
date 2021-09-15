@@ -1,0 +1,91 @@
+_id: req_6519bad05a304f91b3e555e34f2f1606
+type: Request
+parentId: fld_a113b0f7a4bb48e4be05061209264b67
+modified: 1631690210026
+created: 1631690210026
+url: "{{ _.baseurl
+  }}/api/email/verify/e32dbf52-5bda-4c75-8dd8-6021bd5b473a/817304dcd8ad730cb159\
+  47c71846d5bfdd20b494?expires=1628236407&signature=d52de9c45b6959306c38069b6ab\
+  ead71c0a41fb4a66097297bd9ac972869f5b6"
+name: VERIFICATION EMAIL
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/email/verify/{id}/{hash}?expires=*&signature=*
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|
+  |---------|----|--------|----|
+  |id|string|yes|route|
+  |hash|string|yes|route|
+  |expires|string|yes|query|
+  |signature|string|yes|query|
+  |domain|string|yes|body|
+  |bearer token|jwt|yes|header|
+  |X-DOMAIN-MEMBER|string|yes|header|
+
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Verified"
+    },
+    "data": [
+      "Verification Success"
+    ]
+  }
+  ```
+
+  ## Response Failed
+  ### error
+  ```
+  {
+    "meta": {
+      "code": 500,
+      "status": "error",
+      "message": "Verification Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Verification User Failed!"
+    }
+  }
+  ```
+
+  ### already verified
+  ```
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Verified"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "User Already Have Verified The Email!"
+    }
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_5d7e3096ff0e4e0388cbe4d973da402f
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  prefix: ""
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1627855767407
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
