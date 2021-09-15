@@ -1,0 +1,27 @@
+_id: req_9eb33f3da86744f3ac1d0e668e440270
+type: Request
+parentId: fld_56eae3c4e688440fb4d81fe931f1b87a
+modified: 1631707929530
+created: 1631707877567
+url: "{{ _.baseurl }}/api/admin/resellers"
+name: INDEX
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_91b2dba1259d42e29a5e6329895da310
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1000000000
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
