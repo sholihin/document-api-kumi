@@ -1,7 +1,7 @@
 _id: req_9c5fa1fbf2a84414834babdeed73ab9d
 type: Request
 parentId: fld_53fe21ee2098498cab5432eee56adb6e
-modified: 1631690190547
+modified: 1631699396997
 created: 1631690190547
 url: "{{ _.baseurl }}/api/reseller/login"
 name: Login Reseller
@@ -116,7 +116,7 @@ headers:
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
 authentication: {}
-metaSortKey: -1627482067984
+metaSortKey: -1627975775054
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
