@@ -1,4 +1,4 @@
-# Document API Kumi ID
+# Document API Kumi
 
 Silahkan Pilih Import Melalui URL:
 
