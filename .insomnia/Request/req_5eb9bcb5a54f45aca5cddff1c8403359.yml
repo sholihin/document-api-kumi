@@ -1,0 +1,97 @@
+_id: req_5eb9bcb5a54f45aca5cddff1c8403359
+type: Request
+parentId: fld_521e691b49454ceaa4995c09bc3c5dd0
+modified: 1631707215141
+created: 1631707215141
+url: "{{ _.baseurl }}/api/blog"
+name: INDEX
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/blog
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "blogs": [
+        {
+          "id": "1",
+          "title": "1",
+          "slug": "1",
+          "image": "http:\/\/kumi-backend.test\/storage\/1",
+          "content": "1",
+          "viewers": 1,
+          "created_at": "2021-09-14T11:05:27.000000Z",
+          "updated_at": "2021-09-14T11:05:28.000000Z"
+        }
+      ]
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Domain Invalid
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Creating Address Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+  ### Validation Input
+  ```
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Updating Password Failed"
+    },
+    "data": {
+      "message": "New Password Does Not Match !",
+      "error": "New Password Does Not Match !"
+    }
+  }
+  ```
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - id: pair_6370e14b2d9a42b8a9d47e88e1deca5d
+    name: Content-Type
+    value: application/json
+  - description: ""
+    id: pair_a38c8a33a3644dd1adf5c0b2715fa865
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token }}"
+  type: bearer
+metaSortKey: -1628596208522
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
