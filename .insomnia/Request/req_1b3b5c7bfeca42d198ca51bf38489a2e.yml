@@ -1,9 +1,9 @@
 _id: req_1b3b5c7bfeca42d198ca51bf38489a2e
 type: Request
 parentId: fld_56eae3c4e688440fb4d81fe931f1b87a
-modified: 1631707935490
+modified: 1631708529776
 created: 1631707903590
-url: "{{ _.baseurl }}/api/admin/resellers/1656c698-cb21-40ed-b61d-16d777d037e7"
+url: "{{ _.baseurl }}/api/admin/resellers/95df4783-b780-4080-9e26-450280784032"
 name: SHOW
 description: ""
 method: GET

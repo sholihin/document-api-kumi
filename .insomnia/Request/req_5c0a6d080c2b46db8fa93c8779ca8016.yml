@@ -1,10 +1,10 @@
 _id: req_5c0a6d080c2b46db8fa93c8779ca8016
 type: Request
 parentId: fld_48561d5e8d12426e94a187777ee7e9db
-modified: 1631690201164
+modified: 1631714758111
 created: 1631690201164
 url: "{{ _.baseurl
-  }}/api/admin/config/analytic/40067048-4eb7-491c-a643-9a4c1d27821f"
+  }}/api/admin/config/analytic/63f7fb4f-cf69-4378-bfdd-00094a6768b6"
 name: UPDATE
 description: >-
   ## Method (PATCH)

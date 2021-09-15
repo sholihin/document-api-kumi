@@ -1,9 +1,9 @@
 _id: req_6d2e589ac3dc46c1b589683a55d92b40
 type: Request
 parentId: fld_72cb62af60c04607b62c8098399fc0b0
-modified: 1631690201123
+modified: 1631715090645
 created: 1631690201123
-url: "{{ _.baseurl }}/api/admin/config/slider/7d896699-a2ba4-46ba-a9df-c558e8dcc04f"
+url: "{{ _.baseurl }}/api/admin/config/slider/96ff8642-f29d-46c8-8abb-4b602513f8a9"
 name: UPDATE SLIDER
 description: >-
   ## Method (PATCH)
@@ -147,8 +147,8 @@ body:
       name: url
       value: https://laravel.com/docs/8.x/validation
     - description: ""
-      disabled: true
-      fileName: C:\Users\ADHIT\Downloads\bsi.png
+      disabled: false
+      fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
       id: pair_9b8938a7c7c542dbaa9e67d131a95aca
       name: image
       type: file
