@@ -121,7 +121,6 @@ body:
       value: ""
       description: ""
       type: file
-      multiline: null
       fileName: C:\Users\ADHIT\Downloads\store.PNG
     - id: pair_b05cd59c0a03447aa7d7161a07371276
       name: sub_domain

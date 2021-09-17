@@ -1,10 +1,12 @@
-_id: req_1dfb8639c71847c5b21a970d779ba0f2
+_id: req_015de0e34c5e40d38ba30c526c50a71d
 type: Request
 parentId: fld_967d5fb22fdc4b5e9672fc5efd5dde5f
-modified: 1631867687725
-created: 1631690201067
-url: "{{ _.baseurl }}/api/admin/config/payment/e404e628-eaca-41c0-ab63-e78a0b6e40c3"
-name: UPDATE
+modified: 1631867794144
+created: 1631866070331
+url: "{{ _.baseurl
+  }}/api/admin/config/payment/e404e628-eaca-41c0-ab63-e78a0b6e40c3/200f21c8-0be\
+  4-4d42-a36d-1bc0b6d7e397"
+name: DELETE
 description: >-
   ## Method (PATCH)
 
@@ -138,50 +140,15 @@ description: >-
   }
 
   ```
-method: PATCH
+method: DELETE
 body:
-  mimeType: application/x-www-form-urlencoded
-  params:
-    - description: ""
-      disabled: true
-      id: pair_9aff25b0d4d041908a8e4684f7e4c8df
-      name: type
-      value: banks
-    - description: ""
-      disabled: false
-      id: pair_b64e2a2e88d0408892e7ed1f3c4f6ebc
-      name: no_rekening
-      value: "123412412"
-    - description: ""
-      disabled: false
-      id: pair_c5b7baed58bb4706818cd8ce49bfa620
-      name: nama_pemilik
-      value: kumi
-    - description: ""
-      disabled: false
-      id: pair_1f4582faebb34eab85460d1701e4f655
-      name: bank_id
-      value: "1"
-    - description: ""
-      disabled: true
-      id: pair_e7d1751015cb41fcad361d0074c31f53
-      name: status
-      value: "1"
-    - description: ""
-      disabled: true
-      id: pair_d0833508d86e4f549e4b6441b2f900e2
-      name: server_key
-      value: "1234124124"
-    - description: ""
-      disabled: true
-      id: pair_39b0df9b31cc4698b2ae856d2171a733
-      name: client_key
-      value: "1234124124"
+  mimeType: multipart/form-data
+  params: []
 parameters: []
 headers:
   - id: pair_66c577ac1d2947518320d4e12e64b5cf
     name: Content-Type
-    value: application/x-www-form-urlencoded
+    value: multipart/form-data
   - description: ""
     id: pair_f01cddc3f09f494cafa005deb6466e78
     name: X-DOMAIN-MEMBER
@@ -190,7 +157,7 @@ authentication:
   disabled: false
   token: "{{ _.token_admin }}"
   type: bearer
-metaSortKey: -1630136116904
+metaSortKey: -1629889305097
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
