@@ -1,7 +1,7 @@
 _id: req_1dfb8639c71847c5b21a970d779ba0f2
 type: Request
 parentId: fld_967d5fb22fdc4b5e9672fc5efd5dde5f
-modified: 1631867687725
+modified: 1631868055669
 created: 1631690201067
 url: "{{ _.baseurl }}/api/admin/config/payment/e404e628-eaca-41c0-ab63-e78a0b6e40c3"
 name: UPDATE
@@ -161,7 +161,7 @@ body:
       disabled: false
       id: pair_1f4582faebb34eab85460d1701e4f655
       name: bank_id
-      value: "1"
+      value: "2"
     - description: ""
       disabled: true
       id: pair_e7d1751015cb41fcad361d0074c31f53

@@ -1,20 +1,20 @@
 _id: req_015de0e34c5e40d38ba30c526c50a71d
 type: Request
 parentId: fld_967d5fb22fdc4b5e9672fc5efd5dde5f
-modified: 1631867794144
+modified: 1631868091674
 created: 1631866070331
 url: "{{ _.baseurl
-  }}/api/admin/config/payment/e404e628-eaca-41c0-ab63-e78a0b6e40c3/200f21c8-0be\
-  4-4d42-a36d-1bc0b6d7e397"
+  }}/api/admin/config/payment/e404e628-eaca-41c0-ab63-e78a0b6e40c3/ec06a4c8-d6d\
+  2-4858-b914-0dd315a69838"
 name: DELETE
 description: >-
-  ## Method (PATCH)
+  ## Method (DELETE)
 
   ## Route
 
   ```
 
-  /api/admin/config/payment/{configuration}
+  api/admin/config/payment/{configuration}/{id_data} 
 
   ```
 
@@ -26,19 +26,7 @@ description: >-
 
   |configuration|uuid|yes|route param|hsdfg7567sdf|
 
-  |type|string|optional|body|banks/midtrans|
-
-  |no_rekening|string|optional|body|12345435|
-
-  |nama_pemilik|string|optional|body|kumi|
-
-  |bank_id|int|optional|body|1|
-
-  |status|boolean|optional|body|1|
-
-  |server_key|string|optional|body|123jh3124|
-
-  |client_key|string|optional|body|123jh3124|
+  |id_data|uuid|yes|route param|hsdfg7567sdf|
 
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
 
@@ -52,30 +40,17 @@ description: >-
     "meta": {
       "code": 200,
       "status": "success",
-      "message": "Payment Configuration Updated!"
+      "message": "Bank on Payment Configuration Deleted!"
     },
     "data": {
       "payment": {
-        "config_id": "3fd95b7c-7ad5-4bdb-aef6-2e6a79b36988",
+        "config_id": "e404e628-eaca-41c0-ab63-e78a0b6e40c3",
         "banks": {
           "status": true,
           "data": [
             {
-              "id_data": "9a990986-9b9f-4351-af48-0127502c88ca",
-              "no_rekening": "1213-23124-2312",
-              "nama_pemilik": "kumi",
-              "bank_id": {
-                "id": 1,
-                "name": "BANK BRI",
-                "code": "002",
-                "logo": "http:\/\/kumi-backend.apps\/assets\/img\/payment\/BRI.png",
-                "panduan": "<p><span style=\\\"font-size:16px\\\"><strong>Panduan Pembayaran M-Banking BRI<\/strong><\/span><\/p><ul><li>Buka aplikasi, lalu pilih menu&nbsp;<strong>Mobile Banking BRI<\/strong>.<\/li><li>Saat muncul jendela baru, tap menu&nbsp;<strong>Transfer<\/strong>.<\/li><li>Untuk transfer ke sesama rekening BRI, tap menu&nbsp;<strong>Sesama BRI<\/strong>.<\/li><li>Pada halaman baru,&nbsp;<strong>masukkan nomor rekening BRI<\/strong>&nbsp;yang dituju.<\/li><li><strong>Masukkan jumlah transfer<\/strong>&nbsp;yang akan dikirim.<\/li><li>Klik&nbsp;<strong>OK<\/strong>. Lalu,&nbsp;<strong>masukkan PIN<\/strong>&nbsp;Mobile Banking BRI Anda. Klik&nbsp;<strong>SEND<\/strong>.<\/li><li>Untuk melakukan verifikasi SMS, Klik&nbsp;<strong>OK<\/strong>.<\/li><li>Terima SMS dari Mobile Banking BRI, lalu ketik&nbsp;<strong>YA<\/strong>&nbsp;&lt;spasi&gt;&nbsp;<strong>Kode Transaksi<\/strong>. Kalau bingung, ikuti saja petunjuk yang ada pada SMS tersebut.<\/li><li>Kalau sudah benar, langsung&nbsp;<strong>Kirim SMS<\/strong>.<\/li><\/ul>"
-              },
-              "status_bank": true
-            },
-            {
-              "id_data": "d18add58-f5b9-429f-931b-13eb9ec241dd",
-              "no_rekening": "1234124124",
+              "id_data": "f9d3f63c-8430-44e1-a948-5b90b6681c9f",
+              "no_rekening": "123412412",
               "nama_pemilik": "kumi",
               "bank_id": {
                 "id": 2,
@@ -109,7 +84,7 @@ description: >-
     "meta": {
       "code": 401,
       "status": "error",
-      "message": "Payment's Configuration Updated"
+      "message": "Data Bank on Payment's Configuration Failed"
     },
     "data": {
       "message": "Something went wrong!",
@@ -125,17 +100,13 @@ description: >-
 
   {
     "meta": {
-      "code": 422,
+      "code": 401,
       "status": "error",
-      "message": "Updating Payment's Configuration Failed"
+      "message": "Deleting Payment's Configuration Failed"
     },
     "data": {
       "message": "Something went wrong!",
-      "error": {
-        "no_rekening": [
-          "The no rekening field is required when nama pemilik \/ bank id is present."
-        ]
-      }
+      "error": "Bank Configuration Not Found!"
     }
   }
 
