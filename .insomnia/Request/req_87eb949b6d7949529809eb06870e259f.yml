@@ -1,7 +1,7 @@
 _id: req_87eb949b6d7949529809eb06870e259f
 type: Request
 parentId: fld_835c4dd68d9c4a519045735f26c330dd
-modified: 1631690181295
+modified: 1632147285053
 created: 1631690181295
 url: "{{ _.baseurl }}/api/cart/qty-update"
 name: QTY UPDATE
@@ -28,6 +28,8 @@ description: >-
 
   |note|string|optional|body|warna hijau|
 
+  |status|boolean|optional|body|true/false|
+
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
   |X-DOMAIN-MEMBER|string|yes|body|example.net|
@@ -49,6 +51,7 @@ description: >-
         "price": 3600000,
         "weight": 27,
         "note": "Decrease",
+        "status": false,
         "discount": null,
         "dicount_type": null,
         "product": {
@@ -125,9 +128,10 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"product_id" : "ac43fbf2-81de-4f2b-93f4-035c168a55d8",
-    	"type" : "decrease",
-    	"note" : "yang bagus ya"
+    	"product_id" : "067096a2-e75e-4044-a1e7-65e304bf226c",
+    	"type" : "increase",
+    	"note" : "yang bagus ya",
+    	"status" : true
     }
 parameters: []
 headers:

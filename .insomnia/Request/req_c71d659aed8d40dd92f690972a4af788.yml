@@ -1,7 +1,7 @@
 _id: req_c71d659aed8d40dd92f690972a4af788
 type: Request
 parentId: fld_fc625f025a244d79a220618a93d25f29
-modified: 1631690200951
+modified: 1632134484644
 created: 1631690200951
 url: "{{ _.baseurl }}/api/admin/product"
 name: CREATE
@@ -171,17 +171,17 @@ body:
       disabled: false
       id: pair_86997d4df9704cc79defeada0eaa56fa
       name: title
-      value: physical Product
+      value: physical Product 2
     - description: ""
       disabled: false
       id: pair_6b1a129751ef4961b2fe46b93457f860
       name: category_id
-      value: 6cb69669-9682-4289-b57a-d71c0605ade0
+      value: a03a009d-5032-435c-b42d-ac1c7595131b
     - description: ""
       disabled: false
       id: pair_340b627a78f24245b7a87eecaac8957a
       name: type
-      value: digital
+      value: physical
     - description: ""
       disabled: false
       fileName: C:\Users\ADHIT\Downloads\store.PNG

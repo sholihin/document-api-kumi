@@ -1,7 +1,7 @@
 _id: req_3928d5e566b2419d97b73e3f34a86335
 type: Request
 parentId: fld_835c4dd68d9c4a519045735f26c330dd
-modified: 1631690181301
+modified: 1632147263601
 created: 1631690181301
 url: "{{ _.baseurl }}/api/cart"
 name: INDEX
@@ -39,37 +39,77 @@ description: >-
     "data": {
       "cart": [
         {
-          "id": "a0e4e56a-b727-4b8c-83ce-69b01eb5c8ef",
-          "qty": 3,
-          "price": 3600000,
-          "weight": 27,
-          "note": "Decrease",
+          "id": "7609d7d4-fe33-44f5-8589-aa4a7b1fddb7",
+          "qty": 1,
+          "price": 1200000,
+          "weight": 0,
+          "note": null,
+          "status": true,
           "discount": null,
           "dicount_type": null,
           "product": {
-            "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
-            "title": "Computers Baru",
-            "slug": "computers-baru",
+            "id": "25ef8675-69c6-4336-b986-700e477a56b1",
+            "title": "Physical Product",
+            "slug": "physical-product-istqi",
             "type": "physical",
             "merk": "ASUS",
-            "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+            "main_image": "http:\/\/kumi-backend.apps\/storage\/dc2ac83c-7796-4f77-916f-773c9d62bad7\/products\/6A6XmjPJtyG1YIPXirixPj8Cpa4K7rklmp4CrIpq.png",
             "content": "nice",
             "tnc": "you should buy",
-            "weight": 9,
+            "weight": 0,
             "price": 1200000,
-            "stocks": 12,
+            "stocks": 0,
             "reseller_price": 1300000,
             "discount_type": "nominal",
             "discount": null,
             "affiliate_type": "nominal",
             "affiliate_fee": 10000,
             "pin": null,
-            "created_at": "2021-08-10T02:48:26.000000Z",
-            "updated_at": "2021-08-10T02:48:26.000000Z"
+            "seo": 0,
+            "meta_title": null,
+            "meta_keyword": null,
+            "meta_description": null,
+            "created_at": "2021-09-20T10:40:01.000000Z",
+            "updated_at": "2021-09-20T10:40:01.000000Z"
+          }
+        },
+        {
+          "id": "b08f9da0-2c8d-419e-8737-301f71ec7837",
+          "qty": 3,
+          "price": 3600000,
+          "weight": 0,
+          "note": "Yang Bagus Ya",
+          "status": false,
+          "discount": null,
+          "dicount_type": null,
+          "product": {
+            "id": "067096a2-e75e-4044-a1e7-65e304bf226c",
+            "title": "Physical Product 2",
+            "slug": "physical-product-2-ub6gp",
+            "type": "physical",
+            "merk": "ASUS",
+            "main_image": "http:\/\/kumi-backend.apps\/storage\/dc2ac83c-7796-4f77-916f-773c9d62bad7\/products\/7dESyyCMjV41qroQznWRjVmR7UPZ6tkBfxYgumHl.png",
+            "content": "nice",
+            "tnc": "you should buy",
+            "weight": 0,
+            "price": 1200000,
+            "stocks": 0,
+            "reseller_price": 1300000,
+            "discount_type": "nominal",
+            "discount": null,
+            "affiliate_type": "nominal",
+            "affiliate_fee": 10000,
+            "pin": null,
+            "seo": 0,
+            "meta_title": null,
+            "meta_keyword": null,
+            "meta_description": null,
+            "created_at": "2021-09-20T10:41:28.000000Z",
+            "updated_at": "2021-09-20T10:41:28.000000Z"
           }
         }
       ],
-      "total": 3600000
+      "total": 1200000
     }
   }
 
@@ -107,7 +147,7 @@ headers:
     name: ""
     value: ""
 authentication:
-  token: "{{ _.token_reseller }}"
+  token: "{{ _.token }}"
   type: bearer
 metaSortKey: -1628404474690
 isPrivate: false

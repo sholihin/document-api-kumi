@@ -1,7 +1,7 @@
 _id: req_ce78dc6147864449abd5a209b50d3ea4
 type: Request
 parentId: fld_835c4dd68d9c4a519045735f26c330dd
-modified: 1631690181307
+modified: 1632147315657
 created: 1631690181307
 url: "{{ _.baseurl }}/api/cart/qty-update"
 name: CREATE OR UPDATE NOTE
@@ -33,6 +33,7 @@ description: |-
         "price": 2400000,
         "weight": 18,
         "note": "Yang Bagus Ya Gaes Boleh Lah",
+        "status": true,
         "discount": null,
         "dicount_type": null,
         "product": {
@@ -99,7 +100,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"product_id" : "ac43fbf2-81de-4f2b-93f4-035c168a55d8",
+    	"product_id" : "25ef8675-69c6-4336-b986-700e477a56b1",
     	"note" : "yang bagus ya gaes boleh lah"
     }
 parameters: []

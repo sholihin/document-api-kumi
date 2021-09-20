@@ -1,9 +1,9 @@
 _id: req_89156c61df4a47dabbe905552cb5e617
 type: Request
 parentId: fld_835c4dd68d9c4a519045735f26c330dd
-modified: 1631690181288
+modified: 1632145125381
 created: 1631690181288
-url: "{{ _.baseurl }}/api/cart/314501de-fb67-43e1-b4a8-be2101460c67"
+url: "{{ _.baseurl }}/api/cart/10341efd-a6d9-48b7-a6c2-9e3db4348169"
 name: DELETE
 description: |-
   ## Method (DELETE)

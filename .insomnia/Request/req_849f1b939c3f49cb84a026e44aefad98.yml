@@ -1,9 +1,9 @@
 _id: req_849f1b939c3f49cb84a026e44aefad98
 type: Request
 parentId: fld_835c4dd68d9c4a519045735f26c330dd
-modified: 1631690181283
+modified: 1632147307345
 created: 1631690181283
-url: "{{ _.produrl }}/api/cart"
+url: "{{ _.baseurl }}/api/cart"
 name: CREATE
 description: >-
   ## Method (POST)
@@ -47,6 +47,7 @@ description: >-
         "price": 1200000,
         "weight": 9,
         "note": null,
+        "status": true,
         "discount": null,
         "dicount_type": null,
         "product": {
@@ -123,7 +124,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"product_id" : "4d6ef52b-a568-484e-b5ce-d76a9b93f212",
+    	"product_id" : "25ef8675-69c6-4336-b986-700e477a56b1",
     	"qty" : 1
     }
 parameters: []
@@ -136,8 +137,8 @@ headers:
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
 authentication:
-  token: "{{ _.token }}"
   type: bearer
+  token: "{{ _.token }}"
 metaSortKey: -1628319613782
 isPrivate: false
 settingStoreCookies: true
