@@ -1,19 +1,23 @@
-_id: req_5da1eb01498d4f91857f4b47c10c9981
+_id: req_0be7d4313f05461f973b80b42380f435
 type: Request
 parentId: fld_0b6e4486ce0042a2ab80e25be56664f0
-modified: 1631707225197
-created: 1631707225197
-url: "{{ _.baseurl }}/api/contact"
-name: INDEX
+modified: 1632996899703
+created: 1632996699939
+url: "{{ _.baseurl }}/api/contact/send"
+name: SEND EMAIL
 description: |-
-  ## Method (GET)
+  ## Method (POST)
   ## Route
   ```
-  /api/contact
+  /api/contact/send
   ```
   ## Query Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
   |---------|----|--------|--------|
+  |name|string|yes|body||
+  |email|string|yes|body||
+  |phone|number|yes|body||
+  |message|string|yes|body||
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
   |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
@@ -26,18 +30,7 @@ description: |-
       "message": "success"
     },
     "data": {
-      "contacts": [
-        {
-          "id": 1,
-          "config_id": "10974cbf-35a9-439a-880f-4286b06bc656",
-          "name": "1",
-          "phone": "1",
-          "email": "1",
-          "message": "1",
-          "created_at": "2021-09-15 01:07:32",
-          "updated_at": "2021-09-15 01:07:32"
-        }
-      ]
+      "message": "Email Sent Successfully!"
     }
   }
   ```
@@ -49,7 +42,7 @@ description: |-
     "meta": {
       "code": 401,
       "status": "error",
-      "message": "Creating Address Failed"
+      "message": "Send Email Failed"
     },
     "data": {
       "message": "Something went wrong!",
@@ -63,31 +56,42 @@ description: |-
     "meta": {
       "code": 422,
       "status": "error",
-      "message": "Updating Password Failed"
+      "message": "Failed"
     },
     "data": {
-      "message": "New Password Does Not Match !",
-      "error": "New Password Does Not Match !"
+      "message": "Something went wrong!",
+      "error": {
+        "name": [
+          "The name field is required."
+        ]
+      }
     }
   }
   ```
-method: GET
+method: POST
 body:
   mimeType: application/json
-  text: ""
+  text: |-
+    {
+    	"name" : "alfie",
+    	"email" : "alfie@gmail.com",
+    	"phone" : "085813246421", 
+    	"message" : "Test Email"
+    }
 parameters: []
 headers:
-  - id: pair_6370e14b2d9a42b8a9d47e88e1deca5d
-    name: Content-Type
-    value: application/json
   - description: ""
-    id: pair_a38c8a33a3644dd1adf5c0b2715fa865
+    id: pair_46643d4e95a54e46a271e16d140b00c3
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
+  - id: pair_996098c40fac486db5c53e6baaaecf00
+    name: Content-Type
+    value: application/json
 authentication:
   token: "{{ _.token }}"
   type: bearer
-metaSortKey: -1628596208522
+  disabled: true
+metaSortKey: -1000000075
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
