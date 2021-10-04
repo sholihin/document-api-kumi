@@ -1,0 +1,133 @@
+_id: req_9ecdab2cc52d47c1bde3d627f1df8e4a
+type: Request
+parentId: fld_f73e5de9faf34cd89f3c216bfbe568ba
+modified: 1633072200037
+created: 1632298993712
+url: "{{ _.baseurl }}/api/admin/config/address/c7dc4b3c-fbd8-49db-b7b9-51e68088b964"
+name: UPDATE ADDRESS
+description: |-
+  ## Method (PATCH)
+  ## Route
+  ```
+  /api/admin/config/shipping/{configuration}
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|
+  |configuration|uuid|yes|route param|hsdfg7567sdf|
+  |status_custom|boolean|optional|body|1/0|
+  |name|string|optional|body|jne|
+  |city|string|optional|body|jakarta|
+  |flat_rate|int|optional|body|10000|
+  |tnc|string|optional|body|12km|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Shipping Method Configuration Updated!"
+    },
+    "data": {
+      "shipping": {
+        "config_id": "4bd70146-c197-4044-89d6-bd7104e7deca",
+        "rajaongkir": [
+          {
+            "name": "jne",
+            "status": true
+          },
+          {
+            "name": "jnt",
+            "status": false
+          }
+        ],
+        "custom_shipping": {
+          "status": true,
+          "data": [
+            {
+              "city": "bogor",
+              "flat_rate": 10000,
+              "tnc": "stirng"
+            },
+            {
+              "city": "jakarta",
+              "flat_rate": 15000,
+              "tnc": null
+            }
+          ]
+        }
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating Shipping Method\'s Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+  ### Validation Input
+  ```
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Updating Shipping Method's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "flat_rate": [
+          "The flat rate field is required when city is present."
+        ]
+      }
+    }
+  }
+  ```
+method: PATCH
+body:
+  mimeType: application/x-www-form-urlencoded
+  params:
+    - description: ""
+      disabled: false
+      id: pair_4aeac3dc44404946af5b8c9b1b7e7bf4
+      name: subdistrict_id
+      value: "2105"
+    - description: ""
+      disabled: false
+      id: pair_671400f0c0ca42a99867cae773f8448c
+      name: detail
+      value: Jl. Kebayoran Baru No. 01
+parameters: []
+headers:
+  - id: pair_66c577ac1d2947518320d4e12e64b5cf
+    name: Content-Type
+    value: application/x-www-form-urlencoded
+  - description: ""
+    id: pair_f01cddc3f09f494cafa005deb6466e78
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  disabled: false
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630074413964.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

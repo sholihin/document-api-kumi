@@ -1,7 +1,7 @@
 _id: req_c71d659aed8d40dd92f690972a4af788
 type: Request
 parentId: fld_fc625f025a244d79a220618a93d25f29
-modified: 1632134484644
+modified: 1633072267582
 created: 1631690200951
 url: "{{ _.baseurl }}/api/admin/product"
 name: CREATE
@@ -171,20 +171,20 @@ body:
       disabled: false
       id: pair_86997d4df9704cc79defeada0eaa56fa
       name: title
-      value: physical Product 2
+      value: digital Product
     - description: ""
       disabled: false
       id: pair_6b1a129751ef4961b2fe46b93457f860
       name: category_id
-      value: a03a009d-5032-435c-b42d-ac1c7595131b
+      value: ed68b9be-950d-4bbe-b013-86c077da7e2c
     - description: ""
       disabled: false
       id: pair_340b627a78f24245b7a87eecaac8957a
       name: type
-      value: physical
+      value: digital
     - description: ""
       disabled: false
-      fileName: C:\Users\ADHIT\Downloads\store.PNG
+      fileName: C:\Users\ADHIT\Downloads\mandiri.png
       id: pair_649140ece1094a5d8544ac75d05561e4
       name: digital_product
       type: file
@@ -205,11 +205,11 @@ body:
       disabled: false
       id: pair_fc95df7d6b244e6a8740eab83ad8769a
       name: weight
-      value: "0"
+      value: "500"
     - description: ""
       id: pair_b3cc0ab53e424550b4995b7ce53d36d8
       name: price
-      value: "1200000"
+      value: "300000"
     - description: ""
       id: pair_ebd71b9930384dcebafb59ebb48a5d70
       name: discount_type
@@ -222,7 +222,7 @@ body:
       disabled: false
       id: pair_46369d748f2142c6aac1fb6b511e856a
       name: stocks
-      value: "0"
+      value: "12"
     - description: ""
       id: pair_15423095971144d3b43503366f4eb1a6
       name: affiliate_type
@@ -251,7 +251,7 @@ body:
       value: ""
     - description: ""
       disabled: false
-      fileName: C:\Users\ADHIT\Downloads\store.PNG
+      fileName: C:\Users\ADHIT\Downloads\permata.png
       id: pair_bb526d271bf14c2dae03fd90dcbcdc6e
       name: main_image
       type: file

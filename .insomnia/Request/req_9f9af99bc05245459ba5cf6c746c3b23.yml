@@ -1,0 +1,182 @@
+_id: req_9f9af99bc05245459ba5cf6c746c3b23
+type: Request
+parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
+modified: 1633325751197
+created: 1633062309404
+url: "{{ _.baseurl
+  }}/api/checkout/confirmation/056f70c7-35fe-419c-9313-55f64bca910d"
+name: Payment Confirmation
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/checkout/confirmation/{invoice}
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |invoice|uuid|required|route param|asdas3452-124312sdf|
+
+  |image|image|required|body|file|
+
+  |name|string|required|body|kumi|
+
+  |total|int|required|body|3000000|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "transaction": {
+        "id": "fa3eb375-cebb-4ea1-83c1-9772b5cf9a26",
+        "invoice": "INV-20211004002",
+        "shipping": {
+          "cost": [
+            {
+              "etd": "",
+              "note": "",
+              "value": 29000
+            }
+          ],
+          "type": "rajaongkir",
+          "service": "STANDARD",
+          "description": "Standard Service"
+        },
+        "weight": 500,
+        "address": {
+          "label": "home 2",
+          "penerima": "admin kumi",
+          "province": "Jawa Tengah",
+          "city": "Kabupaten Pemalang",
+          "subdistrict": "Bodeh",
+          "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15",
+          "phone_number": "0827372412434"
+        },
+        "payment_status": "PENDING",
+        "delivery_status": null,
+        "payment_url": null,
+        "discount": 10000,
+        "platform_fee": 0,
+        "total_origin": 300000,
+        "grand_total": 319211,
+        "payment_confirmation": null,
+        "time_remaining": "2021-10-04 17:32:59",
+        "orders": [
+          {
+            "id": "c49ad418-9bda-4256-8e63-7bdf3ba25670",
+            "qty": 1,
+            "price": 300000,
+            "product": {
+              "type": "physical",
+              "title": "Physical Product",
+              "main_image": "http:\/\/kumi-backend.apps\/storage\/archive\/89d60b19-9fe1-47c9-9fdb-1c7d57161dda\/products\/IFAnyvLfjMnIHPW3CSrKZeRTwjVn0ZT4JODJ93fB.png",
+              "slug": "physical-product-mzh75",
+              "category": "Laptop",
+              "content": "nice",
+              "weight": 500,
+              "price": 300000,
+              "discount": null,
+              "discount_type": "nominal",
+              "tnc": "you should buy",
+              "merk": "ASUS"
+            },
+            "created_at": "2021-10-04T05:32:59.000000Z",
+            "updated_at": "2021-10-04T05:32:59.000000Z"
+          }
+        ],
+        "created_at": "2021-10-04T05:32:59.000000Z",
+        "updated_at": "2021-10-04T05:32:59.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Checkout Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ```
+
+  {
+    "meta": {
+      "code": 500,
+      "status": "error",
+      "message": "Transaction Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "You don't Have any Product on Checkout"
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_ea13f4a9da774aa2a28ca27e26490ba7
+      name: image
+      value: ""
+      description: ""
+      type: file
+      fileName: C:\Users\ADHIT\Downloads\store.PNG
+    - id: pair_e36621780987485aad2ed5452cfef95d
+      name: name
+      value: dhit
+      description: ""
+    - id: pair_011f8aa9dc2c4d8bb0708b37fe4fa5a4
+      name: total
+      value: "596000"
+      description: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_1d1c62ac17b34ecf97019ab6b8b9cd80
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1633062309404
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

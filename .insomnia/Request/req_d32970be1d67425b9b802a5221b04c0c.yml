@@ -1,7 +1,7 @@
 _id: req_d32970be1d67425b9b802a5221b04c0c
 type: Request
 parentId: fld_d090bb7af08b4a5085b07142de8b4264
-modified: 1631690200986
+modified: 1633325216246
 created: 1631690200986
 url: "{{ _.baseurl }}/api/admin/coupon"
 name: CREATE
@@ -124,7 +124,7 @@ body:
     - description: ""
       id: pair_297c7ac8cf5944d19035321507d49402
       name: code
-      value: KUMIKUPONs
+      value: qwerty
     - description: ""
       id: pair_ee23dfa14add4769a6e661ce535436ee
       name: name
@@ -142,12 +142,12 @@ body:
       multiline: false
       name: start_date
       type: text
-      value: 2021-09-01 21:39:23
+      value: 2021-10-04 17:54:15
       disabled: false
     - description: ""
       id: pair_7e6aaecbd1fc4e49a494430377bce1f3
       name: expired_date
-      value: 2021-09-30 21:39:23
+      value: 2021-10-30 21:39:23
       disabled: false
     - description: ""
       id: pair_13dae179106c4bcf9938f313157ddca2

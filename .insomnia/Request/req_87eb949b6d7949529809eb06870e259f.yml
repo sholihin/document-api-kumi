@@ -1,7 +1,7 @@
 _id: req_87eb949b6d7949529809eb06870e259f
 type: Request
 parentId: fld_835c4dd68d9c4a519045735f26c330dd
-modified: 1632147285053
+modified: 1633072368567
 created: 1631690181295
 url: "{{ _.baseurl }}/api/cart/qty-update"
 name: QTY UPDATE
@@ -128,7 +128,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"product_id" : "067096a2-e75e-4044-a1e7-65e304bf226c",
+    	"product_id" : "09d9fc25-b6f5-4c6a-b08e-806669a12ca8",
     	"type" : "increase",
     	"note" : "yang bagus ya",
     	"status" : true

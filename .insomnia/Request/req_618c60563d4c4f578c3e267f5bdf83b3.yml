@@ -1,7 +1,7 @@
 _id: req_618c60563d4c4f578c3e267f5bdf83b3
 type: Request
 parentId: fld_74f8e1128f9441d4b8f5e322bdc0d90a
-modified: 1631690200888
+modified: 1632629888320
 created: 1631690200888
 url: "{{ _.baseurl }}/api/admin/category/product"
 name: CREATE
@@ -111,7 +111,7 @@ body:
       name: parent_id
       value: ""
     - description: ""
-      fileName: C:\Users\ADHIT\Downloads\store.PNG
+      fileName: C:\Users\ADHIT\Downloads\bsi.png
       id: pair_3ef5265881124cb0b5324ea993f29262
       name: image
       type: file
