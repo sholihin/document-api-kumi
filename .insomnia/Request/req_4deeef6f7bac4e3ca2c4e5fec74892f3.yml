@@ -1,0 +1,29 @@
+_id: req_4deeef6f7bac4e3ca2c4e5fec74892f3
+type: Request
+parentId: fld_3ee4af54477a431fb353b1fda57ad28a
+modified: 1633425932067
+created: 1633425912816
+url: "{{ _.baseurl }}/api/config/analytics"
+name: Google Analytics
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_cda71ab27b39449cac9deb689f729ec1
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+  - id: pair_6cb0f444e45a41e69658d3abc38ddce8
+    name: ""
+    value: ""
+    description: ""
+authentication: {}
+metaSortKey: -1633418707884
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

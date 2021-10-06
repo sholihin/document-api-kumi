@@ -1,0 +1,29 @@
+_id: req_e670b545e69d480bb18b9f740f4a8a28
+type: Request
+parentId: fld_3ee4af54477a431fb353b1fda57ad28a
+modified: 1633425884527
+created: 1633425881313
+url: "{{ _.baseurl }}/api/config/sliders"
+name: Sliders
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_cda71ab27b39449cac9deb689f729ec1
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+  - id: pair_6cb0f444e45a41e69658d3abc38ddce8
+    name: ""
+    value: ""
+    description: ""
+authentication: {}
+metaSortKey: -1633420830060
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,29 @@
+_id: req_486b26736a174108b22c41fbe214c2e7
+type: Request
+parentId: fld_3ee4af54477a431fb353b1fda57ad28a
+modified: 1633425987097
+created: 1633425983324
+url: "{{ _.baseurl }}/api/config/landing"
+name: Landing Page
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_cda71ab27b39449cac9deb689f729ec1
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+  - id: pair_6cb0f444e45a41e69658d3abc38ddce8
+    name: ""
+    value: ""
+    description: ""
+authentication: {}
+metaSortKey: -1633417116252
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

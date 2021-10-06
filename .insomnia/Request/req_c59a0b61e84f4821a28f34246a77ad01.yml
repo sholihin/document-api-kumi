@@ -1,0 +1,31 @@
+_id: req_c59a0b61e84f4821a28f34246a77ad01
+type: Request
+parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
+modified: 1633402273610
+created: 1633401753988
+url: "{{ _.baseurl }}/api/checkout/refund/eb0314d7-c93e-428b-9c88-1f67ea3a3eda"
+name: Midtrans Refund
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"reason": "lorem ipsum"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_1cf40aaf9d124a3d87cc0185339d9f6c
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1633401753988
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
