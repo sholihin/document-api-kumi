@@ -1,9 +1,9 @@
 _id: req_9ecdab2cc52d47c1bde3d627f1df8e4a
 type: Request
 parentId: fld_f73e5de9faf34cd89f3c216bfbe568ba
-modified: 1633072200037
+modified: 1633589631433
 created: 1632298993712
-url: "{{ _.baseurl }}/api/admin/config/address/c7dc4b3c-fbd8-49db-b7b9-51e68088b964"
+url: "{{ _.baseurl }}/api/admin/config/address/a92b106f-8128-4909-a64d-253b06788494"
 name: UPDATE ADDRESS
 description: |-
   ## Method (PATCH)

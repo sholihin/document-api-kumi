@@ -1,10 +1,10 @@
 _id: req_9f9af99bc05245459ba5cf6c746c3b23
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1633341347555
+modified: 1633682396056
 created: 1633062309404
 url: "{{ _.baseurl
-  }}/api/checkout/confirmation/79d658aa-6399-4737-a233-da0d3cc149ef"
+  }}/api/checkout/confirmation/780ea984-645a-4e7c-9c78-0c6d93cfa0fa"
 name: Payment Confirmation
 description: >-
   ## Method (POST)
@@ -169,6 +169,10 @@ headers:
   - name: Content-Type
     value: multipart/form-data
     id: pair_1d1c62ac17b34ecf97019ab6b8b9cd80
+  - id: pair_63290490e674405b9eec6ec43d6a2946
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
 authentication:
   type: bearer
   token: "{{ _.token }}"

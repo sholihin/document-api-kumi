@@ -1,0 +1,27 @@
+_id: req_b13a45c81d5746c6871a1e76d048814c
+type: Request
+parentId: fld_4a65af8a2b16414ca0f1a513492bc30c
+modified: 1633681365981
+created: 1633662864626
+url: "{{ _.baseurl }}/api/admin/dashboard"
+name: Dashboard
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_59489834dca44146b1be9e84dd12b8e0
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1633662864626
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

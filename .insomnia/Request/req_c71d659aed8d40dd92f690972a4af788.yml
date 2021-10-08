@@ -1,7 +1,7 @@
 _id: req_c71d659aed8d40dd92f690972a4af788
 type: Request
 parentId: fld_fc625f025a244d79a220618a93d25f29
-modified: 1633072267582
+modified: 1633588977381
 created: 1631690200951
 url: "{{ _.baseurl }}/api/admin/product"
 name: CREATE
@@ -171,17 +171,17 @@ body:
       disabled: false
       id: pair_86997d4df9704cc79defeada0eaa56fa
       name: title
-      value: digital Product
+      value: physical Product
     - description: ""
       disabled: false
       id: pair_6b1a129751ef4961b2fe46b93457f860
       name: category_id
-      value: ed68b9be-950d-4bbe-b013-86c077da7e2c
+      value: 3111b319-3e19-4325-9e83-0bded2469bfb
     - description: ""
       disabled: false
       id: pair_340b627a78f24245b7a87eecaac8957a
       name: type
-      value: digital
+      value: physical
     - description: ""
       disabled: false
       fileName: C:\Users\ADHIT\Downloads\mandiri.png
