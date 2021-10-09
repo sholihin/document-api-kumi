@@ -1,0 +1,27 @@
+_id: req_d95f299b89ac4bc89d95e0949939e5b0
+type: Request
+parentId: fld_2406074dbccb433faba2a200c6b53008
+modified: 1633792205198
+created: 1633792201897
+url: "{{ _.baseurl }}/api/checkout/done"
+name: Done
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_1dd1d3444a41489db5e2faeda384a830
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1633786157621.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

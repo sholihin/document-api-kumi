@@ -1,0 +1,27 @@
+_id: req_9146663713594ee08b819a75e72ee968
+type: Request
+parentId: fld_2406074dbccb433faba2a200c6b53008
+modified: 1633792352239
+created: 1633792350767
+url: "{{ _.baseurl }}/api/checkout/canceled"
+name: Canceled
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_1dd1d3444a41489db5e2faeda384a830
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1633785869947.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
