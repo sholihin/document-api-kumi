@@ -1,0 +1,27 @@
+_id: req_31410801016f45329976de1dd56979c2
+type: Request
+parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
+modified: 1633700448827
+created: 1633700368840
+url: "{{ _.baseurl }}/api/admin/checkout/new-order"
+name: New Order
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_0e35d07bb6064899979b92a0918d9fbb
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1633700368883
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

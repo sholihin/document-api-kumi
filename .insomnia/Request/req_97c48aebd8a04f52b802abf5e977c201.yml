@@ -1,0 +1,27 @@
+_id: req_97c48aebd8a04f52b802abf5e977c201
+type: Request
+parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
+modified: 1633786769581
+created: 1633786732408
+url: "{{ _.baseurl }}/api/admin/checkout/order-complaints"
+name: Complaints
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_0e35d07bb6064899979b92a0918d9fbb
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1633690992818.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
