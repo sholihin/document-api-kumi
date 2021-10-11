@@ -1,7 +1,7 @@
 _id: req_84e10b31f81a46108f0b9c6c042b5061
 type: Request
 parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
-modified: 1633788499557
+modified: 1633927130235
 created: 1633788373477
 url: "{{ _.baseurl
   }}/api/admin/checkout/status/complaint/780ea984-645a-4e7c-9c78-0c6d93cfa0qw"
@@ -18,6 +18,9 @@ description: |-
   |invoice|uuid|yes|route param|hsdfg7567sdf|
   |status|string|yes|body|ON_PROCESS,ACCEPTED,REJECTED,DONE|
   |detail_status|string|required if status done|body|REFUND,NEW_PRODUCT|
+  |transfer_image|file|required if detail_status REFUND|body|image|
+  |waybill|string|opyional if detail_status NEW_PRODUCT|body|3452352435|
+  |serive_waybill|string|opyional if detail_status NEW_PRODUCT|body|jne|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|
   ## Response Success
@@ -47,18 +50,33 @@ description: |-
     }
   }
   ```
-method: PATCH
+method: POST
 body:
-  mimeType: application/json
-  text: |-
-    {
-    	"status": "ACCEPTED",
-    	"detail_status" : "REFUND"
-    }
+  mimeType: multipart/form-data
+  params:
+    - id: pair_f75589e6520e4101bec11e126c861427
+      name: status
+      value: ACCEPTED
+      description: ""
+    - id: pair_fe296d4442154b0dbd0820684d00fd21
+      name: detail_status
+      value: REFUND
+      description: ""
+    - id: pair_db5b8540ce994986b7825238dc4001f2
+      name: transfer_image
+      value: ""
+      description: ""
+      type: file
+      multiline: null
+      fileName: C:\Users\ADHIT\Downloads\store.PNG
+    - id: pair_334dd46e3cf44f34815a198ef514314a
+      name: _method
+      value: PATCH
+      description: ""
 parameters: []
 headers:
   - name: Content-Type
-    value: application/json
+    value: multipart/form-data
     id: pair_9366b3e9fa8a4ab2b340172c8c958e38
   - id: pair_5fc908d030f24d4d9eb084364b4f6d26
     name: X-DOMAIN-MEMBER

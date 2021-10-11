@@ -19,14 +19,12 @@ body:
       value: ""
       description: ""
       type: file
-      multiline: null
       fileName: C:\Users\ADHIT\Downloads\store.PNG
     - id: pair_7f9fd4a5fae0478bb01ed81e2525ce49
       name: images[]
       value: ""
       description: ""
       type: file
-      multiline: null
       fileName: C:\Users\ADHIT\Downloads\WhatsApp Image 2021-10-04 at 07.44.19.jpeg
 parameters: []
 headers:
