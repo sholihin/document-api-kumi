@@ -1,0 +1,29 @@
+_id: req_dfb5ae45997e4ed8a3bd8d18d086def4
+type: Request
+parentId: fld_3ee4af54477a431fb353b1fda57ad28a
+modified: 1634023225253
+created: 1634023116025
+url: "{{ _.baseurl }}/api/config/faq"
+name: FAQ
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_cda71ab27b39449cac9deb689f729ec1
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+  - id: pair_6cb0f444e45a41e69658d3abc38ddce8
+    name: ""
+    value: ""
+    description: ""
+authentication: {}
+metaSortKey: -1633416718344
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

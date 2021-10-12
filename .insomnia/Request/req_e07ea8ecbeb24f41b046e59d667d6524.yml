@@ -1,0 +1,29 @@
+_id: req_e07ea8ecbeb24f41b046e59d667d6524
+type: Request
+parentId: fld_3ee4af54477a431fb353b1fda57ad28a
+modified: 1634012317436
+created: 1634012314294
+url: "{{ _.baseurl }}/api/config/tnc"
+name: TnC
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_cda71ab27b39449cac9deb689f729ec1
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+  - id: pair_6cb0f444e45a41e69658d3abc38ddce8
+    name: ""
+    value: ""
+    description: ""
+authentication: {}
+metaSortKey: -1633416850980
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

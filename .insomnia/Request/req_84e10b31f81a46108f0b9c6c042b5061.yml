@@ -67,7 +67,6 @@ body:
       value: ""
       description: ""
       type: file
-      multiline: null
       fileName: C:\Users\ADHIT\Downloads\store.PNG
     - id: pair_334dd46e3cf44f34815a198ef514314a
       name: _method
