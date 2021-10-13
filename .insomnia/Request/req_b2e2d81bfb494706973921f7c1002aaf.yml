@@ -1,0 +1,130 @@
+_id: req_b2e2d81bfb494706973921f7c1002aaf
+type: Request
+parentId: fld_92db5037fd30421984552980f3ae17fb
+modified: 1634108893772
+created: 1634093440052
+url: "{{ _.baseurl }}/api/products"
+name: Search
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/products
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |f_title|string|optional|route param|search by title|
+
+  |f_category|string|optional|route param|search by category|
+
+  |f_price_to|string|optional|route param|filter by max price|
+
+  |f_price_from|string|optional|route param|filter by min price|
+
+  |f_merk|string|optional|route param|search by merk|
+
+  |sort|string|optional|route param|s_price_to (by max price), s_price_from (by min price), s_last (by new product), s_old (by old product), default by popular product|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "products": {
+        "items": [
+          {
+            "id": "e7f1432f-c4ea-4859-a136-733ef0aa92fd",
+            "title": "Digital Product",
+            "slug": "digital-product-htyui",
+            "digital_product": "http:\/\/kumi-backend.apps\/storage\/2b7af9cd-4735-43d8-aa39-4f7763898f37\/products\/XITH7vjWix70GehaEOfYq7gzpi6HGjDS8OJSlsmc.png",
+            "type": "digital",
+            "merk": "ASUS",
+            "main_image": "http:\/\/kumi-backend.apps\/storage\/2b7af9cd-4735-43d8-aa39-4f7763898f37\/products\/32i08WSk0jzCzhsTR13o0g8OrYbLL8IhocE7y7uW.png",
+            "content": "nice",
+            "tnc": "you should buy",
+            "weight": null,
+            "price": 300000,
+            "stocks": 12,
+            "reseller_price": 1300000,
+            "discount_type": "nominal",
+            "discount": null,
+            "affiliate_type": "nominal",
+            "affiliate_fee": 10000,
+            "pin": null,
+            "seo": 0,
+            "meta_title": null,
+            "meta_keyword": null,
+            "meta_description": null,
+            "created_at": "2021-10-07T06:42:46.000000Z",
+            "updated_at": "2021-10-07T06:42:46.000000Z"
+          }
+        ],
+        "pages": {
+          "previous": null,
+          "current": 1,
+          "next": "http:\/\/kumi-backend.apps\/api\/products?page=2",
+          "last_page": 2
+        }
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Domain Invalid
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Unauthorize Domain"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Failed"
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_57f9c19123924553b8e387c85a378c89
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication: {}
+metaSortKey: -1634093440052
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
