@@ -1,0 +1,139 @@
+_id: req_15f904615e8e4120b37bf7fe460ccadb
+type: Request
+parentId: fld_ca1867cb7e954152806f85d4a844db63
+modified: 1634182509165
+created: 1634182509165
+url: "{{ _.baseurl }}/api/discussions\t"
+name: CREATE
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/discussions
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |product_id|uuid|yes|body|12132-jfjdf34-213|
+
+  |description|string|yes|body|stock ada ?|
+
+  |discussion_id|uuid|optional|body|12132-jfjdf34-213|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "success!"
+    },
+    "data": {
+      "discussion": {
+        "id": "7cf1ad55-fd9e-47bb-8ca5-609647b464f4",
+        "parent": null,
+        "product": "40df9b0b-e062-4189-98bf-efea8c7e8ace",
+        "user": {
+          "id": "f71bd3aa-0d74-4811-8078-cb9dd78ba12e",
+          "name": "Customer",
+          "avatar": "https:\/\/ui-avatars.com\/api\/?name=Customer&background=4e73df&color=ffffff&size=100",
+          "jenkel": "L",
+          "email": "customer@kumi.id",
+          "phone_number": "87764281912",
+          "created_at": "2021-10-07T06:41:55.000000Z",
+          "updated_at": "2021-10-07T06:41:55.000000Z"
+        },
+        "description": "ada?",
+        "created_at": "2021-10-14T03:30:48.000000Z",
+        "updated_at": "2021-10-14T03:30:48.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Domain Invalid
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "product_id": [
+          "The product_id field is required."
+        ]
+      }
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"product_id" : "40df9b0b-e062-4189-98bf-efea8c7e8ace",
+    	"description" : "ada?"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_3c591e764d484d3ba1cb2e90901ce6c3
+  - id: pair_15a5e55455ec4a0490b30861c98415fb
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1634114880206
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
