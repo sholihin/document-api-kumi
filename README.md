@@ -3,7 +3,7 @@
 Silahkan Pilih Import Melalui URL:
 
 ```
-https://gitlab.com/sholihin/document-api-kumi-id/-/raw/main/Insomnia-All.yaml
+https://raw.githubusercontent.com/sholihin/document-api-kumi/main/Insomnia-All.yaml
 ```
 
 ![Gambar 1.0](images/import-by-url-1.png)
