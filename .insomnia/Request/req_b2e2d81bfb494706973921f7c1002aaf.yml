@@ -1,9 +1,9 @@
 _id: req_b2e2d81bfb494706973921f7c1002aaf
 type: Request
 parentId: fld_92db5037fd30421984552980f3ae17fb
-modified: 1634108893772
+modified: 1634701795839
 created: 1634093440052
-url: "{{ _.baseurl }}/api/products"
+url: "{{ _.baseurl }}/api/products?f_title=sony&f_category=game"
 name: Search
 description: >-
   ## Method (GET)

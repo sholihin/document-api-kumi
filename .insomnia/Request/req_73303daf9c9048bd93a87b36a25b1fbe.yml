@@ -1,15 +1,15 @@
 _id: req_73303daf9c9048bd93a87b36a25b1fbe
 type: Request
 parentId: fld_4fb73788d2f14310be0111a290ce306e
-modified: 1631707234923
+modified: 1634714609060
 created: 1631707234923
-url: "{{ _.baseurl }}/api/about/1"
-name: SHOW
+url: "{{ _.baseurl }}/api/about"
+name: INDEX
 description: |-
   ## Method (GET)
   ## Route
   ```
-  /api/about/{id}
+  /api/about
   ```
   ## Query Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
@@ -25,47 +25,27 @@ description: |-
       "status": "success",
       "message": "success"
     },
-    "data": [
-      {
-        "abouts": [
-          {
-            "id": 1,
-            "config_id": "10974cbf-35a9-439a-880f-4286b06bc656",
-            "image": "http:\/\/kumi-backend.test\/storage\/1",
-            "content": "1"
-          }
-        ]
+    "data": {
+      "about": {
+        "config_id": "e1058f11-c49f-46f9-af4e-4ce21df7ba1c",
+        "status": true,
+        "content": "lorem ipsum"
       }
-    ]
+    }
   }
   ```
 
   ## Response Failed
-  ### Domain Invalid
   ```
   {
     "meta": {
       "code": 401,
       "status": "error",
-      "message": "Creating Address Failed"
+      "message": "No Content"
     },
     "data": {
-      "message": "Something went wrong!",
-      "error": "Unauthorized Domain"
-    }
-  }
-  ```
-  ### Validation Input
-  ```
-  {
-    "meta": {
-      "code": 422,
-      "status": "error",
-      "message": "Updating Password Failed"
-    },
-    "data": {
-      "message": "New Password Does Not Match !",
-      "error": "New Password Does Not Match !"
+      "message": "Content not activated!",
+      "error": "Unauthorized"
     }
   }
   ```
