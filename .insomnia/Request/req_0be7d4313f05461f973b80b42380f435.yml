@@ -1,7 +1,7 @@
 _id: req_0be7d4313f05461f973b80b42380f435
 type: Request
 parentId: fld_0b6e4486ce0042a2ab80e25be56664f0
-modified: 1632999155484
+modified: 1634720452324
 created: 1632996699939
 url: "{{ _.baseurl }}/api/contact/send"
 name: SEND EMAIL
@@ -73,8 +73,8 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"name" : "alfie",
-    	"email" : "alfie@gmail.com",
+    	"name" : "mohamad sholihin",
+    	"email" : "mohamad.sholihin@gmail.com",
     	"phone" : "085813246421", 
     	"message" : "Test Email"
     }
