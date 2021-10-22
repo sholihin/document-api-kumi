@@ -1,10 +1,10 @@
 _id: req_9b0e3d122788443c98eead83b194cef3
 type: Request
 parentId: fld_f73e5de9faf34cd89f3c216bfbe568ba
-modified: 1631714091307
+modified: 1634812507268
 created: 1631690201099
 url: "{{ _.baseurl
-  }}/api/admin/config/shipping/63f7fb4f-cf69-4378-bfdd-00094a6768b6"
+  }}/api/admin/config/shipping/7458662e-fc6c-4676-b394-83b4220bc839"
 name: UPDATE
 description: |-
   ## Method (PATCH)
@@ -102,29 +102,34 @@ body:
   mimeType: application/x-www-form-urlencoded
   params:
     - description: ""
-      disabled: false
+      disabled: true
       id: pair_4aeac3dc44404946af5b8c9b1b7e7bf4
       name: name
       value: jne
     - description: ""
-      disabled: false
+      disabled: true
       id: pair_671400f0c0ca42a99867cae773f8448c
       name: city
       value: jakarta
     - description: ""
-      disabled: false
+      disabled: true
       id: pair_5818635960464455aaa902a558a6911c
       name: flat_rate
       value: "11000"
     - description: ""
-      disabled: false
+      disabled: true
       id: pair_e8e7d4d0633045a980b62ff5c3d20a90
       name: status_custom
-      value: "0"
+      value: "1"
     - description: ""
       id: pair_ea1af4574be84fd2be32ffa801dfa3e2
       name: tnc
       value: 13 KM
+      disabled: true
+    - id: pair_73eada3e7e8f4eb59f55869c5437f875
+      name: status_rajaongkir
+      value: "1"
+      description: ""
       disabled: false
 parameters: []
 headers:
