@@ -1,7 +1,7 @@
 _id: req_5da1eb01498d4f91857f4b47c10c9981
 type: Request
 parentId: fld_0b6e4486ce0042a2ab80e25be56664f0
-modified: 1631707225197
+modified: 1634790017315
 created: 1631707225197
 url: "{{ _.baseurl }}/api/contact"
 name: INDEX
@@ -26,18 +26,13 @@ description: |-
       "message": "success"
     },
     "data": {
-      "contacts": [
-        {
-          "id": 1,
-          "config_id": "10974cbf-35a9-439a-880f-4286b06bc656",
-          "name": "1",
-          "phone": "1",
-          "email": "1",
-          "message": "1",
-          "created_at": "2021-09-15 01:07:32",
-          "updated_at": "2021-09-15 01:07:32"
-        }
-      ]
+      "contacts": {
+        "phone": "0813XXXXXXXX",
+        "email": "admin@kumi.id",
+        "facebook": null,
+        "instagram": null,
+        "youtube": null
+      }
     }
   }
   ```
@@ -54,20 +49,6 @@ description: |-
     "data": {
       "message": "Something went wrong!",
       "error": "Unauthorized Domain"
-    }
-  }
-  ```
-  ### Validation Input
-  ```
-  {
-    "meta": {
-      "code": 422,
-      "status": "error",
-      "message": "Updating Password Failed"
-    },
-    "data": {
-      "message": "New Password Does Not Match !",
-      "error": "New Password Does Not Match !"
     }
   }
   ```

@@ -1,9 +1,9 @@
 _id: req_8ffca912c6484c6593509d74e3e6cac5
 type: Request
 parentId: fld_ea7110f104074fec884feb0eff2e6e59
-modified: 1631707637019
+modified: 1634743057926
 created: 1631707637019
-url: "{{ _.baseurl }}/api/customer/order/1/pending"
+url: "{{ _.baseurl }}/api/customer/order/"
 name: Show
 description: >-
   ## Method (POST)
