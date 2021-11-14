@@ -1,7 +1,7 @@
 _id: req_dcc37e4c590c4a74903b06bec46b0a98
 type: Request
 parentId: fld_35a0ff58d7e045cd98cb0f081e920b59
-modified: 1632300733697
+modified: 1634803105736
 created: 1631690181358
 url: "{{ _.baseurl }}/api/customer/address"
 name: CREATE
@@ -87,8 +87,8 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"label" : "home 2",
-    	"penerima" : "admin kumi",
+    	"label" : "home",
+    	"penerima" : "saya",
     	"phone_number" : "0827372412434", 
     	"province_id" : 10,
     	"city_id" : 352,
