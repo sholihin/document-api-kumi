@@ -1,0 +1,129 @@
+_id: req_328dc63d177c469a9d19005f28292247
+type: Request
+parentId: fld_c0a5afdd3fe24f8ea3c16975f9a48708
+modified: 1637207608008
+created: 1637123575027
+url: "{{ _.baseurl }}/api/review/13af51c9-589e-452e-9bf7-8ebc7ad10168"
+name: CREATE
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/review/{product}
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |product|uuid|yes|body|12132-jfjdf34-213|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Success"
+    },
+    "data": {
+      "message": "Review created successfully!",
+      "review": {
+        "id": "16d13d31-09e8-44b4-8b98-b0716c921963",
+        "user": {
+          "id": "fed03689-f0d3-4e72-a28a-7c05a33260c9",
+          "name": "Customer",
+          "avatar": "https:\/\/ui-avatars.com\/api\/?name=Customer&background=4e73df&color=ffffff&size=100",
+          "jenkel": "L",
+          "email": "customer@kumi.id",
+          "phone_number": "87764281912",
+          "created_at": "2021-11-16T03:52:16.000000Z",
+          "updated_at": "2021-11-16T03:52:16.000000Z"
+        },
+        "rating": 4,
+        "comment": "oke",
+        "created_at": "2021-11-18T03:42:53.000000Z",
+        "updated_at": "2021-11-18T03:42:53.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Domain Invalid
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "You have not ordered this product yet!"
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"rating" : 4,
+    	"comment" : "oke"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_3c591e764d484d3ba1cb2e90901ce6c3
+  - id: pair_15a5e55455ec4a0490b30861c98415fb
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1634114880206
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
