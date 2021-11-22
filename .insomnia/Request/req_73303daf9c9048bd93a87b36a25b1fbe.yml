@@ -1,53 +1,72 @@
 _id: req_73303daf9c9048bd93a87b36a25b1fbe
 type: Request
 parentId: fld_4fb73788d2f14310be0111a290ce306e
-modified: 1634714609060
+modified: 1637591867740
 created: 1631707234923
 url: "{{ _.baseurl }}/api/about"
 name: INDEX
-description: |-
+description: >-
   ## Method (GET)
+
   ## Route
+
   ```
+
   /api/about
+
   ```
+
   ## Query Parameters
+
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
   |---------|----|--------|--------|
-  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
   |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
+
   ## Response Success
-  ```
-  {
-    "meta": {
-      "code": 200,
-      "status": "success",
-      "message": "success"
-    },
-    "data": {
-      "about": {
-        "config_id": "e1058f11-c49f-46f9-af4e-4ce21df7ba1c",
-        "status": true,
-        "content": "lorem ipsum"
-      }
-    }
-  }
+
   ```
 
-  ## Response Failed
-  ```
   {
-    "meta": {
-      "code": 401,
-      "status": "error",
-      "message": "No Content"
-    },
-    "data": {
-      "message": "Content not activated!",
-      "error": "Unauthorized"
-    }
+    "status": "success",
+    "message": null,
+    "data": [
+      {
+        "config_id": "96c97852-c2e2-4b94-8319-6a443b230c64",
+        "status": true,
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Itaque nostrum est-quod nostrum dico, artis est-ad ea principia, quae accepimus. At certe gravius. Facile est hoc cernere in primis puerorum aetatulis. Quos nisi redarguimus, omnis virtus, omne decus, omnis vera laus deserenda est. <\/p>\n\n<p>Duo Reges: constructio interrete. Qui autem de summo bono dissentit de tota philosophiae ratione dissentit. Inde sermone vario sex illa a Dipylo stadia confecimus. Sed venio ad inconstantiae crimen, ne saepius dicas me aberrare; Quae cum ita sint, effectum est nihil esse malum, quod turpe non sit. Occultum facinus esse potuerit, gaudebit; <\/p>\n\n<p>Saepe ab Aristotele, a Theophrasto mirabiliter est laudata per se ipsa rerum scientia; Facillimum id quidem est, inquam. Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; At multis se probavit. Cyrenaici quidem non recusant; Quis suae urbis conservatorem Codrum, quis Erechthei filias non maxime laudat? Quid enim de amicitia statueris utilitatis causa expetenda vides. Deinde disputat, quod cuiusque generis animantium statui deceat extremum. Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Quo modo autem optimum, si bonum praeterea nullum est? <\/p>\n\n<p>Et quidem, Cato, hanc totam copiam iam Lucullo nostro notam esse oportebit; Non modo carum sibi quemque, verum etiam vehementer carum esse? At enim sequor utilitatem. His enim rebus detractis negat se reperire in asotorum vita quod reprehendat. An est aliquid per se ipsum flagitiosum, etiamsi nulla comitetur infamia? Aufert enim sensus actionemque tollit omnem. Ab his oratores, ab his imperatores ac rerum publicarum principes extiterunt. Graece donan, Latine voluptatem vocant. <\/p>\n\n"
+      }
+    ]
   }
+
+  ```
+
+
+  ## Content Disabled
+
+  ```
+
+  {
+    "status": "success",
+    "message": "Content Disabled!",
+    "data": null
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+      "status": "error",
+      "message": "No Content",
+      "data": null
+  }
+
   ```
 method: GET
 body:

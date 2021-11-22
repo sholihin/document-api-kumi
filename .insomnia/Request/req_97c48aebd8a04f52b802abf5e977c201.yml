@@ -1,7 +1,7 @@
 _id: req_97c48aebd8a04f52b802abf5e977c201
 type: Request
 parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
-modified: 1634875681599
+modified: 1637031434826
 created: 1633786732408
 url: "{{ _.baseurl }}/api/admin/checkout/order-complaints"
 name: Complaints
@@ -31,42 +31,84 @@ description: >-
   ```
 
   {
-    "meta": {
-      "code": 200,
-      "status": "success",
-      "message": "List Order On Complaints Success!"
-    },
-    "data": {
-      "complaints": [
+    "status": "success",
+    "message": "List Order On Complaints Success!",
+    "data": [
+      [
         {
-          "id": "780ea984-645a-4e7c-9c78-0c6d93cfa0qw",
-          "invoice": "INV-20211007002",
-          "shipping": null,
-          "weight": 0,
-          "address": null,
+          "id": "55637e59-4e61-48fa-b210-895c39ffa218",
+          "invoice": "INV-20211114001",
+          "shipping": {
+            "cost": [
+              {
+                "etd": "4-7",
+                "note": "",
+                "value": 92000
+              }
+            ],
+            "type": "rajaongkir",
+            "courier": "jne",
+            "service": "OKE",
+            "description": "Ongkos Kirim Ekonomis"
+          },
+          "waybill": "10002359810077",
+          "waybill_status": null,
+          "weight": 4000,
+          "address": {
+            "label": "home 2",
+            "penerima": "admin kumi",
+            "province": "Jawa Tengah",
+            "city": "Kabupaten Pemalang",
+            "subdistrict": "Bodeh",
+            "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15",
+            "phone_number": "0827372412434"
+          },
           "payment_status": "SUCCESS",
-          "delivery_status": null,
+          "delivery_status": "DELIVERED",
           "payment_url": null,
-          "discount": 10000,
+          "discount": 0,
           "platform_fee": 0,
-          "total_origin": 300000,
-          "grand_total": 290474,
+          "total_origin": 1975000,
+          "grand_total": 2067288,
           "payment_confirmation": null,
-          "time_remaining": "2021-10-07 19:20:46",
-          "orders": [],
+          "time_remaining": null,
+          "orders": [
+            {
+              "id": "365a64f8-2a61-4a31-86d9-5217531f7071",
+              "product_id": "6ae3eb33-d64a-4ec8-b615-1cf91a56420d",
+              "qty": 1,
+              "price": 1975000,
+              "product": {
+                "type": "physical",
+                "title": "Sony Ps3 Superslim Game Console - Black [500 Gb\/full Game]",
+                "main_image": "http:\/\/kumi-backend.apps\/storage\/archive\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/game.jpg",
+                "slug": "sony-ps3-superslim-game-console-black-500-gbfull-game-sony-an0au",
+                "category": "Game",
+                "content": "",
+                "note": "Yang Bagus Ya Gaes Boleh Lah",
+                "weight": 4000,
+                "price": 1975000,
+                "discount": null,
+                "discount_type": null,
+                "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres. Idem iste, inquam, de voluptate quid sentit? Eam tum adesse, cum dolor omnis absit; Certe non potest. A quibus propter discendi cupiditatem videmus ultimas terras esse peragratas. Duo Reges: constructio interrete. An me, inquam, nisi te audire vellem, censes haec dicturum fuisse? An me, inquis, tam amentem putas, ut apud imperitos isto modo loquar? Et quae per vim oblatum stuprum volontaria morte lueret inventa est et qui interficeret filiam, ne stupraretur. Sed in rebus apertissimis nimium longi sumus. <\/p>\n\n<p>Quae iam oratio non a philosopho aliquo, sed a censore opprimenda est. Quae sequuntur igitur? Tu vero, inquam, ducas licet, si sequetur; Expressa vero in iis aetatibus, quae iam confirmatae sunt. Maximeque eos videre possumus res gestas audire et legere velle, qui a spe gerendi absunt confecti senectute. Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Quod idem cum vestri faciant, non satis magnam tribuunt inventoribus gratiam. Iam illud quale tandem est, bona praeterita non effluere sapienti, mala meminisse non oportere? <\/p>\n\n<p>Item de contrariis, a quibus ad genera formasque generum venerunt. Satis est tibi in te, satis in legibus, satis in mediocribus amicitiis praesidii. Quae cum dixisset paulumque institisset, Quid est? Ergo hoc quidem apparet, nos ad agendum esse natos. Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum. Isto modo, ne si avia quidem eius nata non esset. Tenesne igitur, inquam, Hieronymus Rhodius quid dicat esse summum bonum, quo putet omnia referri oportere? <\/p>\n\n<p>Nam, ut paulo ante docui, augendae voluptatis finis est doloris omnis amotio. Atqui reperies, inquit, in hoc quidem pertinacem; Duo enim genera quae erant, fecit tria. Itaque hoc frequenter dici solet a vobis, non intellegere nos, quam dicat Epicurus voluptatem. Aeque enim contingit omnibus fidibus, ut incontentae sint. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Laelius clamores sofòw ille so lebat Edere compellans gumias ex ordine nostros. Nam de isto magna dissensio est. Nos cum te, M. Dempta enim aeternitate nihilo beatior Iuppiter quam Epicurus; Ex rebus enim timiditas, non ex vocabulis nascitur. <\/p>\n\n",
+                "merk": "SONY"
+              },
+              "created_at": "2021-11-14T14:02:27.000000Z",
+              "updated_at": "2021-11-14T14:02:27.000000Z"
+            }
+          ],
           "complaint": {
-            "id": "a3524e95-b5a1-4853-93a1-61b49c498598",
+            "id": "661e0817-efd8-4201-8e38-a592749f10c5",
             "reason": "tidak sesuai",
             "images": [
-              "http:\/\/kumi-backend.apps\/storage\/2b7af9cd-4735-43d8-aa39-4f7763898f37\/complaints\/zQY5U9me6k2CinAYJd5D1Mb9JpSnrxCjzZMqU73L.png",
-              "http:\/\/kumi-backend.apps\/storage\/2b7af9cd-4735-43d8-aa39-4f7763898f37\/complaints\/yJFqGV7xzX2gP9VQ9pjrq2F275WPggR38Lk7DSyP.jpeg"
+              "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/complaints\/Qy4PhUBB0ruzsvYZP4YSdCvtvTlRiILgC8Ejif8A.jpeg"
             ]
           },
-          "created_at": "2021-10-01T07:20:46.000000Z",
-          "updated_at": "2021-10-01T07:20:46.000000Z"
+          "created_at": "2021-11-14T14:02:27.000000Z",
+          "updated_at": "2021-11-14T14:50:12.000000Z"
         }
       ]
-    }
+    ]
   }
 
   ```

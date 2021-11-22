@@ -1,11 +1,51 @@
 _id: req_e670b545e69d480bb18b9f740f4a8a28
 type: Request
 parentId: fld_3ee4af54477a431fb353b1fda57ad28a
-modified: 1633425884527
+modified: 1637591022074
 created: 1633425881313
 url: "{{ _.baseurl }}/api/config/sliders"
 name: Sliders
-description: ""
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/config/sliders
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+  ```
+  {
+    "status": "success",
+    "message": null,
+    "data": {
+      "config_id": "96c97852-c2e2-4b94-8319-6a443b230c64",
+      "status": true,
+      "sliders": [
+        {
+          "id": "ce18369c-2bf9-4ea9-9c9b-f398bab6d206",
+          "sorter": 1,
+          "title": "kumi",
+          "slug": "kumi",
+          "url": "url",
+          "image": "http:\/\/kumi-backend.apps\/storage\/image"
+        }
+      ]
+    }
+  }
+  ```
+
+  ## Response Failed
+  ```
+  {
+    "status": "error",
+    "message": "pesan error",
+    "data": null
+  }
+  ```
 method: GET
 body: {}
 parameters: []

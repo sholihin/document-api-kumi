@@ -1,7 +1,7 @@
 _id: req_b2e2d81bfb494706973921f7c1002aaf
 type: Request
 parentId: fld_92db5037fd30421984552980f3ae17fb
-modified: 1634701795839
+modified: 1637033983270
 created: 1634093440052
 url: "{{ _.baseurl }}/api/products?f_title=sony&f_category=game"
 name: Search
@@ -12,7 +12,7 @@ description: >-
 
   ```
 
-  /api/products
+  /api/products?f_title=sony&f_category=game
 
   ```
 
@@ -33,8 +33,6 @@ description: >-
   |f_merk|string|optional|route param|search by merk|
 
   |sort|string|optional|route param|s_price_to (by max price), s_price_from (by min price), s_last (by new product), s_old (by old product), default by popular product|
-
-  |bearer token|jwt|yes|header|12132-jfjdf34-213|
 
   |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
@@ -94,20 +92,12 @@ description: >-
 
   ## Response Failed
 
-  ### Domain Invalid
-
   ```
 
   {
-    "meta": {
-      "code": 401,
-      "status": "error",
-      "message": "Unauthorize Domain"
-    },
-    "data": {
-      "message": "Something went wrong!",
-      "error": "Failed"
-    }
+    "status": "error",
+    "message": "message error!",
+    "data": null
   }
 
   ```

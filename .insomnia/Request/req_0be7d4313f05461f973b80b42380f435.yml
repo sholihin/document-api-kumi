@@ -1,7 +1,7 @@
 _id: req_0be7d4313f05461f973b80b42380f435
 type: Request
 parentId: fld_0b6e4486ce0042a2ab80e25be56664f0
-modified: 1634720452324
+modified: 1637591709295
 created: 1632996699939
 url: "{{ _.baseurl }}/api/contact/send"
 name: SEND EMAIL
@@ -24,48 +24,40 @@ description: |-
   ## Response Success
   ```
   {
-    "meta": {
-      "code": 200,
-      "status": "success",
-      "message": "success"
+    "status": "success",
+    "message": "Email Sent Successfully!",
+    "data": null
+  }
+  ```
+
+  ## Validation Input
+  ```
+  {
+    "status": "error",
+    "message": {
+      "name": [
+        "The name field is required."
+      ],
+      "email": [
+        "The email field is required."
+      ],
+      "phone": [
+        "The phone field is required."
+      ],
+      "message": [
+        "The message field is required."
+      ]
     },
-    "data": {
-      "message": "Email Sent Successfully!"
-    }
+    "data": null
   }
   ```
 
   ## Response Failed
-  ### Domain Invalid
   ```
   {
-    "meta": {
-      "code": 401,
-      "status": "error",
-      "message": "Send Email Failed"
-    },
-    "data": {
-      "message": "Something went wrong!",
-      "error": "Unauthorized Domain"
-    }
-  }
-  ```
-  ### Validation Input
-  ```
-  {
-    "meta": {
-      "code": 422,
-      "status": "error",
-      "message": "Failed"
-    },
-    "data": {
-      "message": "Something went wrong!",
-      "error": {
-        "name": [
-          "The name field is required."
-        ]
-      }
-    }
+    "status": "error",
+    "message": "message error!",
+    "data": null
   }
   ```
 method: POST
@@ -75,7 +67,7 @@ body:
     {
     	"name" : "mohamad sholihin",
     	"email" : "mohamad.sholihin@gmail.com",
-    	"phone" : "085813246421", 
+    	"phone" : "085813246421",
     	"message" : "Test Email"
     }
 parameters: []

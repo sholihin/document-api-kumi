@@ -1,7 +1,7 @@
 _id: req_219ccbd8ce734432ae6aa0ee0d5a1d9e
 type: Request
 parentId: fld_6e3b207f75df4bf299ced31577d0651a
-modified: 1631690201225
+modified: 1637045242693
 created: 1631690201225
 url: "{{ _.baseurl }}/api/admin/blog"
 name: CREATE
@@ -113,13 +113,13 @@ body:
     - description: ""
       id: pair_517ae35059594315ba7db4c71f33abed
       name: category_id
-      value: a8be48da-b1ad-407a-8632-d8215dd1a199
+      value: 5ea998eb-c1cd-452a-b130-86f478390fd5
     - description: ""
       id: pair_41f5658cfa094af0bc9bb8d7aff5518a
       name: title
       value: Blog Examples
     - description: ""
-      fileName: C:\Users\ADHIT\Downloads\bsi.png
+      fileName: D:\Pictures\bukti.jpg
       id: pair_61f7682e32a942fa9d687410187c6dd6
       name: image
       type: file

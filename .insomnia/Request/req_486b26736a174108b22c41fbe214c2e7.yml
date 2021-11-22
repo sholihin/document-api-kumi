@@ -1,11 +1,47 @@
 _id: req_486b26736a174108b22c41fbe214c2e7
 type: Request
 parentId: fld_3ee4af54477a431fb353b1fda57ad28a
-modified: 1633425987097
+modified: 1637591074651
 created: 1633425983324
 url: "{{ _.baseurl }}/api/config/landing"
 name: Landing Page
-description: ""
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/config/landing
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+  ```
+  {
+    "status": "success",
+    "message": null,
+    "data": {
+      "config_id": "96c97852-c2e2-4b94-8319-6a443b230c64",
+      "status": false,
+      "html": "html",
+      "css": "css",
+      "js": "js",
+      "meta_title": "meta_title",
+      "meta_description": "meta_description",
+      "meta_keyword": "meta_keyword"
+    }
+  }
+  ```
+
+  ## Response Failed
+  ```
+  {
+    "status": "error",
+    "message": "pesan error",
+    "data": null
+  }
+  ```
 method: GET
 body: {}
 parameters: []

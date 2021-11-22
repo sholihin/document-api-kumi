@@ -1,7 +1,7 @@
 _id: req_1c9cd04b636140f29bca14005daa8f7d
 type: Request
 parentId: fld_c6bb3b6a0c8b4c8b94eee36fa591149d
-modified: 1631690190491
+modified: 1636983639922
 created: 1631690190491
 url: "{{ _.baseurl }}/api/wishlist"
 name: CREATE
@@ -112,7 +112,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"product_id" : "dcaa8d22-8e2f-40e0-b76c-a843ee835765"
+    	"product_id" : "6ae3eb33-d64a-4ec8-b615-1cf91a56420d"
     }
 parameters: []
 headers:

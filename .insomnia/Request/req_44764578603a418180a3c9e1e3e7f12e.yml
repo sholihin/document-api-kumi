@@ -1,9 +1,9 @@
 _id: req_44764578603a418180a3c9e1e3e7f12e
 type: Request
 parentId: fld_c6bb3b6a0c8b4c8b94eee36fa591149d
-modified: 1631690190501
+modified: 1636983650965
 created: 1631690190501
-url: "{{ _.baseurl }}/api/wishlist/dcaa8d22-8e2f-40e0-b76c-a843ee835765"
+url: "{{ _.baseurl }}/api/wishlist/6ae3eb33-d64a-4ec8-b615-1cf91a56420d"
 name: DELETE
 description: |-
   ## Method (DELETE)

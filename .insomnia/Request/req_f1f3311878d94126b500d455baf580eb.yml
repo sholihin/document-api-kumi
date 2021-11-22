@@ -1,7 +1,7 @@
 _id: req_f1f3311878d94126b500d455baf580eb
 type: Request
 parentId: fld_5abd3a45fdf34cfda05c5f73e7453059
-modified: 1631690201195
+modified: 1637035111138
 created: 1631690201195
 url: "{{ _.baseurl }}/api/admin/category/blog"
 name: CREATE
@@ -37,21 +37,19 @@ description: >-
   ```
 
   {
-    "meta": {
-      "code": 201,
-      "status": "success",
-      "message": "Category Created!"
-    },
-    "data": {
-      "user": {
-        "id": "5d3ac7b0-b756-41e7-97cb-9b4428180871",
-        "name": "Computer",
-        "slug": "computer",
-        "image": "https:\/\/panel.kumi.id/\/storage\/exampledomain_com\/categories\/ySjEaJ0vKVzuFYSRVV5zB6rWb6dqAgYg5B3UWqwK.png",
-        "created_at": "2021-07-29T13:47:31.000000Z",
-        "updated_at": "2021-07-29T13:47:31.000000Z"
+    "status": "success",
+    "message": null,
+    "data": [
+      {
+        "id": "5ea998eb-c1cd-452a-b130-86f478390fd5",
+        "name": "Baju",
+        "parent_id": null,
+        "slug": "baju",
+        "image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/categories\/lUP9xduulTEl2D6B4VCgT0ok4RqffR5ylUSINCHK.jpeg",
+        "created_at": "2021-11-16T03:56:31.000000Z",
+        "updated_at": "2021-11-16T03:56:31.000000Z"
       }
-    }
+    ]
   }
 
   ```
@@ -59,42 +57,12 @@ description: >-
 
   ## Response Failed
 
-  ### Unauthorized
-
   ```
 
   {
-    "meta": {
-      "code": 401,
       "status": "error",
-      "message": "Creating Category Failed"
-    },
-    "data": {
       "message": "Something went wrong!",
-      "error": "Unauthorized Domain"
-    }
-  }
-
-  ```
-
-  ### Validation Input
-
-  ```
-
-  {
-    "meta": {
-      "code": 422,
-      "status": "error",
-      "message": "Failed"
-    },
-    "data": {
-      "message": "Something went wrong!",
-      "error": {
-        "name": [
-          "The name field is required."
-        ]
-      }
-    }
+      "data": null
   }
 
   ```
@@ -105,13 +73,13 @@ body:
     - description: ""
       id: pair_dbb45fbeb20c448689839f52fa763e4a
       name: name
-      value: Laptop
+      value: Baju
     - description: ""
       id: pair_4c8c68ff51b04685b543291077361b3f
       name: parent_id
       value: ""
     - description: ""
-      fileName: C:\Users\ADHIT\Downloads\store.PNG
+      fileName: D:\Pictures\bukti.jpg
       id: pair_3ef5265881124cb0b5324ea993f29262
       name: image
       type: file

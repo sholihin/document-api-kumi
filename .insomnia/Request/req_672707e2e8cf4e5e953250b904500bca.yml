@@ -1,9 +1,9 @@
 _id: req_672707e2e8cf4e5e953250b904500bca
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1633787538087
+modified: 1636904341594
 created: 1633785582273
-url: "{{ _.baseurl }}/api/checkout/complaints/780ea984-645a-4e7c-9c78-0c6d93cfa0qw"
+url: "{{ _.baseurl }}/api/checkout/complaints/55637e59-4e61-48fa-b210-895c39ffa218"
 name: Complains
 description: ""
 method: POST
@@ -19,13 +19,15 @@ body:
       value: ""
       description: ""
       type: file
-      fileName: C:\Users\ADHIT\Downloads\store.PNG
+      fileName: D:\Pictures\bukti.jpg
+      disabled: false
     - id: pair_7f9fd4a5fae0478bb01ed81e2525ce49
       name: images[]
       value: ""
       description: ""
       type: file
-      fileName: C:\Users\ADHIT\Downloads\WhatsApp Image 2021-10-04 at 07.44.19.jpeg
+      fileName: D:\Pictures\sinergi21.png
+      disabled: true
 parameters: []
 headers:
   - id: pair_c4da5454d48647b393290df91a74c138

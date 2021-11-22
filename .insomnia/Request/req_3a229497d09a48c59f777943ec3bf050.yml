@@ -1,16 +1,16 @@
 _id: req_3a229497d09a48c59f777943ec3bf050
 type: Request
 parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
-modified: 1634876281452
+modified: 1636987302367
 created: 1633416585708
 url: "{{ _.baseurl
-  }}/api/admin/checkout/status/payment/043bd4e2-d8a3-4c12-be73-528d71ae5bde"
+  }}/api/admin/checkout/status/payment/55637e59-4e61-48fa-b210-895c39ffa218"
 name: Payment Status
 description: |-
   ## Method (PATCH)
   ## Route
   ```
-  /api/admin/checkout/status/delivery/{invoice}
+  /api/admin/checkout/status/payment/{invoice}
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
@@ -36,14 +36,11 @@ description: |-
   ```
   {
     "meta": {
-      "code": 401,
-      "status": "error",
-      "message": "Updating Payment Status Failed"
+      "code": 201,
+      "status": "success",
+      "message": "Payment Status Successfully Updated!"
     },
-    "data": {
-      "message": "Something went wrong!",
-      "error": "Unauthorized Domain"
-    }
+    "data": "success"
   }
   ```
 method: PATCH

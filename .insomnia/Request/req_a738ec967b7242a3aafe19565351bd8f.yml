@@ -1,7 +1,7 @@
 _id: req_a738ec967b7242a3aafe19565351bd8f
 type: Request
 parentId: fld_92db5037fd30421984552980f3ae17fb
-modified: 1637207497608
+modified: 1637592518634
 created: 1637113872555
 url: "{{ _.baseurl }}/api/product/canon-printer-ts207-inkjet-canon-jk4il"
 name: Detail

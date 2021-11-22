@@ -1,16 +1,16 @@
 _id: req_84e10b31f81a46108f0b9c6c042b5061
 type: Request
 parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
-modified: 1633927130235
+modified: 1636987010301
 created: 1633788373477
 url: "{{ _.baseurl
-  }}/api/admin/checkout/status/complaint/780ea984-645a-4e7c-9c78-0c6d93cfa0qw"
+  }}/api/admin/checkout/status/complaint/55637e59-4e61-48fa-b210-895c39ffa218"
 name: Complaint Status
 description: |-
   ## Method (PATCH)
   ## Route
   ```
-  /api/admin/checkout/status/delivery/{invoice}
+  /api/admin/checkout/status/complaint{invoice}
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
@@ -62,12 +62,13 @@ body:
       name: detail_status
       value: REFUND
       description: ""
+      disabled: false
     - id: pair_db5b8540ce994986b7825238dc4001f2
       name: transfer_image
       value: ""
       description: ""
       type: file
-      fileName: C:\Users\ADHIT\Downloads\store.PNG
+      fileName: D:\Pictures\bukti.jpg
     - id: pair_334dd46e3cf44f34815a198ef514314a
       name: _method
       value: PATCH

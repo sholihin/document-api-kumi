@@ -1,9 +1,9 @@
 _id: req_da8582b934664489bae5f92c35d36de5
 type: Request
 parentId: fld_2d0bdc60709345dabd00452d5f138750
-modified: 1631771101643
+modified: 1636904483924
 created: 1631699788008
-url: "{{ _.baseurl }}/api/reseller/store/37a5b1d9-53c9-4c8f-9028-9b8d9f7cc60b"
+url: "{{ _.baseurl }}/api/reseller/store/27ff0989-07d9-4932-9d50-14c8c16e18d5"
 name: UPDATE
 description: >-
   ## Method (PATCH)
@@ -121,7 +121,7 @@ body:
       value: ""
       description: ""
       type: file
-      fileName: C:\Users\ADHIT\Downloads\store.PNG
+      fileName: D:\Pictures\bukti.jpg
     - id: pair_b05cd59c0a03447aa7d7161a07371276
       name: sub_domain
       value: tokoepik
@@ -148,7 +148,7 @@ headers:
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
     description: ""
-    disabled: true
+    disabled: false
 authentication:
   type: bearer
   token: "{{ _.token_reseller }}"

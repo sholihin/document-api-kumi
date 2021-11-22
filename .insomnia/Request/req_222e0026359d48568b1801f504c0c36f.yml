@@ -1,7 +1,7 @@
 _id: req_222e0026359d48568b1801f504c0c36f
 type: Request
 parentId: fld_4a65af8a2b16414ca0f1a513492bc30c
-modified: 1634182612848
+modified: 1637222719280
 created: 1631690201299
 url: "{{ _.baseurl }}/api/admin/login"
 name: Login Admin
@@ -34,19 +34,19 @@ description: >-
   ```
 
   {
-    "meta": {
-      "code": 200,
-      "status": "success",
-      "message": "Authenticated"
-    },
+    "status": "success",
+    "message": null,
     "data": {
-      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyNzQ4Mjk4NiwiZXhwIjoxNjI3NDg2NTg2LCJuYmYiOjE2Mjc0ODI5ODYsImp0aSI6IjZCdWdKVEQ1ZmJrTXBuNmQiLCJzdWIiOiI3OThlOGRkYS02OTk5LTRjN2UtOTcxNy1jNDk2MjJiMzcyOTciLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.VzHCaWRl81IDPONEKvu6p35IKsggIfTa69g_WCwxOy8",
+      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MzcwMzI3MTYsImV4cCI6MTYzNzAzNjMxNiwibmJmIjoxNjM3MDMyNzE2LCJqdGkiOiJjdFBCZFJHS3hEdFl6eEkxIiwic3ViIjoiZGU2ZDA0MDEtYjY5MS00M2EwLTlkYzQtOWZlMGY4YjM4MjAxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.1_wpHiD5D2z5C8psXMJlO0ZoAOB5gI1D0-gpiEHsnlU",
       "user": {
-        "id": "798e8dda-6999-4c7e-9717-c49622b37297",
+        "id": "de6d0401-b691-43a0-9dc4-9fe0f8b38201",
         "name": "Admin",
+        "avatar": "https:\/\/ui-avatars.com\/api\/?name=Admin&background=4e73df&color=ffffff&size=100",
+        "jenkel": "L",
         "email": "admin@kumi.id",
-        "created_at": "2021-07-25T13:16:07.000000Z",
-        "updated_at": "2021-07-25T13:16:07.000000Z"
+        "phone_number": "87764281999",
+        "created_at": "2021-11-14T13:56:01.000000Z",
+        "updated_at": "2021-11-14T13:56:02.000000Z"
       }
     }
   }
@@ -61,40 +61,9 @@ description: >-
   ```
 
   {
-    "meta": {
-      "code": 500,
-      "status": "error",
-      "message": "Authenticated Failed"
-    },
-    "data": {
-      "message": "Something went wrong!",
-      "error": "Invalid Credential!"
-    }
-  }
-
-  ```
-
-  ### Validation Input
-
-  ```
-
-  {
-    "meta": {
-      "code": 422,
-      "status": "error",
-      "message": "Authenticated Failed"
-    },
-    "data": {
-      "message": "Something went wrong!",
-      "error": {
-        "email": [
-          "The email field is required."
-        ],
-        "password": [
-          "The password field is required."
-        ]
-      }
-    }
+    "status": "failed",
+    "message": "message error",
+    "data": null
   }
 
   ```
