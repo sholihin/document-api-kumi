@@ -1,0 +1,103 @@
+_id: req_2636ba78cbc84482bbcb8253253cc6a8
+type: Request
+parentId: fld_f89572f6eeb7496bb5da99d47fd378a3
+modified: 1637655780141
+created: 1637654512998
+url: "{{ _.baseurl }}/api/bank"
+name: List Data Bank
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/bank
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "status": "success",
+    "message": "Data banks retrieved!",
+    "data": [
+      {
+        "id_data": "3cef1f66-59b2-44fe-b4c5-9655b958302e",
+        "no_rekening": 123456789,
+        "nama_pemilik": "kumi",
+        "bank_id": {
+          "id": 1,
+          "name": "BANK BRI",
+          "code": "002",
+          "logo": "http:\/\/kumi-backend.apps\/assets\/img\/payment\/BRI.png",
+          "panduan": "<p><span style=\\\"font-size:16px\\\"><strong>Panduan Pembayaran M-Banking BRI<\/strong><\/span><\/p><ul><li>Buka aplikasi, lalu pilih menu&nbsp;<strong>Mobile Banking BRI<\/strong>.<\/li><li>Saat muncul jendela baru, tap menu&nbsp;<strong>Transfer<\/strong>.<\/li><li>Untuk transfer ke sesama rekening BRI, tap menu&nbsp;<strong>Sesama BRI<\/strong>.<\/li><li>Pada halaman baru,&nbsp;<strong>masukkan nomor rekening BRI<\/strong>&nbsp;yang dituju.<\/li><li><strong>Masukkan jumlah transfer<\/strong>&nbsp;yang akan dikirim.<\/li><li>Klik&nbsp;<strong>OK<\/strong>. Lalu,&nbsp;<strong>masukkan PIN<\/strong>&nbsp;Mobile Banking BRI Anda. Klik&nbsp;<strong>SEND<\/strong>.<\/li><li>Untuk melakukan verifikasi SMS, Klik&nbsp;<strong>OK<\/strong>.<\/li><li>Terima SMS dari Mobile Banking BRI, lalu ketik&nbsp;<strong>YA<\/strong>&nbsp;&lt;spasi&gt;&nbsp;<strong>Kode Transaksi<\/strong>. Kalau bingung, ikuti saja petunjuk yang ada pada SMS tersebut.<\/li><li>Kalau sudah benar, langsung&nbsp;<strong>Kirim SMS<\/strong>.<\/li><\/ul>"
+        },
+        "status_bank": 1
+      }
+    ]
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Showing Master Bank Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+method: GET
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"no_rekening" : 123456789,
+    	"nama_pemilik" : "kumi",
+    	"bank_id" : 1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_ddc0137d7d0c451194ef44864f346531
+  - id: pair_223632ef7d39488d8660d1c380a1655f
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1637653961924
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

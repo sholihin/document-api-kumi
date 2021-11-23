@@ -1,0 +1,131 @@
+_id: req_74583328b1b945e09e80eadd2b3e73a0
+type: Request
+parentId: fld_c70a990aebc64a889d18e7f6bd431d44
+modified: 1637655870803
+created: 1637655870803
+url: "{{ _.baseurl }}/api/banks"
+name: Master Bank
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/banks
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "banks": [
+        {
+          "id": 1,
+          "name": "BANK BRI",
+          "code": "002",
+          "logo": "http:\/\/kumi-backend.apps\/assets\/img\/payment\/BRI.png",
+          "panduan": "<p><span style=\\\"font-size:16px\\\"><strong>Panduan Pembayaran M-Banking BRI<\/strong><\/span><\/p><ul><li>Buka aplikasi, lalu pilih menu&nbsp;<strong>Mobile Banking BRI<\/strong>.<\/li><li>Saat muncul jendela baru, tap menu&nbsp;<strong>Transfer<\/strong>.<\/li><li>Untuk transfer ke sesama rekening BRI, tap menu&nbsp;<strong>Sesama BRI<\/strong>.<\/li><li>Pada halaman baru,&nbsp;<strong>masukkan nomor rekening BRI<\/strong>&nbsp;yang dituju.<\/li><li><strong>Masukkan jumlah transfer<\/strong>&nbsp;yang akan dikirim.<\/li><li>Klik&nbsp;<strong>OK<\/strong>. Lalu,&nbsp;<strong>masukkan PIN<\/strong>&nbsp;Mobile Banking BRI Anda. Klik&nbsp;<strong>SEND<\/strong>.<\/li><li>Untuk melakukan verifikasi SMS, Klik&nbsp;<strong>OK<\/strong>.<\/li><li>Terima SMS dari Mobile Banking BRI, lalu ketik&nbsp;<strong>YA<\/strong>&nbsp;&lt;spasi&gt;&nbsp;<strong>Kode Transaksi<\/strong>. Kalau bingung, ikuti saja petunjuk yang ada pada SMS tersebut.<\/li><li>Kalau sudah benar, langsung&nbsp;<strong>Kirim SMS<\/strong>.<\/li><\/ul>"
+        },
+        {
+          "id": 2,
+          "name": "BANK MANDIRI",
+          "code": "008",
+          "logo": "http:\/\/kumi-backend.apps\/assets\/img\/payment\/MANDIRI.png",
+          "panduan": "<p><span style=\\\"font-size:16px\\\"><strong>Panduan Pembayaran M-Banking Mandiri (Livin&#39; by Mandiri)<\/strong><\/span><\/p><ul><li><strong>Login<\/strong>&nbsp;Livin&#39; dengan&nbsp;<strong>Username<\/strong>&nbsp;dan&nbsp;<strong>Password<\/strong>&nbsp;Anda.<\/li><li><p>Tap di menu&nbsp;<strong>Transfer.<\/strong><\/p><\/li><li>Pilih jenis transfer&nbsp;<strong>Ke Rekening Mandiri<\/strong><\/li><li><p>Tentukan&nbsp;<strong>Rekening Sumber<\/strong>&nbsp;yang akan anda pakai.<\/p><\/li><li>Isi&nbsp;<strong>Nomor Rekening Tujuan&nbsp;<\/strong>transfer dan&nbsp;<strong>Jumlah&nbsp;<\/strong>transfer<\/li><li><p>Pastikan informasi bayar sesuai lalu tekan&nbsp;<strong>Kirim&nbsp;<\/strong>dan masukkan&nbsp;<strong>MPIN<\/strong>.<\/p><\/li><\/ul>"
+        },
+        {
+          "id": 3,
+          "name": "BANK BNI",
+          "code": "009",
+          "logo": "http:\/\/kumi-backend.apps\/assets\/img\/payment\/BNI.png",
+          "panduan": "<p><span style=\\\"font-size:16px\\\"><strong>Panduan Pembayaran M-Banking BNI<\/strong><\/span><\/p><ul><li>Masukkan&nbsp;<strong><em>username<\/em><\/strong>&nbsp;dan <strong><em>mpin&nbsp;<\/em><\/strong>pada kolom yang tersedia.<\/li><li><p>Tap di menu&nbsp;<strong>Transfer.<\/strong><\/p><\/li><li>Pilih jenis transfer&nbsp;<strong>BNI<\/strong><\/li><li><p>Masukan <strong>Nomor Rekening<\/strong> tujuan dan <strong>Jumlah <\/strong>transfer<\/p><\/li><li>Klik <strong>Selanjutnya<\/strong><\/li><li><p>Pastikan informasi bayar sesuai lalu masukan <strong>Password <\/strong>dan klik <strong>Selanjutnya<\/strong><\/p><\/li><\/ul>"
+        },
+        {
+          "id": 4,
+          "name": "BANK SYARIAH INDONESIA",
+          "code": "451",
+          "logo": "http:\/\/kumi-backend.apps\/assets\/img\/payment\/BSI.png",
+          "panduan": "<p><span style=\\\"font-size:16px\\\"><strong>Panduan Pembayaran M-Banking Bank Syariah Indonesia (BSI)<\/strong><\/span><\/p><ul><li>Silakan buka aplikasi <strong>BSI Mobile<\/strong> Anda, kemudian silakan pilih menu transfer<\/li><li><p>Pilih Jenis <strong>Transfer<\/strong><\/p><\/li><li>Masukan<strong> Nomor Rekening BSI <\/strong>yang <strong>di Tuju<\/strong><\/li><li><p>Masukan <strong>Nominal<\/strong><\/p><\/li><li>Konfirmasi <strong>PIN BSI Mobile<\/strong><\/li><li><p>Konfirmasi <strong>Transfer<\/strong><\/p><\/li><\/ul>"
+        },
+        {
+          "id": 5,
+          "name": "BANK PERMATA",
+          "code": "013",
+          "logo": "http:\/\/kumi-backend.apps\/assets\/img\/payment\/PERMATA.png",
+          "panduan": "<p><span style=\\\"font-size:16px\\\"><strong>Panduan Pembayaran M-Banking Permata Bank<\/strong><\/span><\/p><ul><li>Buka aplikasi <strong>PermataMobile <\/strong>dan lakukan&nbsp;<em><strong>log in<\/strong>.<\/em><\/li><li>Pilih menu <strong>Transfer<\/strong><\/li><li>Pilih menu Antar Rekening <strong>PermataBank<\/strong><\/li><li>Konfirmasi kembali <strong>nomor rekening<\/strong>, <strong>nominal <\/strong>dan <strong>tanggal transfer<\/strong><\/li><li>Input&nbsp;<strong><em>response code<\/em><\/strong>&nbsp;atau yang biasa disebut dengan <strong>token<\/strong>.<\/li><li>Selanjutnya klik <strong>tombol konfirmasi,<\/strong> maka proses transfer pun akan berjalan. Jika transaksi berhasil, Anda akan mendapatkan <strong>bukti transaksi<\/strong>.<\/li><\/ul>"
+        },
+        {
+          "id": 6,
+          "name": "BANK BCA",
+          "code": "014",
+          "logo": "http:\/\/kumi-backend.apps\/assets\/img\/payment\/BCA.png",
+          "panduan": "<p><span style=\\\"font-size:16px\\\"><strong>Panduan Pembayaran M-Banking BCA<\/strong><\/span><\/p><ul><li>Masuk ke menu m-Transfer.<\/li><li>Selanjutnya, pilih transfer ke sesama bank atau lain bank.<\/li><li>Jika ke lain bank, maka masuklah ke menu transfer antar rekening. Lalu pilih ke rekening mana yang kamu akan transfer.<\/li><li>Setelah itu, masukkan kode bank dan nomor rekening tujuan, lalu masukkan jumlah uang yang akan kamu transfer.<\/li><li>Kemudian kamu akan melihat menu konfirmasi nomor rekening penerima. Setelah itu kamu diminta memasukkan Personal Identification Number (PIN) BCA, pastikan tidak salah dalam memasukkan PIN<\/li><\/ul>"
+        }
+      ]
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Showing Master Bank Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_534c48daccca422aadcb2bc6fdda09ba
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+  - id: pair_8765ecab834649bcafbe28b301582e86
+    name: ""
+    value: ""
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1637653919338
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
