@@ -1,9 +1,9 @@
 _id: req_a738ec967b7242a3aafe19565351bd8f
 type: Request
 parentId: fld_92db5037fd30421984552980f3ae17fb
-modified: 1637592518634
+modified: 1637738859237
 created: 1637113872555
-url: "{{ _.baseurl }}/api/product/canon-printer-ts207-inkjet-canon-jk4il"
+url: "{{ _.baseurl }}/api/product/leopard-g20-led-gaming-keyboard-leopard-lclg1"
 name: Detail
 description: >-
   ## Method (GET)
@@ -32,123 +32,43 @@ description: >-
   ```
 
   {
-    "meta": {
-      "code": 200,
-      "status": "success",
-      "message": "success"
-    },
-    "data": {
-      "product": {
-        "id": "13af51c9-589e-452e-9bf7-8ebc7ad10168",
-        "title": "Canon Printer Ts207 Inkjet",
-        "slug": "canon-printer-ts207-inkjet-canon-jk4il",
-        "type": "physical",
-        "merk": "CANON",
-        "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/printer.jpg",
-        "category": {
-          "id": "6df2fc06-c50b-411d-bfe9-359d0e1b3cea",
-          "name": "Printer",
-          "parent_id": null,
-          "slug": "printer",
-          "image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/categories\/printer.svg",
-          "created_at": "2021-11-16T03:52:26.000000Z",
-          "updated_at": "2021-11-16T03:52:26.000000Z"
-        },
-        "content": "",
-        "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pisone in eo gymnasio, quod Ptolomaeum vocatur, unaque nobiscum Q. Sed haec quidem liberius ab eo dicuntur et saepius. Ille vero, si insipiens-quo certe, quoniam tyrannus -, numquam beatus; De ingenio eius in his disputationibus, non de moribus quaeritur. <\/p>\n\n<p>Sed plane dicit quod intellegit. Habes, inquam, Cato, formam eorum, de quibus loquor, philosophorum. Nam his libris eum malo quam reliquo ornatu villae delectari. Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Miserum hominem! Si dolor summum malum est, dici aliter non potest. Portenta haec esse dicit, neque ea ratione ullo modo posse vivi; Qualem igitur hominem natura inchoavit? Et hunc idem dico, inquieta sed ad virtutes et ad vitia nihil interesse. <\/p>\n\n<p>Duo Reges: constructio interrete. Id mihi magnum videtur. Si quicquam extra virtutem habeatur in bonis. Sed tu istuc dixti bene Latine, parum plane. Non est enim vitium in oratione solum, sed etiam in moribus. Quid autem habent admirationis, cum prope accesseris? <\/p>\n\n<p>Quis est, qui non oderit libidinosam, protervam adolescentiam? Ergo hoc quidem apparet, nos ad agendum esse natos. Cur igitur, cum de re conveniat, non malumus usitate loqui? Quod totum contra est. Nemo nostrum istius generis asotos iucunde putat vivere. Tubulo putas dicere? Et ille ridens: Video, inquit, quid agas; <\/p>\n\n",
-        "weight": 5000,
-        "price": 715000,
-        "stocks": 10,
-        "reseller_price": null,
-        "discount_type": null,
-        "discount": null,
-        "affiliate_type": null,
-        "affiliate_fee": null,
-        "pin": null,
-        "seo": 0,
-        "meta_title": null,
-        "meta_keyword": null,
-        "meta_description": null,
-        "status": 1,
-        "product_sold": 1,
-        "reviews_count": 1,
-        "reviews": [
-          {
-            "id": "16d13d31-09e8-44b4-8b98-b0716c921963",
-            "user": {
-              "id": "fed03689-f0d3-4e72-a28a-7c05a33260c9",
-              "name": "Customer",
-              "avatar": "https:\/\/ui-avatars.com\/api\/?name=Customer&background=4e73df&color=ffffff&size=100",
-              "jenkel": "L",
-              "email": "customer@kumi.id",
-              "phone_number": "87764281912",
-              "created_at": "2021-11-16T03:52:16.000000Z",
-              "updated_at": "2021-11-16T03:52:16.000000Z"
-            },
-            "rating": 4,
-            "comment": "hidden by owner cause its inappropriate!",
-            "reply": {
-              "id": "53f8bd8f-623d-4378-a53b-8970e939d46e",
+      "data": {
+          "id": "13af51c9-589e-452e-9bf7-8ebc7ad10168",
+          "title": "Canon Printer Ts207 Inkjet",
+          "slug": "canon-printer-ts207-inkjet-canon-jk4il",
+          "type": "physical",
+          "merk": "CANON",
+          "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/printer.jpg",
+          "category": {
+              "id": "6df2fc06-c50b-411d-bfe9-359d0e1b3cea",
+              "name": "Printer",
+              "parent_id": null,
+              "slug": "printer",
+              "image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/categories\/printer.svg",
+              "created_at": "2021-11-16T03:52:26.000000Z",
+              "updated_at": "2021-11-16T03:52:26.000000Z"
+          },
+          "content": "",
+          "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pisone in eo gymnasio, quod Ptolomaeum vocatur, unaque nobiscum Q. Sed haec quidem liberius ab eo dicuntur et saepius. Ille vero, si insipiens-quo certe, quoniam tyrannus -, numquam beatus; De ingenio eius in his disputationibus, non de moribus quaeritur. <\/p>\n\n<p>Sed plane dicit quod intellegit. Habes, inquam, Cato, formam eorum, de quibus loquor, philosophorum. Nam his libris eum malo quam reliquo ornatu villae delectari. Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Miserum hominem! Si dolor summum malum est, dici aliter non potest. Portenta haec esse dicit, neque ea ratione ullo modo posse vivi; Qualem igitur hominem natura inchoavit? Et hunc idem dico, inquieta sed ad virtutes et ad vitia nihil interesse. <\/p>\n\n<p>Duo Reges: constructio interrete. Id mihi magnum videtur. Si quicquam extra virtutem habeatur in bonis. Sed tu istuc dixti bene Latine, parum plane. Non est enim vitium in oratione solum, sed etiam in moribus. Quid autem habent admirationis, cum prope accesseris? <\/p>\n\n<p>Quis est, qui non oderit libidinosam, protervam adolescentiam? Ergo hoc quidem apparet, nos ad agendum esse natos. Cur igitur, cum de re conveniat, non malumus usitate loqui? Quod totum contra est. Nemo nostrum istius generis asotos iucunde putat vivere. Tubulo putas dicere? Et ille ridens: Video, inquit, quid agas; <\/p>\n\n",
+          "weight": 5000,
+          "price": 715000,
+          "stocks": 10,
+          "reseller_price": null,
+          "discount_type": null,
+          "discount": null,
+          "affiliate_type": null,
+          "affiliate_fee": null,
+          "pin": null,
+          "seo": 0,
+          "meta_title": null,
+          "meta_keyword": null,
+          "meta_description": null,
+          "status": 1,
+          "product_sold": 1,
+          "reviews_count": 1,
+          "reviews": [{
+              "id": "16d13d31-09e8-44b4-8b98-b0716c921963",
               "user": {
-                "id": "0d328ded-9002-4cb4-8883-52c3fee8ec06",
-                "name": "Admin",
-                "avatar": "https:\/\/ui-avatars.com\/api\/?name=Admin&background=4e73df&color=ffffff&size=100",
-                "jenkel": "L",
-                "email": "admin@kumi.id",
-                "phone_number": "87764281999",
-                "created_at": "2021-11-16T03:52:16.000000Z",
-                "updated_at": "2021-11-16T03:52:16.000000Z"
-              },
-              "comment": "terima kasih",
-              "created_at": "2021-11-18T03:43:10.000000Z",
-              "updated_at": "2021-11-18T03:43:10.000000Z"
-            },
-            "created_at": "2021-11-18T03:42:53.000000Z",
-            "updated_at": "2021-11-18T03:42:53.000000Z"
-          }
-        ],
-        "discussions": [
-          {
-            "id": "224b2cac-9461-47c8-bb0f-b7f14673e5dc",
-            "parent": null,
-            "product": "13af51c9-589e-452e-9bf7-8ebc7ad10168",
-            "user": {
-              "id": "fed03689-f0d3-4e72-a28a-7c05a33260c9",
-              "name": "Customer",
-              "avatar": "https:\/\/ui-avatars.com\/api\/?name=Customer&background=4e73df&color=ffffff&size=100",
-              "jenkel": "L",
-              "email": "customer@kumi.id",
-              "phone_number": "87764281912",
-              "created_at": "2021-11-16T03:52:16.000000Z",
-              "updated_at": "2021-11-16T03:52:16.000000Z"
-            },
-            "description": "ada?",
-            "created_at": "2021-11-17T03:52:03.000000Z",
-            "updated_at": "2021-11-17T03:52:03.000000Z",
-            "replies": [
-              {
-                "id": "b70b6daf-f322-4cf5-b441-63f488e9d3e3",
-                "parent": "224b2cac-9461-47c8-bb0f-b7f14673e5dc",
-                "product": "13af51c9-589e-452e-9bf7-8ebc7ad10168",
-                "user": {
-                  "id": "0d328ded-9002-4cb4-8883-52c3fee8ec06",
-                  "name": "Admin",
-                  "avatar": "https:\/\/ui-avatars.com\/api\/?name=Admin&background=4e73df&color=ffffff&size=100",
-                  "jenkel": "L",
-                  "email": "admin@kumi.id",
-                  "phone_number": "87764281999",
-                  "created_at": "2021-11-16T03:52:16.000000Z",
-                  "updated_at": "2021-11-16T03:52:16.000000Z"
-                },
-                "description": "ada",
-                "created_at": "2021-11-17T04:00:51.000000Z",
-                "updated_at": "2021-11-17T04:00:51.000000Z"
-              },
-              {
-                "id": "d6aa5244-65b6-472b-b38c-fbbca3a74d0e",
-                "parent": "224b2cac-9461-47c8-bb0f-b7f14673e5dc",
-                "product": "13af51c9-589e-452e-9bf7-8ebc7ad10168",
-                "user": {
                   "id": "fed03689-f0d3-4e72-a28a-7c05a33260c9",
                   "name": "Customer",
                   "avatar": "https:\/\/ui-avatars.com\/api\/?name=Customer&background=4e73df&color=ffffff&size=100",
@@ -157,18 +77,86 @@ description: >-
                   "phone_number": "87764281912",
                   "created_at": "2021-11-16T03:52:16.000000Z",
                   "updated_at": "2021-11-16T03:52:16.000000Z"
-                },
-                "description": "oke",
-                "created_at": "2021-11-17T04:09:36.000000Z",
-                "updated_at": "2021-11-17T04:09:36.000000Z"
-              }
-            ]
-          }
-        ],
-        "created_at": "2021-11-16T03:52:27.000000Z",
-        "updated_at": "2021-11-16T03:52:27.000000Z"
+              },
+              "rating": 4,
+              "comment": "hidden by owner cause its inappropriate!",
+              "reply": {
+                  "id": "53f8bd8f-623d-4378-a53b-8970e939d46e",
+                  "user": {
+                      "id": "0d328ded-9002-4cb4-8883-52c3fee8ec06",
+                      "name": "Admin",
+                      "avatar": "https:\/\/ui-avatars.com\/api\/?name=Admin&background=4e73df&color=ffffff&size=100",
+                      "jenkel": "L",
+                      "email": "admin@kumi.id",
+                      "phone_number": "87764281999",
+                      "created_at": "2021-11-16T03:52:16.000000Z",
+                      "updated_at": "2021-11-16T03:52:16.000000Z"
+                  },
+                  "comment": "terima kasih",
+                  "created_at": "2021-11-18T03:43:10.000000Z",
+                  "updated_at": "2021-11-18T03:43:10.000000Z"
+              },
+              "created_at": "2021-11-18T03:42:53.000000Z",
+              "updated_at": "2021-11-18T03:42:53.000000Z"
+          }],
+          "discussions": [{
+              "id": "224b2cac-9461-47c8-bb0f-b7f14673e5dc",
+              "parent": null,
+              "product": "13af51c9-589e-452e-9bf7-8ebc7ad10168",
+              "user": {
+                  "id": "fed03689-f0d3-4e72-a28a-7c05a33260c9",
+                  "name": "Customer",
+                  "avatar": "https:\/\/ui-avatars.com\/api\/?name=Customer&background=4e73df&color=ffffff&size=100",
+                  "jenkel": "L",
+                  "email": "customer@kumi.id",
+                  "phone_number": "87764281912",
+                  "created_at": "2021-11-16T03:52:16.000000Z",
+                  "updated_at": "2021-11-16T03:52:16.000000Z"
+              },
+              "description": "ada?",
+              "created_at": "2021-11-17T03:52:03.000000Z",
+              "updated_at": "2021-11-17T03:52:03.000000Z",
+              "replies": [{
+                      "id": "b70b6daf-f322-4cf5-b441-63f488e9d3e3",
+                      "parent": "224b2cac-9461-47c8-bb0f-b7f14673e5dc",
+                      "product": "13af51c9-589e-452e-9bf7-8ebc7ad10168",
+                      "user": {
+                          "id": "0d328ded-9002-4cb4-8883-52c3fee8ec06",
+                          "name": "Admin",
+                          "avatar": "https:\/\/ui-avatars.com\/api\/?name=Admin&background=4e73df&color=ffffff&size=100",
+                          "jenkel": "L",
+                          "email": "admin@kumi.id",
+                          "phone_number": "87764281999",
+                          "created_at": "2021-11-16T03:52:16.000000Z",
+                          "updated_at": "2021-11-16T03:52:16.000000Z"
+                      },
+                      "description": "ada",
+                      "created_at": "2021-11-17T04:00:51.000000Z",
+                      "updated_at": "2021-11-17T04:00:51.000000Z"
+                  },
+                  {
+                      "id": "d6aa5244-65b6-472b-b38c-fbbca3a74d0e",
+                      "parent": "224b2cac-9461-47c8-bb0f-b7f14673e5dc",
+                      "product": "13af51c9-589e-452e-9bf7-8ebc7ad10168",
+                      "user": {
+                          "id": "fed03689-f0d3-4e72-a28a-7c05a33260c9",
+                          "name": "Customer",
+                          "avatar": "https:\/\/ui-avatars.com\/api\/?name=Customer&background=4e73df&color=ffffff&size=100",
+                          "jenkel": "L",
+                          "email": "customer@kumi.id",
+                          "phone_number": "87764281912",
+                          "created_at": "2021-11-16T03:52:16.000000Z",
+                          "updated_at": "2021-11-16T03:52:16.000000Z"
+                      },
+                      "description": "oke",
+                      "created_at": "2021-11-17T04:09:36.000000Z",
+                      "updated_at": "2021-11-17T04:09:36.000000Z"
+                  }
+              ]
+          }],
+          "created_at": "2021-11-16T03:52:27.000000Z",
+          "updated_at": "2021-11-16T03:52:27.000000Z"
       }
-    }
   }
 
   ```
@@ -176,19 +164,13 @@ description: >-
 
   ## Response Failed
 
-  ### Domain Invalid
-
   ```
 
   {
-    "meta": {
-      "code": 401,
-      "status": "error",
-      "message": "Unauthorize Domain"
-    },
     "data": {
-      "message": "Something went wrong!",
-      "error": "Failed"
+      "message": "error message!",
+      "status": "error",
+      "data": null
     }
   }
 
