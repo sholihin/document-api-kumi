@@ -1,0 +1,54 @@
+_id: req_8b5cb39c847a4c1799a8b8253c164d02
+type: Request
+parentId: fld_b0fc06fc115047778ef38581d3fdecc8
+modified: 1637907849824
+created: 1637898794793
+url: "{{ _.baseurl
+  }}/api/admin/wallet/confirmation/7801bf4c-d3ec-47cd-9dc6-1fd763765831"
+name: Wallet Confirmation
+description: ""
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_77c786916f9d472581d9abebc29055a4
+      name: _method
+      value: PATCH
+      description: ""
+    - id: pair_d07f2a6c7b1e490ba4c88d753133a59b
+      name: status
+      value: CANCELED
+      description: ""
+      disabled: true
+    - id: pair_d879bd8326c449b2bfc3b63cfa0fc20b
+      name: reason
+      value: tidak terkualifikasi
+      description: ""
+      disabled: true
+    - id: pair_30162a55343f4a798ed5a46f330166a4
+      name: picture
+      value: ""
+      description: ""
+      type: file
+      multiline: null
+      fileName: C:\Users\ADHIT\Downloads\WhatsApp Image 2021-11-25 at 09.55.44.jpeg
+parameters: []
+headers:
+  - id: pair_0bdecacb2d784cd2bf1a6d7f836cf97f
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_d3f4898b65e44806beaba981141efa5e
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1637898794793
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

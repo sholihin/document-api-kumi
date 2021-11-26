@@ -1,7 +1,7 @@
 _id: req_66c471dcdc034f379dedc1dfe0325250
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1634811254439
+modified: 1637754313391
 created: 1632134456283
 url: "{{ _.baseurl }}/api/oncheckout?courier=jne&service_courier=reg"
 name: OnCheckout
@@ -365,7 +365,7 @@ headers:
     id: pair_9f8152cadc3346d8a432a0b90c96a975
   - id: pair_c66db063e78648f097664f2dc5b094b5
     name: X-DOMAIN-MEMBER
-    value: "{{ _.domain }}"
+    value: "{{ _.subdomain }}"
     description: ""
 authentication:
   type: bearer

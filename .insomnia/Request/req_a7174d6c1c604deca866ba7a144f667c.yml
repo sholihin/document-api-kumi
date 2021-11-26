@@ -1,10 +1,10 @@
-_id: req_58bee3eabb204221af2aaa9812be3b14
+_id: req_a7174d6c1c604deca866ba7a144f667c
 type: Request
-parentId: fld_c70a990aebc64a889d18e7f6bd431d44
-modified: 1637742245808
-created: 1637655870810
-url: "{{ _.baseurl }}/api/bank"
-name: List Data Bank
+parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
+modified: 1637744478218
+created: 1637744352890
+url: "{{ _.baseurl }}/api/checkout/list-banks"
+name: List Banks
 description: >-
   ## Method (GET)
 
@@ -12,19 +12,22 @@ description: >-
 
   ```
 
-  /api/bank
+  /api/checkout/list-banks
 
   ```
 
-  ## Parameters
+  ## Query Parameters
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
   |---------|----|--------|--------|
 
-  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |invoice|uuid|required|route param|asdas3452-124312sdf|
 
-  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
 
   ## Response Success
 
@@ -32,10 +35,10 @@ description: >-
 
   {
     "status": "success",
-    "message": "Data banks retrieved!",
+    "message": "Data Banks Retrieved",
     "data": [
       {
-        "id_data": "3cef1f66-59b2-44fe-b4c5-9655b958302e",
+        "id_data": "f7597924-25cf-445c-9fb2-1e1ca0ec3430",
         "no_rekening": 123456789,
         "nama_pemilik": "kumi",
         "bank_id": {
@@ -55,15 +58,13 @@ description: >-
 
   ## Response Failed
 
-  ### Unauthorized
-
   ```
 
   {
     "meta": {
       "code": 401,
       "status": "error",
-      "message": "Showing Master Bank Failed"
+      "message": "Check Delivery Status Failed!"
     },
     "data": {
       "message": "Something went wrong!",
@@ -73,27 +74,17 @@ description: >-
 
   ```
 method: GET
-body:
-  mimeType: application/json
-  text: |-
-    {
-    	"no_rekening" : 123456789,
-    	"nama_pemilik" : "kumi",
-    	"bank_id" : 1
-    }
+body: {}
 parameters: []
 headers:
-  - name: Content-Type
-    value: application/json
-    id: pair_ddc0137d7d0c451194ef44864f346531
-  - id: pair_223632ef7d39488d8660d1c380a1655f
+  - id: pair_c4165412350b449481eed031aaa3a4f4
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
     description: ""
 authentication:
   type: bearer
-  token: "{{ _.token_admin }}"
-metaSortKey: -1637653961924
+  token: "{{ _.token }}"
+metaSortKey: -1633787877842
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,8 +1,8 @@
-_id: req_e7c323ea244047c0bf0e6e0bacdcf7b3
+_id: req_a306a971745741b5b9012da00e26301c
 type: Request
-parentId: fld_c70a990aebc64a889d18e7f6bd431d44
-modified: 1637741872692
-created: 1637655870821
+parentId: fld_5bf1bcc6c5ba4f68ac32ef87f9b0322d
+modified: 1637741100902
+created: 1637741100902
 url: "{{ _.baseurl }}/api/bank/3cef1f66-59b2-44fe-b4c5-9655b958302e"
 name: Delete Data Bank
 description: |-
@@ -61,7 +61,7 @@ headers:
     description: ""
 authentication:
   type: bearer
-  token: "{{ _.token_admin }}"
+  token: "{{ _.token }}"
 metaSortKey: -1637653972570.5
 isPrivate: false
 settingStoreCookies: true

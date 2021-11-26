@@ -1,7 +1,7 @@
 _id: req_e670b545e69d480bb18b9f740f4a8a28
 type: Request
 parentId: fld_3ee4af54477a431fb353b1fda57ad28a
-modified: 1637591022074
+modified: 1637742688473
 created: 1633425881313
 url: "{{ _.baseurl }}/api/config/sliders"
 name: Sliders

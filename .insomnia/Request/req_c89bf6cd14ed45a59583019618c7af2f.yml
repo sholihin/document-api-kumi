@@ -1,12 +1,12 @@
-_id: req_1c1e0270f8c74a0f992868110f4e0222
+_id: req_c89bf6cd14ed45a59583019618c7af2f
 type: Request
-parentId: fld_c70a990aebc64a889d18e7f6bd431d44
-modified: 1637741862535
-created: 1637655870814
+parentId: fld_5bf1bcc6c5ba4f68ac32ef87f9b0322d
+modified: 1637741100898
+created: 1637741100898
 url: "{{ _.baseurl }}/api/bank/3cef1f66-59b2-44fe-b4c5-9655b958302e"
-name: Update Data Bank
+name: Get Data Bank
 description: >-
-  ## Method (PATCH)
+  ## Method (GET)
 
   ## Route
 
@@ -34,11 +34,11 @@ description: >-
 
   {
     "status": "success",
-    "message": "Data Bank Updated!",
+    "message": "Data Bank!",
     "data": {
       "id_data": "3cef1f66-59b2-44fe-b4c5-9655b958302e",
       "no_rekening": 123456789,
-      "nama_pemilik": "kita",
+      "nama_pemilik": "kumi",
       "bank_id": {
         "id": 1,
         "name": "BANK BRI",
@@ -72,13 +72,13 @@ description: >-
   }
 
   ```
-method: PATCH
+method: GET
 body:
   mimeType: application/json
   text: |-
     {
     	"no_rekening" : 123456789,
-    	"nama_pemilik" : "kita",
+    	"nama_pemilik" : "kumi",
     	"bank_id" : 1
     }
 parameters: []
@@ -92,8 +92,8 @@ headers:
     description: ""
 authentication:
   type: bearer
-  token: "{{ _.token_admin }}"
-metaSortKey: -1637653983217
+  token: "{{ _.token }}"
+metaSortKey: -1637653940631
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

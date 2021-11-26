@@ -1,7 +1,7 @@
 _id: req_849f1b939c3f49cb84a026e44aefad98
 type: Request
 parentId: fld_835c4dd68d9c4a519045735f26c330dd
-modified: 1634810373916
+modified: 1637754272154
 created: 1631690181283
 url: "{{ _.baseurl }}/api/cart"
 name: CREATE
@@ -124,7 +124,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"product_id" : "0a8df8f0-c3f7-4c6d-aeaa-5f4ac5e00a92",
+    	"product_id" : "36dca795-be1a-42b0-a56d-5f3b64dfdd92",
     	"qty" : 1
     }
 parameters: []
@@ -135,7 +135,7 @@ headers:
   - description: ""
     id: pair_ad6e92f886bc4d63ab7480098ac86ae2
     name: X-DOMAIN-MEMBER
-    value: "{{ _.domain }}"
+    value: "{{ _.subdomain }}"
 authentication:
   type: bearer
   token: "{{ _.token }}"

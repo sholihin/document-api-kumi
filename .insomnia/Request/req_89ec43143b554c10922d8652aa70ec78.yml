@@ -1,0 +1,27 @@
+_id: req_89ec43143b554c10922d8652aa70ec78
+type: Request
+parentId: fld_b0fc06fc115047778ef38581d3fdecc8
+modified: 1637907850444
+created: 1637900450470
+url: "{{ _.baseurl }}/api/admin/wallet/history"
+name: History Wallet
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_207f116ce86d46309610214eac61b8f3
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1637900450470
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
