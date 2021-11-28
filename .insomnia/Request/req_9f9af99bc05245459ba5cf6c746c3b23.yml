@@ -1,10 +1,10 @@
 _id: req_9f9af99bc05245459ba5cf6c746c3b23
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1637919841881
+modified: 1638092706545
 created: 1633062309404
 url: "{{ _.baseurl
-  }}/api/checkout/confirmation/f5e8ee91-5142-4042-b5aa-f1a426efcca1"
+  }}/api/checkout/confirmation/a36bd074-8121-4e3e-9035-a4bddd63df78"
 name: Payment Confirmation
 description: >-
   ## Method (POST)

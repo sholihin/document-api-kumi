@@ -1,7 +1,7 @@
 _id: req_c71d659aed8d40dd92f690972a4af788
 type: Request
 parentId: fld_fc625f025a244d79a220618a93d25f29
-modified: 1633588977381
+modified: 1638080098525
 created: 1631690200951
 url: "{{ _.baseurl }}/api/admin/product"
 name: CREATE

@@ -1,7 +1,7 @@
 _id: req_849f1b939c3f49cb84a026e44aefad98
 type: Request
 parentId: fld_835c4dd68d9c4a519045735f26c330dd
-modified: 1637917656752
+modified: 1638092289918
 created: 1631690181283
 url: "{{ _.baseurl }}/api/cart"
 name: CREATE
@@ -124,7 +124,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"product_id" : "73031802-72be-4e60-921a-cb70447b3adf",
+    	"product_id" : "10ab7081-c9ed-4e69-bf9d-8199314b86f2",
     	"qty" : 1
     }
 parameters: []

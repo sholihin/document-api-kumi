@@ -1,9 +1,11 @@
 _id: req_a738ec967b7242a3aafe19565351bd8f
 type: Request
 parentId: fld_92db5037fd30421984552980f3ae17fb
-modified: 1637592518634
+modified: 1638091358656
 created: 1637113872555
-url: "{{ _.baseurl }}/api/product/canon-printer-ts207-inkjet-canon-jk4il"
+url: "{{ _.baseurl
+  }}/api/product/sony-ps3-superslim-game-console-black-500-gbfull-game-sony-owh\
+  4k"
 name: Detail
 description: >-
   ## Method (GET)
@@ -199,7 +201,7 @@ parameters: []
 headers:
   - id: pair_f0f61d07314746cfaf907e22c1f914dc
     name: X-DOMAIN-MEMBER
-    value: "{{ _.domain }}"
+    value: "{{ _.subdomain }}"
     description: ""
 authentication: {}
 metaSortKey: -1637113872555
