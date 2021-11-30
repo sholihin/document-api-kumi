@@ -1,7 +1,7 @@
 _id: req_b2e2d81bfb494706973921f7c1002aaf
 type: Request
 parentId: fld_92db5037fd30421984552980f3ae17fb
-modified: 1637033983270
+modified: 1637738861659
 created: 1634093440052
 url: "{{ _.baseurl }}/api/products?f_title=sony&f_category=game"
 name: Search
@@ -42,47 +42,42 @@ description: >-
   ```
 
   {
-    "meta": {
-      "code": 200,
-      "status": "success",
-      "message": "success"
-    },
+    "status": "success",
+    "message": null,
     "data": {
-      "products": {
-        "items": [
-          {
-            "id": "e7f1432f-c4ea-4859-a136-733ef0aa92fd",
-            "title": "Digital Product",
-            "slug": "digital-product-htyui",
-            "digital_product": "http:\/\/kumi-backend.apps\/storage\/2b7af9cd-4735-43d8-aa39-4f7763898f37\/products\/XITH7vjWix70GehaEOfYq7gzpi6HGjDS8OJSlsmc.png",
-            "type": "digital",
-            "merk": "ASUS",
-            "main_image": "http:\/\/kumi-backend.apps\/storage\/2b7af9cd-4735-43d8-aa39-4f7763898f37\/products\/32i08WSk0jzCzhsTR13o0g8OrYbLL8IhocE7y7uW.png",
-            "content": "nice",
-            "tnc": "you should buy",
-            "weight": null,
-            "price": 300000,
-            "stocks": 12,
-            "reseller_price": 1300000,
-            "discount_type": "nominal",
-            "discount": null,
-            "affiliate_type": "nominal",
-            "affiliate_fee": 10000,
-            "pin": null,
-            "seo": 0,
-            "meta_title": null,
-            "meta_keyword": null,
-            "meta_description": null,
-            "created_at": "2021-10-07T06:42:46.000000Z",
-            "updated_at": "2021-10-07T06:42:46.000000Z"
-          }
-        ],
-        "pages": {
-          "previous": null,
-          "current": 1,
-          "next": "http:\/\/kumi-backend.apps\/api\/products?page=2",
-          "last_page": 2
+      "items": [
+        {
+          "id": "6ae3eb33-d64a-4ec8-b615-1cf91a56420d",
+          "title": "Sony Ps3 Superslim Game Console - Black [500 Gb\/full Game]",
+          "slug": "sony-ps3-superslim-game-console-black-500-gbfull-game-sony-an0au",
+          "type": "physical",
+          "merk": "SONY",
+          "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/game.jpg",
+          "content": "",
+          "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres. Idem iste, inquam, de voluptate quid sentit? Eam tum adesse, cum dolor omnis absit; Certe non potest. A quibus propter discendi cupiditatem videmus ultimas terras esse peragratas. Duo Reges: constructio interrete. An me, inquam, nisi te audire vellem, censes haec dicturum fuisse? An me, inquis, tam amentem putas, ut apud imperitos isto modo loquar? Et quae per vim oblatum stuprum volontaria morte lueret inventa est et qui interficeret filiam, ne stupraretur. Sed in rebus apertissimis nimium longi sumus. <\/p>\n\n<p>Quae iam oratio non a philosopho aliquo, sed a censore opprimenda est. Quae sequuntur igitur? Tu vero, inquam, ducas licet, si sequetur; Expressa vero in iis aetatibus, quae iam confirmatae sunt. Maximeque eos videre possumus res gestas audire et legere velle, qui a spe gerendi absunt confecti senectute. Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Quod idem cum vestri faciant, non satis magnam tribuunt inventoribus gratiam. Iam illud quale tandem est, bona praeterita non effluere sapienti, mala meminisse non oportere? <\/p>\n\n<p>Item de contrariis, a quibus ad genera formasque generum venerunt. Satis est tibi in te, satis in legibus, satis in mediocribus amicitiis praesidii. Quae cum dixisset paulumque institisset, Quid est? Ergo hoc quidem apparet, nos ad agendum esse natos. Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum. Isto modo, ne si avia quidem eius nata non esset. Tenesne igitur, inquam, Hieronymus Rhodius quid dicat esse summum bonum, quo putet omnia referri oportere? <\/p>\n\n<p>Nam, ut paulo ante docui, augendae voluptatis finis est doloris omnis amotio. Atqui reperies, inquit, in hoc quidem pertinacem; Duo enim genera quae erant, fecit tria. Itaque hoc frequenter dici solet a vobis, non intellegere nos, quam dicat Epicurus voluptatem. Aeque enim contingit omnibus fidibus, ut incontentae sint. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Laelius clamores sofòw ille so lebat Edere compellans gumias ex ordine nostros. Nam de isto magna dissensio est. Nos cum te, M. Dempta enim aeternitate nihilo beatior Iuppiter quam Epicurus; Ex rebus enim timiditas, non ex vocabulis nascitur. <\/p>\n\n",
+          "weight": 4000,
+          "price": 1975000,
+          "stocks": 10,
+          "reseller_price": null,
+          "discount_type": null,
+          "discount": null,
+          "affiliate_type": null,
+          "affiliate_fee": null,
+          "pin": null,
+          "seo": 0,
+          "meta_title": null,
+          "meta_keyword": null,
+          "meta_description": null,
+          "status": 1,
+          "created_at": "2021-11-14T13:56:16.000000Z",
+          "updated_at": "2021-11-14T13:56:16.000000Z"
         }
+      ],
+      "pages": {
+        "previous": null,
+        "current": 1,
+        "next": null,
+        "last_page": 1
       }
     }
   }

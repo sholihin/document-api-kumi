@@ -1,7 +1,7 @@
 _id: req_219ccbd8ce734432ae6aa0ee0d5a1d9e
 type: Request
 parentId: fld_6e3b207f75df4bf299ced31577d0651a
-modified: 1637045242693
+modified: 1637739085841
 created: 1631690201225
 url: "{{ _.baseurl }}/api/admin/blog"
 name: CREATE
@@ -113,11 +113,11 @@ body:
     - description: ""
       id: pair_517ae35059594315ba7db4c71f33abed
       name: category_id
-      value: 5ea998eb-c1cd-452a-b130-86f478390fd5
+      value: 84b5c4d4-d4fd-4baf-b383-57c316292b8c
     - description: ""
       id: pair_41f5658cfa094af0bc9bb8d7aff5518a
       name: title
-      value: Blog Examples
+      value: Contoh 2
     - description: ""
       fileName: D:\Pictures\bukti.jpg
       id: pair_61f7682e32a942fa9d687410187c6dd6
@@ -128,6 +128,10 @@ body:
       id: pair_2288dc632b8342f3ade5c12f88c37b5f
       name: content
       value: lorem ipsum
+    - id: pair_89ef1408556d4e32b914a9be0d8e0c3e
+      name: ""
+      value: ""
+      description: ""
 parameters: []
 headers:
   - description: ""

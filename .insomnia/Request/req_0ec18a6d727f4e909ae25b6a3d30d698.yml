@@ -1,7 +1,7 @@
 _id: req_0ec18a6d727f4e909ae25b6a3d30d698
 type: Request
 parentId: fld_4593e41f610941ec94fa931251c2fda2
-modified: 1638092283460
+modified: 1638246733375
 created: 1631690181404
 url: "{{ _.baseurl }}/api/customer/login"
 name: Login Customer
@@ -34,19 +34,19 @@ description: >-
   ```
 
   {
-    "meta": {
-      "code": 200,
-      "status": "success",
-      "message": "Authenticated"
-    },
+    "status": "success",
+    "message": "Authenticated",
     "data": {
-      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyNzQ4Mjk4NiwiZXhwIjoxNjI3NDg2NTg2LCJuYmYiOjE2Mjc0ODI5ODYsImp0aSI6IjZCdWdKVEQ1ZmJrTXBuNmQiLCJzdWIiOiI3OThlOGRkYS02OTk5LTRjN2UtOTcxNy1jNDk2MjJiMzcyOTciLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.VzHCaWRl81IDPONEKvu6p35IKsggIfTa69g_WCwxOy8",
+      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE2Mzc3NDA2ODAsImV4cCI6MTYzNzc0NDI4MCwibmJmIjoxNjM3NzQwNjgwLCJqdGkiOiJEdk1NemNzYXRyaXR3NVc1Iiwic3ViIjoiOWJmYzAxNGQtNmExOS00YTViLWIwM2EtYTFlZDM5MmZhNjU4IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.z7RY4s60ioivwedkK_JOkvT-sqd0sykTnX8z7J2fZtM",
       "user": {
-        "id": "798e8dda-6999-4c7e-9717-c49622b37297",
-        "name": "Admin",
-        "email": "admin@kumi.id",
-        "created_at": "2021-07-25T13:16:07.000000Z",
-        "updated_at": "2021-07-25T13:16:07.000000Z"
+        "id": "9bfc014d-6a19-4a5b-b03a-a1ed392fa658",
+        "name": "Customer",
+        "avatar": "https:\/\/ui-avatars.com\/api\/?name=Customer&background=4e73df&color=ffffff&size=100",
+        "jenkel": "L",
+        "email": "customer@kumi.id",
+        "phone_number": "87764281912",
+        "created_at": "2021-11-24T03:59:49.000000Z",
+        "updated_at": "2021-11-24T03:59:49.000000Z"
       }
     }
   }
@@ -56,45 +56,34 @@ description: >-
 
   ## Response Failed
 
-  ### Invalid Credentials
-
   ```
 
   {
-    "meta": {
-      "code": 500,
-      "status": "error",
-      "message": "Authenticated Failed"
-    },
     "data": {
-      "message": "Something went wrong!",
-      "error": "Invalid Credential!"
+      "message": "Error message!",
+      "status": "status",
+      "data": null
     }
   }
 
   ```
 
-  ### Validation Input
+
+  ## Validation Input
 
   ```
 
   {
-    "meta": {
-      "code": 422,
-      "status": "error",
-      "message": "Authenticated Failed"
+    "status": "error",
+    "message": {
+      "email": [
+        "The email field is required."
+      ],
+      "password": [
+        "The password field is required."
+      ]
     },
-    "data": {
-      "message": "Something went wrong!",
-      "error": {
-        "email": [
-          "The email field is required."
-        ],
-        "password": [
-          "The password field is required."
-        ]
-      }
-    }
+    "data": null
   }
 
   ```
