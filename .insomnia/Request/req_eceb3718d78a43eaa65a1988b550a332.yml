@@ -1,18 +1,18 @@
-_id: req_1c1e0270f8c74a0f992868110f4e0222
+_id: req_eceb3718d78a43eaa65a1988b550a332
 type: Request
-parentId: fld_c70a990aebc64a889d18e7f6bd431d44
-modified: 1637741862535
-created: 1637655870814
-url: "{{ _.baseurl }}/api/bank/3cef1f66-59b2-44fe-b4c5-9655b958302e"
-name: Update Data Bank
+parentId: fld_5bf1bcc6c5ba4f68ac32ef87f9b0322d
+modified: 1637744651887
+created: 1637741100882
+url: "{{ _.baseurl }}/api/bank"
+name: Create Data Bank
 description: >-
-  ## Method (PATCH)
+  ## Method (POST)
 
   ## Route
 
   ```
 
-  /api/bank/{bank}
+  /api/bank
 
   ```
 
@@ -22,7 +22,11 @@ description: >-
 
   |---------|----|--------|--------|
 
-  |bank|uuid|yes|route param|hfhe34234-3423fdf|
+  |no_rekening|int|required|body|12346789|
+
+  |nama_pemilik|string|required|body|kumi|
+
+  |bank_id|int|required|body|1|
 
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
 
@@ -34,11 +38,11 @@ description: >-
 
   {
     "status": "success",
-    "message": "Data Bank Updated!",
+    "message": "Data bank created!",
     "data": {
       "id_data": "3cef1f66-59b2-44fe-b4c5-9655b958302e",
       "no_rekening": 123456789,
-      "nama_pemilik": "kita",
+      "nama_pemilik": "kumi",
       "bank_id": {
         "id": 1,
         "name": "BANK BRI",
@@ -46,7 +50,7 @@ description: >-
         "logo": "http:\/\/kumi-backend.apps\/assets\/img\/payment\/BRI.png",
         "panduan": "<p><span style=\\\"font-size:16px\\\"><strong>Panduan Pembayaran M-Banking BRI<\/strong><\/span><\/p><ul><li>Buka aplikasi, lalu pilih menu&nbsp;<strong>Mobile Banking BRI<\/strong>.<\/li><li>Saat muncul jendela baru, tap menu&nbsp;<strong>Transfer<\/strong>.<\/li><li>Untuk transfer ke sesama rekening BRI, tap menu&nbsp;<strong>Sesama BRI<\/strong>.<\/li><li>Pada halaman baru,&nbsp;<strong>masukkan nomor rekening BRI<\/strong>&nbsp;yang dituju.<\/li><li><strong>Masukkan jumlah transfer<\/strong>&nbsp;yang akan dikirim.<\/li><li>Klik&nbsp;<strong>OK<\/strong>. Lalu,&nbsp;<strong>masukkan PIN<\/strong>&nbsp;Mobile Banking BRI Anda. Klik&nbsp;<strong>SEND<\/strong>.<\/li><li>Untuk melakukan verifikasi SMS, Klik&nbsp;<strong>OK<\/strong>.<\/li><li>Terima SMS dari Mobile Banking BRI, lalu ketik&nbsp;<strong>YA<\/strong>&nbsp;&lt;spasi&gt;&nbsp;<strong>Kode Transaksi<\/strong>. Kalau bingung, ikuti saja petunjuk yang ada pada SMS tersebut.<\/li><li>Kalau sudah benar, langsung&nbsp;<strong>Kirim SMS<\/strong>.<\/li><\/ul>"
       },
-      "status_bank": 1
+      "status_bank": true
     }
   }
 
@@ -72,14 +76,13 @@ description: >-
   }
 
   ```
-method: PATCH
+method: POST
 body:
   mimeType: application/json
   text: |-
     {
     	"no_rekening" : 123456789,
-    	"nama_pemilik" : "kita",
-    	"bank_id" : 1
+    	"nama_pemilik" : "kumi"
     }
 parameters: []
 headers:
@@ -92,8 +95,8 @@ headers:
     description: ""
 authentication:
   type: bearer
-  token: "{{ _.token_admin }}"
-metaSortKey: -1637653983217
+  token: "{{ _.token }}"
+metaSortKey: -1637654004510
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

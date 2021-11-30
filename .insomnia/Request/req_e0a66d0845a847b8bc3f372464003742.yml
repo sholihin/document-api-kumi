@@ -1,8 +1,8 @@
-_id: req_58bee3eabb204221af2aaa9812be3b14
+_id: req_e0a66d0845a847b8bc3f372464003742
 type: Request
-parentId: fld_c70a990aebc64a889d18e7f6bd431d44
-modified: 1638246782343
-created: 1637655870810
+parentId: fld_5bf1bcc6c5ba4f68ac32ef87f9b0322d
+modified: 1637741100888
+created: 1637741100888
 url: "{{ _.baseurl }}/api/bank"
 name: List Data Bank
 description: >-
@@ -92,7 +92,7 @@ headers:
     description: ""
 authentication:
   type: bearer
-  token: "{{ _.token_admin }}"
+  token: "{{ _.token }}"
 metaSortKey: -1637653961924
 isPrivate: false
 settingStoreCookies: true

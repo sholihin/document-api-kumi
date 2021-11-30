@@ -111,7 +111,7 @@ headers:
     description: ""
 authentication:
   type: bearer
-  token: "{{ _.token }}"
+  token: "{{ _.token_admin }}"
 metaSortKey: -1637654004510
 isPrivate: false
 settingStoreCookies: true

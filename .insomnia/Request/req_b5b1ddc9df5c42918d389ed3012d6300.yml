@@ -1,10 +1,10 @@
-_id: req_d95f299b89ac4bc89d95e0949939e5b0
+_id: req_b5b1ddc9df5c42918d389ed3012d6300
 type: Request
 parentId: fld_2406074dbccb433faba2a200c6b53008
-modified: 1638095907153
-created: 1633792201897
-url: "{{ _.baseurl }}/api/checkout/done"
-name: Done
+modified: 1638095546064
+created: 1638093000662
+url: "{{ _.baseurl }}/api/checkout/delivered"
+name: Delivered / Product Digital Success
 description: >-
   ## Method (GET)
 
@@ -161,7 +161,7 @@ headers:
 authentication:
   type: bearer
   token: "{{ _.token }}"
-metaSortKey: -1633786157621.5
+metaSortKey: -1633786013784.375
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

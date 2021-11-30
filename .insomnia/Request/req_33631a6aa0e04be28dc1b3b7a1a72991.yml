@@ -282,8 +282,11 @@ headers:
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
 authentication:
-  token: "{{ _.token }}"
-  type: bearer
+  type: basic
+  useISO88591: false
+  disabled: false
+  username: ""
+  password: ""
 metaSortKey: -1628594105171.5
 isPrivate: false
 settingStoreCookies: true

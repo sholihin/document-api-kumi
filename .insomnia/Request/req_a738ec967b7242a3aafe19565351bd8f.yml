@@ -181,7 +181,7 @@ parameters: []
 headers:
   - id: pair_f0f61d07314746cfaf907e22c1f914dc
     name: X-DOMAIN-MEMBER
-    value: "{{ _.domain }}"
+    value: "{{ _.subdomain }}"
     description: ""
 authentication: {}
 metaSortKey: -1637113872555

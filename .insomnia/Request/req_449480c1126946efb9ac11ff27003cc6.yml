@@ -1,0 +1,27 @@
+_id: req_449480c1126946efb9ac11ff27003cc6
+type: Request
+parentId: fld_70130381b8544e64b41bf7b7a6c86542
+modified: 1637897605913
+created: 1637897161771
+url: "{{ _.baseurl }}/api/wallet"
+name: Get Wallet
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_01cce108f10541e9b9718d3d34272fd2
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1637897161771
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
