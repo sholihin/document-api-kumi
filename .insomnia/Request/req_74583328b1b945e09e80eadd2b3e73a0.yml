@@ -1,7 +1,7 @@
 _id: req_74583328b1b945e09e80eadd2b3e73a0
 type: Request
 parentId: fld_c70a990aebc64a889d18e7f6bd431d44
-modified: 1637655870803
+modified: 1637740970367
 created: 1637655870803
 url: "{{ _.baseurl }}/api/banks"
 name: Master Bank

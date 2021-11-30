@@ -1,7 +1,7 @@
 _id: req_b0a09e2c62144d648db0beee6cc6f4ac
 type: Request
 parentId: fld_c70a990aebc64a889d18e7f6bd431d44
-modified: 1637655870818
+modified: 1637740966806
 created: 1637655870818
 url: "{{ _.baseurl }}/api/bank/3cef1f66-59b2-44fe-b4c5-9655b958302e"
 name: Get Data Bank

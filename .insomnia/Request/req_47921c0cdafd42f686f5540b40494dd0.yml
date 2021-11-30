@@ -1,83 +1,97 @@
 _id: req_47921c0cdafd42f686f5540b40494dd0
 type: Request
 parentId: fld_4593e41f610941ec94fa931251c2fda2
-modified: 1631706924777
+modified: 1637740559083
 created: 1631690181410
 url: "{{ _.baseurl }}/api/customer/register"
 name: Register Customer
-description: |-
+description: >-
   ## Method (POST)
+
   ## Route
+
   ```
+
   /api/customer/register
+
   ```
+
   ## Query Parameters
-  |PARAMETER|TYPE|REQUIRED|
+
+  |PARAMETER|TYPE|REQUIRED|UNIQUE|
+
   |---------|----|--------|
-  |name|string|yes|
-  |phone_number|string|yes|
-  |email|string|yes|
-  |password|string|yes|
-  |confirmation_password|string|yes|
+
+  |name|string|yes|no|
+
+  |phone_number|string|yes|no|
+
+  |email|string|yes|yes|
+
+  |password|string|yes|no|
+
+  |confirmation_password|string|yes|no|
+
 
   ## Response Success
-  ```
-  {
-    "meta": {
-      "code": 201,
-      "status": "success",
-      "message": "Registered"
-    },
-    "data": {
-      "user": {
-        "id": "b546577d-d264-4952-9a23-d978ddc8f979",
-        "name": "Dhit",
-        "email": "dhit@example.net",
-        "created_at": "2021-07-28T15:16:05.000000Z",
-        "updated_at": "2021-07-28T15:16:05.000000Z"
-      }
-    }
-  }
+
   ```
 
+  {
+    "status": "success",
+    "message": "Registered",
+    "data": {
+      "id": "b2eda098-b65e-44b7-942f-a2f8145f8c82",
+      "name": "Mohamad Sholihin",
+      "avatar": "https:\/\/ui-avatars.com\/api\/?name=Mohamad+Sholihin&background=4e73df&color=ffffff&size=100",
+      "jenkel": null,
+      "email": "mohamad.sholihin.it@kumi.id",
+      "phone_number": "08123123123",
+      "created_at": "2021-11-24T07:54:27.000000Z",
+      "updated_at": "2021-11-24T07:54:27.000000Z"
+    }
+  }
+
+  ```
+
+
   ## Response Failed
-  ### Domain Invalid
+
   ```
+
   {
-    "meta": {
-      "code": 401,
-      "status": "error",
-      "message": "Registering User Failed"
-    },
     "data": {
-      "message": "Something went wrong!",
-      "error": "Unauthorized Domain"
+      "message": "Error Message!",
+      "status": "error",
+      "data": null
     }
   }
+
   ```
+
   ### Validation Input
+
   ```
+
   {
-    "meta": {
-      "code": 422,
-      "status": "error",
-      "message": "Register Failed"
+    "status": "error",
+    "message": {
+      "name": [
+        "The name field is required."
+      ],
+      "email": [
+        "The email field is required."
+      ],
+      "phone_number": [
+        "The phone number field is required."
+      ],
+      "password": [
+        "The password field is required."
+      ]
     },
-    "data": {
-      "message": "Something went wrong!",
-      "error": {
-        "email": [
-          "The email has already been taken."
-        ],
-        "phone_number": [
-          "The phone number field is required."
-        ],
-        "password": [
-          "The password confirmation does not match."
-        ]
-      }
-    }
+    "data": null
   }
+
   ```
 method: POST
 body:
@@ -86,23 +100,28 @@ body:
     - description: ""
       id: pair_aab0c323359349568c04ca92cf573c89
       name: email
-      value: mohamad.sholihin@kumi.id
+      value: mohamad.sholihin.it@kumi.id
+      disabled: false
     - description: ""
       id: pair_cc05e2f61973474aa1c47b1e46936b62
       name: name
       value: Mohamad Sholihin
+      disabled: false
     - description: ""
       id: pair_9783cdaf9087445b9876de1e3cd70b90
       name: phone_number
       value: "08123123123"
+      disabled: false
     - description: ""
       id: pair_0caf408794134592bd16ba8640ac255e
       name: password
       value: bismillah
+      disabled: false
     - description: ""
       id: pair_8fb44b7133e94e6b9bb1350418710f59
       name: password_confirmation
       value: bismillah
+      disabled: false
 parameters: []
 headers:
   - id: pair_5e963fb2fc0c45149a90ae275816c00b

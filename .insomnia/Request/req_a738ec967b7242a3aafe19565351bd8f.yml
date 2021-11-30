@@ -1,7 +1,7 @@
 _id: req_a738ec967b7242a3aafe19565351bd8f
 type: Request
 parentId: fld_92db5037fd30421984552980f3ae17fb
-modified: 1637738859237
+modified: 1638235292622
 created: 1637113872555
 url: "{{ _.baseurl }}/api/product/leopard-g20-led-gaming-keyboard-leopard-lclg1"
 name: Detail
