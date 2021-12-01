@@ -1,8 +1,8 @@
-_id: req_449480c1126946efb9ac11ff27003cc6
+_id: req_760b5be242694909a462f0641c92bec1
 type: Request
-parentId: fld_70130381b8544e64b41bf7b7a6c86542
-modified: 1638328933389
-created: 1637897161771
+parentId: fld_9e2b3ebee28a4bc69f16660fb89e267a
+modified: 1638329148935
+created: 1638329075518
 url: "{{ _.baseurl }}/api/wallet"
 name: Get Wallet
 description: |-
@@ -48,7 +48,7 @@ headers:
     description: ""
 authentication:
   type: bearer
-  token: "{{ _.token }}"
+  token: "{{ _.token_reseller }}"
 metaSortKey: -1637897161771
 isPrivate: false
 settingStoreCookies: true

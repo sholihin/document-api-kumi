@@ -1,9 +1,9 @@
 _id: req_97c48aebd8a04f52b802abf5e977c201
 type: Request
 parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
-modified: 1637031434826
+modified: 1638348296121
 created: 1633786732408
-url: "{{ _.baseurl }}/api/admin/checkout/order-complaints"
+url: "{{ _.baseurl }}/api/reseller/checkout/order-complaints"
 name: Complaints
 description: >-
   ## Method (GET)
@@ -12,7 +12,7 @@ description: >-
 
   ```
 
-  /api/admin/checkout/order-complaints
+  /api/reseller/checkout/order-complaints
 
   ```
 
@@ -141,7 +141,7 @@ headers:
     description: ""
 authentication:
   type: bearer
-  token: "{{ _.token_admin }}"
+  token: "{{ _.token_reseller }}"
 metaSortKey: -1633690992818.75
 isPrivate: false
 settingStoreCookies: true

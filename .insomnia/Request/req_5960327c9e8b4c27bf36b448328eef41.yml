@@ -1,10 +1,10 @@
-_id: req_a90a5cdeeca74124aebea024bbb2ad64
+_id: req_5960327c9e8b4c27bf36b448328eef41
 type: Request
-parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
-modified: 1638341976867
-created: 1633701129705
-url: "{{ _.baseurl }}/api/admin/checkout/order-delivery"
-name: On Delivery
+parentId: fld_ba66419573c14bd0b77b091c5cece635
+modified: 1638349229075
+created: 1638347980348
+url: "{{ _.baseurl }}/api/admin/checkout/order-onprogress"
+name: On Progress
 description: >-
   ## Method (GET)
 
@@ -12,7 +12,7 @@ description: >-
 
   ```
 
-  /api/admin/checkout/order-refund
+  /api/admin/checkout/order-onprogress
 
   ```
 
@@ -32,7 +32,7 @@ description: >-
 
   {
     "status": "success",
-    "message": "List Order On Delivery Success!",
+    "message": "List Order On Progress Success!",
     "data": [
       {
         "id": "cc2e0dd2-3e20-4852-8f7f-2ec6ab7d0f0d",
@@ -63,7 +63,7 @@ description: >-
           "phone_number": "0827372412434"
         },
         "payment_status": "SUCCESS",
-        "delivery_status": "ON_DELIVERY",
+        "delivery_status": "PACKAGING",
         "payment_url": null,
         "discount": 0,
         "platform_fee": 0,
@@ -152,7 +152,7 @@ headers:
 authentication:
   type: bearer
   token: "{{ _.token_admin }}"
-metaSortKey: -1633672240690.25
+metaSortKey: -1633681616754.5
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

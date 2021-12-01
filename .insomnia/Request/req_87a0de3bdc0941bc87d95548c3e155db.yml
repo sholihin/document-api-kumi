@@ -1,34 +1,29 @@
-_id: req_449480c1126946efb9ac11ff27003cc6
+_id: req_87a0de3bdc0941bc87d95548c3e155db
 type: Request
-parentId: fld_70130381b8544e64b41bf7b7a6c86542
-modified: 1638328933389
-created: 1637897161771
-url: "{{ _.baseurl }}/api/wallet"
-name: Get Wallet
+parentId: fld_9e2b3ebee28a4bc69f16660fb89e267a
+modified: 1638329147920
+created: 1638329075522
+url: "{{ _.baseurl }}/api/wallet/debit/4a236f61-42b1-43be-9919-7f5b575e5a65"
+name: Debit Wallet
 description: |-
   ## Method (GET)
   ## Route
   ```
-  /api/wallet
+  /api/wallet/debit/{wallet}
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
   |---------|----|--------|--------|
+  |wallet|uuid|required|route param|sdaj24-242|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|
   ## Response Success
   ```
   {
     "status": "success",
-    "message": "Wallet Retrieved!",
-    "data": {
-      "id": "4a236f61-42b1-43be-9919-7f5b575e5a65",
-      "balance": 0,
-      "created_at": "2021-11-24T08:02:58.000000Z",
-      "updated_at": "2021-11-24T08:02:58.000000Z"
-    }
-  }
-  ```
+    "message": "Wallet Debit On Progress, please wait for couple days!",
+    "data": null
+  }```
 
   ## Response Failed
   ### Unauthorized
@@ -38,18 +33,27 @@ description: |-
     "message": "Unauthorized Domain!",
     "data": null
   }```
-method: GET
-body: {}
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"amount" : 145000,
+    	"bank_id" : "f7597924-25cf-445c-9fb2-1e1ca0ec3430"
+    }
 parameters: []
 headers:
   - id: pair_01cce108f10541e9b9718d3d34272fd2
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
     description: ""
+  - name: Content-Type
+    value: application/json
+    id: pair_5eccc32b72b64e91aa79e80125de920d
 authentication:
   type: bearer
-  token: "{{ _.token }}"
-metaSortKey: -1637897161771
+  token: "{{ _.token_reseller }}"
+metaSortKey: -1637775583165.5
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

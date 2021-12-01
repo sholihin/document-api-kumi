@@ -1,7 +1,7 @@
 _id: req_50381b4776f54567904fe8f8a8cfc629
 type: Request
 parentId: fld_53fe21ee2098498cab5432eee56adb6e
-modified: 1636983762959
+modified: 1638348007123
 created: 1631707737514
 url: "{{ _.baseurl }}/api/reseller/register"
 name: Register Reseller
@@ -114,7 +114,7 @@ headers:
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
 authentication: {}
-metaSortKey: -1627975775047.75
+metaSortKey: 100
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

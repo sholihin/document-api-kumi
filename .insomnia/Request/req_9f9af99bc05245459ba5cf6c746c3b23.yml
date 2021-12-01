@@ -1,10 +1,10 @@
 _id: req_9f9af99bc05245459ba5cf6c746c3b23
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1638092706545
+modified: 1638341258308
 created: 1633062309404
 url: "{{ _.baseurl
-  }}/api/checkout/confirmation/a36bd074-8121-4e3e-9035-a4bddd63df78"
+  }}/api/checkout/confirmation/cc2e0dd2-3e20-4852-8f7f-2ec6ab7d0f0d"
 name: Payment Confirmation
 description: >-
   ## Method (POST)
@@ -41,73 +41,9 @@ description: >-
   ```
 
   {
-    "meta": {
-      "code": 200,
-      "status": "success",
-      "message": "success"
-    },
-    "data": {
-      "transaction": {
-        "id": "fa3eb375-cebb-4ea1-83c1-9772b5cf9a26",
-        "invoice": "INV-20211004002",
-        "shipping": {
-          "cost": [
-            {
-              "etd": "",
-              "note": "",
-              "value": 29000
-            }
-          ],
-          "type": "rajaongkir",
-          "service": "STANDARD",
-          "description": "Standard Service"
-        },
-        "weight": 500,
-        "address": {
-          "label": "home 2",
-          "penerima": "admin kumi",
-          "province": "Jawa Tengah",
-          "city": "Kabupaten Pemalang",
-          "subdistrict": "Bodeh",
-          "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15",
-          "phone_number": "0827372412434"
-        },
-        "payment_status": "PENDING",
-        "delivery_status": null,
-        "payment_url": null,
-        "discount": 10000,
-        "platform_fee": 0,
-        "total_origin": 300000,
-        "grand_total": 319211,
-        "payment_confirmation": null,
-        "time_remaining": "2021-10-04 17:32:59",
-        "orders": [
-          {
-            "id": "c49ad418-9bda-4256-8e63-7bdf3ba25670",
-            "qty": 1,
-            "price": 300000,
-            "product": {
-              "type": "physical",
-              "title": "Physical Product",
-              "main_image": "http:\/\/kumi-backend.apps\/storage\/archive\/89d60b19-9fe1-47c9-9fdb-1c7d57161dda\/products\/IFAnyvLfjMnIHPW3CSrKZeRTwjVn0ZT4JODJ93fB.png",
-              "slug": "physical-product-mzh75",
-              "category": "Laptop",
-              "content": "nice",
-              "weight": 500,
-              "price": 300000,
-              "discount": null,
-              "discount_type": "nominal",
-              "tnc": "you should buy",
-              "merk": "ASUS"
-            },
-            "created_at": "2021-10-04T05:32:59.000000Z",
-            "updated_at": "2021-10-04T05:32:59.000000Z"
-          }
-        ],
-        "created_at": "2021-10-04T05:32:59.000000Z",
-        "updated_at": "2021-10-04T05:32:59.000000Z"
-      }
-    }
+    "status": "success",
+    "message": "Thank You, We Will Review Your Payment Confirmation In The Next Couple Hours!",
+    "data": null
   }
 
   ```
@@ -118,15 +54,9 @@ description: >-
   ```
 
   {
-    "meta": {
-      "code": 401,
-      "status": "error",
-      "message": "Checkout Failed"
-    },
-    "data": {
-      "message": "Something went wrong!",
-      "error": "Unauthorized Domain"
-    }
+    "status": "error",
+    "message": "Unauthorized Domain!",
+    "data": null
   }
 
   ```
@@ -134,15 +64,9 @@ description: >-
   ```
 
   {
-    "meta": {
-      "code": 500,
-      "status": "error",
-      "message": "Transaction Failed"
-    },
-    "data": {
-      "message": "Something went wrong!",
-      "error": "You don't Have any Product on Checkout"
-    }
+    "status": "error",
+    "message": "You don't Have any Product on Checkout!",
+    "data": null
   }
 
   ```
@@ -164,6 +88,7 @@ body:
       name: total
       value: "596000"
       description: ""
+      disabled: false
 parameters: []
 headers:
   - name: Content-Type
@@ -171,7 +96,7 @@ headers:
     id: pair_1d1c62ac17b34ecf97019ab6b8b9cd80
   - id: pair_63290490e674405b9eec6ec43d6a2946
     name: X-DOMAIN-MEMBER
-    value: "{{ _.domain }}"
+    value: "{{ _.subdomain }}"
     description: ""
 authentication:
   type: bearer

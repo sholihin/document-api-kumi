@@ -1,10 +1,10 @@
-_id: req_a90a5cdeeca74124aebea024bbb2ad64
+_id: req_f49ad3a3aa61412db23dba02890b202d
 type: Request
-parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
-modified: 1638341976867
-created: 1633701129705
-url: "{{ _.baseurl }}/api/admin/checkout/order-delivery"
-name: On Delivery
+parentId: fld_ba66419573c14bd0b77b091c5cece635
+modified: 1638347980379
+created: 1638347980379
+url: "{{ _.baseurl }}/api/admin/checkout/order-delivered"
+name: Delivered
 description: >-
   ## Method (GET)
 
@@ -12,7 +12,7 @@ description: >-
 
   ```
 
-  /api/admin/checkout/order-refund
+  /api/admin/checkout/order-delivered
 
   ```
 
@@ -63,7 +63,7 @@ description: >-
           "phone_number": "0827372412434"
         },
         "payment_status": "SUCCESS",
-        "delivery_status": "ON_DELIVERY",
+        "delivery_status": "DELIVERED",
         "payment_url": null,
         "discount": 0,
         "platform_fee": 0,
@@ -152,7 +152,7 @@ headers:
 authentication:
   type: bearer
   token: "{{ _.token_admin }}"
-metaSortKey: -1633672240690.25
+metaSortKey: -1633670482678.2031
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

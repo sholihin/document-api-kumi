@@ -1,54 +1,79 @@
-_id: req_84e10b31f81a46108f0b9c6c042b5061
+_id: req_9cc31468d1a74e2ca2c8e53c9ebffc0e
 type: Request
-parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
-modified: 1637917738850
-created: 1633788373477
+parentId: fld_ba66419573c14bd0b77b091c5cece635
+modified: 1638349855295
+created: 1638347980371
 url: "{{ _.baseurl
-  }}/api/admin/checkout/status/complaint/55637e59-4e61-48fa-b210-895c39ffa218"
+  }}/api/admin/checkout/status/complaint/cc2e0dd2-3e20-4852-8f7f-2ec6ab7d0f0d"
 name: Complaint Status
-description: |-
+description: >-
   ## Method (PATCH)
+
   ## Route
-  ```
-  /api/admin/checkout/status/complaint{invoice}
-  ```
-  ## Parameters
-  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
-  |invoice|uuid|yes|route param|hsdfg7567sdf|
-  |status|string|yes|body|ON_PROCESS,ACCEPTED,REJECTED,DONE|
-  |detail_status|string|required if status done|body|REFUND,NEW_PRODUCT|
-  |transfer_image|file|required if detail_status REFUND|body|image|
-  |waybill|string|opyional if detail_status NEW_PRODUCT|body|3452352435|
-  |serive_waybill|string|opyional if detail_status NEW_PRODUCT|body|jne|
-  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
-  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
-  ## Response Success
-  ```
-  {
-    "meta": {
-      "code": 201,
-      "status": "success",
-      "message": "Payment Status Successfully Updated!"
-    },
-    "data": "success"
-  }
+
   ```
 
-  ## Response Failed
-  ### Unauthorized
+  /api/admin/checkout/status/complaint/{invoice}
+
   ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |invoice|uuid|yes|route param|hsdfg7567sdf|
+
+  |status|string|yes|body|ON_PROCESS,ACCEPTED,REJECTED,DONE|
+
+  |detail_status|string|required if status ACCEPTED|body|REFUND,NEW_PRODUCT|
+
+  |transfer_image|file|required if status DONE and detail status REFUND|body|image|
+
+  |waybill|string|required if status DONE and detail_status NEW_PRODUCT|body|3452352435|
+
+  |serive_waybill|string|required if status DONE and  detail_status NEW_PRODUCT|body|jne|
+
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
   {
-    "meta": {
-      "code": 401,
-      "status": "error",
-      "message": "Updating Payment Status Failed"
-    },
-    "data": {
-      "message": "Something went wrong!",
-      "error": "Unauthorized Domain"
-    }
+    "status": "success",
+    "message": "Complaint Status Successfully Updated!",
+    "data": null
   }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "status": "error",
+    "message": "Invalid Complaint Status!",
+    "data": null
+  }
+
+  ```
+
+  ```
+
+  {
+    "status": "error",
+    "message": "Unauthorized Domain!",
+    "data": null
+  }
+
   ```
 method: POST
 body:
@@ -56,19 +81,20 @@ body:
   params:
     - id: pair_f75589e6520e4101bec11e126c861427
       name: status
-      value: ACCEPTED
+      value: DONE
       description: ""
     - id: pair_fe296d4442154b0dbd0820684d00fd21
       name: detail_status
       value: REFUND
       description: ""
-      disabled: false
+      disabled: true
     - id: pair_db5b8540ce994986b7825238dc4001f2
       name: transfer_image
       value: ""
       description: ""
       type: file
-      fileName: D:\Pictures\bukti.jpg
+      fileName: C:\Users\ADHIT\Downloads\store.PNG
+      disabled: false
     - id: pair_334dd46e3cf44f34815a198ef514314a
       name: _method
       value: PATCH

@@ -1,10 +1,10 @@
-_id: req_be83e69885a24d5b9da789caa8c3af88
+_id: req_eeb79cb03b6241a1a98ac63283bf190d
 type: Request
-parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
-modified: 1636902330437
-created: 1633403470907
+parentId: fld_ba66419573c14bd0b77b091c5cece635
+modified: 1638347980335
+created: 1638347980335
 url: "{{ _.baseurl
-  }}/api/admin/checkout/waybill/55637e59-4e61-48fa-b210-895c39ffa218"
+  }}/api/admin/checkout/waybill/cc2e0dd2-3e20-4852-8f7f-2ec6ab7d0f0d"
 name: Insert Waybill
 description: |-
   ## Method (PATCH)
@@ -22,11 +22,8 @@ description: |-
   ## Response Success
   ```
   {
-    "meta": {
-      "code": 201,
-      "status": "success",
-      "message": "Waybill Successfully Updated!"
-    },
+    "status": "success",
+    "message": "Waybill Successfully Updated!",
     "data": "success"
   }
   ```
@@ -35,15 +32,9 @@ description: |-
   ### Unauthorized
   ```
   {
-    "meta": {
-      "code": 401,
-      "status": "error",
-      "message": "Updating Waybill Failed"
-    },
-    "data": {
-      "message": "Something went wrong!",
-      "error": "Unauthorized Domain"
-    }
+    "status": "error",
+    "message": "Unauthorized Domain!",
+    "data": null
   }
   ```
 method: PATCH

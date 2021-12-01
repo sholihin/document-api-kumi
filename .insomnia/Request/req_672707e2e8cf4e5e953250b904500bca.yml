@@ -1,9 +1,9 @@
 _id: req_672707e2e8cf4e5e953250b904500bca
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1637919729130
+modified: 1638348972103
 created: 1633785582273
-url: "{{ _.baseurl }}/api/checkout/complaints/55637e59-4e61-48fa-b210-895c39ffa218"
+url: "{{ _.baseurl }}/api/checkout/complaints/cc2e0dd2-3e20-4852-8f7f-2ec6ab7d0f0d"
 name: Complains
 description: ""
 method: POST
@@ -19,7 +19,7 @@ body:
       value: ""
       description: ""
       type: file
-      fileName: D:\Pictures\bukti.jpg
+      fileName: C:\Users\ADHIT\Downloads\store.PNG
       disabled: false
     - id: pair_7f9fd4a5fae0478bb01ed81e2525ce49
       name: images[]

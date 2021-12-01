@@ -1,11 +1,38 @@
 _id: req_0aa6235b3d074810a1a5c81290ff1698
 type: Request
 parentId: fld_70130381b8544e64b41bf7b7a6c86542
-modified: 1637898406305
+modified: 1638329023530
 created: 1637898079493
 url: "{{ _.baseurl }}/api/wallet/debit/4a236f61-42b1-43be-9919-7f5b575e5a65"
 name: Debit Wallet
-description: ""
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/wallet/debit/{wallet}
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|
+  |wallet|uuid|required|route param|sdaj24-242|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "status": "success",
+    "message": "Wallet Debit On Progress, please wait for couple days!",
+    "data": null
+  }```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "status": "error",
+    "message": "Unauthorized Domain!",
+    "data": null
+  }```
 method: POST
 body:
   mimeType: application/json

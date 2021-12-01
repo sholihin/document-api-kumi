@@ -1,0 +1,117 @@
+_id: req_e07728ec2d0e4173be636b7e84e6b6ea
+type: Request
+parentId: fld_2bb4b622d3e240fc8ad66d87553be612
+modified: 1637593289553
+created: 1633007729198
+url: "    {{ _.baseurl }}/api/products"
+name: By Category
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/category/{type}
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |type|string|yes|header|product/blog|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "status": "success",
+    "message": null,
+    "data": {
+      "items": [
+        {
+          "id": "244cc5f1-4812-43c9-81d9-5c5e312590c8",
+          "title": "Sony Dsc H300",
+          "slug": "sony-dsc-h300-sony-r8axo",
+          "type": "physical",
+          "merk": "SONY",
+          "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/kamera.jpg",
+          "content": "",
+          "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Apud imperitos tum illa dicta sunt, aliquid etiam coronae datum; Sic enim censent, oportunitatis esse beate vivere. Et quod est munus, quod opus sapientiae? Est enim effectrix multarum et magnarum voluptatum. <\/p>\n\n<p>Non est ista, inquam, Piso, magna dissensio. Pudebit te, inquam, illius tabulae, quam Cleanthes sane commode verbis depingere solebat. Multa sunt dicta ab antiquis de contemnendis ac despiciendis rebus humanis; Qui ita affectus, beatum esse numquam probabis; Ita relinquet duas, de quibus etiam atque etiam consideret. At enim, qua in vita est aliquid mali, ea beata esse non potest. Ergo hoc quidem apparet, nos ad agendum esse natos. <\/p>\n\n<p>Sit sane ista voluptas. Si alia sentit, inquam, alia loquitur, numquam intellegam quid sentiat; Itaque haec cum illis est dissensio, cum Peripateticis nulla sane. Quae iam oratio non a philosopho aliquo, sed a censore opprimenda est. Profectus in exilium Tubulus statim nec respondere ausus; Quid, si non sensus modo ei sit datus, verum etiam animus hominis? Superiores tres erant, quae esse possent, quarum est una sola defensa, eaque vehementer. Simul atque natum animal est, gaudet voluptate et eam appetit ut bonum, aspernatur dolorem ut malum. Beatus sibi videtur esse moriens. <\/p>\n\n<p>Duo Reges: constructio interrete. Quae cum essent dicta, finem fecimus et ambulandi et disputandi. Aliter enim explicari, quod quaeritur, non potest. Venit enim mihi Platonis in mentem, quem accepimus primum hic disputare solitum; Ergo id est convenienter naturae vivere, a natura discedere. Quis est tam dissimile homini. <\/p>\n\n",
+          "weight": 2000,
+          "price": 2699000,
+          "stocks": 10,
+          "reseller_price": null,
+          "discount_type": null,
+          "discount": null,
+          "affiliate_type": null,
+          "affiliate_fee": null,
+          "pin": null,
+          "seo": 0,
+          "meta_title": null,
+          "meta_keyword": null,
+          "meta_description": null,
+          "status": 1,
+          "created_at": "2021-11-14T13:56:10.000000Z",
+          "updated_at": "2021-11-14T13:56:10.000000Z"
+        }
+      ],
+      "pages": {
+        "previous": null,
+        "current": 1,
+        "next": null,
+        "last_page": 1
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "status": "error",
+    "message": "",
+    "data": null
+  }
+
+  ```
+method: GET
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"f_category":"kamera"
+    }
+parameters: []
+headers:
+  - id: pair_6370e14b2d9a42b8a9d47e88e1deca5d
+    name: Content-Type
+    value: application/json
+  - description: ""
+    id: pair_a38c8a33a3644dd1adf5c0b2715fa865
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token }}"
+  type: bearer
+metaSortKey: -1628594105171.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

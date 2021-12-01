@@ -1,10 +1,10 @@
-_id: req_a90a5cdeeca74124aebea024bbb2ad64
+_id: req_326eda37779942d19c0d2c7404a1e983
 type: Request
-parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
-modified: 1638341976867
-created: 1633701129705
-url: "{{ _.baseurl }}/api/admin/checkout/order-delivery"
-name: On Delivery
+parentId: fld_ba66419573c14bd0b77b091c5cece635
+modified: 1638348370183
+created: 1638347980367
+url: "{{ _.baseurl }}/api/admin/checkout/order-complaints"
+name: Complaints
 description: >-
   ## Method (GET)
 
@@ -12,7 +12,7 @@ description: >-
 
   ```
 
-  /api/admin/checkout/order-refund
+  /api/admin/checkout/order-complaints
 
   ```
 
@@ -32,7 +32,7 @@ description: >-
 
   {
     "status": "success",
-    "message": "List Order On Delivery Success!",
+    "message": "List Order On Complaints Success!",
     "data": [
       {
         "id": "cc2e0dd2-3e20-4852-8f7f-2ec6ab7d0f0d",
@@ -63,7 +63,7 @@ description: >-
           "phone_number": "0827372412434"
         },
         "payment_status": "SUCCESS",
-        "delivery_status": "ON_DELIVERY",
+        "delivery_status": "DELIVERED",
         "payment_url": null,
         "discount": 0,
         "platform_fee": 0,
@@ -120,9 +120,15 @@ description: >-
             "updated_at": "2021-12-01T04:19:29.000000Z"
           }
         ],
-        "complaint": null,
+        "complaint": {
+          "id": "dc56fdf3-6520-41ad-bbb2-3fda25d50ed6",
+          "reason": "tidak sesuai",
+          "images": [
+            "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/complaints\/IxvYQbhNDH6ymmNHrh6Jntv7tn6ckQz8dE7voOcJ.png"
+          ]
+        },
         "created_at": "2021-12-01T04:19:29.000000Z",
-        "updated_at": "2021-12-01T06:54:32.000000Z"
+        "updated_at": "2021-12-01T07:17:45.000000Z"
       }
     ]
   }
@@ -152,7 +158,7 @@ headers:
 authentication:
   type: bearer
   token: "{{ _.token_admin }}"
-metaSortKey: -1633672240690.25
+metaSortKey: -1633690992818.75
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

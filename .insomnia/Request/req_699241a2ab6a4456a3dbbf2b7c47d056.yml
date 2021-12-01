@@ -1,9 +1,9 @@
 _id: req_699241a2ab6a4456a3dbbf2b7c47d056
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1637921480589
+modified: 1638342123232
 created: 1637560422073
-url: "{{ _.baseurl }}/api/checkout/done/f5e8ee91-5142-4042-b5aa-f1a426efcca1"
+url: "{{ _.baseurl }}/api/checkout/done/cc2e0dd2-3e20-4852-8f7f-2ec6ab7d0f0d"
 name: DONE
 description: |-
   ## Method (POST)
@@ -51,7 +51,7 @@ headers:
     id: pair_9f8152cadc3346d8a432a0b90c96a975
   - id: pair_c66db063e78648f097664f2dc5b094b5
     name: X-DOMAIN-MEMBER
-    value: reseller1.{{ _.domain }}
+    value: "{{ _.subdomain }}"
     description: ""
 authentication:
   type: bearer

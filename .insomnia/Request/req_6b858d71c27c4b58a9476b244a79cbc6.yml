@@ -1,7 +1,7 @@
 _id: req_6b858d71c27c4b58a9476b244a79cbc6
 type: Request
 parentId: fld_3d1357ac29e34173a93d4f5e2eca9ef9
-modified: 1636983803449
+modified: 1638329260940
 created: 1631690190518
 url: "{{ _.baseurl }}/api/cart/qty-update"
 name: QTY UPDATE

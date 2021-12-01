@@ -1,7 +1,7 @@
 _id: req_2a643a6766a44545b9c8fdafffdd8891
 type: Request
 parentId: fld_3d1357ac29e34173a93d4f5e2eca9ef9
-modified: 1636983931552
+modified: 1638329254394
 created: 1631690190523
 url: "{{ _.baseurl }}/api/cart"
 name: INDEX
@@ -31,14 +31,11 @@ description: >-
   ```
 
   {
-    "meta": {
-      "code": 200,
-      "status": "success",
-      "message": "Your Carts Listed!"
-    },
+    "status": "success",
+    "message": "Your Carts Listed!",
     "data": {
       "cart": [
-        {
+      {
           "id": "a0e4e56a-b727-4b8c-83ce-69b01eb5c8ef",
           "qty": 3,
           "price": 3600000,
@@ -69,11 +66,9 @@ description: >-
           }
         }
       ],
-      "total": 3600000
+      "total": 0
     }
-  }
-
-  ```
+  }```
 
 
   ## Response Failed
@@ -83,14 +78,9 @@ description: >-
   ```
 
   {
-    "meta": {
-      "code": 500,
-      "status": "error",
-    },
-    "data": {
-      "message": "Something went wrong!",
-      "error": "Showing Cart Failed!"
-    }
+    "status": "error",
+    "message": "Unauthorized Domain!",
+    "data": null
   }
 
   ```
@@ -101,7 +91,7 @@ headers:
   - description: ""
     id: pair_76ffb2c492b0467587b0413d0263acd8
     name: X-DOMAIN-MEMBER
-    value: "{{ _.domain }}"
+    value: "{{ _.domain }}a"
   - description: ""
     id: pair_8cda0aeabfc74640aa737fc2069a2e2b
     name: ""
