@@ -1,7 +1,7 @@
 _id: req_33631a6aa0e04be28dc1b3b7a1a72991
 type: Request
 parentId: fld_92db5037fd30421984552980f3ae17fb
-modified: 1638235294945
+modified: 1638716198594
 created: 1633008486760
 url: "{{ _.baseurl }}/api/products"
 name: INDEX
@@ -22,7 +22,16 @@ description: >-
 
   |---------|----|--------|--------|
 
+  |limit|int|optional|body|15|
+
   |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ##
+
+  Limit untuk pagination product
+
+  ##
 
 
   ## Response Success
@@ -282,11 +291,8 @@ headers:
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
 authentication:
-  type: basic
-  useISO88591: false
-  disabled: false
-  username: ""
-  password: ""
+  type: bearer
+  token: "{{ _.token }}"
 metaSortKey: -1628594105171.5
 isPrivate: false
 settingStoreCookies: true
