@@ -1,0 +1,247 @@
+_id: req_d81d3f6971a84a5db9e65190f8d6a5ab
+type: Request
+parentId: fld_4a08c8dd2ba448979dfa6016c9f29578
+modified: 1645089073024
+created: 1645071103876
+url: "{{ _.baseurl }}/api/package"
+name: CREATE
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/package
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|
+
+  |title|string|yes|body|samsung a12|
+
+  |category_id|uuid|required|body|asd231-231423-231|
+
+  |main_image|file|optional|body|picture|
+
+  |images[]|image(array)|optional|body|picture|
+
+  |max_reseller|int|yes|body|150|
+
+  |duration|int|yes|body|12 (Bulan)|
+
+  |content|string|yes|body|lorem ipsum|
+
+  |price|int|yes|body|12000000|
+
+  |discount_type|enum(presentase, nominal)|optional|body|presentase|
+
+  |discount|int|yes (if discount_type not null)|body|50|
+
+  |affiliate_type|enum(presentase, nominal)|optional|body|presentase|
+
+  |affiliate_fee|int|yes (if discount_type not null)|body|50|
+
+  |tnc|string|yes|body|lorem ipsum|
+
+  |pin|string|optional|body|flash sale|
+
+  |seo|boolean|yes|body|1|
+
+  |meta_title|string|yes: if seo true|body|computer bagus|
+
+  |meta_keyword|string|yes: if seo true|body|computer bagus|
+
+  |meta_description|string|yes: if seo true|body|computer bagus|
+
+  |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+
+  ## Response Success
+
+  ```
+
+  {
+  	"status": "success",
+  	"message": "Package Created!",
+  	"data": {
+  		"id": "2813655c-ee44-40ec-86f8-89b8bcd2c35f",
+  		"title": "Package 1 Tahun",
+  		"slug": "package-1-tahun-cxdp2",
+  		"max_reseller": "150",
+  		"duration": "12",
+  		"type": "digital",
+  		"merk": null,
+  		"main_image": "https:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/6gHoAKbUOTA4wSj851I4SUs4WXW94e0fS54xWW6C.jpeg",
+  		"content": "Package 1 Tahun (12 Bulan)",
+  		"tnc": "Package 1 Tahun (12 Bulan)",
+  		"weight": null,
+  		"reseller_price": "0",
+  		"digital_product": null,
+  		"price": "150000",
+  		"stocks": null,
+  		"discount_type": "presentase",
+  		"discount": "10",
+  		"pin": null,
+  		"seo": "0",
+  		"meta_title": null,
+  		"meta_keyword": null,
+  		"meta_description": null,
+  		"status": false,
+  		"rating_avg": 0,
+  		"flag_wishlist": false,
+  		"created_at": "2022-02-17T04:21:40.000000Z",
+  		"updated_at": "2022-02-17T04:21:40.000000Z"
+  	}
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+      "message": "Error message!",
+      "status": "status",
+      "data": null
+  }
+
+  ```
+
+  ```
+
+  {
+  	"status": "error",
+  	"message": {
+  		"main_image": [
+  			"The main image may not be greater than 300 kilobytes."
+  		],
+  		"seo": [
+  			"The seo field is required."
+  		]
+  	},
+  	"data": null
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_ec85c253b8204a339f456e0597516d34
+      name: title
+      value: Package 1 Tahun
+      description: ""
+    - id: pair_edd2b7064c9948edaa9608249ec1863f
+      name: category_id
+      value: 0ab77564-b8ee-419b-bc67-3c8466c65a2a
+      description: ""
+    - id: pair_53e2e4b32062405b8b854af0f07dee5d
+      name: main_image
+      value: ""
+      description: ""
+      type: file
+      fileName: C:\Users\ADHIT\Downloads\image.png
+    - id: pair_54b2593a37b04de7b723404ebb35761b
+      name: content
+      value: Package 1 Tahun (12 Bulan)
+      description: ""
+    - id: pair_e53dccf6e3564824b71bc061a8e3efd9
+      name: price
+      value: "150000"
+      description: ""
+    - id: pair_cfb7437ea70a49eeb40fd3287037ae41
+      name: reseller_price
+      value: "0"
+      description: ""
+    - id: pair_9bc639bc03514178884d447cb397ffe7
+      name: discount_type
+      value: presentase
+      description: ""
+    - id: pair_6091cd9dfaab422bb42ede9207ac5da6
+      name: discount
+      value: "10"
+      description: ""
+    - id: pair_0b467c5c605b4ebd90a04e27553b9670
+      name: affiliate_type
+      value: ""
+      description: ""
+    - id: pair_f2c096fe3a5549c285d0d9738a4f45bf
+      name: affiliate_fee
+      value: ""
+      description: ""
+    - id: pair_c37ec0daf00d46629a65e813fb3e4e6a
+      name: tnc
+      value: Package 1 Tahun (12 Bulan)
+      description: ""
+    - id: pair_08797a6167ba4bfca758c076866811b8
+      name: pin
+      value: ""
+      description: ""
+    - id: pair_913255763a274ac29961a17865f04df1
+      name: max_reseller
+      value: "150"
+      description: ""
+    - id: pair_48498205d785440cb2548e65e0a5ae49
+      name: duration
+      value: "12"
+      description: ""
+    - id: pair_737efbed5d784b0384a46d84613e1827
+      name: seo
+      value: "0"
+      description: ""
+      disabled: false
+    - id: pair_31b7fe456223418e94c2244819b477d6
+      name: meta_title
+      value: ""
+      description: ""
+      disabled: true
+    - id: pair_e2f9fb27795d4f4bac6645d68e954eba
+      name: meta_keyword
+      value: ""
+      description: ""
+      disabled: true
+    - id: pair_1856b966c35f4525bfe560646c347d57
+      name: meta_description
+      value: ""
+      description: ""
+      disabled: true
+    - id: pair_578cd432e9d64d8b906f3e51c0216694
+      name: images[]
+      value: ""
+      description: ""
+      type: file
+      fileName: C:\Users\ADHIT\Downloads\logo.png
+    - id: pair_3670bfe6aabf4951975a489b62d0bee3
+      name: images[]
+      value: ""
+      description: ""
+      disabled: true
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_486cd8ba1e7844a980ab89e11f800d85
+  - id: pair_22c5b4d395e647bc8bd53c96d8ec8332
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1645071103876
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

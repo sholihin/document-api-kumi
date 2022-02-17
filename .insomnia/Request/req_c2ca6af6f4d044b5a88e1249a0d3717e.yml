@@ -1,0 +1,27 @@
+_id: req_c2ca6af6f4d044b5a88e1249a0d3717e
+type: Request
+parentId: fld_e9196f337d2f4f40915e1953f02d4c1c
+modified: 1645073233887
+created: 1645073225307
+url: "{{ _.baseurl }}/api/member/renting"
+name: get User Membered by Renting
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_877dea677c564a3b8fc6c9b1892d2b02
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1645072090103.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

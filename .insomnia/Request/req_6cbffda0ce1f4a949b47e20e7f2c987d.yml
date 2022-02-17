@@ -1,0 +1,65 @@
+_id: req_6cbffda0ce1f4a949b47e20e7f2c987d
+type: Request
+parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
+modified: 1643816134784
+created: 1643816085527
+url: "{{ _.baseurl }}/api/checkout/cancel/aa397293-5bca-446c-a6be-8034f96a43f6"
+name: CANCEL
+description: |-
+  ## Method (POST)
+  ## Route
+  ```
+  /api/checkout
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|
+  |status|string|required|body|DONE|
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+  ```
+  {
+    "status": "success",
+    "message": "Thank You!",
+    "data": null
+  }
+  ```
+
+  ## Response Failed
+  ```
+  {
+    "status": "error",
+    "message": "This Invoice is not applicable to this request!",
+    "data": null
+  }
+  ```
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"status" : "CANCEL",
+    	"reason" : "nothing"
+    }
+parameters: []
+headers:
+  - id: pair_c66db063e78648f097664f2dc5b094b5
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.subdomain }}"
+    description: ""
+  - name: Content-Type
+    value: application/json
+    id: pair_05da0d5ed52448d397cd412cd2178137
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1631805100697.875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

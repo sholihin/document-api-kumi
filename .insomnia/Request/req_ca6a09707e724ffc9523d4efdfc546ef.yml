@@ -1,10 +1,10 @@
 _id: req_ca6a09707e724ffc9523d4efdfc546ef
 type: Request
 parentId: fld_c70a990aebc64a889d18e7f6bd431d44
-modified: 1637741759255
+modified: 1639838374617
 created: 1631690201079
 url: "{{ _.baseurl
-  }}/api/admin/config/payment/status-bank/05c2e21d-1b92-4611-b799-a6a802d9e71d"
+  }}/api/admin/config/payment/status-bank/fda14ee2-7555-4253-b32f-db759a8d1b0f"
 name: UPDATE BANK STATUS
 description: >-
   ## Method (PATCH)
@@ -106,16 +106,16 @@ description: >-
 method: PATCH
 body:
   mimeType: application/json
-  text: '{"status" : 1}'
+  text: '{"status": 1}'
 parameters: []
 headers:
-  - id: pair_66c577ac1d2947518320d4e12e64b5cf
-    name: Content-Type
-    value: application/json
   - description: ""
     id: pair_f01cddc3f09f494cafa005deb6466e78
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
+  - name: Content-Type
+    value: application/json
+    id: pair_7eb55a5d22104ed09bcbda2ef1c79920
 authentication:
   disabled: false
   token: "{{ _.token_admin }}"

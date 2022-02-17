@@ -1,0 +1,27 @@
+_id: req_5f08ff14626d4bc69465d2070416c5fa
+type: Request
+parentId: fld_e9196f337d2f4f40915e1953f02d4c1c
+modified: 1645090218909
+created: 1645073497004
+url: "{{ _.baseurl }}/api/member/admin/check"
+name: get Member by Admin
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_877dea677c564a3b8fc6c9b1892d2b02
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1645071473742.5625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

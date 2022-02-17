@@ -1,7 +1,7 @@
 _id: req_47921c0cdafd42f686f5540b40494dd0
 type: Request
 parentId: fld_4593e41f610941ec94fa931251c2fda2
-modified: 1637740559083
+modified: 1644660459570
 created: 1631690181410
 url: "{{ _.baseurl }}/api/customer/register"
 name: Register Customer
@@ -100,12 +100,12 @@ body:
     - description: ""
       id: pair_aab0c323359349568c04ca92cf573c89
       name: email
-      value: mohamad.sholihin.it@kumi.id
+      value: customer2@kumi.id
       disabled: false
     - description: ""
       id: pair_cc05e2f61973474aa1c47b1e46936b62
       name: name
-      value: Mohamad Sholihin
+      value: "customer "
       disabled: false
     - description: ""
       id: pair_9783cdaf9087445b9876de1e3cd70b90
@@ -115,12 +115,12 @@ body:
     - description: ""
       id: pair_0caf408794134592bd16ba8640ac255e
       name: password
-      value: bismillah
+      value: password
       disabled: false
     - description: ""
       id: pair_8fb44b7133e94e6b9bb1350418710f59
       name: password_confirmation
-      value: bismillah
+      value: password
       disabled: false
 parameters: []
 headers:

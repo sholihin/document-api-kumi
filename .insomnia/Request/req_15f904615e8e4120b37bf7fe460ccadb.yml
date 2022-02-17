@@ -1,7 +1,7 @@
 _id: req_15f904615e8e4120b37bf7fe460ccadb
 type: Request
 parentId: fld_ca1867cb7e954152806f85d4a844db63
-modified: 1638235276700
+modified: 1642009873575
 created: 1634182509165
 url: "{{ _.baseurl }}/api/discussions\t"
 name: CREATE
@@ -114,7 +114,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"product_id" : "05c4c3d7-a9f2-4ded-93bd-2362d6f8b517",
+    	"product_id" : "013583c3-c3be-4f04-978a-a72798b40894",
     	"description" : "ada?"
     }
 parameters: []

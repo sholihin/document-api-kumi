@@ -1,7 +1,7 @@
 _id: req_73bde893e2a44ae9939bf3f2318a5128
 type: Request
 parentId: fld_967d5fb22fdc4b5e9672fc5efd5dde5f
-modified: 1637741859652
+modified: 1640067484974
 created: 1631690201071
 url: "{{ _.baseurl }}/api/admin/config/payment"
 name: GET

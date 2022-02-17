@@ -1,9 +1,9 @@
 _id: req_87a0de3bdc0941bc87d95548c3e155db
 type: Request
 parentId: fld_9e2b3ebee28a4bc69f16660fb89e267a
-modified: 1638329147920
+modified: 1642779524740
 created: 1638329075522
-url: "{{ _.baseurl }}/api/wallet/debit/4a236f61-42b1-43be-9919-7f5b575e5a65"
+url: "{{ _.baseurl }}/api/wallet/debit/b76734b0-ee1c-486c-b152-afdaebc21aa6"
 name: Debit Wallet
 description: |-
   ## Method (GET)
@@ -38,8 +38,8 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"amount" : 145000,
-    	"bank_id" : "f7597924-25cf-445c-9fb2-1e1ca0ec3430"
+    	"amount" : 50000,
+    	"bank_id" : "a329e600-ab30-499f-b271-e5be271514bf"
     }
 parameters: []
 headers:

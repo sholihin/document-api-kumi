@@ -1,7 +1,7 @@
 _id: req_a7174d6c1c604deca866ba7a144f667c
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1637744478218
+modified: 1642143319102
 created: 1637744352890
 url: "{{ _.baseurl }}/api/checkout/list-banks"
 name: List Banks

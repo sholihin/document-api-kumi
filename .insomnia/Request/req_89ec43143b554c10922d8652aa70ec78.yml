@@ -1,10 +1,10 @@
 _id: req_89ec43143b554c10922d8652aa70ec78
 type: Request
 parentId: fld_b0fc06fc115047778ef38581d3fdecc8
-modified: 1637907850444
+modified: 1645091429112
 created: 1637900450470
-url: "{{ _.baseurl }}/api/admin/wallet/history"
-name: History Wallet
+url: "{{ _.baseurl }}/api/admin/wallets "
+name: Wallet
 description: ""
 method: GET
 body: {}

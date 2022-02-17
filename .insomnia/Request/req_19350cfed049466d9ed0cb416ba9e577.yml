@@ -1,9 +1,9 @@
 _id: req_19350cfed049466d9ed0cb416ba9e577
 type: Request
 parentId: fld_fc625f025a244d79a220618a93d25f29
-modified: 1638080093128
+modified: 1645072017047
 created: 1631690200967
-url: "{{ _.baseurl }}/api/admin/product/c0cd5146-a0cc-4894-8c38-3bad1a6b0104"
+url: "{{ _.baseurl }}/api/admin/product/4b2c8b44-852b-40a7-a2d8-f3c41062d17b"
 name: SHOW
 description: >-
   ## Method (GET)

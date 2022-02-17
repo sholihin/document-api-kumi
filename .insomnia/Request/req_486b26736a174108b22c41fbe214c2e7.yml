@@ -1,9 +1,9 @@
 _id: req_486b26736a174108b22c41fbe214c2e7
 type: Request
 parentId: fld_3ee4af54477a431fb353b1fda57ad28a
-modified: 1637591074651
+modified: 1643802377622
 created: 1633425983324
-url: "{{ _.baseurl }}/api/config/landing"
+url: "{{ _.produrl }}/api/config/landing"
 name: Landing Page
 description: |-
   ## Method (GET)

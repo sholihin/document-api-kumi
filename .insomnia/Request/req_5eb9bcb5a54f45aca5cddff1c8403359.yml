@@ -1,7 +1,7 @@
 _id: req_5eb9bcb5a54f45aca5cddff1c8403359
 type: Request
 parentId: fld_521e691b49454ceaa4995c09bc3c5dd0
-modified: 1638709293492
+modified: 1642487045979
 created: 1631707215141
 url: "{{ _.baseurl }}/api/blog"
 name: INDEX
@@ -85,9 +85,7 @@ headers:
     id: pair_a38c8a33a3644dd1adf5c0b2715fa865
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
-authentication:
-  token: "{{ _.token }}"
-  type: bearer
+authentication: {}
 metaSortKey: -1628596208522
 isPrivate: false
 settingStoreCookies: true

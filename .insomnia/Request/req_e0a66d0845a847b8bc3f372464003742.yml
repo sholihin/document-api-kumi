@@ -1,7 +1,7 @@
 _id: req_e0a66d0845a847b8bc3f372464003742
 type: Request
 parentId: fld_5bf1bcc6c5ba4f68ac32ef87f9b0322d
-modified: 1637741100888
+modified: 1642047108150
 created: 1637741100888
 url: "{{ _.baseurl }}/api/bank"
 name: List Data Bank

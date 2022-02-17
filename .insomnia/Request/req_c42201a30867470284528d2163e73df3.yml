@@ -1,12 +1,12 @@
 _id: req_c42201a30867470284528d2163e73df3
 type: Request
 parentId: fld_53fe21ee2098498cab5432eee56adb6e
-modified: 1638347988687
+modified: 1645091589648
 created: 1631690190558
 url: "{{ _.baseurl }}/api/reseller/google/login"
 name: Login via Google
 description: ""
-method: GET
+method: POST
 body: {}
 parameters: []
 headers: []

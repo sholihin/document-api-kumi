@@ -1,7 +1,7 @@
 _id: req_587367fe3b4a48cca2b46fa55b474f20
 type: Request
 parentId: fld_72cb62af60c04607b62c8098399fc0b0
-modified: 1631715051883
+modified: 1639660195199
 created: 1631690201111
 url: "{{ _.baseurl }}/api/admin/config/sliders/63f7fb4f-cf69-4378-bfdd-00094a6768b6"
 name: UPDATE

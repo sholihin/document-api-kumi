@@ -1,7 +1,7 @@
 _id: req_6a672aedbbe442519ee84c611c49a175
 type: Request
 parentId: fld_d090bb7af08b4a5085b07142de8b4264
-modified: 1631690200990
+modified: 1642413004328
 created: 1631690200990
 url: "{{ _.baseurl }}/api/admin/coupon/bf459bc6-c70a-4dcb-9e90-5de6047a2ea8"
 name: UPDATE
@@ -126,7 +126,7 @@ body:
     - description: ""
       id: pair_297c7ac8cf5944d19035321507d49402
       name: code
-      value: KUMIKUPONs
+      value: KUPON
     - description: ""
       id: pair_ee23dfa14add4769a6e661ce535436ee
       name: name
@@ -144,15 +144,15 @@ body:
       multiline: false
       name: start_date
       type: text
-      value: 2021-08-22 21:39:23
+      value: 2022-01-17 06:39:23
     - description: ""
       id: pair_7e6aaecbd1fc4e49a494430377bce1f3
       name: expired_date
-      value: 2021-09-25 06:39:23
+      value: 2022-09-25 06:39:23
     - description: ""
       id: pair_13dae179106c4bcf9938f313157ddca2
       name: status
-      value: non-active
+      value: active
     - description: ""
       id: pair_f6b824cfc2ee497b9879ac8d8bf92ec1
       name: min_total

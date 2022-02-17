@@ -1,7 +1,7 @@
 _id: req_d1c11827a65c4e2d90d3b2ab54bf8dc8
 type: Request
 parentId: fld_28d70defde9e4452a2bf07f2dd563e92
-modified: 1634182668650
+modified: 1642044517608
 created: 1634114880206
 url: "{{ _.baseurl }}/api/discussions\t"
 name: CREATE
@@ -114,9 +114,9 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"product_id" : "40df9b0b-e062-4189-98bf-efea8c7e8ace",
+    	"product_id" : "013583c3-c3be-4f04-978a-a72798b40894",
     	"description" : "ada",
-    	"discussion_id" : "7cf1ad55-fd9e-47bb-8ca5-609647b464f4"
+    	"discussion_id" : "4c47aeda-ccb7-4924-b3b8-4592e621049d"
     }
 parameters: []
 headers:

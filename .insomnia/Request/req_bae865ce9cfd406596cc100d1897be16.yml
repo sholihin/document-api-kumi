@@ -1,10 +1,10 @@
 _id: req_bae865ce9cfd406596cc100d1897be16
 type: Request
 parentId: fld_ba66419573c14bd0b77b091c5cece635
-modified: 1638348381895
+modified: 1642081943263
 created: 1638347980339
 url: "{{ _.baseurl
-  }}/api/admin/checkout/status/payment/cc2e0dd2-3e20-4852-8f7f-2ec6ab7d0f0d"
+  }}/api/admin/checkout/status/payment/6817c7ff-3717-4936-8980-d7c0d5743973"
 name: Payment Status
 description: |-
   ## Method (PATCH)

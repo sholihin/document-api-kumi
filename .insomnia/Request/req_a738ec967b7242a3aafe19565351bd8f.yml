@@ -1,9 +1,9 @@
 _id: req_a738ec967b7242a3aafe19565351bd8f
 type: Request
 parentId: fld_92db5037fd30421984552980f3ae17fb
-modified: 1638716277839
+modified: 1643218686098
 created: 1637113872555
-url: "{{ _.baseurl }}/api/product/sony-dsc-h300-sony-zqfes"
+url: "{{ _.baseurl }}/api/categories/product"
 name: Detail
 description: >-
   ## Method (GET)

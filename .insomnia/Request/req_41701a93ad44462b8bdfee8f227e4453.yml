@@ -1,7 +1,7 @@
 _id: req_41701a93ad44462b8bdfee8f227e4453
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1638342066881
+modified: 1644826547764
 created: 1632987096513
 url: "{{ _.baseurl }}/api/checkout"
 name: Checkout
@@ -145,7 +145,7 @@ body:
   params:
     - id: pair_01a41bd5edf9422ea8ef24fe798056bd
       name: id_data
-      value: fda14ee2-7555-4253-b32f-db759a8d1b0f
+      value: "\tf0553a9c-6302-4767-938d-6896de63fe65"
       description: ""
       disabled: false
 parameters: []
@@ -155,7 +155,7 @@ headers:
     id: pair_9f8152cadc3346d8a432a0b90c96a975
   - id: pair_c66db063e78648f097664f2dc5b094b5
     name: X-DOMAIN-MEMBER
-    value: "{{ _.subdomain }}"
+    value: "{{ _.domain }}"
     description: ""
 authentication:
   type: bearer

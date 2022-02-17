@@ -1,9 +1,9 @@
 _id: req_9ecdab2cc52d47c1bde3d627f1df8e4a
 type: Request
 parentId: fld_f73e5de9faf34cd89f3c216bfbe568ba
-modified: 1634810428514
+modified: 1640575183030
 created: 1632298993712
-url: "{{ _.baseurl }}/api/admin/config/address/7458662e-fc6c-4676-b394-83b4220bc839"
+url: "{{ _.baseurl }}/api/admin/config/address/a773dbdd-ae32-4186-af97-840a8e65ab61"
 name: UPDATE ADDRESS
 description: |-
   ## Method (PATCH)
@@ -109,7 +109,7 @@ body:
       disabled: false
       id: pair_671400f0c0ca42a99867cae773f8448c
       name: detail
-      value: Jl. Kebayoran Baru No. 01
+      value: Jl. Kebayoran Baru No. 02
 parameters: []
 headers:
   - id: pair_66c577ac1d2947518320d4e12e64b5cf

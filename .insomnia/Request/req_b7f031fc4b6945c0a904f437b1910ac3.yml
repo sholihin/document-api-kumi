@@ -1,7 +1,7 @@
 _id: req_b7f031fc4b6945c0a904f437b1910ac3
 type: Request
 parentId: fld_a113b0f7a4bb48e4be05061209264b67
-modified: 1631690210031
+modified: 1643789650469
 created: 1631690210031
 url: "{{ _.baseurl }}/api/email/verification-notification"
 name: RESENT VERIFICATION
@@ -46,17 +46,13 @@ description: |-
   }
   ```
 method: POST
-body:
-  mimeType: application/json
-  text: |-
-    {
-    	"domain" : "example.net"
-    }
+body: {}
 parameters: []
 headers:
-  - id: pair_41b871351a134cfb9fcf6f3ae1d14216
-    name: Content-Type
-    value: application/json
+  - id: pair_9c2452104c13422aacf382131307426d
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
 authentication:
   token: "{{ _.token_admin }}"
   type: bearer

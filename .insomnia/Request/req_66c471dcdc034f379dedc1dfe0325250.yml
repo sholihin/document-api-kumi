@@ -1,9 +1,9 @@
 _id: req_66c471dcdc034f379dedc1dfe0325250
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1638332332020
+modified: 1644826635447
 created: 1632134456283
-url: "{{ _.baseurl }}/api/oncheckout?courier=jne&service_courier=reg"
+url: "{{ _.baseurl }}/api/oncheckout?courier=j%26t&service_courier=EZ"
 name: OnCheckout
 description: >-
   ## Method (GET)
@@ -361,6 +361,10 @@ headers:
   - id: pair_c66db063e78648f097664f2dc5b094b5
     name: X-DOMAIN-MEMBER
     value: "{{ _.subdomain }}"
+    description: ""
+  - id: pair_8603e9160c984e7bb03ba23d2da04261
+    name: Accept
+    value: application/json
     description: ""
 authentication:
   type: bearer

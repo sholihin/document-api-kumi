@@ -1,10 +1,10 @@
 _id: req_eeb79cb03b6241a1a98ac63283bf190d
 type: Request
 parentId: fld_ba66419573c14bd0b77b091c5cece635
-modified: 1638347980335
+modified: 1641991083729
 created: 1638347980335
 url: "{{ _.baseurl
-  }}/api/admin/checkout/waybill/cc2e0dd2-3e20-4852-8f7f-2ec6ab7d0f0d"
+  }}/api/admin/checkout/waybill/178ee131-df5f-4943-9658-6312f3d484c1"
 name: Insert Waybill
 description: |-
   ## Method (PATCH)
@@ -42,7 +42,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"waybill": "10002359810077"
+    	"waybill": "10003348234955"
     }
 parameters: []
 headers:

@@ -1,10 +1,10 @@
 _id: req_9b0e3d122788443c98eead83b194cef3
 type: Request
 parentId: fld_f73e5de9faf34cd89f3c216bfbe568ba
-modified: 1634812507268
+modified: 1642303705802
 created: 1631690201099
 url: "{{ _.baseurl
-  }}/api/admin/config/shipping/7458662e-fc6c-4676-b394-83b4220bc839"
+  }}/api/admin/config/shipping/a773dbdd-ae32-4186-af97-840a8e65ab61"
 name: UPDATE
 description: |-
   ## Method (PATCH)
@@ -117,7 +117,7 @@ body:
       name: flat_rate
       value: "11000"
     - description: ""
-      disabled: true
+      disabled: false
       id: pair_e8e7d4d0633045a980b62ff5c3d20a90
       name: status_custom
       value: "1"
@@ -130,7 +130,7 @@ body:
       name: status_rajaongkir
       value: "1"
       description: ""
-      disabled: false
+      disabled: true
 parameters: []
 headers:
   - id: pair_66c577ac1d2947518320d4e12e64b5cf

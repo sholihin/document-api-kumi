@@ -1,10 +1,10 @@
 _id: req_9f9af99bc05245459ba5cf6c746c3b23
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1638341258308
+modified: 1644554396126
 created: 1633062309404
 url: "{{ _.baseurl
-  }}/api/checkout/confirmation/cc2e0dd2-3e20-4852-8f7f-2ec6ab7d0f0d"
+  }}/api/checkout/confirmation/9f163b52-475f-4a75-a853-4a8e9168ab7a"
 name: Payment Confirmation
 description: >-
   ## Method (POST)
@@ -84,9 +84,15 @@ body:
       name: name
       value: dhit
       description: ""
+      disabled: false
     - id: pair_011f8aa9dc2c4d8bb0708b37fe4fa5a4
       name: total
       value: "596000"
+      description: ""
+      disabled: false
+    - id: pair_03f4b40ae66b478897b102fad655b393
+      name: _method
+      value: PATCH
       description: ""
       disabled: false
 parameters: []

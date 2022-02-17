@@ -1,0 +1,59 @@
+_id: req_4357633bcea04b59ba62d643e9380da9
+type: Request
+parentId: fld_9e2b3ebee28a4bc69f16660fb89e267a
+modified: 1642837517970
+created: 1642779537307
+url: "{{ _.baseurl }}/api/wallet/history"
+name: Get Wallet History
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/wallet
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "status": "success",
+    "message": "Wallet Retrieved!",
+    "data": {
+      "id": "4a236f61-42b1-43be-9919-7f5b575e5a65",
+      "balance": 0,
+      "created_at": "2021-11-24T08:02:58.000000Z",
+      "updated_at": "2021-11-24T08:02:58.000000Z"
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "status": "error",
+    "message": "Unauthorized Domain!",
+    "data": null
+  }```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_01cce108f10541e9b9718d3d34272fd2
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_reseller }}"
+metaSortKey: -1637836372468.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

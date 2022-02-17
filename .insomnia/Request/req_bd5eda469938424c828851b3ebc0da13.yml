@@ -1,0 +1,53 @@
+_id: req_bd5eda469938424c828851b3ebc0da13
+type: Request
+parentId: fld_afb34fbd208449129459a8ad25afc3b8
+modified: 1645091216119
+created: 1645090905646
+url: "{{ _.baseurl }}/api/member/customer/check"
+name: get Member by Customer
+description: |
+  ## Method (POST)
+  ## Route
+  ```
+  /api/member/customer/check
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|
+  |---------|----|--------|--------|
+  |X-DOMAIN-MEMBER|string|yes|header|
+
+  ## Response Success
+  ```
+              Gate::authorize('kumi');
+
+  ```
+
+  ## Response Failed
+  ```
+  {
+    "data": {
+      "message": "Error message!",
+      "status": "status",
+      "data": null
+    }
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_9cc585eb13034393b2682fa5dda66251
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1645081828846
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

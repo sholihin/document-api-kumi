@@ -1,7 +1,7 @@
 _id: req_7db8723f54b64ffc8bc50b0b2fa05475
 type: Request
 parentId: fld_f73e5de9faf34cd89f3c216bfbe568ba
-modified: 1631690201102
+modified: 1642601462756
 created: 1631690201102
 url: "{{ _.baseurl }}/api/admin/config/shipping"
 name: GET

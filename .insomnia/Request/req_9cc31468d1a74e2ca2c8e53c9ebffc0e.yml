@@ -1,10 +1,10 @@
 _id: req_9cc31468d1a74e2ca2c8e53c9ebffc0e
 type: Request
 parentId: fld_ba66419573c14bd0b77b091c5cece635
-modified: 1638708857816
+modified: 1642579242479
 created: 1638347980371
 url: "{{ _.baseurl
-  }}/api/admin/checkout/status/complaint/cc2e0dd2-3e20-4852-8f7f-2ec6ab7d0f0d"
+  }}/api/admin/checkout/status/complaint/bfe05357-21d1-42de-92ed-6008b4e813b7"
 name: Complaint Status
 description: >-
   ## Method (PATCH)
@@ -81,23 +81,37 @@ body:
   params:
     - id: pair_f75589e6520e4101bec11e126c861427
       name: status
-      value: DONE
+      value: ACCEPTED
       description: ""
     - id: pair_fe296d4442154b0dbd0820684d00fd21
       name: detail_status
-      value: REFUND
+      value: NEW_PRODUCT
       description: ""
-      disabled: true
+      disabled: false
     - id: pair_db5b8540ce994986b7825238dc4001f2
       name: transfer_image
       value: ""
       description: ""
       type: file
       fileName: C:\Users\ADHIT\Downloads\store.PNG
-      disabled: false
+      disabled: true
     - id: pair_334dd46e3cf44f34815a198ef514314a
       name: _method
       value: PATCH
+      description: ""
+      disabled: false
+    - id: pair_a7e78d3a2aab4eea88d24e80cf891e8d
+      name: reason
+      value: sudah sesuai deskripsi
+      description: ""
+      disabled: true
+    - id: pair_034518a0d4864b52a10f1072b62f5b80
+      name: waybill
+      value: anteraja
+      description: ""
+    - id: pair_928b0a79ba2c4793aaae3a9f02d0c51a
+      name: service_waybill
+      value: "10003380822130"
       description: ""
 parameters: []
 headers:

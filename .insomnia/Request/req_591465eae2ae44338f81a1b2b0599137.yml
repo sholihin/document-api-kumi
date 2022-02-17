@@ -1,9 +1,9 @@
 _id: req_591465eae2ae44338f81a1b2b0599137
 type: Request
 parentId: fld_f43992deee37419f9dacf092a99060d9
-modified: 1631690181319
+modified: 1642594075736
 created: 1631690181319
-url: "{{ _.produrl }}/api/customer/profile"
+url: "{{ _.baseurl }}/api/profile"
 name: SHOW
 description: >-
   ## Method (GET)

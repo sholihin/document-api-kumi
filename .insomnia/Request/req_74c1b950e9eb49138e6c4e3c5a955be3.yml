@@ -1,7 +1,7 @@
 _id: req_74c1b950e9eb49138e6c4e3c5a955be3
 type: Request
 parentId: fld_fc625f025a244d79a220618a93d25f29
-modified: 1631690200977
+modified: 1642173919144
 created: 1631690200977
 url: "{{ _.baseurl }}/api/admin/mass/product"
 name: Mass Upload
@@ -110,7 +110,7 @@ body:
   mimeType: multipart/form-data
   params:
     - description: ""
-      fileName: C:\Users\ADHIT\Downloads\example_mass_upload_product - Sheet1.csv
+      fileName: C:\Users\ADHIT\Downloads\example_mass_upload_product.xlsx
       id: pair_6380941fb50c4841b7778eb19611bbc3
       name: product
       type: file

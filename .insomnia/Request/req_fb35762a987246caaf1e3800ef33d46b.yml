@@ -1,7 +1,7 @@
 _id: req_fb35762a987246caaf1e3800ef33d46b
 type: Request
 parentId: fld_521e691b49454ceaa4995c09bc3c5dd0
-modified: 1638709211296
+modified: 1642488551889
 created: 1631707215148
 url: "{{ _.baseurl }}/api/blog/0c0797b8-abbd-4a9c-9c87-1385bdb8fb51"
 name: SHOW
@@ -77,9 +77,7 @@ headers:
     id: pair_a38c8a33a3644dd1adf5c0b2715fa865
     name: X-DOMAIN-MEMBER
     value: "{{ _.domain }}"
-authentication:
-  token: "{{ _.token }}"
-  type: bearer
+authentication: {}
 metaSortKey: -1628594105121.5
 isPrivate: false
 settingStoreCookies: true

@@ -1,7 +1,7 @@
 _id: req_e022fc87bc1f4b968d4f4d4bf10c55c5
 type: Request
 parentId: fld_72cb62af60c04607b62c8098399fc0b0
-modified: 1631690201116
+modified: 1639746827225
 created: 1631690201116
 url: "{{ _.baseurl }}/api/admin/config/sliders"
 name: GET

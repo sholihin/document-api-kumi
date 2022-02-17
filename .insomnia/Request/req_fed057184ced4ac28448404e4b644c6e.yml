@@ -1,0 +1,27 @@
+_id: req_fed057184ced4ac28448404e4b644c6e
+type: Request
+parentId: fld_b0fc06fc115047778ef38581d3fdecc8
+modified: 1645091495104
+created: 1642853869886
+url: "{{ _.baseurl }}/api/admin/wallet/on-process"
+name: History Wallet On Process
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_207f116ce86d46309610214eac61b8f3
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1637899622631.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

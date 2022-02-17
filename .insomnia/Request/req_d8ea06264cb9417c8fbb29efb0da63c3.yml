@@ -1,9 +1,9 @@
 _id: req_d8ea06264cb9417c8fbb29efb0da63c3
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1638348114041
+modified: 1644224319790
 created: 1633406053671
-url: "{{ _.baseurl }}/api/checkout/waybill/ba452584-2032-4c41-9790-c1277ec8ea95"
+url: "{{ _.baseurl }}/api/checkout/waybill/041b447f-3841-413e-8e61-6b4d07954394"
 name: Delivery Status
 description: >-
   ## Method (GET)
@@ -170,7 +170,11 @@ description: >-
 method: GET
 body: {}
 parameters: []
-headers: []
+headers:
+  - id: pair_9128e07964774525a25d86c4a4d268aa
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
 authentication:
   type: bearer
   token: "{{ _.token }}"

@@ -1,7 +1,7 @@
 _id: req_fa8e2f4d92af47df85522ca56e472fe1
 type: Request
 parentId: fld_fc625f025a244d79a220618a93d25f29
-modified: 1638091344613
+modified: 1645072023118
 created: 1631690200972
 url: "{{ _.baseurl }}/api/admin/products"
 name: INDEX

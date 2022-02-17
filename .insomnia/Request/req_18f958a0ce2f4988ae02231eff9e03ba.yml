@@ -1,7 +1,7 @@
 _id: req_18f958a0ce2f4988ae02231eff9e03ba
 type: Request
 parentId: fld_fc625f025a244d79a220618a93d25f29
-modified: 1631690200957
+modified: 1645072209800
 created: 1631690200957
 url: "{{ _.baseurl }}/api/admin/product/c98a91e3-49d9-4b3d-9848-3830adfa4c32"
 name: UPDATE
@@ -50,6 +50,10 @@ description: >-
 
   |discount|int|yes (if discount_type not null)|body|50|
 
+  |affiliate_type|enum(presentase, nominal)|optional|body|presentase|
+
+  |affiliate_fee|int|yes (if discount_type not null)|body|50|
+
   |tnc|string|yes|body|lorem ipsum|
 
   |pin|string|optional|body|flash sale|
@@ -62,7 +66,7 @@ description: >-
 
   |meta_description|string|yes: if seo true|body|computer bagus|
 
-  |X-DIMAIN-MEMBER|string|yes|header|kumi.id|
+  |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
 
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
 

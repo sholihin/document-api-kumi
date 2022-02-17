@@ -1,7 +1,7 @@
 _id: req_222e0026359d48568b1801f504c0c36f
 type: Request
 parentId: fld_4a65af8a2b16414ca0f1a513492bc30c
-modified: 1638347802293
+modified: 1645091483911
 created: 1631690201299
 url: "{{ _.baseurl }}/api/admin/login"
 name: Login Admin
@@ -34,21 +34,36 @@ description: >-
   ```
 
   {
-    "status": "success",
-    "message": null,
-    "data": {
-      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2MzcwMzI3MTYsImV4cCI6MTYzNzAzNjMxNiwibmJmIjoxNjM3MDMyNzE2LCJqdGkiOiJjdFBCZFJHS3hEdFl6eEkxIiwic3ViIjoiZGU2ZDA0MDEtYjY5MS00M2EwLTlkYzQtOWZlMGY4YjM4MjAxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.1_wpHiD5D2z5C8psXMJlO0ZoAOB5gI1D0-gpiEHsnlU",
-      "user": {
-        "id": "de6d0401-b691-43a0-9dc4-9fe0f8b38201",
-        "name": "Admin",
-        "avatar": "https:\/\/ui-avatars.com\/api\/?name=Admin&background=4e73df&color=ffffff&size=100",
-        "jenkel": "L",
-        "email": "admin@kumi.id",
-        "phone_number": "87764281999",
-        "created_at": "2021-11-14T13:56:01.000000Z",
-        "updated_at": "2021-11-14T13:56:02.000000Z"
-      }
-    }
+  	"status": "success",
+  	"message": "Login successful",
+  	"data": {
+  		"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE2NDUwNzA3MDYsImV4cCI6MTY0NTI4NjcwNiwibmJmIjoxNjQ1MDcwNzA2LCJqdGkiOiJOUEhGMVN5N044NnptdzIzIiwic3ViIjoiYmNiZTJmNmEtODczZS00ODY4LWJkM2UtMTc0MDc4MzYxYjc4IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.TtTUB4nM9r7CaV4M78v4GAzoaldBAzRbOWqjiwhi0dA",
+  		"user": {
+  			"id": "bcbe2f6a-873e-4868-bd3e-174078361b78",
+  			"name": "Admin",
+  			"avatar": "https:\/\/ui-avatars.com\/api\/?name=Admin&background=4e73df&color=ffffff&size=100",
+  			"jenkel": "L",
+  			"email": "admin@kumi.id",
+  			"verified": true,
+  			"phone_number": "87764281999",
+  			"member": {
+  				"id": "5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb",
+  				"domain": "kumi.id",
+  				"max_reseller": 10000000,
+  				"contract": null,
+  				"platform_fee": null,
+  				"duration": 2400,
+  				"expired_on": "2222-02-02 11:24:53",
+  				"expired_on_time": "199 years from now",
+  				"is_deploy": 1,
+  				"created_at": "2022-02-02T04:24:53.000000Z",
+  				"updated_at": "2022-02-02T18:41:14.000000Z"
+  			},
+  			"flag_role": false,
+  			"created_at": "2022-02-02T04:24:53.000000Z",
+  			"updated_at": "2022-02-02T04:24:53.000000Z"
+  		}
+  	}
   }
 
   ```
@@ -61,9 +76,9 @@ description: >-
   ```
 
   {
-    "status": "failed",
-    "message": "message error",
-    "data": null
+  	"status": "error",
+  	"message": "Invalid Credential!",
+  	"data": null
   }
 
   ```

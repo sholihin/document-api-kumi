@@ -1,0 +1,100 @@
+_id: req_15c10c6ff8884af097b7270a7ebdddc8
+type: Request
+parentId: fld_afb34fbd208449129459a8ad25afc3b8
+modified: 1645090873437
+created: 1645090581411
+url: "{{ _.baseurl }}/api/generate/cdddad2d-933f-4d7a-8c40-2ea9b9b0f642"
+name: Generate Website
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/generate/{invoice}
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|
+
+  |---------|----|--------|--------|
+
+  |invoice|uuid|yes|route param|
+
+  |domain|string|yes|body|
+
+  |email|string|yes|body|
+
+  |password|string|yes|body|
+
+  |password_confirmation|string|yes|body|
+
+  |phone_number|string|yes|body|
+
+  |same|boolean|optional|body|
+
+  |X-DOMAIN-MEMBER|string|yes|header|
+
+
+  ## Response Success
+
+  ```
+
+  {
+  	"status": "success",
+  	"message": "Thank You For Trusting Us, We Will Process It In The Next Couple Hours!",
+  	"data": null
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "data": {
+      "message": "Error message!",
+      "status": "status",
+      "data": null
+    }
+  }
+
+  ```
+
+
+  ## Validation Input
+
+  ```
+
+  {
+    "status": "error",
+    "message": {
+      "email": [
+        "The email field is required."
+      ],
+      "password": [
+        "The password field is required."
+      ]
+    },
+    "data": null
+  }
+
+  ```
+method: POST
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1645090581411
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
