@@ -1,0 +1,168 @@
+_id: req_e119ab03b9f141dcbc03b332583c64f2
+type: Request
+parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
+modified: 1648377469978
+created: 1633701618536
+url: "{{ _.baseurl }}/api/admin/checkout/order-done"
+name: Done
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/admin/checkout/order-canceled
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+
+  ```
+
+  {
+    "status": "success",
+    "message": "List Order Success!",
+    "data": [
+      {
+        "id": "cc2e0dd2-3e20-4852-8f7f-2ec6ab7d0f0d",
+        "invoice": "INV-20211201001",
+        "shipping": {
+          "cost": [
+            {
+              "etd": "3-6",
+              "note": "",
+              "value": 54000
+            }
+          ],
+          "type": "rajaongkir",
+          "courier": "jne",
+          "service": "REG",
+          "description": "Layanan Reguler"
+        },
+        "waybill": "10002359810077",
+        "waybill_status": null,
+        "weight": 2000,
+        "address": {
+          "label": "home",
+          "penerima": "saya",
+          "province": "Jawa Tengah",
+          "city": "Kabupaten Pemalang",
+          "subdistrict": "Bodeh",
+          "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15",
+          "phone_number": "0827372412434"
+        },
+        "payment_status": "DONE",
+        "delivery_status": "DELIVERED",
+        "payment_url": null,
+        "discount": 0,
+        "platform_fee": 0,
+        "total_origin": 2699000,
+        "grand_total": 2753366,
+        "payment_confirmation": null,
+        "time_remaining": null,
+        "orders": [
+          {
+            "id": "ebee7cf6-bf0f-4576-bc43-c3154ad48bad",
+            "product": {
+              "id": "013583c3-c3be-4f04-978a-a72798b40894",
+              "title": "Sony Dsc H300",
+              "slug": "sony-dsc-h300-sony-zqfes",
+              "max_reseller": null,
+              "duration": null,
+              "type": "physical",
+              "merk": "SONY",
+              "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/kamera.jpg",
+              "content": "",
+              "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non autem hoc: igitur ne illud quidem. Neque enim disputari sine reprehensione nec cum iracundia aut pertinacia recte disputari potest. Nihil opus est exemplis hoc facere longius. Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia; Nos paucis ad haec additis finem faciamus aliquando; Duo Reges: constructio interrete. Bonum integritas corporis: misera debilitas. At hoc in eo M. Tuo vero id quidem, inquam, arbitratu. <\/p>\n\n<p>Princeps huius civitatis Phalereus Demetrius cum patria pulsus esset iniuria, ad Ptolomaeum se regem Alexandream contulit. Est enim tanti philosophi tamque nobilis audacter sua decreta defendere. Non autem hoc: igitur ne illud quidem. Utrum igitur tibi litteram videor an totas paginas commovere? Teneo, inquit, finem illi videri nihil dolere. Nunc omni virtuti vitium contrario nomine opponitur. Cur igitur, inquam, res tam dissimiles eodem nomine appellas? Innumerabilia dici possunt in hanc sententiam, sed non necesse est. Cur igitur, cum de re conveniat, non malumus usitate loqui? <\/p>\n\n<p>Cenasti in vita numquam bene, cum omnia in ista Consumis squilla atque acupensere cum decimano. Res enim se praeclare habebat, et quidem in utraque parte. Ne in odium veniam, si amicum destitero tueri. Etsi ea quidem, quae adhuc dixisti, quamvis ad aetatem recte isto modo dicerentur. Quae quo sunt excelsiores, eo dant clariora indicia naturae. Age sane, inquam. <\/p>\n\n<p>Et quod est munus, quod opus sapientiae? Faceres tu quidem, Torquate, haec omnia; Aperiendum est igitur, quid sit voluptas; Hanc ergo intuens debet institutum illud quasi signum absolvere. Id est enim, de quo quaerimus. Cui Tubuli nomen odio non est? Quantam rem agas, ut Circeis qui habitet totum hunc mundum suum municipium esse existimet? Quae cum essent dicta, discessimus. Similiter sensus, cum accessit ad naturam, tuetur illam quidem, sed etiam se tuetur; Solum praeterea formosum, solum liberum, solum civem, stultost; Terram, mihi crede, ea lanx et maria deprimet. Quam illa ardentis amores excitaret sui! Cur tandem? <\/p>\n\n",
+              "weight": 2000,
+              "price": 2699000,
+              "stocks": 9,
+              "discount_type": null,
+              "discount": null,
+              "pin": null,
+              "seo": 0,
+              "meta_title": null,
+              "meta_keyword": null,
+              "meta_description": null,
+              "status": 1,
+              "created_at": "2021-11-30T03:01:42.000000Z",
+              "updated_at": "2021-12-01T04:19:29.000000Z"
+            },
+            "qty": 1,
+            "price": 2699000,
+            "product_history": {
+              "type": "physical",
+              "title": "Sony Dsc H300",
+              "main_image": "http:\/\/kumi-backend.apps\/storage\/archive\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/kamera.jpg",
+              "slug": "sony-dsc-h300-sony-zqfes",
+              "category": "Kamera",
+              "content": "",
+              "note": null,
+              "weight": 2000,
+              "price": 2699000,
+              "discount": null,
+              "discount_type": null,
+              "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non autem hoc: igitur ne illud quidem. Neque enim disputari sine reprehensione nec cum iracundia aut pertinacia recte disputari potest. Nihil opus est exemplis hoc facere longius. Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia; Nos paucis ad haec additis finem faciamus aliquando; Duo Reges: constructio interrete. Bonum integritas corporis: misera debilitas. At hoc in eo M. Tuo vero id quidem, inquam, arbitratu. <\/p>\n\n<p>Princeps huius civitatis Phalereus Demetrius cum patria pulsus esset iniuria, ad Ptolomaeum se regem Alexandream contulit. Est enim tanti philosophi tamque nobilis audacter sua decreta defendere. Non autem hoc: igitur ne illud quidem. Utrum igitur tibi litteram videor an totas paginas commovere? Teneo, inquit, finem illi videri nihil dolere. Nunc omni virtuti vitium contrario nomine opponitur. Cur igitur, inquam, res tam dissimiles eodem nomine appellas? Innumerabilia dici possunt in hanc sententiam, sed non necesse est. Cur igitur, cum de re conveniat, non malumus usitate loqui? <\/p>\n\n<p>Cenasti in vita numquam bene, cum omnia in ista Consumis squilla atque acupensere cum decimano. Res enim se praeclare habebat, et quidem in utraque parte. Ne in odium veniam, si amicum destitero tueri. Etsi ea quidem, quae adhuc dixisti, quamvis ad aetatem recte isto modo dicerentur. Quae quo sunt excelsiores, eo dant clariora indicia naturae. Age sane, inquam. <\/p>\n\n<p>Et quod est munus, quod opus sapientiae? Faceres tu quidem, Torquate, haec omnia; Aperiendum est igitur, quid sit voluptas; Hanc ergo intuens debet institutum illud quasi signum absolvere. Id est enim, de quo quaerimus. Cui Tubuli nomen odio non est? Quantam rem agas, ut Circeis qui habitet totum hunc mundum suum municipium esse existimet? Quae cum essent dicta, discessimus. Similiter sensus, cum accessit ad naturam, tuetur illam quidem, sed etiam se tuetur; Solum praeterea formosum, solum liberum, solum civem, stultost; Terram, mihi crede, ea lanx et maria deprimet. Quam illa ardentis amores excitaret sui! Cur tandem? <\/p>\n\n",
+              "merk": "SONY"
+            },
+            "created_at": "2021-12-01T04:19:29.000000Z",
+            "updated_at": "2021-12-01T04:19:29.000000Z"
+          }
+        ],
+        "complaint": null,
+        "created_at": "2021-12-01T04:19:29.000000Z",
+        "updated_at": "2021-12-01T07:17:45.000000Z"
+      }
+    ]
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_0e35d07bb6064899979b92a0918d9fbb
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1633668724666.1562
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

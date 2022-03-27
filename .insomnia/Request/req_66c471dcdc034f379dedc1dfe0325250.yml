@@ -1,0 +1,379 @@
+_id: req_66c471dcdc034f379dedc1dfe0325250
+type: Request
+parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
+modified: 1648377176054
+created: 1632134456283
+url: "{{ _.baseurl }}/api/oncheckout?courier=j%26t&service_courier=EZ"
+name: OnCheckout
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/oncheckout
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |address|uuid|optional|route param|asdas3452-124312sdf|
+
+  |city|int|optional|route param|352|
+
+  |courier|string|optional|route param|jne|
+
+  |service_courier|string|optional|route param|yes|
+
+  |coupon|string|optional|route param|qwerty|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "status": "success",
+    "message": null,
+    "data": {
+      "products": [
+          {
+            "id": "f505cf59-7d11-42b5-8f30-44ee9f1a58d8",
+            "qty": 1,
+            "price": 300000,
+            "weight": 500,
+            "note": null,
+            "status": true,
+            "discount": null,
+            "dicount_type": null,
+            "product": {
+              "id": "f7acd36e-1184-4247-8b5f-8c84891a7b67",
+              "title": "Physical Product",
+              "slug": "physical-product-mzh75",
+              "type": "physical",
+              "merk": "ASUS",
+              "main_image": "http:\/\/kumi-backend.apps\/storage\/89d60b19-9fe1-47c9-9fdb-1c7d57161dda\/products\/IFAnyvLfjMnIHPW3CSrKZeRTwjVn0ZT4JODJ93fB.png",
+              "category": {
+                "id": "ed68b9be-950d-4bbe-b013-86c077da7e2c",
+                "name": "Laptop",
+                "parent_id": null,
+                "slug": "laptop",
+                "image": "http:\/\/kumi-backend.apps\/storage\/89d60b19-9fe1-47c9-9fdb-1c7d57161dda\/categories\/NDP0TJ9kYLvHLuvnim3LrBXZIaoUaAV31SFOxyk6.png",
+                "created_at": "2021-10-01T14:10:42.000000Z",
+                "updated_at": "2021-10-01T14:10:42.000000Z"
+              },
+              "content": "nice",
+              "tnc": "you should buy",
+              "weight": 500,
+              "price": 300000,
+              "stocks": 12,
+              "reseller_price": 1300000,
+              "discount_type": "nominal",
+              "discount": null,
+              "affiliate_type": "nominal",
+              "affiliate_fee": 10000,
+              "pin": null,
+              "seo": 0,
+              "meta_title": null,
+              "meta_keyword": null,
+              "meta_description": null,
+              "created_at": "2021-10-01T14:10:55.000000Z",
+              "updated_at": "2021-10-01T14:10:55.000000Z"
+            }
+          }
+        ],
+        "address": {
+          "id": "c69a2e6e-6683-4db1-9294-ff08e2cde7ab",
+          "label": "home 2",
+          "penerima": "admin kumi",
+          "phone_number": "0827372412434",
+          "province_id": 10,
+          "province": "Jawa Tengah",
+          "city_id": 352,
+          "city": "Pemalang",
+          "subdistrict_id": 4941,
+          "subdstrict": "Bodeh",
+          "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+        },
+        "shipment": {
+          "rajaongkir": [
+            {
+              "code": "jne",
+              "name": "Jalur Nugraha Ekakurir (JNE)",
+              "costs": [
+                {
+                  "service": "OKE",
+                  "description": "Ongkos Kirim Ekonomis",
+                  "cost": [
+                    {
+                      "value": 23000,
+                      "etd": "4-7",
+                      "note": ""
+                    }
+                  ]
+                },
+                {
+                  "service": "REG",
+                  "description": "Layanan Reguler",
+                  "cost": [
+                    {
+                      "value": 27000,
+                      "etd": "3-6",
+                      "note": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "code": "tiki",
+              "name": "Citra Van Titipan Kilat (TIKI)",
+              "costs": []
+            },
+            {
+              "code": "wahana",
+              "name": "Wahana Prestasi Logistik",
+              "costs": [
+                {
+                  "service": "Normal",
+                  "description": "Normal Service",
+                  "cost": [
+                    {
+                      "value": 22000,
+                      "etd": "",
+                      "note": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "code": "sicepat",
+              "name": "SiCepat Express",
+              "costs": [
+                {
+                  "service": "REG",
+                  "description": "Layanan Reguler",
+                  "cost": [
+                    {
+                      "value": 30000,
+                      "etd": "3-6",
+                      "note": ""
+                    }
+                  ]
+                },
+                {
+                  "service": "SIUNT",
+                  "description": "SiUntung",
+                  "cost": [
+                    {
+                      "value": 27000,
+                      "etd": "3-6",
+                      "note": ""
+                    }
+                  ]
+                },
+                {
+                  "service": "GOKIL",
+                  "description": "Cargo (Minimal 10kg)",
+                  "cost": [
+                    {
+                      "value": 70000,
+                      "etd": "6-7",
+                      "note": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "code": "J&T",
+              "name": "J&T Express",
+              "costs": [
+                {
+                  "service": "EZ",
+                  "description": "Regular Service",
+                  "cost": [
+                    {
+                      "value": 22000,
+                      "etd": "",
+                      "note": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "code": "jet",
+              "name": "JET Express",
+              "costs": []
+            },
+            {
+              "code": "indah",
+              "name": "Indah Logistic",
+              "costs": [
+                {
+                  "service": "DARAT",
+                  "description": "Pengiriman Darat",
+                  "cost": [
+                    {
+                      "value": 121200,
+                      "etd": "2-3",
+                      "note": ""
+                    }
+                  ]
+                },
+                {
+                  "service": "UDARA",
+                  "description": "Pengiriman Udara",
+                  "cost": [
+                    {
+                      "value": 24240,
+                      "etd": "2-3",
+                      "note": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "code": "ninja",
+              "name": "Ninja Xpress",
+              "costs": [
+                {
+                  "service": "STANDARD",
+                  "description": "Standard Service",
+                  "cost": [
+                    {
+                      "value": 29000,
+                      "etd": "",
+                      "note": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "code": "anteraja",
+              "name": "AnterAja",
+              "costs": [
+                {
+                  "service": "REG",
+                  "description": "Regular",
+                  "cost": [
+                    {
+                      "value": 22000,
+                      "etd": "2-4",
+                      "note": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "custom_shipping": [
+            {
+              "city": 352,
+              "flat_rate": 10000,
+              "tnc": "string"
+            }
+          ]
+        },
+        "detail_shipment": {
+          "service": "STANDARD",
+          "description": "Standard Service",
+          "cost": [
+            {
+              "value": 29000,
+              "etd": "",
+              "note": ""
+            }
+          ],
+          "type": "rajaongkir"
+        },
+        "detail_charge": {
+          "qty_all": 1,
+          "total": 300000,
+          "fee": 0,
+          "discount": 10000,
+          "weight": 500,
+          "ongkir": 29000,
+          "code": 211,
+          "grand_total": 319211
+        }
+     }      
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Checkout Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ```
+
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "Checkout Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "coupon does'nt exists"
+    }
+  }
+
+  ```
+method: GET
+body:
+  mimeType: multipart/form-data
+  params: []
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_9f8152cadc3346d8a432a0b90c96a975
+  - id: pair_c66db063e78648f097664f2dc5b094b5
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.subdomain }}"
+    description: ""
+  - id: pair_8603e9160c984e7bb03ba23d2da04261
+    name: Accept
+    value: application/json
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1632134456283
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

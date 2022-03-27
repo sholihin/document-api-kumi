@@ -1,0 +1,188 @@
+_id: req_d8ea06264cb9417c8fbb29efb0da63c3
+type: Request
+parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
+modified: 1648377160997
+created: 1633406053671
+url: "{{ _.baseurl }}/api/checkout/waybill/041b447f-3841-413e-8e61-6b4d07954394"
+name: Delivery Status
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/checkout/waybill/{invoice}
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |invoice|uuid|required|route param|asdas3452-124312sdf|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success!"
+    },
+    "data": {
+      "result": {
+        "delivered": false,
+        "summary": {
+          "courier_code": "anteraja",
+          "courier_name": "AnterAja",
+          "waybill_number": "10002359810077",
+          "service_code": "REG",
+          "waybill_date": "2021-10-04",
+          "shipper_name": "Mineral Botanica",
+          "receiver_name": "Adhitya",
+          "origin": "15314",
+          "destination": "17415",
+          "status": "ON PROCESS"
+        },
+        "details": {
+          "waybill_number": "10002359810077",
+          "waybill_date": "2021-10-04",
+          "waybill_time": "01:18:19",
+          "weight": "1.00",
+          "origin": "15314",
+          "destination": "17415",
+          "shippper_name": "Mineral Botanica",
+          "shipper_address1": "Taman Tekno BSD, Blk. D2, Setu, South Tangerang City, Banten 15314",
+          "shipper_address2": "",
+          "shipper_address3": "",
+          "shipper_city": "15314",
+          "receiver_name": "Adhitya",
+          "receiver_address1": "Perumahan Pondok Melati Indah Jl. Semeru No.02 RT 4 RW 5 Jatiwarna",
+          "receiver_address2": "",
+          "receiver_address3": "",
+          "receiver_city": "17415"
+        },
+        "manifest": [
+          {
+            "manifest_code": 240,
+            "manifest_description": "SATRIA sudah ditugaskan dan parcel akan segera diantar ke penerima.",
+            "manifest_date": "2021-10-05",
+            "manifest_time": "09:51:23",
+            "city_name": "Hub Halim"
+          },
+          {
+            "manifest_code": 230,
+            "manifest_description": "Parcel sudah tiba di SS Kota Bekasi - Jatimelati untuk proses delivery.",
+            "manifest_date": "2021-10-05",
+            "manifest_time": "09:21:08",
+            "city_name": "Hub Halim"
+          },
+          {
+            "manifest_code": 330,
+            "manifest_description": "Parcel menuju ke Staging SS Kota Bekasi - Jatimelati.",
+            "manifest_date": "2021-10-05",
+            "manifest_time": "07:58:04",
+            "city_name": "Hub Halim"
+          },
+          {
+            "manifest_code": 300,
+            "manifest_description": "Parcel sedang diproses di Hub Jakarta Timur",
+            "manifest_date": "2021-10-05",
+            "manifest_time": "02:57:07",
+            "city_name": "Hub Halim"
+          },
+          {
+            "manifest_code": 300,
+            "manifest_description": "Parcel sedang diproses di Hub Tangerang Selatan",
+            "manifest_date": "2021-10-04",
+            "manifest_time": "13:57:42",
+            "city_name": "Hub Tangerang"
+          },
+          {
+            "manifest_code": 200,
+            "manifest_description": "Parcel sudah diterima oleh SATRIA.",
+            "manifest_date": "2021-10-04",
+            "manifest_time": "13:57:27",
+            "city_name": "Hub Tangerang"
+          },
+          {
+            "manifest_code": 160,
+            "manifest_description": "Tugas pickup sudah diambil alih oleh SATRIA dan parcel akan segera pickup.",
+            "manifest_date": "2021-10-04",
+            "manifest_time": "13:57:27",
+            "city_name": "Hub Tangerang"
+          },
+          {
+            "manifest_code": 150,
+            "manifest_description": "SATRIA sudah ditugaskan dan parcel akan segera di-pickup.",
+            "manifest_date": "2021-10-04",
+            "manifest_time": "09:34:57",
+            "city_name": "Hub Tangerang"
+          },
+          {
+            "manifest_code": 100,
+            "manifest_description": "Pickup sudah di-request oleh shipper, dan SATRIA akan pickup parcel Senin 4 Oktober 2021 sekitar jam 10:00 - 14:00.",
+            "manifest_date": "2021-10-04",
+            "manifest_time": "01:18:19",
+            "city_name": ""
+          }
+        ],
+        "delivery_status": {
+          "status": "ON PROCESS",
+          "pod_receiver": "",
+          "pod_date": "",
+          "pod_time": ""
+        }
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Check Delivery Status Failed!"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_9128e07964774525a25d86c4a4d268aa
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1633406053671
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

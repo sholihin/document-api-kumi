@@ -1,0 +1,171 @@
+_id: req_b5b1ddc9df5c42918d389ed3012d6300
+type: Request
+parentId: fld_2406074dbccb433faba2a200c6b53008
+modified: 1648377113584
+created: 1638093000662
+url: "{{ _.baseurl }}/api/checkout/delivered"
+name: Delivered / Product Digital Success
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  api/checkout/done
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "List Order Success!"
+    },
+    "data": {
+      "done": [
+        {
+          "id": "c21acfe9-f947-4d61-b904-291c660a6fe5",
+          "invoice": "INV-20211007001",
+          "shipping": {
+            "cost": [
+              {
+                "etd": "3-6",
+                "note": "",
+                "value": 54000
+              }
+            ],
+            "type": "rajaongkir",
+            "courier": "jnt",
+            "service": "REG",
+            "description": "Layanan Reguler"
+          },
+          "waybill": "JP3433750125",
+          "weight": 2000,
+          "address": {
+            "label": "home 2",
+            "penerima": "admin kumi",
+            "province": "Jawa Tengah",
+            "city": "Kabupaten Pemalang",
+            "subdistrict": "Bodeh",
+            "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15",
+            "phone_number": "0827372412434"
+          },
+          "payment_status": "SUCCESS",
+          "delivery_status": "DONE",
+          "payment_url": null,
+          "discount": 10000,
+          "platform_fee": 0,
+          "total_origin": 2100000,
+          "grand_total": 2144000,
+          "payment_confirmation": null,
+          "time_remaining": "2021-10-07 18:55:42",
+          "orders": [
+            {
+              "id": "40cc7b0a-cb1e-4f12-8908-bd3e01bfdf47",
+              "product_id": "40df9b0b-e062-4189-98bf-efea8c7e8ace",
+              "qty": 4,
+              "price": 1200000,
+              "product": {
+                "type": "physical",
+                "title": "Physical Product",
+                "main_image": "http:\/\/kumi-backend.apps\/storage\/archive\/2b7af9cd-4735-43d8-aa39-4f7763898f37\/products\/OSPtLQfQzStu3hLuvYyeV7WXziGVx1IO1Zpwf70f.png",
+                "slug": "physical-product-wb7qi",
+                "category": "Laptop",
+                "content": "nice",
+                "note": "Yang Bagus Ya",
+                "weight": 500,
+                "price": 300000,
+                "discount": null,
+                "discount_type": "nominal",
+                "tnc": "you should buy",
+                "merk": "ASUS"
+              },
+              "created_at": "2021-10-07T06:55:43.000000Z",
+              "updated_at": "2021-10-07T06:55:43.000000Z"
+            },
+            {
+              "id": "5af573ea-85cd-4173-aa49-510b9203b32b",
+              "product_id": "e7f1432f-c4ea-4859-a136-733ef0aa92fd",
+              "qty": 3,
+              "price": 900000,
+              "product": {
+                "type": "digital",
+                "title": "Digital Product",
+                "main_image": "http:\/\/kumi-backend.apps\/storage\/archive\/2b7af9cd-4735-43d8-aa39-4f7763898f37\/products\/32i08WSk0jzCzhsTR13o0g8OrYbLL8IhocE7y7uW.png",
+                "slug": "digital-product-htyui",
+                "category": "Laptop",
+                "content": "nice",
+                "note": "Yang Bagus Ya",
+                "weight": null,
+                "price": 300000,
+                "discount": null,
+                "discount_type": "nominal",
+                "tnc": "you should buy",
+                "merk": "ASUS"
+              },
+              "created_at": "2021-10-07T06:55:43.000000Z",
+              "updated_at": "2021-10-07T06:55:43.000000Z"
+            }
+          ],
+          "complaint": null,
+          "created_at": "2021-10-07T06:55:43.000000Z",
+          "updated_at": "2021-10-09T15:05:45.000000Z"
+        }
+      ]
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_1dd1d3444a41489db5e2faeda384a830
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1633786013784.375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

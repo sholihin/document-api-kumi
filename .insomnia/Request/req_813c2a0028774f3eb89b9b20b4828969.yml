@@ -1,0 +1,112 @@
+_id: req_813c2a0028774f3eb89b9b20b4828969
+type: Request
+parentId: fld_e0b55da3f39a452091d93e8d8042982b
+modified: 1648378153388
+created: 1631690201034
+url: "{{ _.baseurl }}/api/admin/config/about/96c97852-c2e2-4b94-8319-6a443b230c64"
+name: UPDATE
+description: |-
+  ## Method (PATCH)
+  ## Route
+  ```
+  /api/admin/config/about/{configuration}
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |configuration|uuid|yes|route param|hsdfg7567sdf|
+  |status|boolean|yes|body|1/0|
+  |content|string|yes|body|lorem ipsum|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "About Configuration Updated!"
+    },
+    "data": {
+      "about": {
+        "config_id": "0de71900-7b61-48ee-9356-7bcaba8509f8",
+        "status": false,
+        "content": "nominal"
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating About's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+  ### Validation Input
+  ```
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "status": [
+          "The status field is required."
+        ]
+      }
+    }
+  }
+  ```
+method: PATCH
+body:
+  mimeType: application/x-www-form-urlencoded
+  params:
+    - description: ""
+      id: pair_4aeac3dc44404946af5b8c9b1b7e7bf4
+      name: status
+      value: "0"
+      disabled: false
+    - description: ""
+      id: pair_671400f0c0ca42a99867cae773f8448c
+      name: content
+      value: nominal
+      disabled: false
+    - description: ""
+      id: pair_93f2f4667538477788322afcb960f509
+      name: ""
+      value: ""
+      disabled: false
+parameters: []
+headers:
+  - id: pair_66c577ac1d2947518320d4e12e64b5cf
+    name: Content-Type
+    value: application/x-www-form-urlencoded
+  - description: ""
+    id: pair_f01cddc3f09f494cafa005deb6466e78
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  disabled: false
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630136116904
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

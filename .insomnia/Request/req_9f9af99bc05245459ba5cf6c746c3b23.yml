@@ -1,0 +1,117 @@
+_id: req_9f9af99bc05245459ba5cf6c746c3b23
+type: Request
+parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
+modified: 1648377167984
+created: 1633062309404
+url: "{{ _.baseurl
+  }}/api/checkout/confirmation/9f163b52-475f-4a75-a853-4a8e9168ab7a"
+name: Payment Confirmation
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/checkout/confirmation/{invoice}
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |invoice|uuid|required|route param|asdas3452-124312sdf|
+
+  |image|image|required|body|file|
+
+  |name|string|required|body|kumi|
+
+  |total|int|required|body|3000000|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "status": "success",
+    "message": "Thank You, We Will Review Your Payment Confirmation In The Next Couple Hours!",
+    "data": null
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "status": "error",
+    "message": "Unauthorized Domain!",
+    "data": null
+  }
+
+  ```
+
+  ```
+
+  {
+    "status": "error",
+    "message": "You don't Have any Product on Checkout!",
+    "data": null
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_ea13f4a9da774aa2a28ca27e26490ba7
+      name: image
+      value: ""
+      description: ""
+      type: file
+      fileName: C:\Users\ADHIT\Downloads\store.PNG
+    - id: pair_e36621780987485aad2ed5452cfef95d
+      name: name
+      value: dhit
+      description: ""
+      disabled: false
+    - id: pair_011f8aa9dc2c4d8bb0708b37fe4fa5a4
+      name: total
+      value: "596000"
+      description: ""
+      disabled: false
+    - id: pair_03f4b40ae66b478897b102fad655b393
+      name: _method
+      value: PATCH
+      description: ""
+      disabled: false
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_1d1c62ac17b34ecf97019ab6b8b9cd80
+  - id: pair_63290490e674405b9eec6ec43d6a2946
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.subdomain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1633062309404
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

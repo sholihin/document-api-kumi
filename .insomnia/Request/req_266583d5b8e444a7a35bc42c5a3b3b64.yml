@@ -1,0 +1,126 @@
+_id: req_266583d5b8e444a7a35bc42c5a3b3b64
+type: Request
+parentId: fld_653b8763be6b45d2b4df2529575abf21
+modified: 1648377567969
+created: 1631707429659
+url: "{{ _.baseurl }}/api/change-password"
+name: UPDATE
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/change-password
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |old_password|string|yes|body||
+
+  |new_password|string|yes|body||
+
+  |confirm_password|string|yes|body||
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Updated!"
+    },
+    "data": {
+      "user": {
+        "id": "7382d49c-604d-48f2-a557-654175df39a7",
+        "name": "Customer",
+        "email": "customer@kumi.id",
+        "phone_number": "87764281912",
+        "avatar": "https:\/\/ui-avatars.com\/api\/?name=Customer&background=4e73df&color=ffffff&size=100",
+        "jenkel": "L"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Domain Invalid
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Creating Address Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Updating Password Failed"
+    },
+    "data": {
+      "message": "New Password Does Not Match !",
+      "error": "New Password Does Not Match !"
+    }
+  }
+
+  ```
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"old_password" : "password",
+    	"new_password" : "password",
+    	"confirm_password" : "password"
+    }
+parameters: []
+headers:
+  - id: pair_6370e14b2d9a42b8a9d47e88e1deca5d
+    name: Content-Type
+    value: application/json
+  - description: ""
+    id: pair_a38c8a33a3644dd1adf5c0b2715fa865
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token }}"
+  type: bearer
+metaSortKey: -1628596208522
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,135 @@
+_id: req_9cc31468d1a74e2ca2c8e53c9ebffc0e
+type: Request
+parentId: fld_ba66419573c14bd0b77b091c5cece635
+modified: 1648377847929
+created: 1638347980371
+url: "{{ _.baseurl
+  }}/api/admin/checkout/status/complaint/bfe05357-21d1-42de-92ed-6008b4e813b7"
+name: Complaint Status
+description: >-
+  ## Method (PATCH)
+
+  ## Route
+
+  ```
+
+  /api/admin/checkout/status/complaint/{invoice}
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |invoice|uuid|yes|route param|hsdfg7567sdf|
+
+  |status|string|yes|body|ON_PROCESS,ACCEPTED,REJECTED,DONE|
+
+  |detail_status|string|required if status ACCEPTED|body|REFUND,NEW_PRODUCT|
+
+  |transfer_image|file|required if status DONE and detail status REFUND|body|image|
+
+  |waybill|string|required if status DONE and detail_status NEW_PRODUCT|body|3452352435|
+
+  |serive_waybill|string|required if status DONE and  detail_status NEW_PRODUCT|body|jne|
+
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "status": "success",
+    "message": "Complaint Status Successfully Updated!",
+    "data": null
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "status": "error",
+    "message": "Invalid Complaint Status!",
+    "data": null
+  }
+
+  ```
+
+  ```
+
+  {
+    "status": "error",
+    "message": "Unauthorized Domain!",
+    "data": null
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_f75589e6520e4101bec11e126c861427
+      name: status
+      value: ACCEPTED
+      description: ""
+    - id: pair_fe296d4442154b0dbd0820684d00fd21
+      name: detail_status
+      value: NEW_PRODUCT
+      description: ""
+      disabled: false
+    - id: pair_db5b8540ce994986b7825238dc4001f2
+      name: transfer_image
+      value: ""
+      description: ""
+      type: file
+      fileName: C:\Users\ADHIT\Downloads\store.PNG
+      disabled: true
+    - id: pair_334dd46e3cf44f34815a198ef514314a
+      name: _method
+      value: PATCH
+      description: ""
+      disabled: false
+    - id: pair_a7e78d3a2aab4eea88d24e80cf891e8d
+      name: reason
+      value: sudah sesuai deskripsi
+      description: ""
+      disabled: true
+    - id: pair_034518a0d4864b52a10f1072b62f5b80
+      name: waybill
+      value: anteraja
+      description: ""
+    - id: pair_928b0a79ba2c4793aaae3a9f02d0c51a
+      name: service_waybill
+      value: "10003380822130"
+      description: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_9366b3e9fa8a4ab2b340172c8c958e38
+  - id: pair_5fc908d030f24d4d9eb084364b4f6d26
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1633411319689.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

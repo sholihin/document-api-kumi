@@ -1,0 +1,66 @@
+_id: req_3f8f931322e844568e9491ff73efce5a
+type: Request
+parentId: fld_cd509ce2bc484fdb85d098c8ff5216aa
+modified: 1648378255090
+created: 1631690200940
+url: "{{ _.baseurl
+  }}/api/admin/gallery/340f7d37-c59b-4849-8292-4bbdf422972c/d1aaa1fd-fbcd-4021-\
+  bab7-45d9a8818a41"
+name: DELETE
+description: |-
+  ## Method (DELETE)
+  ## Route
+  ```
+  /api/admin/gallery/{product}/{gallery}
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|------------|--------|
+  |product|uuid|yes|route param|146f4f17-ed48-4001-d58b18ae0b7e|
+  |gallery|uuid|yes|route param|146f4f17-sdsds-4001-d58b18ae0b7e|
+  |X-DOMAIN-MEMBER|string|yes|header|example.net|
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Gallery Deleted!"
+    },
+    "data": [
+      "success"
+    ]
+  }
+  ```
+
+  ## Response Failed
+  ### Not Found
+  ```
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "failed"
+    },
+    "data": {
+      "message": "Product Not Found!",
+      "error": "No query results for model [App\\Models\\Gallery]."
+    }
+  }
+  ```
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1628262462715
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

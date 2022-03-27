@@ -1,0 +1,92 @@
+_id: req_a22ef9be27c64b5d99e50bc2cd6923ec
+type: Request
+parentId: fld_4240492dd7864e27a4845a0a82ead699
+modified: 1648377951190
+created: 1631690201251
+url: "{{ _.baseurl }}/api/admin/faq/474c4cce-330d-4c41-8a14-c848b5c50e91"
+name: SHOW
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/admin/faq/{faq}
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
+
+  |faq|uuid|yes|route param|sda2423-dsfsdkf245|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "faq": {
+        "id": "58eedbf3-9c4a-4a16-83d0-0893153df6f3",
+        "question": "Apa itu KUMI ?",
+        "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quaerat porro nihil magni quasi possimus. Quaerat optio ea natus, exercitationem dolore modi qui, voluptatibus labore praesentium neque perferendis aspernatur iste! Nesciunt esse, fugit omnis aut accusamus distinctio expedita mollitia dolor molestiae! Recusandae voluptates dolorem nam harum sit perferendis ex, incidunt, laudantium in laboriosam nostrum repudiandae sint. Cum perspiciatis similique ipsa!",
+        "created_at": "2021-09-06T06:54:30.000000Z",
+        "updated_at": "2021-09-06T06:54:30.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Not Found
+
+  ```
+
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "failed"
+    },
+    "data": {
+      "message": "FAQ Not Found!",
+      "error": "No query results for model [App\\Models\\Faq]."
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_a66980467b3b433da32f164d7c99fa6a
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630551304705
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

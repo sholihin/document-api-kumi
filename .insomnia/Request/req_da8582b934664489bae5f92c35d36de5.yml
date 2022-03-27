@@ -1,0 +1,162 @@
+_id: req_da8582b934664489bae5f92c35d36de5
+type: Request
+parentId: fld_2d0bdc60709345dabd00452d5f138750
+modified: 1648377529535
+created: 1631699788008
+url: "{{ _.baseurl }}/api/reseller/store/27ff0989-07d9-4932-9d50-14c8c16e18d5"
+name: UPDATE
+description: >-
+  ## Method (PATCH)
+
+  ## Route
+
+  ```
+
+  /api/reseller/store/{store}
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|EXAMPLE|
+
+  |---------|----|--------|--------|--------|
+
+  |store|uuid|yes|route param|fwe894-231|
+
+  |store_name|string|yes|body|toko epic|
+
+  |sub_domain|string|yes|body|tokoepic|
+
+  |logo|file|yes|body|image|
+
+  |contact|string|yes|body|627474789934|
+
+  |color|string|yes|body|#000000|
+
+  |bearer token|jwt|yes|header|fwe894-231|
+
+  |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "Store Configuration Updated!"
+    },
+    "data": {
+      "store": {
+        "id": "37a5b1d9-53c9-4c8f-9028-9b8d9f7cc60b",
+        "store_name": "toko apik",
+        "sub_domain": "tokoepik",
+        "logo": "http:\/\/kumi-backend.apps\/storage\/c244a03b-c4fa-4119-ad7d-bfa46e9ad95e\/reseller\/uLTboVAfceguctKgZbZqy1yJalaSMHKoRLLYgCbs.png",
+        "contact": "6287764281912",
+        "color": "#007",
+        "status": 1,
+        "created_at": "2021-09-16T03:01:20.000000Z",
+        "updated_at": "2021-09-16T05:40:21.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Invalid
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating Store Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain!"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "sub_domain": [
+          "The sub domain field is required."
+        ]
+      }
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_1ed01c12feb04f1cb826795e52de875d
+      name: store_name
+      value: toko apik
+      description: ""
+    - id: pair_e4cd1ce73b384bd8b8a3a5ffcd948dae
+      name: logo
+      value: ""
+      description: ""
+      type: file
+      fileName: D:\Pictures\bukti.jpg
+    - id: pair_b05cd59c0a03447aa7d7161a07371276
+      name: sub_domain
+      value: tokoepik
+      description: ""
+      disabled: false
+    - id: pair_4b09830df25b4ae6821cf1493da051dc
+      name: contact
+      value: "087764281912"
+      description: ""
+    - id: pair_9dde84c382194ce0996632e1be2c0f46
+      name: color
+      value: "#007"
+      description: ""
+    - id: pair_13625a71fd954fed817be05794d7d72c
+      name: _method
+      value: PATCH
+      description: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+    id: pair_da7fb5375ea64109b407b27fda8b61b2
+  - id: pair_32fcdd55934546578cce1acc71a0461b
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+    disabled: false
+authentication:
+  type: bearer
+  token: "{{ _.token_reseller }}"
+metaSortKey: -1631699788008
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

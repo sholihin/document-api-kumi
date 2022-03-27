@@ -1,0 +1,35 @@
+_id: req_6827fa5f11244f969de82719bc67e177
+type: Request
+parentId: fld_798c7bd0059245f28f808f7d7546f4f7
+modified: 1648376955822
+created: 1641994585963
+url: "{{ _.baseurl }}/api/notifications/read"
+name: Mark As Read
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"id" : "3be15a6d-ec6d-449d-a400-662fe2042305"
+    }
+parameters: []
+headers:
+  - id: pair_4007acdb629d48d7abeb1649ece8b159
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+  - name: Content-Type
+    value: application/json
+    id: pair_c483c61f7eeb4d139237286968c5f672
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1641842461372
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

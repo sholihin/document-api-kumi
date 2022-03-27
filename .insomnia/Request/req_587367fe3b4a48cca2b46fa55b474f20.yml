@@ -1,0 +1,170 @@
+_id: req_587367fe3b4a48cca2b46fa55b474f20
+type: Request
+parentId: fld_72cb62af60c04607b62c8098399fc0b0
+modified: 1648378118542
+created: 1631690201111
+url: "{{ _.baseurl }}/api/admin/config/sliders/63f7fb4f-cf69-4378-bfdd-00094a6768b6"
+name: UPDATE
+description: >-
+  ## Method (PATCH)
+
+  ## Route
+
+  ```
+
+  /api/admin/config/sliders/{configuration}
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |configuration|uuid|yes|route param|hsdfg7567sdf|
+
+  |status|boolean|optional|body|1/0|
+
+  |title|string|optional|body|slider title|
+
+  |url|url active|optional|body|https://laravel.com/|
+
+  |image|image|optional|body|picture|
+
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Slider Configuration Updated!"
+    },
+    "data": {
+      "slider": {
+        "config_id": "09e53524-da31-4f3b-bb68-7bdb6b24f2c1",
+        "status": true,
+        "data": [
+          {
+            "id": "7d896699-a2b4-46ba-a9df-c558e8dcc04f",
+            "sorter": 1,
+            "title": "kumi",
+            "slug": "kumi",
+            "url": "url",
+            "image": "http:\/\/kumi-backend.apps\/storage\/image"
+          },
+          {
+            "id": "83cdab75-175e-4431-91a5-1e6c628d1240",
+            "sorter": 3,
+            "title": "Nice Slider",
+            "slug": "nice-slider",
+            "url": "https:\/\/laravel.com\/docs\/8.x\/validation",
+            "image": "http:\/\/kumi-backend.apps\/storage\/628a85d6-0ae3-43ba-b691-e015ef986894\/configurations\/nNJTRfgmdLjZvDDwnlf1V2Qyw55dIlbfr8xkkgXE.png"
+          }
+        ]
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating Slider's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Updating Slider's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "title": [
+          "The title field is required when url \/ image is present."
+        ]
+      }
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - description: ""
+      disabled: false
+      id: pair_e7c70642e94e440286f172ea2ea1a925
+      name: status
+      value: "1"
+    - description: ""
+      disabled: false
+      id: pair_ae53b1fc84a94a34a4dc9cd735ce3838
+      name: title
+      value: nice slider tho
+    - description: ""
+      disabled: false
+      id: pair_6e503d60676b4bfa952188990626e2d0
+      name: url
+      value: https://laravel.com/docs/8.x/validation
+    - description: ""
+      disabled: false
+      fileName: C:\Users\Mohamad Sholihin\Desktop\laptop.266e288a.png
+      id: pair_9b8938a7c7c542dbaa9e67d131a95aca
+      name: image
+      type: file
+      value: ""
+    - description: ""
+      disabled: false
+      id: pair_00ac347800014de4aa3be8f4e623a091
+      name: _method
+      value: PATCH
+parameters: []
+headers:
+  - id: pair_66c577ac1d2947518320d4e12e64b5cf
+    name: Content-Type
+    value: multipart/form-data
+  - description: ""
+    id: pair_f01cddc3f09f494cafa005deb6466e78
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  disabled: false
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630136116904
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

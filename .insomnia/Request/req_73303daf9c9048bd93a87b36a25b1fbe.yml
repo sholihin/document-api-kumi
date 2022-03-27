@@ -1,0 +1,94 @@
+_id: req_73303daf9c9048bd93a87b36a25b1fbe
+type: Request
+parentId: fld_4fb73788d2f14310be0111a290ce306e
+modified: 1648376858635
+created: 1631707234923
+url: "{{ _.baseurl }}/api/about"
+name: INDEX
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/about
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "status": "success",
+    "message": null,
+    "data": [
+      {
+        "config_id": "96c97852-c2e2-4b94-8319-6a443b230c64",
+        "status": true,
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Itaque nostrum est-quod nostrum dico, artis est-ad ea principia, quae accepimus. At certe gravius. Facile est hoc cernere in primis puerorum aetatulis. Quos nisi redarguimus, omnis virtus, omne decus, omnis vera laus deserenda est. <\/p>\n\n<p>Duo Reges: constructio interrete. Qui autem de summo bono dissentit de tota philosophiae ratione dissentit. Inde sermone vario sex illa a Dipylo stadia confecimus. Sed venio ad inconstantiae crimen, ne saepius dicas me aberrare; Quae cum ita sint, effectum est nihil esse malum, quod turpe non sit. Occultum facinus esse potuerit, gaudebit; <\/p>\n\n<p>Saepe ab Aristotele, a Theophrasto mirabiliter est laudata per se ipsa rerum scientia; Facillimum id quidem est, inquam. Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; At multis se probavit. Cyrenaici quidem non recusant; Quis suae urbis conservatorem Codrum, quis Erechthei filias non maxime laudat? Quid enim de amicitia statueris utilitatis causa expetenda vides. Deinde disputat, quod cuiusque generis animantium statui deceat extremum. Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Quo modo autem optimum, si bonum praeterea nullum est? <\/p>\n\n<p>Et quidem, Cato, hanc totam copiam iam Lucullo nostro notam esse oportebit; Non modo carum sibi quemque, verum etiam vehementer carum esse? At enim sequor utilitatem. His enim rebus detractis negat se reperire in asotorum vita quod reprehendat. An est aliquid per se ipsum flagitiosum, etiamsi nulla comitetur infamia? Aufert enim sensus actionemque tollit omnem. Ab his oratores, ab his imperatores ac rerum publicarum principes extiterunt. Graece donan, Latine voluptatem vocant. <\/p>\n\n"
+      }
+    ]
+  }
+
+  ```
+
+
+  ## Content Disabled
+
+  ```
+
+  {
+    "status": "success",
+    "message": "Content Disabled!",
+    "data": null
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+      "status": "error",
+      "message": "No Content",
+      "data": null
+  }
+
+  ```
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - id: pair_6370e14b2d9a42b8a9d47e88e1deca5d
+    name: Content-Type
+    value: application/json
+  - description: ""
+    id: pair_a38c8a33a3644dd1adf5c0b2715fa865
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token }}"
+  type: bearer
+metaSortKey: -1628594105121.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

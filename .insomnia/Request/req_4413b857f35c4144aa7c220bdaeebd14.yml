@@ -1,0 +1,199 @@
+_id: req_4413b857f35c4144aa7c220bdaeebd14
+type: Request
+parentId: fld_bb9091fd2a7a46f6a08b54c7987df5d6
+modified: 1648378091138
+created: 1631690201134
+url: "{{ _.baseurl
+  }}/api/admin/config/landing-page/5f08c2bc-876e-482f-9150-8f21790e8e40"
+name: UPDATE
+description: >-
+  ## Method (PATCH)
+
+  ## Route
+
+  ```
+
+  /api/admin/config/landing-page/{configuration}
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |configuration|uuid|yes|route param|hsdfg7567sdf|
+
+  |status|boolean|optional|body|1/0|
+
+  |html|string|optional|body|html tag|
+
+  |css|string|optional|body|style tag|
+
+  |js|string|optional|body|script tag|
+
+  |meta_title|string|optional|body|title|
+
+  |meta_description|string|optional|body|description|
+
+  |meta_keyword|string|optional|body|keyword|
+
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Landing Page Configuration Updated!"
+    },
+    "data": {
+      "landing_page": {
+        "config_id": "8944ab94-4315-4e84-96b3-2222db9a8402",
+        "status": false,
+        "html": "<!DOCTYPE html>\n<html lang=\\\"en\\\">\n<head>\n  <title>Title of the document<\/title>\n<\/head>\n<body>\n\n<h1>This is a heading<\/h1>\n<p>This is a paragraph.<\/p>\n\n<\/body>\n<\/html>nominal",
+        "css": "<style>\r\nbody {background-color: powderblue;}\r\nh1   {color: blue;}\r\np    {color: red;}\r\n<\/style>",
+        "js": "<script>\ndocument.getElementById(\\\"demo\\\").innerHTML = \\\"Hello JavaScript!\\\";\n<\/script>",
+        "meta_title": null,
+        "meta_description": null,
+        "meta_keyword": null
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating Landing Page\'s Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Updating Landing Page's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "status": [
+          "The status field must be true or false."
+        ]
+      }
+    }
+  }
+
+  ```
+method: PATCH
+body:
+  mimeType: application/x-www-form-urlencoded
+  params:
+    - description: ""
+      disabled: false
+      id: pair_4aeac3dc44404946af5b8c9b1b7e7bf4
+      name: status
+      value: "1"
+    - description: ""
+      disabled: false
+      id: pair_671400f0c0ca42a99867cae773f8448c
+      multiline: text/plain
+      name: html
+      type: text
+      value: |-
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <title>Title of the document</title>
+        </head>
+        <body>
+
+        <h1>This is a heading</h1>
+        <p>This is a paragraph.</p>
+
+        </body>
+        </html>nominal
+    - description: ""
+      disabled: false
+      id: pair_00356382fc304a4887cb4fc9944ca31a
+      multiline: text/plain
+      name: css
+      type: text
+      value: "<style>\r
+
+        body {background-color: powderblue;}\r
+
+        h1   {color: blue;}\r
+
+        p    {color: red;}\r
+
+        </style>"
+    - description: ""
+      disabled: false
+      id: pair_92c499aad0b44cc5b477abe3f5bc4036
+      multiline: text/plain
+      name: js
+      type: text
+      value: |-
+        <script>
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        </script>
+    - description: ""
+      id: pair_708bf9f44cd148ca8fa7888ba1c15602
+      name: meta_title
+      value: test
+    - description: ""
+      id: pair_351f785399ba41d181e9d868aeb09822
+      name: meta_description
+      value: test
+    - description: ""
+      id: pair_a2fccab3aff24c6dbc16048af98a1af1
+      name: meta_keyword
+      value: test
+parameters: []
+headers:
+  - id: pair_66c577ac1d2947518320d4e12e64b5cf
+    name: Content-Type
+    value: application/x-www-form-urlencoded
+  - description: ""
+    id: pair_f01cddc3f09f494cafa005deb6466e78
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  disabled: false
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630136116904
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

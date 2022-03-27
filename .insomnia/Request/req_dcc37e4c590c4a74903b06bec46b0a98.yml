@@ -1,0 +1,117 @@
+_id: req_dcc37e4c590c4a74903b06bec46b0a98
+type: Request
+parentId: fld_35a0ff58d7e045cd98cb0f081e920b59
+modified: 1648377248256
+created: 1631690181358
+url: "{{ _.baseurl }}/api/customer/address"
+name: CREATE
+description: |-
+  ## Method (POST)
+  ## Route
+  ```
+  /api/address
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |label|string|yes|body||
+  |penerima|string|yes|body||
+  |phone_number|number|yes|body||
+  |province_id|integer|yes|body||
+  |city_id|integer|yes|body||
+  |subdistrict_id|integer|yes|body||
+  |detail|string|yes|body||
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "Address Created!"
+    },
+    "data": {
+      "address": {
+        "label": "home",
+        "penerima": "admin kumi",
+        "phone_number": "0827372412434",
+        "province_id": 1,
+        "province": "Bali",
+        "city_id": 17,
+        "city": "Badung",
+        "subdistrict_id": 258,
+        "subdstrict": "Abiansemal",
+        "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Domain Invalid
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Creating Address Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+  ### Validation Input
+  ```
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "subdistrict_id": [
+          "The subdistrict id field is required."
+        ]
+      }
+    }
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"label" : "home",
+    	"penerima" : "saya",
+    	"phone_number" : "0827372412434", 
+    	"province_id" : 10,
+    	"city_id" : 352,
+    	"subdistrict_id" : 4941,
+    	"detail" : "Jl. Angkatan 45 No. 15 Rt.04/15"
+    }
+parameters: []
+headers:
+  - description: ""
+    id: pair_46643d4e95a54e46a271e16d140b00c3
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+  - id: pair_996098c40fac486db5c53e6baaaecf00
+    name: Content-Type
+    value: application/json
+authentication:
+  token: "{{ _.token }}"
+  type: bearer
+metaSortKey: -1628596536817
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

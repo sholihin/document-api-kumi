@@ -1,0 +1,94 @@
+_id: req_0f5adda9c132409088efe6dac17b0924
+type: Request
+parentId: fld_74f8e1128f9441d4b8f5e322bdc0d90a
+modified: 1648378239643
+created: 1631690200901
+url: "{{ _.baseurl
+  }}/api/admin/category/product/674d762c-0bab-443d-a268-dc400a26ed48"
+name: SHOW
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/category/product/{category}
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
+
+  |category|uuid|yes|route param|sda2423-dsfsdkf245|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "category": {
+        "id": "ae2306d7-4ab4-40e8-8dc6-b0f16c53c98a",
+        "name": "Computer",
+        "slug": "computer",
+        "image": "https:\/\/kumi-backend.apps\/storage\/example_net\/categories\/5DfKgLcrUIe4Gt2uDQ63niHDILGQdTLDGolxeOYM.png",
+        "created_at": "2021-07-31T12:02:38.000000Z",
+        "updated_at": "2021-07-31T12:02:38.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Not Found
+
+  ```
+
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "failed"
+    },
+    "data": {
+      "message": "Category Not Found!",
+      "error": "No query results for model [App\\Models\\Category]."
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_f9afdbd09f044fe5a6746894c1607aa5
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1627570508699
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

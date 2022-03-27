@@ -1,0 +1,81 @@
+_id: req_d6144af747df4c1a87a4fe48652178b7
+type: Request
+parentId: fld_798c7bd0059245f28f808f7d7546f4f7
+modified: 1648376954389
+created: 1641994585953
+url: "{{ _.baseurl }}/api/notifications"
+name: Index
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/notifications
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|
+  |---------|----|--------|--------|
+  |X-DOMAIN-MEMBER|string|yes|header|
+
+  ## Response Success
+  ```
+  {
+  	"status": "success",
+  	"message": "Notifications Retrieved!",
+  	"data": [
+  		{
+  			"id": "a488c547-91a9-40ca-b0a7-c23bff4823ad",
+  			"data": {
+  				"id": "df3cdbd0-be6b-41b6-9fa6-548045375b7a",
+  				"total": 245949,
+  				"invoice": "INV-20220111001",
+  				"name": "Customer",
+  				"payment_status": "PENDING"
+  			},
+  			"read_at": "2022-01-11T07:41:54.000000Z",
+  			"created_at": "2022-01-11T06:48:08.000000Z",
+  			"updated_at": "2022-01-11T07:41:54.000000Z"
+  		},
+  		{
+  			"id": "a488c547-91a9-40ca-b0a7-c23bff4823db",
+  			"data": {
+  				"id": "df3cdbd0-be6b-41b6-9fa6-548045375b7a",
+  				"total": 245949,
+  				"invoice": "INV-20220111001",
+  				"name": "Customer",
+  				"payment_status": "PENDING"
+  			},
+  			"read_at": null,
+  			"created_at": "2022-01-11T06:48:08.000000Z",
+  			"updated_at": "2022-01-11T07:39:35.000000Z"
+  		}
+  	]
+  }
+  ```
+
+  ## Response Failed
+  ```
+  {
+      "message": "Error message!",
+      "status": "status",
+      "data": null
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_4007acdb629d48d7abeb1649ece8b159
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1641885763728
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

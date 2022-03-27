@@ -1,0 +1,93 @@
+_id: req_0be7d4313f05461f973b80b42380f435
+type: Request
+parentId: fld_0b6e4486ce0042a2ab80e25be56664f0
+modified: 1648376856642
+created: 1632996699939
+url: "{{ _.baseurl }}/api/contact/send"
+name: SEND EMAIL
+description: |-
+  ## Method (POST)
+  ## Route
+  ```
+  /api/contact/send
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |name|string|yes|body||
+  |email|string|yes|body||
+  |phone|number|yes|body||
+  |message|string|yes|body||
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+  ```
+  {
+    "status": "success",
+    "message": "Email Sent Successfully!",
+    "data": null
+  }
+  ```
+
+  ## Validation Input
+  ```
+  {
+    "status": "error",
+    "message": {
+      "name": [
+        "The name field is required."
+      ],
+      "email": [
+        "The email field is required."
+      ],
+      "phone": [
+        "The phone field is required."
+      ],
+      "message": [
+        "The message field is required."
+      ]
+    },
+    "data": null
+  }
+  ```
+
+  ## Response Failed
+  ```
+  {
+    "status": "error",
+    "message": "message error!",
+    "data": null
+  }
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name" : "mohamad sholihin",
+    	"email" : "mohamad.sholihin@gmail.com",
+    	"phone" : "085813246421",
+    	"message" : "Test Email"
+    }
+parameters: []
+headers:
+  - description: ""
+    id: pair_46643d4e95a54e46a271e16d140b00c3
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+  - id: pair_996098c40fac486db5c53e6baaaecf00
+    name: Content-Type
+    value: application/json
+authentication:
+  token: "{{ _.token }}"
+  type: bearer
+  disabled: false
+metaSortKey: -1000000075
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,155 @@
+_id: req_87eb949b6d7949529809eb06870e259f
+type: Request
+parentId: fld_835c4dd68d9c4a519045735f26c330dd
+modified: 1648377339899
+created: 1631690181295
+url: "{{ _.baseurl }}/api/cart/qty-update"
+name: QTY UPDATE
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/cart/qty-update
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |product_id|uuid|yes|body|hfuw4234-123ff|
+
+  |type|string|optional|body|in:increase,decrease|
+
+  |note|string|optional|body|warna hijau|
+
+  |status|boolean|optional|body|true/false|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Cart Updated!"
+    },
+    "data": {
+      "cart": {
+        "id": "a0e4e56a-b727-4b8c-83ce-69b01eb5c8ef",
+        "qty": 3,
+        "price": 3600000,
+        "weight": 27,
+        "note": "Decrease",
+        "status": false,
+        "discount": null,
+        "dicount_type": null,
+        "product": {
+          "id": "1a6f2040-f591-4791-8aa6-4ca9c861a391",
+          "title": "Computers Baru",
+          "slug": "computers-baru",
+          "type": "physical",
+          "merk": "ASUS",
+          "image": "http:\/\/kumi-backend.apps\/storage\/b7c8b051-6189-426a-bbc8-804e1f2aef0b\/products\/B53fwOHCYJWId3Xp3uZ6rUMIfEV3lD8RVS7qmz5Z.png",
+          "content": "nice",
+          "tnc": "you should buy",
+          "weight": 9,
+          "price": 1200000,
+          "stocks": 12,
+          "reseller_price": 1300000,
+          "discount_type": "nominal",
+          "discount": null,
+          "affiliate_type": "nominal",
+          "affiliate_fee": 10000,
+          "pin": null,
+          "created_at": "2021-08-10T02:48:26.000000Z",
+          "updated_at": "2021-08-10T02:48:26.000000Z"
+        }
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating Cart Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "type": [
+          "The selected type is invalid."
+        ]
+      }
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"product_id" : "013583c3-c3be-4f04-978a-a72798b40894",
+    	"type" : "increase",
+    	"note" : "yang bagus ya",
+    	"status" : true
+    }
+parameters: []
+headers:
+  - id: pair_feea94f13a9c4201ad9c45c67161f2fd
+    name: Content-Type
+    value: application/json
+  - description: ""
+    id: pair_63191ad7fce54036a2db2fa0c17427a5
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token }}"
+  type: bearer
+metaSortKey: -1628326317873
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

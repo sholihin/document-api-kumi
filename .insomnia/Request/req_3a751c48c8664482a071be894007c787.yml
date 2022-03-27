@@ -1,0 +1,21 @@
+_id: req_3a751c48c8664482a071be894007c787
+type: Request
+parentId: fld_53fe21ee2098498cab5432eee56adb6e
+modified: 1645091643471
+created: 1645091609024
+url: "{{ _.baseurl }}/api/reseller/marketing-kit"
+name: Marketing Kit
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: 325
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

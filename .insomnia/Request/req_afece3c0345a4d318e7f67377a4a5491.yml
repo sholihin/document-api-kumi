@@ -1,0 +1,91 @@
+_id: req_afece3c0345a4d318e7f67377a4a5491
+type: Request
+parentId: fld_cb645cecefda4525a284ebb540f6904d
+modified: 1648377541019
+created: 1631690190436
+url: "{{ _.baseurl }}/api/reseller/profile"
+name: SHOW
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/reseller/profile
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Listed!"
+    },
+    "data": {
+      "user": {
+        "id": "c16e9bbd-a40b-4ae5-bd6c-7d6ed9bbaa7e",
+        "name": "Mohamad Sholihin",
+        "email": "mohamad.sholihin.it@gmail.com",
+        "phone_number": "08123123123",
+        "avatar": "https:\/\/ui-avatars.com\/api\/?name=Mohamad+Sholihin&background=4e73df&color=ffffff&size=100",
+        "jenkel": "L"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Not Found
+
+  ```
+
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "failed"
+    },
+    "data": {
+      "message": "Profile Not Found!",
+      "error": "No query results for model [App\\Models\\User]."
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_aa9dddd71a4a4203bd31e453bc36562e
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_reseller }}"
+  type: bearer
+metaSortKey: -1628488698762
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
