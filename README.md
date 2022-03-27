@@ -1,13 +1,15 @@
 # Document API Kumi
 
-Silahkan Pilih Import Melalui URL:
+Silahkan Pilih Import Melalui Git Clone, Kemudian Masukkan URL Repository Di Bawah Ini:
 
 ```
-https://raw.githubusercontent.com/sholihin/document-api-kumi/main/Insomnia-All.yaml
+https://github.com/sholihin/document-api-kumi.git
 ```
 
 ![Gambar 1.0](images/import-by-url-1.png)
 
-![Gambar 1.0](images/import-by-url-2.png)
+![Gambar 1.1](images/import-by-url-2.png)
 
-![Gambar 1.0](images/import-by-url-3.png)
+Untuk Authentication Token Di Atas, Silahkan Memintanya Langsung Kepada Developer.
+
+![Gambar 1.2](images/import-by-url-3.png)
