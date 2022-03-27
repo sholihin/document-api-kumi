@@ -1,7 +1,7 @@
 _id: req_04ee3ce7217246768832de9c646b3007
 type: Request
 parentId: fld_d090bb7af08b4a5085b07142de8b4264
-modified: 1631690200994
+modified: 1648378189992
 created: 1631690200994
 url: "{{ _.baseurl }}/api/admin/coupon/bf459bc6-c70a-4dcb-9e90-5de6047a2ea8"
 name: SHOW
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |coupon|uuid|yes|route param|hsdfg7567sdf|
 

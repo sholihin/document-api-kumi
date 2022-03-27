@@ -1,7 +1,7 @@
 _id: req_47921c0cdafd42f686f5540b40494dd0
 type: Request
 parentId: fld_4593e41f610941ec94fa931251c2fda2
-modified: 1644660459570
+modified: 1648376918768
 created: 1631690181410
 url: "{{ _.baseurl }}/api/customer/register"
 name: Register Customer
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|TYPE|REQUIRED|UNIQUE|
 
-  |---------|----|--------|
+  |---------|----|--------|--------|
 
   |name|string|yes|no|
 

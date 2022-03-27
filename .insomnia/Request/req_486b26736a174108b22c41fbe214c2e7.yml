@@ -1,7 +1,7 @@
 _id: req_486b26736a174108b22c41fbe214c2e7
 type: Request
 parentId: fld_3ee4af54477a431fb353b1fda57ad28a
-modified: 1643802377622
+modified: 1648376813009
 created: 1633425983324
 url: "{{ _.produrl }}/api/config/landing"
 name: Landing Page
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Query Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
   ## Response Success

@@ -1,7 +1,7 @@
 _id: req_0b3b96a5c3064e138a2e093275e0df5b
 type: Request
 parentId: fld_dcfd80e748874fe682b565262ad721a5
-modified: 1631690190453
+modified: 1648377676995
 created: 1631690190453
 url: "{{ _.baseurl }}/api/reseller/address"
 name: CREATE
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Query Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |label|string|yes|body||
   |penerima|string|yes|body||
   |phone_number|number|yes|body||

@@ -1,7 +1,7 @@
 _id: req_34092dab9678486eab256c33c5db2a4d
 type: Request
 parentId: fld_72cb62af60c04607b62c8098399fc0b0
-modified: 1639660011292
+modified: 1648378109453
 created: 1631690201119
 url: "{{ _.baseurl }}/api/admin/config/slider/96ff8642-f29d-46c8-8abb-4b602513f8a9"
 name: SHOW
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |slider|jwt|yes|route param|hfhe34234-3423fdf|
 

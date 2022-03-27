@@ -1,7 +1,7 @@
 _id: req_f132b5191c8d407592cc49820486f983
 type: Request
 parentId: fld_d090bb7af08b4a5085b07142de8b4264
-modified: 1631690200998
+modified: 1648378199589
 created: 1631690200998
 url: "{{ _.baseurl }}/api/admin/coupon"
 name: INDEX
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
 

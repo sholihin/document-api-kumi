@@ -1,7 +1,7 @@
 _id: req_9cab9738a1284df98aaa0976895b7fe3
 type: Request
 parentId: fld_53e1e42b17f747cdb77a1a7973081966
-modified: 1631690201091
+modified: 1648377982014
 created: 1631690201091
 url: "{{ _.baseurl }}/api/admin/config/social-media"
 name: GET
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|
   ## Response Success

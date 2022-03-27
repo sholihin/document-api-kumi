@@ -1,7 +1,7 @@
 _id: req_b83937641abc47f1acc127538d29eb70
 type: Request
 parentId: fld_a4b46881d950475a8c1e0ef302e724c7
-modified: 1631690201277
+modified: 1648378319840
 created: 1631690201277
 url: "{{ _.baseurl }}/api/admin/product/2af33735-522f-4d34-8743-015a2e8aa4e2"
 name: SHOW
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
 

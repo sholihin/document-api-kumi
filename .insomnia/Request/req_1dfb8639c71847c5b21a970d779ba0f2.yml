@@ -1,7 +1,7 @@
 _id: req_1dfb8639c71847c5b21a970d779ba0f2
 type: Request
 parentId: fld_967d5fb22fdc4b5e9672fc5efd5dde5f
-modified: 1640067478452
+modified: 1648378043241
 created: 1631690201067
 url: "{{ _.baseurl }}/api/admin/config/payment/cbbd8dfc-692d-4293-8e09-299f55e4220e"
 name: UPDATE
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |configuration|uuid|yes|route param|hsdfg7567sdf|
 

@@ -1,7 +1,7 @@
 _id: req_6f3c767d5cc4495f8730f230290deda0
 type: Request
 parentId: fld_c3326fb282d64d948a4a9077cd5308c7
-modified: 1641817567004
+modified: 1648377392638
 created: 1641816940000
 url: "{{ _.baseurl }}/api/reseller/forgot-password"
 name: Reset Password

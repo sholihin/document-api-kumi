@@ -1,7 +1,7 @@
 _id: req_0c084c8cee32445090c50a9670d6477e
 type: Request
 parentId: fld_3d1357ac29e34173a93d4f5e2eca9ef9
-modified: 1638329270528
+modified: 1648377599791
 created: 1631690190515
 url: "{{ _.baseurl }}/api/cart/387b1951-8d13-46d0-a4d4-1956b566d26a"
 name: DELETE
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |cart|uuid|yes|route param|sdjajsf-2479fd-3423|
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
   |X-DOMAIN-MEMBER|string|yes|body|example.net|

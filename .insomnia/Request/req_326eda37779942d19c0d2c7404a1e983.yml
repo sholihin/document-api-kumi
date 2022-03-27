@@ -1,7 +1,7 @@
 _id: req_326eda37779942d19c0d2c7404a1e983
 type: Request
 parentId: fld_ba66419573c14bd0b77b091c5cece635
-modified: 1642596794759
+modified: 1648377799196
 created: 1638347980367
 url: "{{ _.baseurl }}/api/admin/checkout/order-complaints"
 name: Complaints
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
 

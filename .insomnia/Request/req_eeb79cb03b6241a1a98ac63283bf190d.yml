@@ -1,7 +1,7 @@
 _id: req_eeb79cb03b6241a1a98ac63283bf190d
 type: Request
 parentId: fld_ba66419573c14bd0b77b091c5cece635
-modified: 1641991083729
+modified: 1648377851854
 created: 1638347980335
 url: "{{ _.baseurl
   }}/api/admin/checkout/waybill/178ee131-df5f-4943-9658-6312f3d484c1"
@@ -14,7 +14,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |invoice|uuid|yes|route param|hsdfg7567sdf|
   |waybill|string|yes|body|110000323023|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|

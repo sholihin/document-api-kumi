@@ -1,7 +1,7 @@
 _id: req_ca6a09707e724ffc9523d4efdfc546ef
 type: Request
 parentId: fld_c70a990aebc64a889d18e7f6bd431d44
-modified: 1639838374617
+modified: 1648377998035
 created: 1631690201079
 url: "{{ _.baseurl
   }}/api/admin/config/payment/status-bank/fda14ee2-7555-4253-b32f-db759a8d1b0f"
@@ -21,7 +21,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |id_data|uuid|yes|route param|hsdfg7567sdf|
 

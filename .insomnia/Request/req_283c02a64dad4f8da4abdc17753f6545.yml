@@ -1,7 +1,7 @@
 _id: req_283c02a64dad4f8da4abdc17753f6545
 type: Request
 parentId: fld_46f712760d0542a4bdb0e7153635c42f
-modified: 1631707432353
+modified: 1648377877097
 created: 1631707432353
 url: "{{ _.baseurl }}/api/change-password"
 name: UPDATE
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |old_password|string|yes|body||
 

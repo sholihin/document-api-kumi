@@ -1,7 +1,7 @@
 _id: req_b49b74c8f0744009a4d5655c608249a3
 type: Request
 parentId: fld_8ecaabe8886e47f3aa014f3ef69172fc
-modified: 1631714858324
+modified: 1648378076208
 created: 1631690201175
 url: "{{ _.baseurl
   }}/api/admin/config/platform-fee/63f7fb4f-cf69-4378-bfdd-00094a6768b6"
@@ -14,7 +14,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |configuration|uuid|yes|route param|hsdfg7567sdf|
   |nominal|int|yes|body|15000|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|

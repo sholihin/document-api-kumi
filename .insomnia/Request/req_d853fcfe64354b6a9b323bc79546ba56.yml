@@ -1,7 +1,7 @@
 _id: req_d853fcfe64354b6a9b323bc79546ba56
 type: Request
 parentId: fld_dcfd80e748874fe682b565262ad721a5
-modified: 1631690190473
+modified: 1648377653730
 created: 1631690190473
 url: "{{ _.baseurl }}/api/reseller/address/f0f96b5a-b2c2-4801-a7d3-1e0b75edb897"
 name: UPDATE
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Query Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |address|uuid|yes|body||
   |label|string|yes|body||
   |penerima|string|yes|body||

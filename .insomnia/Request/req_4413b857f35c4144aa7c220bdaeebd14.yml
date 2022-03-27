@@ -1,7 +1,7 @@
 _id: req_4413b857f35c4144aa7c220bdaeebd14
 type: Request
 parentId: fld_bb9091fd2a7a46f6a08b54c7987df5d6
-modified: 1642943954772
+modified: 1648378091138
 created: 1631690201134
 url: "{{ _.baseurl
   }}/api/admin/config/landing-page/5f08c2bc-876e-482f-9150-8f21790e8e40"
@@ -21,7 +21,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |configuration|uuid|yes|route param|hsdfg7567sdf|
 

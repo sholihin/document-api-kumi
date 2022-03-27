@@ -1,7 +1,7 @@
 _id: req_9c360bd2a02e4e3bbb765c4168382423
 type: Request
 parentId: fld_f89572f6eeb7496bb5da99d47fd378a3
-modified: 1637655798374
+modified: 1648377492795
 created: 1637655251517
 url: "{{ _.baseurl }}/api/bank/3cef1f66-59b2-44fe-b4c5-9655b958302e"
 name: Delete Data Bank
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |bank|uuid|yes|route param|hfhe34234-3423fdf|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|

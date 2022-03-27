@@ -1,7 +1,7 @@
 _id: req_05731941934a4fd2a2a64bcb4acc2a85
 type: Request
 parentId: fld_fc625f025a244d79a220618a93d25f29
-modified: 1631690200962
+modified: 1648378289613
 created: 1631690200962
 url: "{{ _.baseurl }}/api/admin/product/e2f4c096-3905-41e7-80e4-04f8e722dee3"
 name: DELETE
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|------------|
+  |---------|----|--------|------------|--------|
   |product|uuid|yes|route param|146f4f17-ed48-4001-d58b18ae0b7e|
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
   ## Response Success

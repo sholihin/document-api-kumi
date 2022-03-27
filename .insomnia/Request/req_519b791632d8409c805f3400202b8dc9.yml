@@ -1,7 +1,7 @@
 _id: req_519b791632d8409c805f3400202b8dc9
 type: Request
 parentId: fld_fc625f025a244d79a220618a93d25f29
-modified: 1643984111819
+modified: 1648378304123
 created: 1643984051838
 url: "{{ _.baseurl }}/api/admin/product/status/1637bdcf-35e7-4203-ac21-a3a4796a2f33"
 name: STATUS
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |product|uuid|required|route param|asd231-231423-231|
 

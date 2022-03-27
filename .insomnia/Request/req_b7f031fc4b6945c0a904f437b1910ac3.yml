@@ -1,7 +1,7 @@
 _id: req_b7f031fc4b6945c0a904f437b1910ac3
 type: Request
 parentId: fld_a113b0f7a4bb48e4be05061209264b67
-modified: 1643789650469
+modified: 1648387475293
 created: 1631690210031
 url: "{{ _.baseurl }}/api/email/verification-notification"
 name: RESENT VERIFICATION
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example
-  |---------|----|--------|----|
+  |---------|----|--------|----|--------|
   |bearer token|jwt|yes|header|fdjwhef234-dkfsdkf24|
   |domain|string|yes|body|kumi.id|
 

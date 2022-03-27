@@ -1,7 +1,7 @@
 _id: req_e3210d3051df4b5a8bbdb1b1f759a1ba
 type: Request
 parentId: fld_35a0ff58d7e045cd98cb0f081e920b59
-modified: 1642047305417
+modified: 1648377264245
 created: 1631690181386
 url: "{{ _.baseurl }}/api/customer/address"
 name: INDEX
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
   |X-DOMAIN-MEMBER|string|yes|body|example.net|
   ## Response Success

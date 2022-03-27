@@ -1,7 +1,7 @@
 _id: req_080a006ba0084621b48a97cdd721d5e5
 type: Request
 parentId: fld_ba66419573c14bd0b77b091c5cece635
-modified: 1638347980357
+modified: 1648377831356
 created: 1638347980357
 url: "{{ _.baseurl }}/api/admin/checkout/order-canceled"
 name: Cancel
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
 

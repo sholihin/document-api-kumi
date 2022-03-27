@@ -1,7 +1,7 @@
 _id: req_d1595e0871aa4dc385351d3d9d6f2910
 type: Request
 parentId: fld_6e3b207f75df4bf299ced31577d0651a
-modified: 1637048114477
+modified: 1648377893086
 created: 1631690201229
 url: "{{ _.baseurl }}/api/admin/blog/a8be48da-b1ad-407a-8632-d8215dd1a199"
 name: SHOW
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
 

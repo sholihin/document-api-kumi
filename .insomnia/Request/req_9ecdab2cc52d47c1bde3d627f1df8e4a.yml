@@ -1,7 +1,7 @@
 _id: req_9ecdab2cc52d47c1bde3d627f1df8e4a
 type: Request
 parentId: fld_f73e5de9faf34cd89f3c216bfbe568ba
-modified: 1640575183030
+modified: 1648378140552
 created: 1632298993712
 url: "{{ _.baseurl }}/api/admin/config/address/a773dbdd-ae32-4186-af97-840a8e65ab61"
 name: UPDATE ADDRESS
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |configuration|uuid|yes|route param|hsdfg7567sdf|
   |status_custom|boolean|optional|body|1/0|
   |name|string|optional|body|jne|

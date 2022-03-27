@@ -1,7 +1,7 @@
 _id: req_f1f3311878d94126b500d455baf580eb
 type: Request
 parentId: fld_5abd3a45fdf34cfda05c5f73e7453059
-modified: 1637738961735
+modified: 1648377934769
 created: 1631690201195
 url: "{{ _.baseurl }}/api/admin/category/blog"
 name: CREATE
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |name|string|yes|body|computer|
 

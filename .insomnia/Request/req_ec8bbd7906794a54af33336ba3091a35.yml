@@ -1,7 +1,7 @@
 _id: req_ec8bbd7906794a54af33336ba3091a35
 type: Request
 parentId: fld_eae078dfd77140c0b9fa768ca7dfa86b
-modified: 1631690201023
+modified: 1648378056543
 created: 1631690201023
 url: "{{ _.baseurl
   }}/api/admin/config/affiliate/25f3f024-eba1-46bf-91ab-729178ff117d"
@@ -14,7 +14,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |configuration|uuid|yes|route param|hsdfg7567sdf|
   |type|string|yes|body|presentase/nominal|
   |value|float/int|yes|body|9|

@@ -1,7 +1,7 @@
 _id: req_5618c8ca21b4416cb7de87174cca3e35
 type: Request
 parentId: fld_2d0bdc60709345dabd00452d5f138750
-modified: 1643636459297
+modified: 1648377528414
 created: 1643520733357
 url: "{{ _.baseurl }}/api/reseller/config/store"
 name: Interface

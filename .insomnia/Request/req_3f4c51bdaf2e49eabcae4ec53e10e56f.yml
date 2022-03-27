@@ -1,7 +1,7 @@
 _id: req_3f4c51bdaf2e49eabcae4ec53e10e56f
 type: Request
 parentId: fld_c3db400a49f146fabc3b26d7e79ed351
-modified: 1631774000794
+modified: 1648377619453
 created: 1631774000794
 url: "{{ _.baseurl }}/api/wishlist/dcaa8d22-8e2f-40e0-b76c-a843ee835765"
 name: DELETE
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |product|uuid|yes|route param|sdjajsf-2479fd-3423|
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
   |X-DOMAIN-MEMBER|string|yes|body|example.net|

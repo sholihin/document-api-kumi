@@ -1,7 +1,7 @@
 _id: req_9a153f520433405d84079cd1332a436b
 type: Request
 parentId: fld_4240492dd7864e27a4845a0a82ead699
-modified: 1631690201258
+modified: 1648377941503
 created: 1631690201258
 url: "{{ _.baseurl }}/api/admin/faq"
 name: INDEX
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
 

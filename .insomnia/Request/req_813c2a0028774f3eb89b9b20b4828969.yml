@@ -1,7 +1,7 @@
 _id: req_813c2a0028774f3eb89b9b20b4828969
 type: Request
 parentId: fld_e0b55da3f39a452091d93e8d8042982b
-modified: 1637222745336
+modified: 1648378153388
 created: 1631690201034
 url: "{{ _.baseurl }}/api/admin/config/about/96c97852-c2e2-4b94-8319-6a443b230c64"
 name: UPDATE
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |configuration|uuid|yes|route param|hsdfg7567sdf|
   |status|boolean|yes|body|1/0|
   |content|string|yes|body|lorem ipsum|

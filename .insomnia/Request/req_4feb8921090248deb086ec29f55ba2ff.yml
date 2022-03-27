@@ -1,7 +1,7 @@
 _id: req_4feb8921090248deb086ec29f55ba2ff
 type: Request
 parentId: fld_5abd3a45fdf34cfda05c5f73e7453059
-modified: 1631690201215
+modified: 1648377911793
 created: 1631690201215
 url: "{{ _.baseurl }}/api/admin/category/blog/parent"
 name: PARENT
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
 

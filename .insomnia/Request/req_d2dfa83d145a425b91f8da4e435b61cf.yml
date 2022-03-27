@@ -1,7 +1,7 @@
 _id: req_d2dfa83d145a425b91f8da4e435b61cf
 type: Request
 parentId: fld_f89572f6eeb7496bb5da99d47fd378a3
-modified: 1638329035822
+modified: 1648377519528
 created: 1637653919338
 url: "{{ _.baseurl }}/api/banks"
 name: Master Bank
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
 

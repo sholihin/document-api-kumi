@@ -1,7 +1,7 @@
 _id: req_d81d3f6971a84a5db9e65190f8d6a5ab
 type: Request
 parentId: fld_4a08c8dd2ba448979dfa6016c9f29578
-modified: 1645089073024
+modified: 1648377725471
 created: 1645071103876
 url: "{{ _.baseurl }}/api/package"
 name: CREATE
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |title|string|yes|body|samsung a12|
 

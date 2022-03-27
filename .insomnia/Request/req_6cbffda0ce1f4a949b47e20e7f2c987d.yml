@@ -1,7 +1,7 @@
 _id: req_6cbffda0ce1f4a949b47e20e7f2c987d
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1643816134784
+modified: 1648377209790
 created: 1643816085527
 url: "{{ _.baseurl }}/api/checkout/cancel/aa397293-5bca-446c-a6be-8034f96a43f6"
 name: CANCEL
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Query Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |status|string|required|body|DONE|
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
   |X-DOMAIN-MEMBER|string|yes|body|example.net|

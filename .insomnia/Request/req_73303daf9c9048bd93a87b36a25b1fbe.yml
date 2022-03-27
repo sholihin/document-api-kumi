@@ -1,7 +1,7 @@
 _id: req_73303daf9c9048bd93a87b36a25b1fbe
 type: Request
 parentId: fld_4fb73788d2f14310be0111a290ce306e
-modified: 1638709191412
+modified: 1648376858635
 created: 1631707234923
 url: "{{ _.baseurl }}/api/about"
 name: INDEX
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|yes|body|example.net|
 

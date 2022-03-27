@@ -1,7 +1,7 @@
 _id: req_222e0026359d48568b1801f504c0c36f
 type: Request
 parentId: fld_4a65af8a2b16414ca0f1a513492bc30c
-modified: 1645091483911
+modified: 1648377692726
 created: 1631690201299
 url: "{{ _.baseurl }}/api/admin/login"
 name: Login Admin
@@ -91,10 +91,14 @@ headers:
   - disabled: false
     id: pair_574e5c67c3d540a4a4693d7ff5f94eda
     name: X-DOMAIN-MEMBER
-    value: "{{ _.domain }}"
+    value: "{{ _.localdomain }}"
   - id: pair_4fb2bc0e31774f99b1bd6251e0b9c4cb
     name: Content-Type
     value: application/json
+  - id: pair_0e7fd92dfafd41e1989162088fcc66dc
+    name: ""
+    value: ""
+    description: ""
 authentication:
   disabled: false
   password: ""

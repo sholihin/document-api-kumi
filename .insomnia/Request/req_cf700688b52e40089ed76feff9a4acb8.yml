@@ -1,7 +1,7 @@
 _id: req_cf700688b52e40089ed76feff9a4acb8
 type: Request
 parentId: fld_6e3b207f75df4bf299ced31577d0651a
-modified: 1637047077492
+modified: 1648377884967
 created: 1631690201237
 url: "{{ _.baseurl }}/api/admin/blog"
 name: INDEX
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
 
@@ -30,7 +30,7 @@ description: >-
 
   ```
 
-  {
+  {--------|
     "meta": {
       "code": 200,
       "status": "success",

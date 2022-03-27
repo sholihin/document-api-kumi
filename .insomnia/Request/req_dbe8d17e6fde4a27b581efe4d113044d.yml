@@ -1,7 +1,7 @@
 _id: req_dbe8d17e6fde4a27b581efe4d113044d
 type: Request
 parentId: fld_9c2b900abea143d8b2bb1a93d0b0c7cf
-modified: 1642484976135
+modified: 1648377971416
 created: 1631690201016
 url: "{{ _.baseurl }}/api/admin/config/theme"
 name: GET
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|
   ## Response Success

@@ -1,7 +1,7 @@
 _id: req_dfb5ae45997e4ed8a3bd8d18d086def4
 type: Request
 parentId: fld_3ee4af54477a431fb353b1fda57ad28a
-modified: 1643801563174
+modified: 1648376835670
 created: 1634023116025
 url: "{{ _.produrl }}/api/config/faq"
 name: FAQ
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|yes|body|example.net|
 

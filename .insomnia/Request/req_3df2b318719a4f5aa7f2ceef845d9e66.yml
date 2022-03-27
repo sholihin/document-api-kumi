@@ -1,7 +1,7 @@
 _id: req_3df2b318719a4f5aa7f2ceef845d9e66
 type: Request
 parentId: fld_4a65af8a2b16414ca0f1a513492bc30c
-modified: 1645091483300
+modified: 1648377690664
 created: 1643114100081
 url: "{{ _.baseurl }}/api/admin/membership"
 name: Membership
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
 

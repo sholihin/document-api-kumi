@@ -1,7 +1,7 @@
 _id: req_d6947e3477af4662a72dccd618aeaa18
 type: Request
 parentId: fld_c2e61ce99c8544b780645b1eb3fb3c18
-modified: 1641817513712
+modified: 1648376961109
 created: 1641817513712
 url: "{{ _.baseurl }}/api/customer/forgot-password"
 name: Send Email Forgot Pass
@@ -23,7 +23,7 @@ headers:
     value: "{{ _.domain }}"
     description: ""
 authentication: {}
-metaSortKey: -1641799159016
+metaSortKey: -1641391524557.25
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,7 +1,7 @@
 _id: req_1c1e0270f8c74a0f992868110f4e0222
 type: Request
 parentId: fld_c70a990aebc64a889d18e7f6bd431d44
-modified: 1637741862535
+modified: 1648378008847
 created: 1637655870814
 url: "{{ _.baseurl }}/api/bank/3cef1f66-59b2-44fe-b4c5-9655b958302e"
 name: Update Data Bank
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |bank|uuid|yes|route param|hfhe34234-3423fdf|
 

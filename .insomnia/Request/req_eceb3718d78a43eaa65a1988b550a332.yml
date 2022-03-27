@@ -1,7 +1,7 @@
 _id: req_eceb3718d78a43eaa65a1988b550a332
 type: Request
 parentId: fld_5bf1bcc6c5ba4f68ac32ef87f9b0322d
-modified: 1637744651887
+modified: 1648376995967
 created: 1637741100882
 url: "{{ _.baseurl }}/api/bank"
 name: Create Data Bank
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |no_rekening|int|required|body|12346789|
 

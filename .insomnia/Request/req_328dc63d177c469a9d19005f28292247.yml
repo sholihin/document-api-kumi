@@ -1,7 +1,7 @@
 _id: req_328dc63d177c469a9d19005f28292247
 type: Request
 parentId: fld_c0a5afdd3fe24f8ea3c16975f9a48708
-modified: 1637207608008
+modified: 1648377054694
 created: 1637123575027
 url: "{{ _.baseurl }}/api/review/13af51c9-589e-452e-9bf7-8ebc7ad10168"
 name: CREATE
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |product|uuid|yes|body|12132-jfjdf34-213|
 

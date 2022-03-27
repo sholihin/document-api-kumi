@@ -1,7 +1,7 @@
 _id: req_d32970be1d67425b9b802a5221b04c0c
 type: Request
 parentId: fld_d090bb7af08b4a5085b07142de8b4264
-modified: 1644664078819
+modified: 1648378181676
 created: 1631690200986
 url: "{{ _.baseurl }}/api/admin/coupon"
 name: CREATE
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |code|string|yes|body|KUMIKUPON|
 

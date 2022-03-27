@@ -1,7 +1,7 @@
 _id: req_f3cfc967cfde4deeb2ef963dc03c3fc0
 type: Request
 parentId: fld_4a560b37c53444638a2cba63f3c6b180
-modified: 1631690201048
+modified: 1648378158667
 created: 1631690201048
 url: "{{ _.baseurl }}/api/admin/config/tnc"
 name: GET
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|
   ## Response Success

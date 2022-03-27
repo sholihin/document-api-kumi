@@ -1,7 +1,7 @@
 _id: req_8916ba2b08a445eb924f98ce1b1b150c
 type: Request
 parentId: fld_9c2b900abea143d8b2bb1a93d0b0c7cf
-modified: 1639642244017
+modified: 1648377975858
 created: 1631690201012
 url: "{{ _.baseurl }}/api/admin/config/theme/a773dbdd-ae32-4186-af97-840a8e65ab61"
 name: UPDATE
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |configuration|uuid|yes|route param|hsdfg7567sdf|
 

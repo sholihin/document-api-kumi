@@ -1,7 +1,7 @@
 _id: req_dc115fc7dda94ad680f69c7b8153946c
 type: Request
 parentId: fld_ba66419573c14bd0b77b091c5cece635
-modified: 1645091366640
+modified: 1648377842035
 created: 1645091311244
 url: "{{ _.baseurl
   }}/api/admin/checkout/status/delivery/6817c7ff-3717-4936-8980-d7c0d5743973"
@@ -14,7 +14,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |invoice|uuid|yes|route param|hsdfg7567sdf|
   |status|string|yes|route param|on_delivery,delivered|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|

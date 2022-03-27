@@ -1,7 +1,7 @@
 _id: req_62645767ea56451b944d55a5b18317f9
 type: Request
 parentId: fld_bb9091fd2a7a46f6a08b54c7987df5d6
-modified: 1642943933269
+modified: 1648378082251
 created: 1631690201138
 url: "{{ _.baseurl }}/api/admin/config/landing-page"
 name: GET
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|
   ## Response Success

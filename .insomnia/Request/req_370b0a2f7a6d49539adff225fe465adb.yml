@@ -1,7 +1,7 @@
 _id: req_370b0a2f7a6d49539adff225fe465adb
 type: Request
 parentId: fld_5abd3a45fdf34cfda05c5f73e7453059
-modified: 1642490036539
+modified: 1648377916236
 created: 1631690201211
 url: "{{ _.baseurl }}/api/admin/categories/blog"
 name: INDEX
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
 

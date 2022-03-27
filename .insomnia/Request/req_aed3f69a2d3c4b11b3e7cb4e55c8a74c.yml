@@ -1,7 +1,7 @@
 _id: req_aed3f69a2d3c4b11b3e7cb4e55c8a74c
 type: Request
 parentId: fld_8ecaabe8886e47f3aa014f3ef69172fc
-modified: 1631690201180
+modified: 1648378070726
 created: 1631690201180
 url: "{{ _.baseurl }}/api/admin/config/platform-fee"
 name: GET
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|
   ## Response Success

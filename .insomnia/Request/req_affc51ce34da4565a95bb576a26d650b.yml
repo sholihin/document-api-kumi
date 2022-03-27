@@ -1,7 +1,7 @@
 _id: req_affc51ce34da4565a95bb576a26d650b
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1644152649540
+modified: 1648377183140
 created: 1643044339282
 url: "{{ _.baseurl }}/api/checkout/generate/cea0679f-5c75-4a0b-a4f0-c5d93f30a79a"
 name: Generate Invoice
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |address|uuid|optional|route param|asdas3452-124312sdf|
 

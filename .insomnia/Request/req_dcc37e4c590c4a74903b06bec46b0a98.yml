@@ -1,7 +1,7 @@
 _id: req_dcc37e4c590c4a74903b06bec46b0a98
 type: Request
 parentId: fld_35a0ff58d7e045cd98cb0f081e920b59
-modified: 1643044172959
+modified: 1648377248256
 created: 1631690181358
 url: "{{ _.baseurl }}/api/customer/address"
 name: CREATE
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Query Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |label|string|yes|body||
   |penerima|string|yes|body||
   |phone_number|number|yes|body||

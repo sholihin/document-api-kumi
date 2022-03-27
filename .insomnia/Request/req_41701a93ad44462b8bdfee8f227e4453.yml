@@ -1,7 +1,7 @@
 _id: req_41701a93ad44462b8bdfee8f227e4453
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1644826547764
+modified: 1648377203038
 created: 1632987096513
 url: "{{ _.baseurl }}/api/checkout"
 name: Checkout
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |id_data|uuid|optional|body|asdas3452-124312sdf|
 

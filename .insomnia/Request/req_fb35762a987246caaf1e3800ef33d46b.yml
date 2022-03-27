@@ -1,7 +1,7 @@
 _id: req_fb35762a987246caaf1e3800ef33d46b
 type: Request
 parentId: fld_521e691b49454ceaa4995c09bc3c5dd0
-modified: 1642488551889
+modified: 1648376911510
 created: 1631707215148
 url: "{{ _.baseurl }}/api/blog/0c0797b8-abbd-4a9c-9c87-1385bdb8fb51"
 name: SHOW
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |id|uuid|yes|route param|65c0d6e9-65bf-4469-bb11-14e1b12243f2|
 

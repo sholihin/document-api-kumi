@@ -1,7 +1,7 @@
 _id: req_66c471dcdc034f379dedc1dfe0325250
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1644826635447
+modified: 1648377176054
 created: 1632134456283
 url: "{{ _.baseurl }}/api/oncheckout?courier=j%26t&service_courier=EZ"
 name: OnCheckout
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |address|uuid|optional|route param|asdas3452-124312sdf|
 

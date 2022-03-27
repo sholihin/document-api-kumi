@@ -1,7 +1,7 @@
 _id: req_5444854e6a8f4480999caf019004c8bf
 type: Request
 parentId: fld_cd509ce2bc484fdb85d098c8ff5216aa
-modified: 1631690200934
+modified: 1648378262954
 created: 1631690200934
 url: "{{ _.baseurl }}/api/admin/gallery/340f7d37-c59b-4849-8292-4bbdf422972c"
 name: CREATE
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |product|uuid|yes|route param|340f7d37-c59b-4849-8292-4bbdf422972c|
 

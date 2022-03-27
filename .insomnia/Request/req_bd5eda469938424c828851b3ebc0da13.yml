@@ -1,7 +1,7 @@
 _id: req_bd5eda469938424c828851b3ebc0da13
 type: Request
 parentId: fld_afb34fbd208449129459a8ad25afc3b8
-modified: 1645091216119
+modified: 1648376946524
 created: 1645090905646
 url: "{{ _.baseurl }}/api/member/customer/check"
 name: get Member by Customer

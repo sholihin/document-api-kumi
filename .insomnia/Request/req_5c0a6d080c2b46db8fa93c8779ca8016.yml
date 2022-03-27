@@ -1,7 +1,7 @@
 _id: req_5c0a6d080c2b46db8fa93c8779ca8016
 type: Request
 parentId: fld_48561d5e8d12426e94a187777ee7e9db
-modified: 1631714758111
+modified: 1648378066062
 created: 1631690201164
 url: "{{ _.baseurl
   }}/api/admin/config/analytic/63f7fb4f-cf69-4378-bfdd-00094a6768b6"
@@ -21,7 +21,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |configuration|uuid|yes|route param|hsdfg7567sdf|
 

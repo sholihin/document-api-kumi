@@ -1,7 +1,7 @@
 _id: req_a738ec967b7242a3aafe19565351bd8f
 type: Request
 parentId: fld_92db5037fd30421984552980f3ae17fb
-modified: 1643218686098
+modified: 1648376865615
 created: 1637113872555
 url: "{{ _.baseurl }}/api/categories/product"
 name: Detail
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |slug|string|required|route param|printer-canon|
 

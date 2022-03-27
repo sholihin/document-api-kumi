@@ -1,7 +1,7 @@
 _id: req_509eb68f9f2045f49a780563851febe3
 type: Request
 parentId: fld_3ee4af54477a431fb353b1fda57ad28a
-modified: 1642437435305
+modified: 1648376845455
 created: 1641868104339
 url: "{{ _.baseurl }}/api/config/payment"
 name: Payment
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|yes|body|example.net|
 

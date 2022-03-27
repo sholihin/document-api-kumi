@@ -1,7 +1,7 @@
 _id: req_9e074df26f1041278e6bb27b28e40ff0
 type: Request
 parentId: fld_f43992deee37419f9dacf092a99060d9
-modified: 1642047486832
+modified: 1648377302828
 created: 1631690181325
 url: "{{ _.produrl }}/api/customer/profile"
 name: UPDATE
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |name|string|yes|body|Sholihin|
 

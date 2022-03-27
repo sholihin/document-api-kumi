@@ -1,7 +1,7 @@
 _id: req_dfee3015af94456ba5650ee2241a0a8c
 type: Request
 parentId: fld_3ee4af54477a431fb353b1fda57ad28a
-modified: 1643802357381
+modified: 1648376797556
 created: 1633425971027
 url: "{{ _.baseurl }}/api/config/meta"
 name: Meta Website
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Query Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
   ## Response Success

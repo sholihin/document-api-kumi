@@ -1,7 +1,7 @@
 _id: req_3f3c9ccea52041fdac0ac513648021dd
 type: Request
 parentId: fld_c3db400a49f146fabc3b26d7e79ed351
-modified: 1641193342203
+modified: 1648377624573
 created: 1631774000787
 url: "{{ _.baseurl }}/api/wishlist"
 name: INDEX
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
 

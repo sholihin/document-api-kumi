@@ -1,7 +1,7 @@
 _id: req_d8ea06264cb9417c8fbb29efb0da63c3
 type: Request
 parentId: fld_c0f3d4f16d0a4707a3482ef78a99b946
-modified: 1644224319790
+modified: 1648377160997
 created: 1633406053671
 url: "{{ _.baseurl }}/api/checkout/waybill/041b447f-3841-413e-8e61-6b4d07954394"
 name: Delivery Status
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |invoice|uuid|required|route param|asdas3452-124312sdf|
 

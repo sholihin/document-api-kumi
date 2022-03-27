@@ -1,7 +1,7 @@
 _id: req_d5268e9ddcc54cc2bd93e3e5697d3b62
 type: Request
 parentId: fld_3ee4af54477a431fb353b1fda57ad28a
-modified: 1644554409705
+modified: 1648387454451
 created: 1633425074369
 url: "{{ _.baseurl }}/api/config/theme"
 name: Theme
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Query Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |X-DOMAIN-MEMBER|string|yes|body|example.net|
 
   ## Response Success
@@ -55,7 +55,7 @@ parameters: []
 headers:
   - id: pair_cda71ab27b39449cac9deb689f729ec1
     name: X-DOMAIN-MEMBER
-    value: "{{ _.domain }}"
+    value: "{{ _.localdomain }}"
     description: ""
 authentication: {}
 metaSortKey: -1633425074412

@@ -1,7 +1,7 @@
 _id: req_74c1b950e9eb49138e6c4e3c5a955be3
 type: Request
 parentId: fld_fc625f025a244d79a220618a93d25f29
-modified: 1642173919144
+modified: 1648378214321
 created: 1631690200977
 url: "{{ _.baseurl }}/api/admin/mass/product"
 name: Mass Upload
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |product|file|required|body|csv|
 

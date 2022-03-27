@@ -1,7 +1,7 @@
 _id: req_15f904615e8e4120b37bf7fe460ccadb
 type: Request
 parentId: fld_ca1867cb7e954152806f85d4a844db63
-modified: 1642009873575
+modified: 1648377039401
 created: 1634182509165
 url: "{{ _.baseurl }}/api/discussions\t"
 name: CREATE
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |product_id|uuid|yes|body|12132-jfjdf34-213|
 

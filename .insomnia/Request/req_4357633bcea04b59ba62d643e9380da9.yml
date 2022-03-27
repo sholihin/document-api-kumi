@@ -1,7 +1,7 @@
 _id: req_4357633bcea04b59ba62d643e9380da9
 type: Request
 parentId: fld_9e2b3ebee28a4bc69f16660fb89e267a
-modified: 1642837517970
+modified: 1648377410148
 created: 1642779537307
 url: "{{ _.baseurl }}/api/wallet/history"
 name: Get Wallet History
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|
   ## Response Success

@@ -1,7 +1,7 @@
 _id: req_4306fecdc3734de5a4b4df6ba06445b6
 type: Request
 parentId: fld_fabfab3b99bf433aba8b7b7be0adb5c0
-modified: 1636983470898
+modified: 1648377580676
 created: 1631690190419
 url: "{{ _.baseurl }}/api/reseller/products"
 name: INDEX
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
 

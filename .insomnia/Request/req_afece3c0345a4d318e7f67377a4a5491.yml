@@ -1,7 +1,7 @@
 _id: req_afece3c0345a4d318e7f67377a4a5491
 type: Request
 parentId: fld_cb645cecefda4525a284ebb540f6904d
-modified: 1631690190436
+modified: 1648377541019
 created: 1631690190436
 url: "{{ _.baseurl }}/api/reseller/profile"
 name: SHOW
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
 

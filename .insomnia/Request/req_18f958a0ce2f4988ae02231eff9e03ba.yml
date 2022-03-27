@@ -1,9 +1,9 @@
 _id: req_18f958a0ce2f4988ae02231eff9e03ba
 type: Request
 parentId: fld_fc625f025a244d79a220618a93d25f29
-modified: 1645072209800
+modified: 1648378299177
 created: 1631690200957
-url: "{{ _.baseurl }}/api/admin/product/c98a91e3-49d9-4b3d-9848-3830adfa4c32"
+url: "{{ _.baseurl }}/api/admin/product/57a92e68-ef6d-49db-b65a-7626378a856f"
 name: UPDATE
 description: >-
   ## Method (PATCH)
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |product|uuid|required|route param|asd231-231423-231|
 
@@ -193,6 +193,7 @@ body:
       name: digital_product
       type: file
       value: http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
+      disabled: true
     - description: ""
       id: pair_a03b3b5721fa48198c83467efad589d6
       name: merk
@@ -269,7 +270,7 @@ headers:
     value: multipart/form-data
   - id: pair_c8ed9fb2408548c2a994e799dd9a7fea
     name: X-DOMAIN-MEMBER
-    value: "{{ _.domain }}"
+    value: "{{ _.localdomain }}"
 authentication:
   token: "{{ _.token_admin }}"
   type: bearer

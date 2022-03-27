@@ -1,7 +1,7 @@
 _id: req_fdd3dea938c44357a5e536fd45ad650b
 type: Request
 parentId: fld_dcfd80e748874fe682b565262ad721a5
-modified: 1631690190468
+modified: 1648377665258
 created: 1631690190468
 url: "{{ _.baseurl }}/api/subdistricts/17"
 name: SUBDISTRICT
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |province|integer|yes|route param|1|
   |X-DOMAIN-MEMBER|string|yes|header|example.net|
   ## Response Success

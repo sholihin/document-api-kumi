@@ -1,7 +1,7 @@
 _id: req_d2108726b0ff4d2f9903ea27ffddf203
 type: Request
 parentId: fld_5a5cc7192ebc41b4a9e26b9ae88ccdf1
-modified: 1631690201154
+modified: 1648378096945
 created: 1631690201154
 url: "{{ _.baseurl }}/api/admin/config/meta-website"
 name: GET
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|
   ## Response Success

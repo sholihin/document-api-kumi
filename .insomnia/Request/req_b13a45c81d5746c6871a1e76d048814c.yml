@@ -1,7 +1,7 @@
 _id: req_b13a45c81d5746c6871a1e76d048814c
 type: Request
 parentId: fld_4a65af8a2b16414ca0f1a513492bc30c
-modified: 1645071446717
+modified: 1648377685452
 created: 1633662864626
 url: "{{ _.baseurl }}/api/admin/dashboard"
 name: Dashboard
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
 

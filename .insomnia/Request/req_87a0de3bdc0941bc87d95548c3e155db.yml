@@ -1,7 +1,7 @@
 _id: req_87a0de3bdc0941bc87d95548c3e155db
 type: Request
 parentId: fld_9e2b3ebee28a4bc69f16660fb89e267a
-modified: 1642779524740
+modified: 1648377416060
 created: 1638329075522
 url: "{{ _.baseurl }}/api/wallet/debit/b76734b0-ee1c-486c-b152-afdaebc21aa6"
 name: Debit Wallet
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |wallet|uuid|required|route param|sdaj24-242|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|

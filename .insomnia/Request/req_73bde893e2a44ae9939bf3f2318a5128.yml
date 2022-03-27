@@ -1,7 +1,7 @@
 _id: req_73bde893e2a44ae9939bf3f2318a5128
 type: Request
 parentId: fld_967d5fb22fdc4b5e9672fc5efd5dde5f
-modified: 1640067484974
+modified: 1648378035917
 created: 1631690201071
 url: "{{ _.baseurl }}/api/admin/config/payment"
 name: GET
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
 

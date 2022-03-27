@@ -1,7 +1,7 @@
 _id: req_3fbc3e040d064e468e7f1a840dcc7f86
 type: Request
 parentId: fld_eae078dfd77140c0b9fa768ca7dfa86b
-modified: 1631690201026
+modified: 1648378050401
 created: 1631690201026
 url: "{{ _.baseurl }}/api/admin/config/affiliate"
 name: GET
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|
   ## Response Success

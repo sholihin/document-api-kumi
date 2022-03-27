@@ -1,7 +1,7 @@
 _id: req_925ee4aae0fb436aa08af1dd97ea88fa
 type: Request
 parentId: fld_74f8e1128f9441d4b8f5e322bdc0d90a
-modified: 1631690200895
+modified: 1648378249622
 created: 1631690200895
 url: "{{ _.baseurl
   }}/api/admin/category/product/ccc48403-7167-47c4-89a0-540cb3344a4d"
@@ -21,7 +21,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |id|uuid|yes|route param|rwer248348-241324dfndf|
 

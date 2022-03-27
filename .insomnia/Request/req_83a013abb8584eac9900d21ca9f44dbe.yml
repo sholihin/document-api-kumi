@@ -1,7 +1,7 @@
 _id: req_83a013abb8584eac9900d21ca9f44dbe
 type: Request
 parentId: fld_4240492dd7864e27a4845a0a82ead699
-modified: 1631715157965
+modified: 1648377945732
 created: 1631690201254
 url: "{{ _.baseurl }}/api/admin/faq/474c4cce-330d-4c41-8a14-c848b5c50e91"
 name: UPDATE
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |category_id|uuid|yes|body|hfuw4234-123ff|
 

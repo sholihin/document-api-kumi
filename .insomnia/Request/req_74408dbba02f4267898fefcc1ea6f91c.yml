@@ -1,7 +1,7 @@
 _id: req_74408dbba02f4267898fefcc1ea6f91c
 type: Request
 parentId: fld_3d1357ac29e34173a93d4f5e2eca9ef9
-modified: 1636983711283
+modified: 1648377611139
 created: 1631690190528
 url: "{{ _.baseurl }}/api/cart/qty-update"
 name: CREATE OR UPDATE NOTE
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |product_id|uuid|yes|body|hfuw4234-123ff|
   |note|string|optional|body|warna hijau|
   |bearer token|jwt|yes|header|12132-jfjdf34-213|

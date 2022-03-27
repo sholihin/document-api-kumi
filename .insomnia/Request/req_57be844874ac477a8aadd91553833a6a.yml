@@ -1,7 +1,7 @@
 _id: req_57be844874ac477a8aadd91553833a6a
 type: Request
 parentId: fld_ba66419573c14bd0b77b091c5cece635
-modified: 1642579837872
+modified: 1648377826813
 created: 1638347980361
 url: "{{ _.baseurl }}/api/admin/checkout/order-done"
 name: Done
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
 

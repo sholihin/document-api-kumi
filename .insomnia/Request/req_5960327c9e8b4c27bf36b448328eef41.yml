@@ -1,7 +1,7 @@
 _id: req_5960327c9e8b4c27bf36b448328eef41
 type: Request
 parentId: fld_ba66419573c14bd0b77b091c5cece635
-modified: 1640615072257
+modified: 1648377810570
 created: 1638347980348
 url: "{{ _.baseurl }}/api/admin/checkout/order-onprogress"
 name: On Progress
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
 

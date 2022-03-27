@@ -1,7 +1,7 @@
 _id: req_2636ba78cbc84482bbcb8253253cc6a8
 type: Request
 parentId: fld_f89572f6eeb7496bb5da99d47fd378a3
-modified: 1638329041762
+modified: 1648377499159
 created: 1637654512998
 url: "{{ _.baseurl }}/api/bank"
 name: List Data Bank
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
 

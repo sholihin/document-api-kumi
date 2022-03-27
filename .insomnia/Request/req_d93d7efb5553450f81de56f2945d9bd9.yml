@@ -1,7 +1,7 @@
 _id: req_d93d7efb5553450f81de56f2945d9bd9
 type: Request
 parentId: fld_f0e0cd4576d04721bce9b333c1a426f8
-modified: 1638342047755
+modified: 1648377464478
 created: 1638341984961
 url: "{{ _.baseurl }}/api/admin/checkout/order-delivered"
 name: Delivered
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
 

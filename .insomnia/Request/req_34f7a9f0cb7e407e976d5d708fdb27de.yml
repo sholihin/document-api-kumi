@@ -1,7 +1,7 @@
 _id: req_34f7a9f0cb7e407e976d5d708fdb27de
 type: Request
 parentId: fld_135d30582dbf4be1b9320f76685a13ca
-modified: 1640593268865
+modified: 1648378171788
 created: 1631690201059
 url: "{{ _.baseurl }}/api/admin/config/email"
 name: GET
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |X-DOMAIN-MEMBER|string|required|header|kumi.id|
   |bearer token|jwt|yes|header|hfhe34234-3423fdf|
   ## Response Success

@@ -1,7 +1,7 @@
 _id: req_aa94f26706c3458595c00420691c10df
 type: Request
 parentId: fld_ba66419573c14bd0b77b091c5cece635
-modified: 1642061384877
+modified: 1648377791743
 created: 1638347980343
 url: "{{ _.baseurl }}/api/admin/checkout/new-order"
 name: New Order
@@ -20,7 +20,7 @@ description: >-
 
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
 
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
 
   |bearer token|jwt|yes|header|12132-jfjdf34-213|
 

@@ -1,7 +1,7 @@
 _id: req_5f08ff14626d4bc69465d2070416c5fa
 type: Request
 parentId: fld_e9196f337d2f4f40915e1953f02d4c1c
-modified: 1645090218909
+modified: 1648377702021
 created: 1645073497004
 url: "{{ _.baseurl }}/api/member/admin/check"
 name: get Member by Admin

@@ -1,7 +1,7 @@
 _id: req_c6f5ee3ef5ba47ef8d176756be7e501b
 type: Request
 parentId: fld_35a0ff58d7e045cd98cb0f081e920b59
-modified: 1631690181379
+modified: 1648377278168
 created: 1631690181379
 url: "{{ _.baseurl }}/api/customer/address/1c5034e5-a0e9-497d-a0df-fc4bc3a7d035"
 name: UPDATE
@@ -13,7 +13,7 @@ description: |-
   ```
   ## Query Parameters
   |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
-  |---------|----|--------|--------|
+  |---------|----|--------|--------|--------|
   |address|uuid|yes|body||
   |label|string|yes|body||
   |penerima|string|yes|body||
