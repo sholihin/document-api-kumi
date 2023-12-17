@@ -1,0 +1,26 @@
+_id: req_ecd52b06d2d94a27b66241b2aa3a583b
+type: Request
+parentId: fld_c12d8aafb858480ba2d5ece3f0a4819c
+modified: 1675698159153
+created: 1675697999871
+url: "{{ _.produrl }}/api/reseller/checkout/order-delivery"
+name: Send
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: X-DOMAIN-MEMBER
+    value: reseller22.nunieskitchen.id
+    id: pair_671d801adda54909a92c3756ae37aa1c
+authentication:
+  type: bearer
+  token: "{{ _.token_reseller }}"
+metaSortKey: -1675697878686
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

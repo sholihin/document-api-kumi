@@ -1,0 +1,91 @@
+_id: req_1218ff57ca754b9184ab12ad3ad0a472
+type: Request
+parentId: fld_724d817dd679463f8ba129bbaa663055
+modified: 1648377916236
+created: 1631690201211
+url: "{{ _.baseurl }}/api/admin/categories/blog"
+name: INDEX
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/admin/categories/blog
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "categories": [
+        {
+          "id": "5d3ac7b0-b756-41e7-97cb-9b4428180871",
+          "name": "Komputer",
+          "slug": "komputer",
+          "image": "https:\/\/kumi-backend.apps\/storage\/http___localhost_8080\/categories\/ySjEaJ0vKVzuFYSRVV5zB6rWb6dqAgYg5B3UWqwK.png",
+          "created_at": "2021-07-29T13:47:31.000000Z",
+          "updated_at": "2021-07-29T14:46:18.000000Z"
+        }
+      ]
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Not Found
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating Category Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_65aa777b2eb445db8bf2666206e0a5a6
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1627735086938
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

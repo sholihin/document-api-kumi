@@ -1,0 +1,27 @@
+_id: req_51ce4acd64c341b59211e1cc43ea8389
+type: Request
+parentId: fld_355f80120419493fb1133aadd8e4e09c
+modified: 1648377880670
+created: 1631690201293
+url: "{{ _.baseurl }}/api/admin/resellers/1656c698-cb21-40ed-b61d-16d777d037e7"
+name: Reseller Show
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_91b2dba1259d42e29a5e6329895da310
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630178978331.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

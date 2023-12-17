@@ -1,0 +1,81 @@
+_id: req_b1335b5f68bd421daa042ffdfb603f9c
+type: Request
+parentId: fld_9d00727a0d1c4836a50194ea4c820d4b
+modified: 1648378171788
+created: 1631690201059
+url: "{{ _.baseurl }}/api/admin/config/email"
+name: GET
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/admin/config/email
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "email": {
+        "config_id": "6e5f4266-7038-484a-8a47-df13bfa9d211",
+        "configurations": {
+          "email": "admin@kumi.id",
+          "password": "password",
+          "mailer": "smtp",
+          "host": "smtp.mailtrap.io",
+          "port": 2525,
+          "encryption": "tls"
+        },
+        "templates": {
+          "checkout": "string",
+          "confirmation": "string",
+          "pembayaran": "string"
+        }
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Email's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_5d0a79555f61419a91037a506be5ab49
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630137219974
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

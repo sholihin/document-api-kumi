@@ -1,0 +1,61 @@
+_id: req_5c518bae8a77470f9a134ec1313cfbb0
+type: Request
+parentId: fld_180d31e36ab741e8b361aa37b77bd338
+modified: 1648376797556
+created: 1633425971027
+url: "{{ _.baseurl }}/api/config/meta"
+name: Meta Website
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/config/meta
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+  ```
+  {
+    "status": "success",
+    "message": null,
+    "data": {
+      "config_id": "96c97852-c2e2-4b94-8319-6a443b230c64",
+      "meta_title": "meta_title",
+      "meta_description": "meta_description",
+      "meta_keyword": "meta_keyword"
+    }
+  }
+  ```
+
+  ## Response Failed
+  ```
+  {
+    "status": "error",
+    "message": "pesan error",
+    "data": null
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_cda71ab27b39449cac9deb689f729ec1
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+  - id: pair_6cb0f444e45a41e69658d3abc38ddce8
+    name: ""
+    value: ""
+    description: ""
+authentication: {}
+metaSortKey: -1633417646796
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,26 @@
+_id: req_b1c0e2e97f9a44aeb1204716a347e836
+type: Request
+parentId: fld_c12d8aafb858480ba2d5ece3f0a4819c
+modified: 1675698190301
+created: 1675697614628
+url: "{{ _.produrl }}/api/reseller/checkout/order-complaints"
+name: Complaints
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: X-DOMAIN-MEMBER
+    value: reseller22.nunieskitchen.id
+    id: pair_671d801adda54909a92c3756ae37aa1c
+authentication:
+  type: bearer
+  token: "{{ _.token_reseller }}"
+metaSortKey: -1675697878486
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

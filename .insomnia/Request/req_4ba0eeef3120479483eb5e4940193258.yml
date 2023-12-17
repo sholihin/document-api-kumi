@@ -1,0 +1,303 @@
+_id: req_4ba0eeef3120479483eb5e4940193258
+type: Request
+parentId: fld_1c61138db79b45d2a2b8f9f704ddb0b0
+modified: 1648376882764
+created: 1633008486760
+url: "{{ _.baseurl }}/api/products"
+name: INDEX
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/products
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |limit|int|optional|body|15|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ##
+
+  Limit untuk pagination product
+
+  ##
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "status": "success",
+    "message": null,
+    "data": [
+      {
+        "items": [
+          {
+            "id": "6ae3eb33-d64a-4ec8-b615-1cf91a56420d",
+            "title": "Sony Ps3 Superslim Game Console - Black [500 Gb\/full Game]",
+            "slug": "sony-ps3-superslim-game-console-black-500-gbfull-game-sony-an0au",
+            "type": "physical",
+            "merk": "SONY",
+            "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/game.jpg",
+            "content": "",
+            "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres. Idem iste, inquam, de voluptate quid sentit? Eam tum adesse, cum dolor omnis absit; Certe non potest. A quibus propter discendi cupiditatem videmus ultimas terras esse peragratas. Duo Reges: constructio interrete. An me, inquam, nisi te audire vellem, censes haec dicturum fuisse? An me, inquis, tam amentem putas, ut apud imperitos isto modo loquar? Et quae per vim oblatum stuprum volontaria morte lueret inventa est et qui interficeret filiam, ne stupraretur. Sed in rebus apertissimis nimium longi sumus. <\/p>\n\n<p>Quae iam oratio non a philosopho aliquo, sed a censore opprimenda est. Quae sequuntur igitur? Tu vero, inquam, ducas licet, si sequetur; Expressa vero in iis aetatibus, quae iam confirmatae sunt. Maximeque eos videre possumus res gestas audire et legere velle, qui a spe gerendi absunt confecti senectute. Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Quod idem cum vestri faciant, non satis magnam tribuunt inventoribus gratiam. Iam illud quale tandem est, bona praeterita non effluere sapienti, mala meminisse non oportere? <\/p>\n\n<p>Item de contrariis, a quibus ad genera formasque generum venerunt. Satis est tibi in te, satis in legibus, satis in mediocribus amicitiis praesidii. Quae cum dixisset paulumque institisset, Quid est? Ergo hoc quidem apparet, nos ad agendum esse natos. Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum. Isto modo, ne si avia quidem eius nata non esset. Tenesne igitur, inquam, Hieronymus Rhodius quid dicat esse summum bonum, quo putet omnia referri oportere? <\/p>\n\n<p>Nam, ut paulo ante docui, augendae voluptatis finis est doloris omnis amotio. Atqui reperies, inquit, in hoc quidem pertinacem; Duo enim genera quae erant, fecit tria. Itaque hoc frequenter dici solet a vobis, non intellegere nos, quam dicat Epicurus voluptatem. Aeque enim contingit omnibus fidibus, ut incontentae sint. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Laelius clamores sofòw ille so lebat Edere compellans gumias ex ordine nostros. Nam de isto magna dissensio est. Nos cum te, M. Dempta enim aeternitate nihilo beatior Iuppiter quam Epicurus; Ex rebus enim timiditas, non ex vocabulis nascitur. <\/p>\n\n",
+            "weight": 4000,
+            "price": 1975000,
+            "stocks": 10,
+            "reseller_price": null,
+            "discount_type": null,
+            "discount": null,
+            "affiliate_type": null,
+            "affiliate_fee": null,
+            "pin": null,
+            "seo": 0,
+            "meta_title": null,
+            "meta_keyword": null,
+            "meta_description": null,
+            "status": 1,
+            "created_at": "2021-11-14T13:56:16.000000Z",
+            "updated_at": "2021-11-14T13:56:16.000000Z"
+          },
+          {
+            "id": "244cc5f1-4812-43c9-81d9-5c5e312590c8",
+            "title": "Sony Dsc H300",
+            "slug": "sony-dsc-h300-sony-r8axo",
+            "type": "physical",
+            "merk": "SONY",
+            "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/kamera.jpg",
+            "content": "",
+            "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Apud imperitos tum illa dicta sunt, aliquid etiam coronae datum; Sic enim censent, oportunitatis esse beate vivere. Et quod est munus, quod opus sapientiae? Est enim effectrix multarum et magnarum voluptatum. <\/p>\n\n<p>Non est ista, inquam, Piso, magna dissensio. Pudebit te, inquam, illius tabulae, quam Cleanthes sane commode verbis depingere solebat. Multa sunt dicta ab antiquis de contemnendis ac despiciendis rebus humanis; Qui ita affectus, beatum esse numquam probabis; Ita relinquet duas, de quibus etiam atque etiam consideret. At enim, qua in vita est aliquid mali, ea beata esse non potest. Ergo hoc quidem apparet, nos ad agendum esse natos. <\/p>\n\n<p>Sit sane ista voluptas. Si alia sentit, inquam, alia loquitur, numquam intellegam quid sentiat; Itaque haec cum illis est dissensio, cum Peripateticis nulla sane. Quae iam oratio non a philosopho aliquo, sed a censore opprimenda est. Profectus in exilium Tubulus statim nec respondere ausus; Quid, si non sensus modo ei sit datus, verum etiam animus hominis? Superiores tres erant, quae esse possent, quarum est una sola defensa, eaque vehementer. Simul atque natum animal est, gaudet voluptate et eam appetit ut bonum, aspernatur dolorem ut malum. Beatus sibi videtur esse moriens. <\/p>\n\n<p>Duo Reges: constructio interrete. Quae cum essent dicta, finem fecimus et ambulandi et disputandi. Aliter enim explicari, quod quaeritur, non potest. Venit enim mihi Platonis in mentem, quem accepimus primum hic disputare solitum; Ergo id est convenienter naturae vivere, a natura discedere. Quis est tam dissimile homini. <\/p>\n\n",
+            "weight": 2000,
+            "price": 2699000,
+            "stocks": 10,
+            "reseller_price": null,
+            "discount_type": null,
+            "discount": null,
+            "affiliate_type": null,
+            "affiliate_fee": null,
+            "pin": null,
+            "seo": 0,
+            "meta_title": null,
+            "meta_keyword": null,
+            "meta_description": null,
+            "status": 1,
+            "created_at": "2021-11-14T13:56:10.000000Z",
+            "updated_at": "2021-11-14T13:56:10.000000Z"
+          },
+          {
+            "id": "297aad4e-934f-4f17-ae68-30f3b3b67a1d",
+            "title": "Fantech Hq50 Mars Headset Gaming High Quality",
+            "slug": "fantech-hq50-mars-headset-gaming-high-quality-fantech-ax0de",
+            "type": "physical",
+            "merk": "FANTECH",
+            "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/headset.jpg",
+            "content": "",
+            "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae diligentissime contra Aristonem dicuntur a Chryippo. Iam contemni non poteris. Potius inflammat, ut coercendi magis quam dedocendi esse videantur. Ita relinquet duas, de quibus etiam atque etiam consideret. Quid autem habent admirationis, cum prope accesseris? Duo Reges: constructio interrete. Vide, ne etiam menses! nisi forte eum dicis, qui, simul atque arripuit, interficit. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? <\/p>\n\n<p>Peccata paria. Sed plane dicit quod intellegit. Minime vero istorum quidem, inquit. Minime vero, inquit ille, consentit. Multa sunt dicta ab antiquis de contemnendis ac despiciendis rebus humanis; Ne tum quidem te respicies et cogitabis sibi quemque natum esse et suis voluptatibus? Nihil sane. Et harum quidem rerum facilis est et expedita distinctio. Si quicquam extra virtutem habeatur in bonis. <\/p>\n\n<p>Atque haec ita iustitiae propria sunt, ut sint virtutum reliquarum communia. Minime id quidem, inquam, alienum, multumque ad ea, quae quaerimus, explicatio tua ista profecerit. Quae contraria sunt his, malane? Hoc etsi multimodis reprehendi potest, tamen accipio, quod dant. Ut optime, secundum naturam affectum esse possit. Quod non faceret, si in voluptate summum bonum poneret. Nullum inveniri verbum potest quod magis idem declaret Latine, quod Graece, quam declarat voluptas. Quae quo sunt excelsiores, eo dant clariora indicia naturae. O magnam vim ingenii causamque iustam, cur nova existeret disciplina! Perge porro. <\/p>\n\n<p>Mihi quidem Homerus huius modi quiddam vidisse videatur in iis, quae de Sirenum cantibus finxerit. Quamquam id quidem licebit iis existimare, qui legerint. <\/p>\n\n",
+            "weight": 500,
+            "price": 83000,
+            "stocks": 10,
+            "reseller_price": null,
+            "discount_type": null,
+            "discount": null,
+            "affiliate_type": null,
+            "affiliate_fee": null,
+            "pin": null,
+            "seo": 0,
+            "meta_title": null,
+            "meta_keyword": null,
+            "meta_description": null,
+            "status": 1,
+            "created_at": "2021-11-14T13:56:13.000000Z",
+            "updated_at": "2021-11-14T13:56:13.000000Z"
+          },
+          {
+            "id": "3048fee7-3bbd-478b-97a5-97e9366a39ba",
+            "title": "Canon Printer Ts207 Inkjet",
+            "slug": "canon-printer-ts207-inkjet-canon-tqwl9",
+            "type": "physical",
+            "merk": "CANON",
+            "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/printer.jpg",
+            "content": "",
+            "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si enim ad populum me vocas, eum. Quicquid porro animo cernimus, id omne oritur a sensibus; Itaque primos congressus copulationesque et consuetudinum instituendarum voluntates fieri propter voluptatem; Quid enim tanto opus est instrumento in optimis artibus comparandis? Huius, Lyco, oratione locuples, rebus ipsis ielunior. <\/p>\n\n<p>Quod equidem non reprehendo; Tum ille: Tu autem cum ipse tantum librorum habeas, quos hic tandem requiris? Quae similitudo in genere etiam humano apparet. Quamquam haec quidem praeposita recte et reiecta dicere licebit. <\/p>\n\n<p>Inde sermone vario sex illa a Dipylo stadia confecimus. Quis est tam dissimile homini. Illum mallem levares, quo optimum atque humanissimum virum, Cn. Semper enim ex eo, quod maximas partes continet latissimeque funditur, tota res appellatur. Ut proverbia non nulla veriora sint quam vestra dogmata. Quod autem principium officii quaerunt, melius quam Pyrrho; Si de re disceptari oportet, nulla mihi tecum, Cato, potest esse dissensio. Sed residamus, inquit, si placet. <\/p>\n\n<p>Praeclare enim Plato: Beatum, cui etiam in senectute contigerit, ut sapientiam verasque opiniones assequi possit. Ipse Epicurus fortasse redderet, ut Sextus Peducaeus, Sex. Quantum Aristoxeni ingenium consumptum videmus in musicis? Duo Reges: constructio interrete. Quid igitur dubitamus in tota eius natura quaerere quid sit effectum? Vide, ne etiam menses! nisi forte eum dicis, qui, simul atque arripuit, interficit. <\/p>\n\n",
+            "weight": 5000,
+            "price": 715000,
+            "stocks": 10,
+            "reseller_price": null,
+            "discount_type": null,
+            "discount": null,
+            "affiliate_type": null,
+            "affiliate_fee": null,
+            "pin": null,
+            "seo": 0,
+            "meta_title": null,
+            "meta_keyword": null,
+            "meta_description": null,
+            "status": 1,
+            "created_at": "2021-11-14T13:56:12.000000Z",
+            "updated_at": "2021-11-14T13:56:12.000000Z"
+          },
+          {
+            "id": "50115c04-e93a-42a0-b900-2e94734b94cd",
+            "title": "Dell Monitor S2421hn",
+            "slug": "dell-monitor-s2421hn-dell-h8cxc",
+            "type": "physical",
+            "merk": "DELL",
+            "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/monitor.jpg",
+            "content": "",
+            "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui autem esse poteris, nisi te amor ipse ceperit? Nonne videmus quanta perturbatio rerum omnium consequatur, quanta confusio? Si enim ad populum me vocas, eum. Nulla profecto est, quin suam vim retineat a primo ad extremum. Vide, quantum, inquam, fallare, Torquate. Duo Reges: constructio interrete. Sed ut iis bonis erigimur, quae expectamus, sic laetamur iis, quae recordamur. Quodsi, ne quo incommodo afficiare, non relinques amicum, tamen, ne sine fructu alligatus sis, ut moriatur optabis. Id enim volumus, id contendimus, ut officii fructus sit ipsum officium. Haec et tu ita posuisti, et verba vestra sunt. Quae quidem vel cum periculo est quaerenda vobis; <\/p>\n\n<p>Quid ergo aliud intellegetur nisi uti ne quae pars naturae neglegatur? Nunc omni virtuti vitium contrario nomine opponitur. Non enim iam stirpis bonum quaeret, sed animalis. Non enim ipsa genuit hominem, sed accepit a natura inchoatum. Rapior illuc, revocat autem Antiochus, nec est praeterea, quem audiamus. Nec vero sum nescius esse utilitatem in historia, non modo voluptatem. Potius ergo illa dicantur: turpe esse, viri non esse debilitari dolore, frangi, succumbere. Qualem igitur hominem natura inchoavit? Minime vero istorum quidem, inquit. Quamquam id quidem, infinitum est in hac urbe; Totum autem id externum est, et quod externum, id in casu est. Nihilne te delectat umquam -video, quicum loquar-, te igitur, Torquate, ipsum per se nihil delectat? <\/p>\n\n<p>De ingenio eius in his disputationibus, non de moribus quaeritur. Quis animo aequo videt eum, quem inpure ac flagitiose putet vivere? Quae similitudo in genere etiam humano apparet. Tecum optime, deinde etiam cum mediocri amico. In his igitur partibus duabus nihil erat, quod Zeno commutare gestiret. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; Quod cum ita sit, perspicuum est omnis rectas res atque laudabilis eo referri, ut cum voluptate vivatur. Sed in rebus apertissimis nimium longi sumus. <\/p>\n\n<p>Nos autem non solum beatae vitae istam esse oblectationem videmus, sed etiam levamentum miseriarum. Cetera illa adhibebat, quibus demptis negat se Epicurus intellegere quid sit bonum. Uterque enim summo bono fruitur, id est voluptate. Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum. Quod cum ille dixisset et satis disputatum videretur, in oppidum ad Pomponium perreximus omnes. Quia nec honesto quic quam honestius nec turpi turpius. <\/p>\n\n",
+            "weight": 3000,
+            "price": 2300000,
+            "stocks": 10,
+            "reseller_price": null,
+            "discount_type": null,
+            "discount": null,
+            "affiliate_type": null,
+            "affiliate_fee": null,
+            "pin": null,
+            "seo": 0,
+            "meta_title": null,
+            "meta_keyword": null,
+            "meta_description": null,
+            "status": 1,
+            "created_at": "2021-11-14T13:56:11.000000Z",
+            "updated_at": "2021-11-14T13:56:11.000000Z"
+          },
+          {
+            "id": "81ed548d-df5f-46bb-a3e6-f9670eab71f3",
+            "title": "Apple Iphone Xr Smartphone [64 Gb]",
+            "slug": "apple-iphone-xr-smartphone-64-gb-apple-50ggd",
+            "type": "physical",
+            "merk": "APPLE",
+            "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/handphone.jpg",
+            "content": "",
+            "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui convenit? An quod ita callida est, ut optime possit architectari voluptates? Venit ad extremum; Duarum enim vitarum nobis erunt instituta capienda. Quid enim de amicitia statueris utilitatis causa expetenda vides. Sed tu istuc dixti bene Latine, parum plane. Duo Reges: constructio interrete. Quis animo aequo videt eum, quem inpure ac flagitiose putet vivere? Nam ista vestra: Si gravis, brevis; <\/p>\n\n<p>Consequatur summas voluptates non modo parvo, sed per me nihilo, si potest; Quorum sine causa fieri nihil putandum est. Est autem officium, quod ita factum est, ut eius facti probabilis ratio reddi possit. Quem quidem vos, cum improbis poenam proponitis, inpetibilem facitis, cum sapientem semper boni plus habere vultis, tolerabilem. <\/p>\n\n<p>Hoc est vim afferre, Torquate, sensibus, extorquere ex animis cognitiones verborum, quibus inbuti sumus. Qui potest igitur habitare in beata vita summi mali metus? Satis est tibi in te, satis in legibus, satis in mediocribus amicitiis praesidii. Quid igitur dubitamus in tota eius natura quaerere quid sit effectum? Hic quoque suus est de summoque bono dissentiens dici vere Peripateticus non potest. Qui ita affectus, beatum esse numquam probabis; Nihilo beatiorem esse Metellum quam Regulum. <\/p>\n\n<p>Ait enim se, si uratur, Quam hoc suave! dicturum. Quae qui non vident, nihil umquam magnum ac cognitione dignum amaverunt. Tu vero, inquam, ducas licet, si sequetur; Deque his rebus satis multa in nostris de re publica libris sunt dicta a Laelio. <\/p>\n\n",
+            "weight": 3000,
+            "price": 7299000,
+            "stocks": 10,
+            "reseller_price": null,
+            "discount_type": null,
+            "discount": null,
+            "affiliate_type": null,
+            "affiliate_fee": null,
+            "pin": null,
+            "seo": 0,
+            "meta_title": null,
+            "meta_keyword": null,
+            "meta_description": null,
+            "status": 1,
+            "created_at": "2021-11-14T13:56:14.000000Z",
+            "updated_at": "2021-11-14T13:56:14.000000Z"
+          },
+          {
+            "id": "be62b8ed-9079-490e-ab8a-fe199d060021",
+            "title": "Tp-link Tl-wr845n 300mbps",
+            "slug": "tp-link-tl-wr845n-300mbps-tp-link-9qggi",
+            "type": "physical",
+            "merk": "TP-LINK",
+            "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/router.jpg",
+            "content": "",
+            "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Octavio fuit, cum illam severitatem in eo filio adhibuit, quem in adoptionem D. Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; Te ipsum, dignissimum maioribus tuis, voluptasne induxit, ut adolescentulus eriperes P. Tum Torquatus: Prorsus, inquit, assentior; Duo enim genera quae erant, fecit tria. Quis non odit sordidos, vanos, leves, futtiles? Duo Reges: constructio interrete. Materiam vero rerum et copiam apud hos exilem, apud illos uberrimam reperiemus. <\/p>\n\n<p>Vitiosum est enim in dividendo partem in genere numerare. Neque enim civitas in seditione beata esse potest nec in discordia dominorum domus; Perturbationes autem nulla naturae vi commoventur, omniaque ea sunt opiniones ac iudicia levitatis. Quae cum essent dicta, discessimus. Hoc etsi multimodis reprehendi potest, tamen accipio, quod dant. Ait enim se, si uratur, Quam hoc suave! dicturum. <\/p>\n\n<p>Ut optime, secundum naturam affectum esse possit. Quae cum dixisset paulumque institisset, Quid est? Claudii libidini, qui tum erat summo ne imperio, dederetur. Haec para\/doca illi, nos admirabilia dicamus. An potest, inquit ille, quicquam esse suavius quam nihil dolere? Illa argumenta propria videamus, cur omnia sint paria peccata. <\/p>\n\n<p>Ita cum ea volunt retinere, quae superiori sententiae conveniunt, in Aristonem incidunt; Dici enim nihil potest verius. Erat enim Polemonis. Id enim volumus, id contendimus, ut officii fructus sit ipsum officium. Quod, inquit, quamquam voluptatibus quibusdam est saepe iucundius, tamen expetitur propter voluptatem. Non minor, inquit, voluptas percipitur ex vilissimis rebus quam ex pretiosissimis. <\/p>\n\n",
+            "weight": 1000,
+            "price": 218500,
+            "stocks": 10,
+            "reseller_price": null,
+            "discount_type": null,
+            "discount": null,
+            "affiliate_type": null,
+            "affiliate_fee": null,
+            "pin": null,
+            "seo": 0,
+            "meta_title": null,
+            "meta_keyword": null,
+            "meta_description": null,
+            "status": 1,
+            "created_at": "2021-11-14T13:56:15.000000Z",
+            "updated_at": "2021-11-14T13:56:15.000000Z"
+          },
+          {
+            "id": "f67ecc78-2bc6-4cb3-8cf7-2d11037c9b21",
+            "title": "Leopard G20 Led Gaming Keyboard",
+            "slug": "leopard-g20-led-gaming-keyboard-leopard-5ewvj",
+            "type": "physical",
+            "merk": "LEOPARD",
+            "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/keyboard.jpg",
+            "content": "",
+            "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ipsa enim parum magna vis inest, ut quam optime se habere possit, si nulla cultura adhibeatur. Ex rebus enim timiditas, non ex vocabulis nascitur. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Nec vero sum nescius esse utilitatem in historia, non modo voluptatem. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Duo Reges: constructio interrete. Hoc est vim afferre, Torquate, sensibus, extorquere ex animis cognitiones verborum, quibus inbuti sumus. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. <\/p>\n\n<p>Quasi vero aut concedatur in omnibus stultis aeque magna esse vitia, et eadem inbecillitate et inconstantia L. Indicant pueri, in quibus ut in speculis natura cernitur. Qui potest igitur habitare in beata vita summi mali metus? Nam constitui virtus nullo modo potesti nisi ea, quae sunt prima naturae, ut ad summam pertinentia tenebit. Cur deinde Metrodori liberos commendas? Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit? Dicet pro me ipsa virtus nec dubitabit isti vestro beato M. <\/p>\n\n<p>Duo enim genera quae erant, fecit tria. Quid enim de amicitia statueris utilitatis causa expetenda vides. Quamquam tu hanc copiosiorem etiam soles dicere. An hoc usque quaque, aliter in vita? <\/p>\n\n<p>Philosophi autem in suis lectulis plerumque moriuntur. Qui est in parvis malis. Hoc est non modo cor non habere, sed ne palatum quidem. Qualem igitur hominem natura inchoavit? <\/p>\n\n",
+            "weight": 600,
+            "price": 84500,
+            "stocks": 10,
+            "reseller_price": null,
+            "discount_type": null,
+            "discount": null,
+            "affiliate_type": null,
+            "affiliate_fee": null,
+            "pin": null,
+            "seo": 0,
+            "meta_title": null,
+            "meta_keyword": null,
+            "meta_description": null,
+            "status": 1,
+            "created_at": "2021-11-14T13:56:13.000000Z",
+            "updated_at": "2021-11-14T13:56:13.000000Z"
+          }
+        ],
+        "pages": {
+          "previous": null,
+          "current": 1,
+          "next": null,
+          "last_page": 1
+        }
+      }
+    ]
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "status": "error",
+    "message": "Pesan Error!",
+    "data": null
+  }
+
+  ```
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - id: pair_6370e14b2d9a42b8a9d47e88e1deca5d
+    name: Content-Type
+    value: application/json
+  - description: ""
+    id: pair_a38c8a33a3644dd1adf5c0b2715fa865
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1628594105171.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

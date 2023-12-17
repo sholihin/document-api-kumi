@@ -1,0 +1,93 @@
+_id: req_986db4147b694a88ba5887f7b2b76077
+type: Request
+parentId: fld_adc90b23db2d4564b2e7caa6f5b2f479
+modified: 1648378105668
+created: 1631690201116
+url: "{{ _.baseurl }}/api/admin/config/sliders"
+name: GET
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/admin/config/sliders
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "slider": {
+        "config_id": "09e53524-da31-4f3b-bb68-7bdb6b24f2c1",
+        "status": true,
+        "data": [
+          {
+            "id": "7d896699-a2b4-46ba-a9df-c558e8dcc04f",
+            "sorter": 1,
+            "title": "kumi",
+            "slug": "kumi",
+            "url": "url",
+            "image": "http:\/\/kumi-backend.apps\/storage\/image"
+          }
+        ]
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Not Found
+  ```
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "Slider's Configuration Not Found!"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Not Found!"
+    }
+  }
+  ```
+  ### Unauthorized
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Slider's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_5d0a79555f61419a91037a506be5ab49
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630137219974
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

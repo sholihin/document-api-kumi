@@ -1,0 +1,74 @@
+_id: req_b03ba752822f4e70a186eddff9bce053
+type: Request
+parentId: fld_7db6419c04aa49a4a97e4c2419a1ccd5
+modified: 1702778640760
+created: 1702370852726
+url: "{{ _.baseurl
+  }}/api/admin/config/marketplace/1100f9dfc-8a3f-448b-8d80-3fd176910e26"
+name: Request Integration
+description: |-
+  ## Method (PATCH)
+  ## Route
+  ```
+  /api/admin/config/marketplace/{configuration_id}
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|EXAMPLE|
+  |---------|----|--------|--------|--------|
+  |Bearer Token|string|yes|header|12132-jfjdf34-213|
+  |X-DOMAIN-MEMBER|string|yes|header|124fdf.342311|
+
+  ## Response Success
+  ```
+  {
+  	"status": "success",
+  	"message": "Integration request received",
+  	"data": {
+  		"id": "1100f9fc-8a3f-448b-8d80-3fd176910e26",
+  		"member_id": "5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb",
+  		"domain": "kumi.id",
+  		"email_user": "no-reply@kumi.id",
+  		"email_register": "info@kumi.id",
+  		"max_reseller": 10000000,
+  		"join_date": null,
+  		"expired_date": null,
+  		"marketplace": "request"
+  	}
+  }
+  ```
+
+  ## Response Failed
+  ```
+  {
+  	"status": "error",
+  	"message": "No Data Found!",
+  	"data": null
+  }
+  ```
+method: PATCH
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_1fe261bec05c4f7f9975eb72a9b7a3b8
+    disabled: false
+  - id: pair_d2b717ef0479452aa7e7a8036ee61428
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.localdomain }}"
+    description: ""
+    disabled: false
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+  disabled: false
+metaSortKey: -1702370852726
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

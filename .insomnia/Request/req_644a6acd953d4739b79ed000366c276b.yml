@@ -1,0 +1,72 @@
+_id: req_644a6acd953d4739b79ed000366c276b
+type: Request
+parentId: fld_f6fb59892f1f48a7be7fb56c6aaead54
+modified: 1648377842035
+created: 1645091311244
+url: "{{ _.baseurl
+  }}/api/admin/checkout/status/delivery/6817c7ff-3717-4936-8980-d7c0d5743973"
+name: Delivery Status
+description: |-
+  ## Method (PATCH)
+  ## Route
+  ```
+  /api/admin/checkout/{status}/delivery/{invoice}
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |invoice|uuid|yes|route param|hsdfg7567sdf|
+  |status|string|yes|route param|on_delivery,delivered|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "Payment Status Successfully Updated!"
+    },
+    "data": "success"
+  }
+  ```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "Payment Status Successfully Updated!"
+    },
+    "data": "success"
+  }
+  ```
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"status": "SUCCESS"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_9366b3e9fa8a4ab2b340172c8c958e38
+  - id: pair_5fc908d030f24d4d9eb084364b4f6d26
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1633413952698.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,31 @@
+_id: req_5d8d9b7e99b64f828056ec44ed131c4a
+type: Request
+parentId: fld_0cda8d90167247c490b6bae2a7ef4cf6
+modified: 1646714864031
+created: 1646204383135
+url: "{{ _.baseurl }}/api/admin/config/payment/midtrans/testing"
+name: Testing Midtrans
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_fe6db4f2cf9e4611a88a8fbf459aa13b
+    name: Accept
+    value: application/json
+    description: ""
+  - id: pair_711353019c5e478b9d4b1091b093105c
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1630639658599
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

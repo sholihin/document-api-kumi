@@ -1,0 +1,70 @@
+_id: req_93c028ccda144e25a9170efa6d141dc5
+type: Request
+parentId: fld_8e413a71c6f343c8bd0d28d5762c99ac
+modified: 1648378158667
+created: 1631690201048
+url: "{{ _.baseurl }}/api/admin/config/tnc"
+name: GET
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/admin/config/tnc
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "about": {
+        "config_id": "0de71900-7b61-48ee-9356-7bcaba8509f8",
+        "status": true,
+        "content": "lorem ipsum"
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "TnC's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_5d0a79555f61419a91037a506be5ab49
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630137219974
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

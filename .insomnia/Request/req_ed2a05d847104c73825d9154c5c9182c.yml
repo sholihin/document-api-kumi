@@ -1,0 +1,66 @@
+_id: req_ed2a05d847104c73825d9154c5c9182c
+type: Request
+parentId: fld_37cf3b14a9b646a5aaae90f6ddad0086
+modified: 1648378340621
+created: 1631690210031
+url: "{{ _.baseurl }}/api/email/verification-notification"
+name: RESENT VERIFICATION
+description: |-
+  ## Method (POST)
+  ## Route
+  ```
+  /api/email/verification-notification
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example
+  |---------|----|--------|----|--------|
+  |bearer token|jwt|yes|header|fdjwhef234-dkfsdkf24|
+  |domain|string|yes|body|kumi.id|
+
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Sent!"
+    },
+    "data": [
+      "Verification Link Sent!"
+    ]
+  }
+  ```
+
+  ## Response Failed
+  ```
+  {
+    "meta": {
+      "code": 500,
+      "status": "error",
+      "message": "Verification Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Verification User Failed!"
+    }
+  }
+  ```
+method: POST
+body: {}
+parameters: []
+headers:
+  - id: pair_9c2452104c13422aacf382131307426d
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1627855767357
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

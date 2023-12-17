@@ -1,0 +1,69 @@
+_id: req_f28c3c6c1fac4b44a8b3bf316d3083bb
+type: Request
+parentId: fld_180d31e36ab741e8b361aa37b77bd338
+modified: 1648376783301
+created: 1633425881313
+url: "{{ _.baseurl }}/api/config/sliders"
+name: Sliders
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/config/sliders
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+  ```
+  {
+    "status": "success",
+    "message": null,
+    "data": {
+      "config_id": "96c97852-c2e2-4b94-8319-6a443b230c64",
+      "status": true,
+      "sliders": [
+        {
+          "id": "ce18369c-2bf9-4ea9-9c9b-f398bab6d206",
+          "sorter": 1,
+          "title": "kumi",
+          "slug": "kumi",
+          "url": "url",
+          "image": "http:\/\/kumi-backend.apps\/storage\/image"
+        }
+      ]
+    }
+  }
+  ```
+
+  ## Response Failed
+  ```
+  {
+    "status": "error",
+    "message": "pesan error",
+    "data": null
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_cda71ab27b39449cac9deb689f729ec1
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+  - id: pair_6cb0f444e45a41e69658d3abc38ddce8
+    name: ""
+    value: ""
+    description: ""
+authentication: {}
+metaSortKey: -1633420830060
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

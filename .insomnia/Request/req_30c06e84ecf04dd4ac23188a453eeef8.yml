@@ -1,0 +1,29 @@
+_id: req_30c06e84ecf04dd4ac23188a453eeef8
+type: Request
+parentId: fld_f5c3a8820f904a83bd60695765fa9ea5
+modified: 1646724778595
+created: 1646724700437
+url: "{{ _.baseurl }}/api/blog/categories/category-blog"
+name: Blog by Category
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_a1020f1ca34f440498f2bdde693cb848
+    name: Accept
+    value: application/json
+    description: ""
+  - id: pair_93af41206b99449796b6f8d10beab442
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication: {}
+metaSortKey: -1646430843907.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

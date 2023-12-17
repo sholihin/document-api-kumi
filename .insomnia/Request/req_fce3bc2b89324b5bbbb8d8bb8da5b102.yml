@@ -1,0 +1,66 @@
+_id: req_fce3bc2b89324b5bbbb8d8bb8da5b102
+type: Request
+parentId: fld_f6fb59892f1f48a7be7fb56c6aaead54
+modified: 1648377851854
+created: 1638347980335
+url: "{{ _.baseurl
+  }}/api/admin/checkout/waybill/178ee131-df5f-4943-9658-6312f3d484c1"
+name: Insert Waybill
+description: |-
+  ## Method (PATCH)
+  ## Route
+  ```
+  /api/admin/checkout/waybill/{invoice}
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |invoice|uuid|yes|route param|hsdfg7567sdf|
+  |waybill|string|yes|body|110000323023|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "status": "success",
+    "message": "Waybill Successfully Updated!",
+    "data": "success"
+  }
+  ```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "status": "error",
+    "message": "Unauthorized Domain!",
+    "data": null
+  }
+  ```
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"waybill": "10003348234955"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_e84920a5b2b546d2a60f5dc64d4a3ac6
+  - id: pair_28e361b808fa45d9828a2cd4be294df4
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1628589308869.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

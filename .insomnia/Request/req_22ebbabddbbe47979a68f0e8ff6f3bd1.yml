@@ -1,0 +1,120 @@
+_id: req_22ebbabddbbe47979a68f0e8ff6f3bd1
+type: Request
+parentId: fld_1c61138db79b45d2a2b8f9f704ddb0b0
+modified: 1648376871625
+created: 1634093440052
+url: "{{ _.baseurl }}/api/products?f_title=sony&f_category=game"
+name: Search
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/products?f_title=sony&f_category=game
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |f_title|string|optional|route param|search by title|
+
+  |f_category|string|optional|route param|search by category|
+
+  |f_price_to|string|optional|route param|filter by max price|
+
+  |f_price_from|string|optional|route param|filter by min price|
+
+  |f_merk|string|optional|route param|search by merk|
+
+  |sort|string|optional|route param|s_price_to (by max price), s_price_from (by min price), s_last (by new product), s_old (by old product), default by popular product|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "status": "success",
+    "message": null,
+    "data": {
+      "items": [
+        {
+          "id": "6ae3eb33-d64a-4ec8-b615-1cf91a56420d",
+          "title": "Sony Ps3 Superslim Game Console - Black [500 Gb\/full Game]",
+          "slug": "sony-ps3-superslim-game-console-black-500-gbfull-game-sony-an0au",
+          "type": "physical",
+          "merk": "SONY",
+          "main_image": "http:\/\/kumi-backend.apps\/storage\/5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb\/products\/game.jpg",
+          "content": "",
+          "tnc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres. Idem iste, inquam, de voluptate quid sentit? Eam tum adesse, cum dolor omnis absit; Certe non potest. A quibus propter discendi cupiditatem videmus ultimas terras esse peragratas. Duo Reges: constructio interrete. An me, inquam, nisi te audire vellem, censes haec dicturum fuisse? An me, inquis, tam amentem putas, ut apud imperitos isto modo loquar? Et quae per vim oblatum stuprum volontaria morte lueret inventa est et qui interficeret filiam, ne stupraretur. Sed in rebus apertissimis nimium longi sumus. <\/p>\n\n<p>Quae iam oratio non a philosopho aliquo, sed a censore opprimenda est. Quae sequuntur igitur? Tu vero, inquam, ducas licet, si sequetur; Expressa vero in iis aetatibus, quae iam confirmatae sunt. Maximeque eos videre possumus res gestas audire et legere velle, qui a spe gerendi absunt confecti senectute. Quae cum praeponunt, ut sit aliqua rerum selectio, naturam videntur sequi; Quod idem cum vestri faciant, non satis magnam tribuunt inventoribus gratiam. Iam illud quale tandem est, bona praeterita non effluere sapienti, mala meminisse non oportere? <\/p>\n\n<p>Item de contrariis, a quibus ad genera formasque generum venerunt. Satis est tibi in te, satis in legibus, satis in mediocribus amicitiis praesidii. Quae cum dixisset paulumque institisset, Quid est? Ergo hoc quidem apparet, nos ad agendum esse natos. Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum. Isto modo, ne si avia quidem eius nata non esset. Tenesne igitur, inquam, Hieronymus Rhodius quid dicat esse summum bonum, quo putet omnia referri oportere? <\/p>\n\n<p>Nam, ut paulo ante docui, augendae voluptatis finis est doloris omnis amotio. Atqui reperies, inquit, in hoc quidem pertinacem; Duo enim genera quae erant, fecit tria. Itaque hoc frequenter dici solet a vobis, non intellegere nos, quam dicat Epicurus voluptatem. Aeque enim contingit omnibus fidibus, ut incontentae sint. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Laelius clamores sofòw ille so lebat Edere compellans gumias ex ordine nostros. Nam de isto magna dissensio est. Nos cum te, M. Dempta enim aeternitate nihilo beatior Iuppiter quam Epicurus; Ex rebus enim timiditas, non ex vocabulis nascitur. <\/p>\n\n",
+          "weight": 4000,
+          "price": 1975000,
+          "stocks": 10,
+          "reseller_price": null,
+          "discount_type": null,
+          "discount": null,
+          "affiliate_type": null,
+          "affiliate_fee": null,
+          "pin": null,
+          "seo": 0,
+          "meta_title": null,
+          "meta_keyword": null,
+          "meta_description": null,
+          "status": 1,
+          "created_at": "2021-11-14T13:56:16.000000Z",
+          "updated_at": "2021-11-14T13:56:16.000000Z"
+        }
+      ],
+      "pages": {
+        "previous": null,
+        "current": 1,
+        "next": null,
+        "last_page": 1
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "status": "error",
+    "message": "message error!",
+    "data": null
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_57f9c19123924553b8e387c85a378c89
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: basic
+  useISO88591: false
+  disabled: false
+  username: ""
+  password: ""
+metaSortKey: -1634093440052
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

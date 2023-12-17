@@ -1,0 +1,146 @@
+_id: req_6ab210d4fb6b4135ba48726cd8a60a3b
+type: Request
+parentId: fld_cf1fcac7d83c437a923545152529fb95
+modified: 1648378273098
+created: 1631690200944
+url: "{{ _.baseurl
+  }}/api/admin/gallery/340f7d37-c59b-4849-8292-4bbdf422972c/d1aaa1fd-fbcd-4021-\
+  bab7-45d9a8818a41"
+name: UPDATE
+description: >-
+  ## Method (PATCH)
+
+  ## Route
+
+  ```
+
+  /api/admin/gallery/{product}/{gallery_id}
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |product|uuid|yes|route param|340f7d37-c59b-4849-8292-4bbdf422972c|
+
+  |gallery_id|uuid|yes|route param|340f7d37-c59b-4849-8292-4bbdf422972c|
+
+  |sorter|integer|yes|body|1|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "Gallery Updated!"
+    },
+    "data": {
+      "product": {
+        "id": "340f7d37-c59b-4849-8292-4bbdf422972c",
+        "title": "Computers Baru",
+        "slug": "computers-baru",
+        "type": "physical",
+        "merk": "ASUS",
+        "image": "http:\/\/kumi-backend.apps\/storage",
+        "galleries": [
+          {
+            "id": "0a4b25a2-0296-4c99-84e4-3d2c5248e7af",
+            "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/YhO1muzUKCyzA5S94Ui8nib49feFRzy7KrxqBw2C.png",
+            "sorter": 0
+          },
+          {
+            "id": "9ac1309e-b315-4363-9cfe-1b8d2c863e6d",
+            "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/MKVY7w7zUlnxdsi7AWw8E2xTp6d5PpqHSqwlTO0y.png",
+            "sorter": 1
+          },
+          {
+            "id": "0530e13b-b054-4f36-926b-45b7ff927984",
+            "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/JgDcMJZK875KiBzdoS4FBHZOWeLOx04RsIhZGK0u.png",
+            "sorter": 2
+          },
+          {
+            "id": "d1aaa1fd-fbcd-4021-bab7-45d9a8818a41",
+            "image": "bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/products\/IqYQ86gFmsuMXzjSKUkSEMQmk113hQgrNzqTBQn9.png",
+            "sorter": 3
+          }
+        ],
+        "category": {
+          "id": "071a0d16-635f-49cf-b775-2de390569933",
+          "name": "Computer",
+          "slug": "computer",
+          "image": "http:\/\/kumi-backend.apps\/storage\/bab72b7b-8848-4e44-ad3a-e0283b7e08d1\/categories\/wEK4cRjhQ0XJMC0yrYEtzmHNjiIezyKEkR3PKuyj.png",
+          "created_at": "2021-08-12T13:54:37.000000Z",
+          "updated_at": "2021-08-12T13:54:37.000000Z"
+        },
+        "content": "nice",
+        "tnc": "you should buy",
+        "weight": 9,
+        "price": 1200000,
+        "stocks": 12,
+        "reseller_price": 1300000,
+        "discount_type": "nominal",
+        "discount": null,
+        "affiliate_type": "nominal",
+        "affiliate_fee": 10000,
+        "pin": null,
+        "created_at": "2021-08-12T14:09:43.000000Z",
+        "updated_at": "2021-08-12T14:09:43.000000Z"
+      }
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "title": [
+          "The iamges field must be image."
+        ],
+      }
+    }
+  }
+
+  ```
+method: PATCH
+body:
+  mimeType: application/x-www-form-urlencoded
+  params:
+    - id: pair_e278f642fbee4a74913ce4ceaa23bf5c
+      name: sorter
+      value: "3"
+      description: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/x-www-form-urlencoded
+    id: pair_9aa2e2bd316e41a097e9eecd0893a6e3
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1628262150779
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

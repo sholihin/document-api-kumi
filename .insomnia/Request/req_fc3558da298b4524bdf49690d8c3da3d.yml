@@ -1,0 +1,94 @@
+_id: req_fc3558da298b4524bdf49690d8c3da3d
+type: Request
+parentId: fld_84d44bbf2d1749f988f2520060ba8486
+modified: 1648377150095
+created: 1637744352890
+url: "{{ _.baseurl }}/api/checkout/list-banks"
+name: List Banks
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/checkout/list-banks
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |invoice|uuid|required|route param|asdas3452-124312sdf|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "status": "success",
+    "message": "Data Banks Retrieved",
+    "data": [
+      {
+        "id_data": "f7597924-25cf-445c-9fb2-1e1ca0ec3430",
+        "no_rekening": 123456789,
+        "nama_pemilik": "kumi",
+        "bank_id": {
+          "id": 1,
+          "name": "BANK BRI",
+          "code": "002",
+          "logo": "http:\/\/kumi-backend.apps\/assets\/img\/payment\/BRI.png",
+          "panduan": "<p><span style=\\\"font-size:16px\\\"><strong>Panduan Pembayaran M-Banking BRI<\/strong><\/span><\/p><ul><li>Buka aplikasi, lalu pilih menu&nbsp;<strong>Mobile Banking BRI<\/strong>.<\/li><li>Saat muncul jendela baru, tap menu&nbsp;<strong>Transfer<\/strong>.<\/li><li>Untuk transfer ke sesama rekening BRI, tap menu&nbsp;<strong>Sesama BRI<\/strong>.<\/li><li>Pada halaman baru,&nbsp;<strong>masukkan nomor rekening BRI<\/strong>&nbsp;yang dituju.<\/li><li><strong>Masukkan jumlah transfer<\/strong>&nbsp;yang akan dikirim.<\/li><li>Klik&nbsp;<strong>OK<\/strong>. Lalu,&nbsp;<strong>masukkan PIN<\/strong>&nbsp;Mobile Banking BRI Anda. Klik&nbsp;<strong>SEND<\/strong>.<\/li><li>Untuk melakukan verifikasi SMS, Klik&nbsp;<strong>OK<\/strong>.<\/li><li>Terima SMS dari Mobile Banking BRI, lalu ketik&nbsp;<strong>YA<\/strong>&nbsp;&lt;spasi&gt;&nbsp;<strong>Kode Transaksi<\/strong>. Kalau bingung, ikuti saja petunjuk yang ada pada SMS tersebut.<\/li><li>Kalau sudah benar, langsung&nbsp;<strong>Kirim SMS<\/strong>.<\/li><\/ul>"
+        },
+        "status_bank": 1
+      }
+    ]
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Check Delivery Status Failed!"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_c4165412350b449481eed031aaa3a4f4
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1633787877842
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

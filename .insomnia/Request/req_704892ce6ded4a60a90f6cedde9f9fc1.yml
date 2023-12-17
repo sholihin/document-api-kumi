@@ -1,0 +1,25 @@
+_id: req_704892ce6ded4a60a90f6cedde9f9fc1
+type: Request
+parentId: fld_f088254d18e44f3c9a9aba4fcbe62078
+modified: 1645091557268
+created: 1631690181423
+url: "{{ _.baseurl }}/api/customer/google/login"
+name: Login via Google
+description: ""
+method: POST
+body: {}
+parameters: []
+headers:
+  - id: pair_d2b53cf9ad1a42d1bfe87c0c26ce7dbf
+    name: ""
+    value: ""
+    description: ""
+authentication: {}
+metaSortKey: -1628538155540
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

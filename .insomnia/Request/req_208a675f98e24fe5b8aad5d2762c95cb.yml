@@ -1,0 +1,27 @@
+_id: req_208a675f98e24fe5b8aad5d2762c95cb
+type: Request
+parentId: fld_355f80120419493fb1133aadd8e4e09c
+modified: 1648377879846
+created: 1631690201290
+url: "{{ _.baseurl }}/api/admin/customers/e921fa73-fbc6-43c0-90a8-424d5bd8df16"
+name: Customer Show
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_91b2dba1259d42e29a5e6329895da310
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630220736688.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,239 @@
+_id: req_59b4d21ff0514d7184d3b6ceb0023a05
+type: Request
+parentId: fld_a0b6407ff93a47a59b3c8c9a3cac816f
+modified: 1648378329925
+created: 1631690201284
+url: "{{ _.baseurl }}/api/admin/package/2af33735-522f-4d34-8743-015a2e8aa4e2"
+name: UPDATE
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/admin/product
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |title|string|yes|body|package 1|
+
+  |max_reseller|int|yes|body|150|
+
+  |duration|int|yes|body|12|
+
+  |category_id|uuid|optional|body|asd231-231423-231|
+
+  |main_image|file|optional|body|picture|
+
+  |content|string|yes|body|lorem ipsum|
+
+  |price|int|yes|body|12000000|
+
+  |discount_type|enum(presentase, nominal)|optional|body|presentase|
+
+  |discount|int|yes (if discount_type not null)|body|50|
+
+  |tnc|string|optional|body|lorem ipsum|
+
+  |seo|boolean|yes|body|1|
+
+  |meta_title|string|yes: if seo true|body|computer bagus|
+
+  |meta_keyword|string|yes: if seo true|body|computer bagus|
+
+  |meta_description|string|yes: if seo true|body|computer bagus|
+
+  |X-DIMAIN-MEMBER|string|yes|header|kumi.id|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Package Updated!"
+    },
+    "data": {
+      "product": {
+        "id": "2af33735-522f-4d34-8743-015a2e8aa4e2",
+        "title": "Package 2",
+        "slug": "package-2-wbtho",
+        "max_reseller": "100",
+        "duration": "12",
+        "type": "digital",
+        "merk": null,
+        "main_image": "http:\/\/kumi-backend.apps\/storage\/781c24ce-2535-4916-b78e-aa6acba54bb6\/products\/X7q5aXUsBSXXcjlYVJzfzkO8F2Sgc3FBAIg9hFI6.png",
+        "galleries": [],
+        "category": null,
+        "content": "nice",
+        "tnc": "you should buy",
+        "weight": null,
+        "price": "1200000",
+        "stocks": null,
+        "reseller_price": null,
+        "discount_type": "nominal",
+        "discount": null,
+        "affiliate_type": "nominal",
+        "affiliate_fee": "10000",
+        "pin": null,
+        "seo": "0",
+        "meta_title": null,
+        "meta_keyword": null,
+        "meta_description": null,
+        "created_at": "2021-09-08T03:44:40.000000Z",
+        "updated_at": "2021-09-08T04:01:18.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating Package Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "title": [
+          "The title field is required."
+        ]
+      }
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - description: ""
+      disabled: false
+      id: pair_86997d4df9704cc79defeada0eaa56fa
+      name: title
+      value: Package 2
+    - description: ""
+      id: pair_25c81dee03be447a8e3c5e9b0a02b275
+      name: category_id
+      value: ""
+    - description: ""
+      id: pair_649140ece1094a5d8544ac75d05561e4
+      name: max_reseller
+      value: "100"
+    - description: ""
+      id: pair_2f0f9c62953a48a4b0929519f17db985
+      name: duration
+      value: "12"
+    - description: ""
+      id: pair_1f76324de37341508dd29570a956a8b9
+      name: content
+      value: nice
+    - description: ""
+      id: pair_6c08dcbcff4949deb46310b7043a2d22
+      name: tnc
+      value: you should buy
+    - description: ""
+      id: pair_b3cc0ab53e424550b4995b7ce53d36d8
+      name: price
+      value: "1200000"
+    - description: ""
+      id: pair_ebd71b9930384dcebafb59ebb48a5d70
+      name: discount_type
+      value: nominal
+    - description: ""
+      id: pair_0143ac9ba5ff4793824a653723f3ed33
+      name: discount
+      value: ""
+    - description: ""
+      id: pair_15423095971144d3b43503366f4eb1a6
+      name: affiliate_type
+      value: nominal
+    - description: ""
+      id: pair_be7fc932c610474386685c27389547cf
+      name: affiliate_fee
+      value: "10000"
+    - description: ""
+      disabled: false
+      fileName: C:\Users\ADHIT\Downloads\store.PNG
+      id: pair_bb526d271bf14c2dae03fd90dcbcdc6e
+      name: main_image
+      type: file
+      value: ""
+    - description: ""
+      id: pair_0d9b55a6184142fd8ff3d7913b57e7f4
+      name: seo
+      value: "0"
+    - description: ""
+      id: pair_9c6e0a1ce5414b2fb42c59e3a0727ca7
+      name: meta_title
+      value: ""
+    - description: ""
+      id: pair_31561de5b7fd412688b97c9799a087d7
+      name: meta_keyword
+      value: ""
+    - description: ""
+      id: pair_a5eaa15d61c04c1fb72a4661e094f8eb
+      name: meta_description
+      value: ""
+    - description: ""
+      id: pair_6547da6881a34051944a542bb3684bc4
+      name: _method
+      value: PATCH
+parameters: []
+headers:
+  - id: pair_c8ed9fb2408548c2a994e799dd9a7fea
+    name: Content-Type
+    value: multipart/form-data
+  - description: ""
+    id: pair_e2e084980e544cbda0d83e81397ce953
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1627781415523.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

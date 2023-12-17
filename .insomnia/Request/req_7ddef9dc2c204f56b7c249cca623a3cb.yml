@@ -1,0 +1,112 @@
+_id: req_7ddef9dc2c204f56b7c249cca623a3cb
+type: Request
+parentId: fld_c0b6c853a10f42c88cb27deabc43e227
+modified: 1702018296093
+created: 1631690200972
+url: "{{ _.baseurl }}/api/admin/products"
+name: INDEX
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/admin/products
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "Products": [
+        {
+          "id": "146f4f17-ed48-4001-a524-d58b18ae0b7e",
+          "title": "Computers",
+          "slug": "computers",
+          "type": "physical",
+          "merk": "ASUS",
+          "image": "https:\/\/kumi-backend.apps\/storage\/products\/example_net\/products\/5sY6AEjzKdu2aud7lKcAvhR6Fn2CJ7R9zYaPK1CK.png",
+          "category": {
+            "id": "f7e7267a-2527-4c5a-88c5-6a5475747d86",
+            "name": "Computer",
+            "slug": "computer",
+            "image": "https:\/\/kumi-backend.apps\/storage\/example_net\/categories\/MdFm4JU7VxPgmaU5AkeDtgbQHVW3tgFCNlhc6Yfm.png",
+            "created_at": "2021-08-01T07:32:26.000000Z",
+            "updated_at": "2021-08-01T07:32:26.000000Z"
+          },
+          "content": "nice",
+          "tnc": "you should buy",
+          "weight": 9,
+          "price": 1200000,
+          "discount_type": "nominal",
+          "discount": null,
+          "stocks": 12,
+          "pin": null,
+          "created_at": "2021-08-01T08:58:20.000000Z",
+          "updated_at": "2021-08-01T08:58:20.000000Z"
+        }
+      ]
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Not Found
+
+  ```
+
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "failed"
+    },
+    "data": {
+      "message": "Product\/Domain Not Found!",
+      "error": "No query results for model [App\\Models\\Member]."
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    disabled: false
+    id: pair_bb22181a0f1d4bf5a69e4745f40453f7
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token }}"
+  type: bearer
+metaSortKey: -1627808730167
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

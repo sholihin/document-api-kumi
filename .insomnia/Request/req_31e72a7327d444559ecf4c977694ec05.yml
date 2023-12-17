@@ -1,0 +1,68 @@
+_id: req_31e72a7327d444559ecf4c977694ec05
+type: Request
+parentId: fld_180d31e36ab741e8b361aa37b77bd338
+modified: 1648376774930
+created: 1633425074369
+url: "{{ _.baseurl }}/api/config/theme"
+name: Theme
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/config/theme
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+  ```
+  {
+    "status": "success",
+    "message": null,
+    "data": {
+      "config_id": "96c97852-c2e2-4b94-8319-6a443b230c64",
+      "blog": true,
+      "contact": true,
+      "faq": true,
+      "title": "KUMI",
+      "theme_color": "sdas",
+      "header_color": "sda",
+      "footer": "sdasdsd",
+      "store_description": "asdasd",
+      "widget_code": "asdasd",
+      "favicon": "http:\/\/kumi-backend.apps\/storage\/dasdas",
+      "loader": "http:\/\/kumi-backend.apps\/storage\/sdasd",
+      "error_banner": "http:\/\/kumi-backend.apps\/storage\/sdas",
+      "logo": "http:\/\/kumi-backend.apps\/storage\/asdas",
+      "invoice": "http:\/\/kumi-backend.apps\/storage\/sdasdddd"
+    }
+  }
+  ```
+
+  ## Response Failed
+  ```
+  {
+    "status": "error",
+    "message": "pesan error",
+    "data": null
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_cda71ab27b39449cac9deb689f729ec1
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.localdomain }}"
+    description: ""
+authentication: {}
+metaSortKey: -1633425074412
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

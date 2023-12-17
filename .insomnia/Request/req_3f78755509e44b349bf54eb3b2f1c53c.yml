@@ -1,0 +1,71 @@
+_id: req_3f78755509e44b349bf54eb3b2f1c53c
+type: Request
+parentId: fld_eda28c1c564c41549972630d1cb16abb
+modified: 1648378096945
+created: 1631690201154
+url: "{{ _.baseurl }}/api/admin/config/meta-website"
+name: GET
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/admin/config/meta-website
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "website_meta": {
+        "config_id": "0c240ae8-ee08-4922-8a4e-8a0ea18f80dc",
+        "meta_title": "meta_title",
+        "meta_description": "meta_description",
+        "meta_keyword": "meta_keyword"
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Meta Website's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_5d0a79555f61419a91037a506be5ab49
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630137219974
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

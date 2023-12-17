@@ -1,0 +1,80 @@
+_id: req_94ba9ea579174a63b880aac106b3ee30
+type: Request
+parentId: fld_2e469a3e31764eda8b6a528b6ed5dd9a
+modified: 1648377982014
+created: 1631690201091
+url: "{{ _.baseurl }}/api/admin/config/social-media"
+name: GET
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/admin/config/social-media
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "social_media": {
+        "config_id": "5542e09b-112a-400a-853f-88e8bf4020f5",
+        "facebook": {
+          "username": "username",
+          "status": true
+        },
+        "instagram": {
+          "username": "username",
+          "status": true
+        },
+        "youtube": {
+          "username": "username",
+          "status": true
+        }
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Social Media's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_5d0a79555f61419a91037a506be5ab49
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630137219974
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

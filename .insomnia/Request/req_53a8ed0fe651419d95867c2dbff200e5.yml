@@ -1,0 +1,76 @@
+_id: req_53a8ed0fe651419d95867c2dbff200e5
+type: Request
+parentId: fld_180d31e36ab741e8b361aa37b77bd338
+modified: 1648376825976
+created: 1634012314294
+url: "{{ _.baseurl }}/api/config/tnc"
+name: Term & Conditions
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/config/tnc
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "status": "success",
+    "message": null,
+    "data": {
+      "config_id": "96c97852-c2e2-4b94-8319-6a443b230c64",
+      "status": true,
+      "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Beatus autem esse in maximarum rerum timore nemo potest. Prioris generis est docilitas, memoria; Eaedem res maneant alio modo. Eaedem enim utilitates poterunt eas labefactare atque pervertere. Si alia sentit, inquam, alia loquitur, numquam intellegam quid sentiat; Videamus animi partes, quarum est conspectus illustrior; <\/p>\n\n<p>At certe gravius. Pisone in eo gymnasio, quod Ptolomaeum vocatur, unaque nobiscum Q. Cur igitur easdem res, inquam, Peripateticis dicentibus verbum nullum est, quod non intellegatur? Erat enim Polemonis. Cur igitur, inquam, res tam dissimiles eodem nomine appellas? Illud mihi a te nimium festinanter dictum videtur, sapientis omnis esse semper beatos; Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus; Atque haec coniunctio confusioque virtutum tamen a philosophis ratione quadam distinguitur. Collatio igitur ista te nihil iuvat. <\/p>\n\n<p>Duo Reges: constructio interrete. Bonum liberi: misera orbitas. Nam ista vestra: Si gravis, brevis; Ea possunt paria non esse. Quae est igitur causa istarum angustiarum? <\/p>\n\n<p>Maximas vero virtutes iacere omnis necesse est voluptate dominante. Immo alio genere; Apparet statim, quae sint officia, quae actiones. Res enim fortasse verae, certe graves, non ita tractantur, ut debent, sed aliquanto minutius. Hoc tu nunc in illo probas. Eam tum adesse, cum dolor omnis absit; Aliud igitur esse censet gaudere, aliud non dolere. <\/p>\n\n"
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "status": "error",
+    "message": "pesan error",
+    "data": null
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_cda71ab27b39449cac9deb689f729ec1
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+  - id: pair_6cb0f444e45a41e69658d3abc38ddce8
+    name: ""
+    value: ""
+    description: ""
+authentication: {}
+metaSortKey: -1633416850980
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

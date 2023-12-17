@@ -1,0 +1,21 @@
+_id: req_a1e1ec68b3c74b9eac9a882439b46719
+type: Request
+parentId: fld_f088254d18e44f3c9a9aba4fcbe62078
+modified: 1645091568810
+created: 1631690181418
+url: "{{ _.baseurl }}/api/customer/facebook/login"
+name: Login via Facebook
+description: ""
+method: POST
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1628538155515
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,35 @@
+_id: req_1341b8432e464a63849195267a038fcf
+type: Request
+parentId: fld_2cdb244a911d4177aa83c89e9ed46746
+modified: 1648377743692
+created: 1641886974108
+url: "{{ _.baseurl }}/api/notifications/read"
+name: Delete
+description: ""
+method: DELETE
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"id" : "a488c547-91a9-40ca-b0a7-c23bff4823ad"
+    }
+parameters: []
+headers:
+  - id: pair_4007acdb629d48d7abeb1649ece8b159
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+  - name: Content-Type
+    value: application/json
+    id: pair_c483c61f7eeb4d139237286968c5f672
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1641820810194
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

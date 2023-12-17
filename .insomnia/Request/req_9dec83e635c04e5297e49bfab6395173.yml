@@ -1,0 +1,33 @@
+_id: req_9dec83e635c04e5297e49bfab6395173
+type: Request
+parentId: fld_c82a156d93d040c191a483faa9d56d80
+modified: 1648376961109
+created: 1641817513712
+url: "{{ _.baseurl }}/api/customer/forgot-password"
+name: Send Email Forgot Pass
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email" : "customer@kumi.id"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_848ffa418de5449e93221f59bf173122
+  - id: pair_1c328a16f9ca4d8798ecdb0779f539f9
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication: {}
+metaSortKey: -1641391524557.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

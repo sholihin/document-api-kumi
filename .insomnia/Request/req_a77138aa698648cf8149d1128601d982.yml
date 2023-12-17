@@ -1,0 +1,234 @@
+_id: req_a77138aa698648cf8149d1128601d982
+type: Request
+parentId: fld_2a9cf01cce0545c384e988ff13816076
+modified: 1648377975858
+created: 1631690201012
+url: "{{ _.baseurl }}/api/admin/config/theme/a773dbdd-ae32-4186-af97-840a8e65ab61"
+name: UPDATE
+description: >-
+  ## Method (PATCH)
+
+  ## Route
+
+  ```
+
+  /api/admin/config/theme/{configuration}
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |configuration|uuid|yes|route param|hsdfg7567sdf|
+
+  |blog|boolean|yes|body|1|
+
+  |faq|boolean|yes|body|1|
+
+  |contact|boolean|yes|body|1|
+
+  |title|string|yes|body|KUMI|
+
+  |theme_color|string|yes|body|#000000|
+
+  |header_color|string|yes|body|#000000|
+
+  |footer|string|yes|body|KUMI|
+
+  |store_description|string|yes|body|KUMI|
+
+  |widget_code|string|yes|body|KUMI|
+
+  |favicon|file|optional|body|image|
+
+  |loader|file|optional|body|image|
+
+  |error_banner|file|optional|body|image|
+
+  |logo|file|optional|body|image|
+
+  |invoice|file|optional|body|image|
+
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Theme Configuration Updated!"
+    },
+    "data": {
+      "theme": {
+        "config_id": null,
+        "blog": false,
+        "contact": true,
+        "faq": true,
+        "title": "KUMI",
+        "theme_color": "sdas",
+        "header_color": "sda",
+        "footer": "sdasdsd",
+        "store_description": "asdasd",
+        "widget_code": "asdasd",
+        "favicon": "http:\/\/kumi-backend.apps\/storage\/b3b17692-e2f2-43e5-abef-915b9f26c19f\/configurations\/cvuTqK1zucc0Pyi0pDqCmv9HATk4b6oGKuG9NhVj.png",
+        "loader": "http:\/\/kumi-backend.apps\/storage",
+        "error_banner": "http:\/\/kumi-backend.apps\/storage",
+        "logo": "http:\/\/kumi-backend.apps\/storage",
+        "invoice": "http:\/\/kumi-backend.apps\/storage"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Theme Configuration Updated"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "blog": [
+          "The blog field is required."
+        ]
+      }
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - description: ""
+      id: pair_5b04e280bf1f403e8e62ca45562f495a
+      name: _method
+      value: PATCH
+    - description: ""
+      disabled: false
+      id: pair_64b3b2d456e24b7a92a22d455322e3dd
+      name: blog
+      value: "0"
+    - description: ""
+      disabled: false
+      id: pair_b788c74dae554c379326db158fd17cde
+      name: contact
+      value: "1"
+    - description: ""
+      disabled: false
+      id: pair_3dfe3a65a9e44087a5487881e7474cb6
+      name: faq
+      value: "1"
+    - description: ""
+      disabled: false
+      id: pair_a8199ec241d24967b346d7743b505bb1
+      name: title
+      value: KUMI
+    - description: ""
+      disabled: false
+      id: pair_6c13912610e140429b7d4cc479a8ac7e
+      name: theme_color
+      value: sdas
+    - description: ""
+      disabled: false
+      id: pair_098c5dde076649c3ac53d7cd4a1e780f
+      name: header_color
+      value: sda
+    - description: ""
+      disabled: false
+      id: pair_f069d61f264e4516938baa03ae9fc55d
+      name: footer
+      value: sdasdsd
+    - description: ""
+      disabled: false
+      id: pair_32a233085cf241e7ae13d4ed4e5ff6bd
+      name: store_description
+      value: asdasd
+    - description: ""
+      disabled: false
+      id: pair_ee42b4c2dd06459087a331565eec5b82
+      name: widget_code
+      value: asdasd
+    - description: ""
+      disabled: false
+      fileName: C:\Users\ADHIT\Downloads\permata.png
+      id: pair_9e3e9e88e1564321a97a7272975f6843
+      name: favicon
+      type: file
+      value: dasdas
+    - description: ""
+      disabled: true
+      id: pair_e9e1542ca80849f5b2324a5594da3606
+      name: loader
+      value: sdasd
+    - description: ""
+      disabled: true
+      id: pair_7570758627854e0487539ea370c87de5
+      name: error
+      value: sdas
+    - description: ""
+      disabled: true
+      id: pair_03c88ea0e3804165aa255eaf1e96894f
+      name: logo
+      value: asdas
+    - description: ""
+      disabled: true
+      id: pair_e3fefcc351ef4b5cbdc263007a203f62
+      name: invoice
+      value: sdasdddd
+parameters: []
+headers:
+  - id: pair_66c577ac1d2947518320d4e12e64b5cf
+    name: Content-Type
+    value: multipart/form-data
+  - description: ""
+    id: pair_f01cddc3f09f494cafa005deb6466e78
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  disabled: false
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630136116904
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

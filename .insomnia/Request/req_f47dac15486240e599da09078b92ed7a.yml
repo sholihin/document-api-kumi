@@ -1,0 +1,118 @@
+_id: req_f47dac15486240e599da09078b92ed7a
+type: Request
+parentId: fld_c0127e478b7a4c0a92b8ca04feb48a0b
+modified: 1648377653730
+created: 1631690190473
+url: "{{ _.baseurl }}/api/reseller/address/f0f96b5a-b2c2-4801-a7d3-1e0b75edb897"
+name: UPDATE
+description: |-
+  ## Method (POST)
+  ## Route
+  ```
+  /api/address/{address}
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |address|uuid|yes|body||
+  |label|string|yes|body||
+  |penerima|string|yes|body||
+  |phone_number|number|yes|body||
+  |province_id|integer|yes|body||
+  |city_id|integer|yes|body||
+  |subdistrict_id|integer|yes|body||
+  |detail|string|yes|body||
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "Address Updated!"
+    },
+    "data": {
+      "address": {
+        "label": "home",
+        "penerima": "saya",
+        "phone_number": "0827372412434",
+        "province_id": 1,
+        "province": "Bali",
+        "city_id": 17,
+        "city": "Badung",
+        "subdistrict_id": 258,
+        "subdstrict": "Abiansemal",
+        "detail": "Jl. Angkatan 45 No. 15 Rt.04\/15"
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Domain Invalid
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Creating Address Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+  ### Validation Input
+  ```
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "subdistrict_id": [
+          "The subdistrict id field is required."
+        ]
+      }
+    }
+  }
+  ```
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"label" : "homes",
+    	"penerima" : "saya",
+    	"phone_number" : "0827372412434", 
+    	"province_id" : 1,
+    	"city_id" : 17,
+    	"subdistrict_id" : 258,
+    	"detail" : "Jl. Angkatan 45 No. 15 Rt.04/15"
+    }
+parameters: []
+headers:
+  - id: pair_6370e14b2d9a42b8a9d47e88e1deca5d
+    name: Content-Type
+    value: application/json
+  - description: ""
+    id: pair_a38c8a33a3644dd1adf5c0b2715fa865
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_reseller }}"
+  type: bearer
+metaSortKey: -1628596208522
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

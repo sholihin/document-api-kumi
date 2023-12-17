@@ -1,0 +1,27 @@
+_id: req_b4b8ad5a13cb4fcdbcc9ba1dce898057
+type: Request
+parentId: fld_aba2016306034ad89e4e10a157351b1e
+modified: 1648376958025
+created: 1641994585970
+url: "{{ _.baseurl }}/api/notifications/delete/"
+name: Delete
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - id: pair_4007acdb629d48d7abeb1649ece8b159
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token }}"
+metaSortKey: -1641820810194
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

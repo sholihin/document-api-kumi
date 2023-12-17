@@ -1,0 +1,144 @@
+_id: req_c2b2ae1721ab41bfbfa395f4bd95bcf5
+type: Request
+parentId: fld_a0b6407ff93a47a59b3c8c9a3cac816f
+modified: 1648378313292
+created: 1631690201280
+url: "{{ _.baseurl }}/api/packages"
+name: INDEX
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/admin/products
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "products": [
+        {
+          "id": "2af33735-522f-4d34-8743-015a2e8aa4e2",
+          "title": "Package 2",
+          "slug": "package-2-wbtho",
+          "max_reseller": 100,
+          "duration": 12,
+          "type": "digital",
+          "merk": null,
+          "main_image": "http:\/\/kumi-backend.apps\/storage\/781c24ce-2535-4916-b78e-aa6acba54bb6\/products\/X7q5aXUsBSXXcjlYVJzfzkO8F2Sgc3FBAIg9hFI6.png",
+          "galleries": [],
+          "category": null,
+          "content": "nice",
+          "tnc": "you should buy",
+          "weight": null,
+          "price": 1200000,
+          "stocks": null,
+          "reseller_price": null,
+          "discount_type": "nominal",
+          "discount": null,
+          "affiliate_type": "nominal",
+          "affiliate_fee": 10000,
+          "pin": null,
+          "seo": 0,
+          "meta_title": null,
+          "meta_keyword": null,
+          "meta_description": null,
+          "created_at": "2021-09-08T03:44:40.000000Z",
+          "updated_at": "2021-09-08T04:01:18.000000Z"
+        },
+        {
+          "id": "f675393f-33e7-4979-a38d-49c814d989db",
+          "title": "Digital Product",
+          "slug": "digital-product-sbfpm",
+          "max_reseller": 100,
+          "duration": 12,
+          "type": "digital",
+          "merk": null,
+          "main_image": "http:\/\/kumi-backend.apps\/storage\/781c24ce-2535-4916-b78e-aa6acba54bb6\/products\/Zk4TDvLV0BhZFm3kPEYLXkQrucTSGTbvGDtCvrZY.png",
+          "galleries": [],
+          "category": null,
+          "content": "nice",
+          "tnc": "you should buy",
+          "weight": null,
+          "price": 1200000,
+          "stocks": null,
+          "reseller_price": null,
+          "discount_type": "nominal",
+          "discount": null,
+          "affiliate_type": "nominal",
+          "affiliate_fee": 10000,
+          "pin": null,
+          "seo": 0,
+          "meta_title": null,
+          "meta_keyword": null,
+          "meta_description": null,
+          "created_at": "2021-09-07T08:04:32.000000Z",
+          "updated_at": "2021-09-07T08:04:32.000000Z"
+        }
+      ]
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Not Found
+
+  ```
+
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "failed"
+    },
+    "data": {
+      "message": "Product\/Domain Not Found!",
+      "error": "No query results for model [App\\Models\\Member]."
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    disabled: false
+    id: pair_bb22181a0f1d4bf5a69e4745f40453f7
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1627808730167
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

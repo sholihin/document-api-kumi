@@ -1,0 +1,66 @@
+_id: req_c9bf4f0835eb44f3b80a452a2a9f412a
+type: Request
+parentId: fld_724d817dd679463f8ba129bbaa663055
+modified: 1648377920611
+created: 1631690201207
+url: "{{ _.baseurl }}/api/admin/category/blog/a8be48da-b1ad-407a-8632-d8215dd1a199"
+name: DELETE
+description: |-
+  ## Method (DELETE)
+  ## Route
+  ```
+  /api/admin/category/blog/{slug}
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |slug|string|yes|route param|computer|
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Category Deleted!"
+    },
+    "data": [
+      "success"
+    ]
+  }
+  ```
+
+  ## Response Failed
+  ### Not Found
+  ```
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "failed"
+    },
+    "data": {
+      "message": "Category Not Found!",
+      "error": "No query results for model [App\\Models\\Category]."
+    }
+  }
+  ```
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_e3b255973e6544688e69b14c9f1fefed
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1627734122925
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

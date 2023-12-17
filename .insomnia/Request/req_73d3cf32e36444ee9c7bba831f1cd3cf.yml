@@ -1,0 +1,30 @@
+_id: req_73d3cf32e36444ee9c7bba831f1cd3cf
+type: Request
+parentId: fld_c12d8aafb858480ba2d5ece3f0a4819c
+modified: 1675698476608
+created: 1675697559673
+url: "{{ _.produrl }}/api/reseller/checkout/new-order"
+name: New Orders
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer
+      eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLmt1bWkuaWRcL2FwaVwvcmVzZWxsZXJcL2xvZ2luIiwiaWF0IjoxNjc1NjI4MzE4LCJleHAiOjE2NzU4NDQzMTgsIm5iZiI6MTY3NTYyODMxOCwianRpIjoiaWs0ckxUNFhiTnVhWVA2dSIsInN1YiI6IjNiNWJmODUzLTkwMDctNDZhZS04Y2IyLWMyNjQ3ZDExODJlOCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ksCV3vtPfLU2lwqmat3gJVMa_sB8JmUxut-FR-u7M6M
+    id: pair_4044034a8e0e41b49b9856ecaf391030
+  - name: X-DOMAIN-MEMBER
+    value: reseller22.nunieskitchen.id
+    id: pair_04e384e5846a4f7283febb96227a67eb
+authentication:
+  type: bearer
+  token: "{{ _.token_reseller }}"
+metaSortKey: -1675697878786
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

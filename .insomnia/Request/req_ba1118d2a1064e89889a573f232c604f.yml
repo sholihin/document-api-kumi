@@ -1,0 +1,126 @@
+_id: req_ba1118d2a1064e89889a573f232c604f
+type: Request
+parentId: fld_0e6c3660c5fd45419dccfee8d13289fb
+modified: 1648377381803
+created: 1631690190547
+url: "{{ _.baseurl }}/api/reseller/login"
+name: Login Reseller
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/reseller/login
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|
+
+  |---------|----|--------|--------|
+
+  |email|string|yes|body|
+
+  |password|string|yes|body|
+
+  |X-DOMAIN-MEMBER|string|yes|header|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Authenticated"
+    },
+    "data": {
+      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9rdW1pLWJhY2tlbmQuYXBwc1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyNzQ4Mjk4NiwiZXhwIjoxNjI3NDg2NTg2LCJuYmYiOjE2Mjc0ODI5ODYsImp0aSI6IjZCdWdKVEQ1ZmJrTXBuNmQiLCJzdWIiOiI3OThlOGRkYS02OTk5LTRjN2UtOTcxNy1jNDk2MjJiMzcyOTciLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.VzHCaWRl81IDPONEKvu6p35IKsggIfTa69g_WCwxOy8",
+      "user": {
+        "id": "798e8dda-6999-4c7e-9717-c49622b37297",
+        "name": "Admin",
+        "email": "admin@kumi.id",
+        "created_at": "2021-07-25T13:16:07.000000Z",
+        "updated_at": "2021-07-25T13:16:07.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Invalid Credentials
+
+  ```
+
+  {
+    "meta": {
+      "code": 500,
+      "status": "error",
+      "message": "Authenticated Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Invalid Credential!"
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Authenticated Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "email": [
+          "The email field is required."
+        ],
+        "password": [
+          "The password field is required."
+        ]
+      }
+    }
+  }
+
+  ```
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email" : "reseller@kumi.id",
+    	"password" : "password"
+    }
+parameters: []
+headers:
+  - id: pair_ca47174a01b34f7682a63471d0a80a6f
+    name: Content-Type
+    value: application/json
+  - description: ""
+    id: pair_06f482597519409ea805845ae2e7b8c6
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication: {}
+metaSortKey: 0
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

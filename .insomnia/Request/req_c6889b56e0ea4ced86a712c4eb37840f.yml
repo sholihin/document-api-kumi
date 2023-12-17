@@ -1,0 +1,27 @@
+_id: req_c6889b56e0ea4ced86a712c4eb37840f
+type: Request
+parentId: fld_7caeaeb21abe48258f8ae3517cc0e55b
+modified: 1702774258068
+created: 1645073269309
+url: "{{ _.baseurl }}/api/member/package/request"
+name: get Request Generate Website
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_877dea677c564a3b8fc6c9b1892d2b02
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.localdomain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1645071597014.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

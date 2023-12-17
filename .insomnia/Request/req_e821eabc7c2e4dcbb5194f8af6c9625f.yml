@@ -1,0 +1,67 @@
+_id: req_e821eabc7c2e4dcbb5194f8af6c9625f
+type: Request
+parentId: fld_bebf1b61206f4a3582b13f888c96d458
+modified: 1648377216661
+created: 1631690181347
+url: "{{ _.baseurl }}/api/wishlist/10ab7081-c9ed-4e69-bf9d-8199314b86f2"
+name: DELETE
+description: |-
+  ## Method (DELETE)
+  ## Route
+  ```
+  /api/wishlist/{product}
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |product|uuid|yes|route param|sdjajsf-2479fd-3423|
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+  |X-DOMAIN-MEMBER|string|yes|body|example.net|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "Wishlist Deleted!"
+    },
+    "data": [
+      "success"
+    ]
+  }
+  ```
+
+  ## Response Failed
+  ### Not Found
+  ```
+  {
+    "meta": {
+      "code": 404,
+      "status": "error",
+      "message": "failed"
+    },
+    "data": {
+      "message": "Category Not Found!",
+      "error": "No query results for model [App\\Models\\Wishlist]."
+    }
+  }
+  ```
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_2b4ba12f5355413c8a62b24d9edfc8e8
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token }}"
+  type: bearer
+metaSortKey: -1628741531249
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

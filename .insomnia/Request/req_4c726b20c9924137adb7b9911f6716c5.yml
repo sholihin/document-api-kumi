@@ -1,0 +1,113 @@
+_id: req_4c726b20c9924137adb7b9911f6716c5
+type: Request
+parentId: fld_1eab7e758c85417da596e52cf0fdef20
+modified: 1648377941503
+created: 1631690201258
+url: "{{ _.baseurl }}/api/admin/faq"
+name: INDEX
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/admin/faq
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |X-DOMAIN-MEMBER|string|yes|header|kumi_id|
+
+  |bearer token|jwt|yes|header|12132-jfjdf34-213|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "faqs": [
+        {
+          "id": "58eedbf3-9c4a-4a16-83d0-0893153df6f3",
+          "question": "Apa itu KUMI ?",
+          "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quaerat porro nihil magni quasi possimus. Quaerat optio ea natus, exercitationem dolore modi qui, voluptatibus labore praesentium neque perferendis aspernatur iste! Nesciunt esse, fugit omnis aut accusamus distinctio expedita mollitia dolor molestiae! Recusandae voluptates dolorem nam harum sit perferendis ex, incidunt, laudantium in laboriosam nostrum repudiandae sint. Cum perspiciatis similique ipsa!",
+          "created_at": "2021-09-06T06:54:30.000000Z",
+          "updated_at": "2021-09-06T06:54:30.000000Z"
+        },
+        {
+          "id": "20d4384f-403a-4523-b64f-8b015b4b4706",
+          "question": "Apa itu KUMI ?",
+          "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quaerat porro nihil magni quasi possimus. Quaerat optio ea natus, exercitationem dolore modi qui, voluptatibus labore praesentium neque perferendis aspernatur iste! Nesciunt esse, fugit omnis aut accusamus distinctio expedita mollitia dolor molestiae! Recusandae voluptates dolorem nam harum sit perferendis ex, incidunt, laudantium in laboriosam nostrum repudiandae sint. Cum perspiciatis similique ipsa!",
+          "created_at": "2021-09-06T06:54:28.000000Z",
+          "updated_at": "2021-09-06T06:54:28.000000Z"
+        },
+        {
+          "id": "f27caef1-15d6-4fd5-aa43-1251c6703352",
+          "question": "Apa itu KUMI",
+          "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quaerat porro nihil magni quasi possimus. Quaerat optio ea natus, exercitationem dolore modi qui, voluptatibus labore praesentium neque perferendis aspernatur iste! Nesciunt esse, fugit omnis aut accusamus distinctio expedita mollitia dolor molestiae! Recusandae voluptates dolorem nama",
+          "created_at": "2021-09-06T06:42:56.000000Z",
+          "updated_at": "2021-09-06T06:59:28.000000Z"
+        },
+        {
+          "id": "cd530589-cf36-4dc8-8631-895d4c01ea3c",
+          "question": "Apa itu KUMI ?",
+          "answer": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quaerat porro nihil magni quasi possimus. Quaerat optio ea natus, exercitationem dolore modi qui, voluptatibus labore praesentium neque perferendis aspernatur iste! Nesciunt esse, fugit omnis aut accusamus distinctio expedita mollitia dolor molestiae! Recusandae voluptates dolorem nam harum sit perferendis ex, incidunt, laudantium in laboriosam nostrum repudiandae sint. Cum perspiciatis similique ipsa!",
+          "created_at": "2021-09-06T06:41:35.000000Z",
+          "updated_at": "2021-09-06T06:41:35.000000Z"
+        }
+      ]
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Not Found
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Showing FAQs Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - description: ""
+    id: pair_a66980467b3b433da32f164d7c99fa6a
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630551304805
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

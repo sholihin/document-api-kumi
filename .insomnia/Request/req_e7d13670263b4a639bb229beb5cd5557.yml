@@ -1,0 +1,130 @@
+_id: req_e7d13670263b4a639bb229beb5cd5557
+type: Request
+parentId: fld_26105991709041d18ba748c62c1dfa7c
+modified: 1648377998035
+created: 1631690201079
+url: "{{ _.baseurl
+  }}/api/admin/config/payment/status-bank/fda14ee2-7555-4253-b32f-db759a8d1b0f"
+name: UPDATE BANK STATUS
+description: >-
+  ## Method (PATCH)
+
+  ## Route
+
+  ```
+
+  /api/admin/config/payment/status-bank/{id_data}
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |id_data|uuid|yes|route param|hsdfg7567sdf|
+
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "Payment Configuration Updated!"
+    },
+    "data": {
+      "payment": {
+        "config_id": "1adf6f91-36c5-4238-b9b8-7bf49bd0d3cd",
+        "banks": {
+          "status": true,
+          "data": [
+            {
+              "id_data": "38fb89d5-011f-468c-ad15-b6318de836fa",
+              "no_rekening": "1213-23124-2312",
+              "nama_pemilik": "kumi",
+              "bank_id": {
+                "id": 1,
+                "name": "BANK BRI",
+                "code": "002",
+                "logo": "http:\/\/kumi-backend.apps\/assets\/img\/payment\/BRI.png",
+                "panduan": "<p><span style=\\\"font-size:16px\\\"><strong>Panduan Pembayaran M-Banking BRI<\/strong><\/span><\/p><ul><li>Buka aplikasi, lalu pilih menu&nbsp;<strong>Mobile Banking BRI<\/strong>.<\/li><li>Saat muncul jendela baru, tap menu&nbsp;<strong>Transfer<\/strong>.<\/li><li>Untuk transfer ke sesama rekening BRI, tap menu&nbsp;<strong>Sesama BRI<\/strong>.<\/li><li>Pada halaman baru,&nbsp;<strong>masukkan nomor rekening BRI<\/strong>&nbsp;yang dituju.<\/li><li><strong>Masukkan jumlah transfer<\/strong>&nbsp;yang akan dikirim.<\/li><li>Klik&nbsp;<strong>OK<\/strong>. Lalu,&nbsp;<strong>masukkan PIN<\/strong>&nbsp;Mobile Banking BRI Anda. Klik&nbsp;<strong>SEND<\/strong>.<\/li><li>Untuk melakukan verifikasi SMS, Klik&nbsp;<strong>OK<\/strong>.<\/li><li>Terima SMS dari Mobile Banking BRI, lalu ketik&nbsp;<strong>YA<\/strong>&nbsp;&lt;spasi&gt;&nbsp;<strong>Kode Transaksi<\/strong>. Kalau bingung, ikuti saja petunjuk yang ada pada SMS tersebut.<\/li><li>Kalau sudah benar, langsung&nbsp;<strong>Kirim SMS<\/strong>.<\/li><\/ul>"
+              },
+              "status_bank": false
+            },
+            {
+              "id_data": "aa4d82e6-4a97-4bae-8965-ea32f2fd5e1d",
+              "no_rekening": "1234124124",
+              "nama_pemilik": "kumi",
+              "bank_id": {
+                "id": 2,
+                "name": "BANK MANDIRI",
+                "code": "008",
+                "logo": "http:\/\/kumi-backend.apps\/assets\/img\/payment\/MANDIRI.png",
+                "panduan": "<p><span style=\\\"font-size:16px\\\"><strong>Panduan Pembayaran M-Banking Mandiri (Livin&#39; by Mandiri)<\/strong><\/span><\/p><ul><li><strong>Login<\/strong>&nbsp;Livin&#39; dengan&nbsp;<strong>Username<\/strong>&nbsp;dan&nbsp;<strong>Password<\/strong>&nbsp;Anda.<\/li><li><p>Tap di menu&nbsp;<strong>Transfer.<\/strong><\/p><\/li><li>Pilih jenis transfer&nbsp;<strong>Ke Rekening Mandiri<\/strong><\/li><li><p>Tentukan&nbsp;<strong>Rekening Sumber<\/strong>&nbsp;yang akan anda pakai.<\/p><\/li><li>Isi&nbsp;<strong>Nomor Rekening Tujuan&nbsp;<\/strong>transfer dan&nbsp;<strong>Jumlah&nbsp;<\/strong>transfer<\/li><li><p>Pastikan informasi bayar sesuai lalu tekan&nbsp;<strong>Kirim&nbsp;<\/strong>dan masukkan&nbsp;<strong>MPIN<\/strong>.<\/p><\/li><\/ul>"
+              },
+              "status_bank": true
+            }
+          ]
+        },
+        "midtrans": {
+          "server_key": "30f9f148-6602-4195-9eca-5bbc0fb28b89",
+          "client_key": "30f9f148-6602-4195-9eca-5bbc0fb28b89"
+        }
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Payment's Configuration Updated"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+method: PATCH
+body:
+  mimeType: application/json
+  text: '{"status": 1}'
+parameters: []
+headers:
+  - description: ""
+    id: pair_f01cddc3f09f494cafa005deb6466e78
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+  - name: Content-Type
+    value: application/json
+    id: pair_7eb55a5d22104ed09bcbda2ef1c79920
+authentication:
+  disabled: false
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1637654004560
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

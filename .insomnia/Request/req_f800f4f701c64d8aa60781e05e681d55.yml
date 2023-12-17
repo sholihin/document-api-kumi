@@ -1,0 +1,95 @@
+_id: req_f800f4f701c64d8aa60781e05e681d55
+type: Request
+parentId: fld_078bf7c78adf46a6ab754a377a88274a
+modified: 1648377526301
+created: 1631758049900
+url: "{{ _.baseurl }}/api/reseller/store"
+name: GET
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/reseller/store
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|EXAMPLE|
+
+  |---------|----|--------|--------|--------|
+
+  |bearer token|jwt|yes|header|fwe894-231|
+
+  |X-DOMAIN-MEMBER|string|yes|header|kumi.id|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 201,
+      "status": "success",
+      "message": "Store Configuration Listed!"
+    },
+    "data": {
+      "store": {
+        "id": "37a5b1d9-53c9-4c8f-9028-9b8d9f7cc60b",
+        "store_name": "toko apik",
+        "sub_domain": "tokoepik",
+        "logo": "http:\/\/kumi-backend.apps\/storage\/c244a03b-c4fa-4119-ad7d-bfa46e9ad95e\/reseller\/TeqsRY9LvQ72HhdTUwe12RhtL8f0xKdDX8WHeVcD.png",
+        "contact": "6287764281912",
+        "color": "#007",
+        "status": 1,
+        "created_at": "2021-09-16T03:01:20.000000Z",
+        "updated_at": "2021-09-16T04:27:12.000000Z"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Invalid
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Store Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain!"
+    }
+  }
+
+  ```
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_33fb89f358294b9f8ab31a5daf69dba1
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_reseller }}"
+metaSortKey: -1631758049900
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

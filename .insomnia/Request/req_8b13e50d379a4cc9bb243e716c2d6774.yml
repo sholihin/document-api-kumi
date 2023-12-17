@@ -1,0 +1,151 @@
+_id: req_8b13e50d379a4cc9bb243e716c2d6774
+type: Request
+parentId: fld_7054d351553249b69189afa165eb284f
+modified: 1648378189992
+created: 1631690200994
+url: "{{ _.baseurl }}/api/admin/coupon/bf459bc6-c70a-4dcb-9e90-5de6047a2ea8"
+name: SHOW
+description: >-
+  ## Method (GET)
+
+  ## Route
+
+  ```
+
+  /api/admin/coupon/{coupon}
+
+  ```
+
+  ## Parameters
+
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+
+  |---------|----|--------|--------|--------|
+
+  |coupon|uuid|yes|route param|hsdfg7567sdf|
+
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+
+  ## Response Success
+
+  ```
+
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "success"
+    },
+    "data": {
+      "coupon": {
+        "code": "KUMIKUPONS",
+        "name": "Kupon Kemerdekaan",
+        "type": "nominal",
+        "amount": 10000,
+        "limit": 100,
+        "used": 0,
+        "min_total": 0,
+        "start_date": "2021-08-22 21:39:23",
+        "expired_date": "2021-08-25 06:39:23",
+        "status": "non-active",
+        "description": "Ini merupakan kupon kemerdekaan dengan minimal pembelian 0 rupiah"
+      }
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ### Unauthorized
+
+  ```
+
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Showing Coupon Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+
+  ```
+method: GET
+body:
+  mimeType: application/x-www-form-urlencoded
+  params:
+    - description: ""
+      id: pair_297c7ac8cf5944d19035321507d49402
+      name: code
+      value: KUMIKUPONs
+    - description: ""
+      id: pair_ee23dfa14add4769a6e661ce535436ee
+      name: name
+      value: Kupon Kemerdekaan
+    - description: ""
+      id: pair_aafa4bdced444dc3a3eef0f3fb11ef69
+      name: type
+      value: nominal
+    - description: ""
+      id: pair_e2fd17393ab4487d97c3b8226095a7be
+      name: amount
+      value: "10000"
+    - description: ""
+      id: pair_b345684d7fe94da3a60574d43bfde2a4
+      multiline: false
+      name: start_date
+      type: text
+      value: 2021-08-22 21:39:23
+    - description: ""
+      id: pair_7e6aaecbd1fc4e49a494430377bce1f3
+      name: expired_date
+      value: 2021-08-25 06:39:23
+    - description: ""
+      id: pair_13dae179106c4bcf9938f313157ddca2
+      name: status
+      value: non-active
+    - description: ""
+      id: pair_f6b824cfc2ee497b9879ac8d8bf92ec1
+      name: min_total
+      value: "0"
+    - description: ""
+      id: pair_38b49f3983db4174aca20ab3bb31a44f
+      name: description
+      value: Ini merupakan kupon kemerdekaan dengan minimal pembelian 0 rupiah
+    - description: ""
+      id: pair_0e82e22714264f80889dcc0604a50b29
+      name: limit
+      value: "100"
+    - description: ""
+      disabled: false
+      id: pair_49525432ff0f46359b99dd4088d482c5
+      name: __method
+      value: PATCH
+parameters: []
+headers:
+  - description: ""
+    disabled: false
+    id: pair_44e5bf90631b4696ba7ccfdd0ed94421
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+  - id: pair_a957ba83ef9d47619b82aa42565c0ad9
+    name: Content-Type
+    value: application/x-www-form-urlencoded
+authentication:
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1629001502693.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

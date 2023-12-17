@@ -1,0 +1,72 @@
+_id: req_d37798ce75bb456792e8bdd6ba00bd2f
+type: Request
+parentId: fld_7db6419c04aa49a4a97e4c2419a1ccd5
+modified: 1702779161630
+created: 1701941532495
+url: "{{ _.baseurl }}/api/merchant/marketplace-integration"
+name: Merchants Request List
+description: |-
+  ## Method (GET)
+  ## Route
+  ```
+  /api/merchant/marketplace-integration
+  ```
+  ## Query Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|EXAMPLE|
+  |---------|----|--------|--------|--------|
+  |Bearer Token|string|yes|header|asdfasdf.asdfasdf|
+  |X-DOMAIN-MEMBER|string|yes|header|124fdf.342311|
+
+  ## Response Success
+  ```
+  {
+  	"status": "success",
+  	"message": "Members Retrieved!",
+  	"data": [
+  		{
+  			"id": "1100f9fc-8a3f-448b-8d80-3fd176910e26",
+  			"member_id": "5c2c0731-dd16-4c5a-b0ee-96eeb6d1a4bb",
+  			"domain": "kumi.id",
+  			"email_user": "no-reply@kumi.id",
+  			"email_register": "info@kumi.id",
+  			"max_reseller": 10000000,
+  			"join_date": null,
+  			"expired_date": null,
+  			"marketplace": "request"
+  		}
+  	]
+  }
+  ```
+
+  ## Response Failed
+  ```
+  {
+  	"status": "error",
+  	"message": {
+  			"Internal Server Error"
+  	},
+  	"data": null
+  }
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_30596ab31ca04aa49acd5c7a875828b6
+  - name: X-DOMAIN-MEMBER
+    value: "{{ _.localdomain }}"
+    id: pair_477e52a3b6ec43e7b19ee883b27b6a25
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1701941532495
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

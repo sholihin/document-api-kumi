@@ -1,0 +1,37 @@
+_id: req_83817e64fee64a07ba3e61cb096064fa
+type: Request
+parentId: fld_c82a156d93d040c191a483faa9d56d80
+modified: 1648376961479
+created: 1641817513716
+url: "{{ _.baseurl
+  }}/api/customer/reset-password?token=67121c619922004121eecdb7fc5bac9ab91e872c\
+  b67f5e22f7ebaa4760538de1"
+name: Reset Password
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email" : "customer@kumi.id",
+    	"password" : "password",
+    	"password_confirmation" : "password"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_848ffa418de5449e93221f59bf173122
+  - id: pair_1c328a16f9ca4d8798ecdb0779f539f9
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication: {}
+metaSortKey: -1640983890098.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

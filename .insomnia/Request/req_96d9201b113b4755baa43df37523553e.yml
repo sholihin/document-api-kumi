@@ -1,0 +1,109 @@
+_id: req_96d9201b113b4755baa43df37523553e
+type: Request
+parentId: fld_8e413a71c6f343c8bd0d28d5762c99ac
+modified: 1648378163221
+created: 1631690201044
+url: "{{ _.baseurl }}/api/admin/config/tnc/0de71900-7b61-48ee-9356-7bcaba8509f8"
+name: UPDATE
+description: |-
+  ## Method (PATCH)
+  ## Route
+  ```
+  /api/admin/config/tnc/{configuration}
+  ```
+  ## Parameters
+  |PARAMETER|DATA TYPE|REQUIRED|TYPE|example|
+  |---------|----|--------|--------|--------|
+  |configuration|uuid|yes|route param|hsdfg7567sdf|
+  |status|boolean|yes|body|1/0|
+  |content|string|yes|body|lorem ipsum|
+  |X-DOMAIN-MEMBER|string|required|header|kumi.id|
+  |bearer token|jwt|yes|header|hfhe34234-3423fdf|
+  ## Response Success
+  ```
+  {
+    "meta": {
+      "code": 200,
+      "status": "success",
+      "message": "About Configuration Updated!"
+    },
+    "data": {
+      "tnc": {
+        "config_id": "0de71900-7b61-48ee-9356-7bcaba8509f8",
+        "status": false,
+        "content": "nominal"
+      }
+    }
+  }
+  ```
+
+  ## Response Failed
+  ### Unauthorized
+  ```
+  {
+    "meta": {
+      "code": 401,
+      "status": "error",
+      "message": "Updating TnC's Configuration Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": "Unauthorized Domain"
+    }
+  }
+  ```
+  ### Validation Input
+  ```
+  {
+    "meta": {
+      "code": 422,
+      "status": "error",
+      "message": "Failed"
+    },
+    "data": {
+      "message": "Something went wrong!",
+      "error": {
+        "status": [
+          "The status field is required."
+        ]
+      }
+    }
+  }
+  ```
+method: PATCH
+body:
+  mimeType: application/x-www-form-urlencoded
+  params:
+    - description: ""
+      id: pair_4aeac3dc44404946af5b8c9b1b7e7bf4
+      name: status
+      value: "1"
+    - description: ""
+      id: pair_671400f0c0ca42a99867cae773f8448c
+      name: content
+      value: lorem ipsum
+    - description: ""
+      id: pair_93f2f4667538477788322afcb960f509
+      name: ""
+      value: ""
+parameters: []
+headers:
+  - id: pair_66c577ac1d2947518320d4e12e64b5cf
+    name: Content-Type
+    value: application/x-www-form-urlencoded
+  - description: ""
+    id: pair_f01cddc3f09f494cafa005deb6466e78
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+authentication:
+  disabled: false
+  token: "{{ _.token_admin }}"
+  type: bearer
+metaSortKey: -1630136116904
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

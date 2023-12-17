@@ -1,0 +1,27 @@
+_id: req_e4f021c2c9d3435ba6cdacb584f00e36
+type: Request
+parentId: fld_7caeaeb21abe48258f8ae3517cc0e55b
+modified: 1702774133901
+created: 1645073076281
+url: "{{ _.baseurl }}/api/member/package"
+name: get User Membered by Package
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_877dea677c564a3b8fc6c9b1892d2b02
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.localdomain }}"
+    description: ""
+authentication:
+  type: bearer
+  token: "{{ _.token_admin }}"
+metaSortKey: -1645073076281
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

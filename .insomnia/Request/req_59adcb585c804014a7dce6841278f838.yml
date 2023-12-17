@@ -1,0 +1,142 @@
+_id: req_59adcb585c804014a7dce6841278f838
+type: Request
+parentId: fld_f088254d18e44f3c9a9aba4fcbe62078
+modified: 1648376918768
+created: 1631690181410
+url: "{{ _.baseurl }}/api/customer/register"
+name: Register Customer
+description: >-
+  ## Method (POST)
+
+  ## Route
+
+  ```
+
+  /api/customer/register
+
+  ```
+
+  ## Query Parameters
+
+  |PARAMETER|TYPE|REQUIRED|UNIQUE|
+
+  |---------|----|--------|--------|
+
+  |name|string|yes|no|
+
+  |phone_number|string|yes|no|
+
+  |email|string|yes|yes|
+
+  |password|string|yes|no|
+
+  |confirmation_password|string|yes|no|
+
+
+  ## Response Success
+
+  ```
+
+  {
+    "status": "success",
+    "message": "Registered",
+    "data": {
+      "id": "b2eda098-b65e-44b7-942f-a2f8145f8c82",
+      "name": "Mohamad Sholihin",
+      "avatar": "https:\/\/ui-avatars.com\/api\/?name=Mohamad+Sholihin&background=4e73df&color=ffffff&size=100",
+      "jenkel": null,
+      "email": "mohamad.sholihin.it@kumi.id",
+      "phone_number": "08123123123",
+      "created_at": "2021-11-24T07:54:27.000000Z",
+      "updated_at": "2021-11-24T07:54:27.000000Z"
+    }
+  }
+
+  ```
+
+
+  ## Response Failed
+
+  ```
+
+  {
+    "data": {
+      "message": "Error Message!",
+      "status": "error",
+      "data": null
+    }
+  }
+
+  ```
+
+  ### Validation Input
+
+  ```
+
+  {
+    "status": "error",
+    "message": {
+      "name": [
+        "The name field is required."
+      ],
+      "email": [
+        "The email field is required."
+      ],
+      "phone_number": [
+        "The phone number field is required."
+      ],
+      "password": [
+        "The password field is required."
+      ]
+    },
+    "data": null
+  }
+
+  ```
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - description: ""
+      id: pair_aab0c323359349568c04ca92cf573c89
+      name: email
+      value: customer2@kumi.id
+      disabled: false
+    - description: ""
+      id: pair_cc05e2f61973474aa1c47b1e46936b62
+      name: name
+      value: "customer "
+      disabled: false
+    - description: ""
+      id: pair_9783cdaf9087445b9876de1e3cd70b90
+      name: phone_number
+      value: "08123123123"
+      disabled: false
+    - description: ""
+      id: pair_0caf408794134592bd16ba8640ac255e
+      name: password
+      value: password
+      disabled: false
+    - description: ""
+      id: pair_8fb44b7133e94e6b9bb1350418710f59
+      name: password_confirmation
+      value: password
+      disabled: false
+parameters: []
+headers:
+  - id: pair_5e963fb2fc0c45149a90ae275816c00b
+    name: Content-Type
+    value: multipart/form-data
+  - id: pair_818ae3a07aee41a2b90fd0120e6543c1
+    name: X-DOMAIN-MEMBER
+    value: "{{ _.domain }}"
+    description: ""
+authentication: {}
+metaSortKey: -1628538155590
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
